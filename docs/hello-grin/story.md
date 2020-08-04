@@ -1,0 +1,62 @@
+# Grin's Story
+
+## Mimblewimble
+On *Mon Aug 01 2016* a user named 'majorplayer' logged into the `#bitcoin-wizards` IRC channel, dropped a file hosted on a Tor hidden server, and immediately logged out. The document[^2] was titled MIMBLEWIMBLE and authored under the psuedonym Tom Elvis Jedusor. It described a radically different method to construct transactions.
+
+!!! note ""
+    Tom Elvis Jedusor is the French name for Tom Riddle (Lord Voldemort) from the Harry Potter book series.
+    Mimblewimble is a tongue-tying spell.
+
+
+```text
+21:35 -!- majorplayer [8ae5c065@gateway/web/freenode/ip.138.229.192.101] has joined #bitcoin-wizards
+21:35 <majorplayer> hi, i have an idea for improving privacy in bitcoin. my
+friend who knows technology says this channel would have interest
+http://5pdcbgndmprm4wud.onion/mimblewimble.txt
+21:35 -!- majorplayer [8ae5c065@gateway/web/freenode/ip.138.229.192.101] has quit [Client Quit]
+```
+
+```text
+MIMBLEWIMBLE
+Tom Elvis Jedusor
+19 July, 2016
+```
+
+The following day, users `nsh` and `andytoshi` (Andrew Poelstra) began discussing the idea proposed in the paper. The anonymous writer left several un-answered questions in the document, along with a general lack of details, so there was much to discuss. The conversation included a memorable moment:
+```text
+09:54 <nsh> gotta be some way this is sneaky, otherwise it's too good to be true...
+09:55 <andytoshi> hah, yeah, i know the feeling
+```
+On *Oct 10 2016*, Andrew Poelstra published a follow-up paper[^1] about Mimblewimble, which introduced several refinements to the original proposal and describes further its technical details.
+
+## Grin
+On *Oct 20 2016*, a pseudonymous developer using the name Ignotus Peverell, announced in the bitcoin wizards IRC channel that he began work on a minimal implementation of the protocol, which he named Grin.
+
+!!! note ""
+    Ignotus Peverell is the powerful wizard who created the cloak of invisiblity. </br>
+    Grin is short for the Gringotts wizarding bank.
+
+```text
+16:45 -!- igno_peverell [~user@104.238.169.137] has joined #bitcoin-wizards
+16:47 < igno_peverell> I have a minimal implementation of MimbleWimble available. It's very far from complete but has the basics, included the summing of pedersen commitments:
+16:47 < igno_peverell> https://github.com/ignopeverell/grin
+16:47 < igno_peverell> Any feedback or review is greatly appreciated. Thanks!
+```
+
+Igno was joined on github by other developers who took interest in the project, several of them bearing pseudonyms of other Harry Potter wizards.
+
+While Mimblewimble serves as the foundation to transacting, it constitutes a relatively small part of a blockchain cryptocurrency, and many choices were yet to be made. Thus began the journey to for a complete implementation.
+
+**(WORK IN PROGRESS)**
+
+
+Fast forward to launch?
+
+Igno's dissappearance
+
+Mention current fund and contributions (and maybe 2010 coinbase btc donor)
+
+
+
+[^1]: [The Mimblewimble Whitepaper](https://scalingbitcoin.org/papers/mimblewimble.txt)
+[^2]: [Andrew Poelstra's Paper](https://download.wpsoftware.net/bitcoin/wizardry/mimblewimble.pdf)

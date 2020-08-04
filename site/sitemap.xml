@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://docs.grin.mw/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.grin.mw/quickstart/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <loc>https://docs.grin.mw/hello-grin/story/</loc>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.grin.mw/test/</loc>
-     <lastmod>2020-08-01</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.grin.mw/integrations/intro/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <loc>https://docs.grin.mw/getting-started/quickstart/</loc>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/table-of-contents/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/introduction-to-mimblewimble/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/grin-for-bitcoiners/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/building-blocks/merkle-mountain-ranges/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/building-blocks/merkle-proof/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/building-blocks/switch-commitments/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/blockchain-and-consensus/coinbase-maturity-rule/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/blockchain-and-consensus/fast-sync/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/blockchain-and-consensus/proof-of-work/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/blockchain-and-consensus/pruning-blockchain-data/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/blockchain-and-consensus/state-and-storage/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/miscellaneous/contracts/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/miscellaneous/dandelion/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/miscellaneous/range-proof-format/</loc>
-     <lastmod>2020-08-01</lastmod>
+     <lastmod>2020-08-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.grin.mw/archives/archives/</loc>
+     <lastmod>2020-08-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

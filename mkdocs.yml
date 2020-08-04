@@ -2,10 +2,7 @@
 site_name: Grin Documentation
 site_url: https://docs.grin.mw
 site_author: Grin Developers
-site_description: >-
-  Create a branded static site from a set of Markdown files to host the
-  documentation of your Open Source or commercial project – customizable,
-  searchable, mobile-friendly, 40+ languages
+site_description: 'Grin Documentation'
 
 # Repository
 repo_name: mimblewimble/grin
@@ -40,13 +37,25 @@ markdown_extensions:
   - codehilite
   - pymdownx.superfences
   - pymdownx.details
+  - footnotes
+  - attr_list
 
 nav:
   - Home: index.md
-  - Quickstart: quickstart.md
-  - Test: test.md
-  - Integrations:
-    - Intro: integrations/intro.md
+  - Hello Grin:
+    - Story: hello-grin/story.md
+    - Basics: hello-grin/basics.md
+    - Transactions: hello-grin/scalability.md
+    - Privacy: hello-grin/privacy.md
+    - Scalability: hello-grin/scalability.md
+    - Proof of Work: hello-grin/proof-of-work.md
+    - Emission: hello-grin/emission.md
+    - Community: hello-grin/community.md
+  - Getting Started:
+    - Quickstart: getting-started/quickstart.md
+    - CLI Wallet: getting-started/cli-wallet.md
+    - Full Node: getting-started/full-node.md
+    - Community Projects: getting-started/community-projects.md
   - Technical Details:
     - Table of Contents: technical/table-of-contents.md
     - Introduction to Mimblewimble: technical/introduction-to-mimblewimble.md
@@ -65,3 +74,5 @@ nav:
       - Contracts: technical/miscellaneous/contracts.md
       - Dandelion: technical/miscellaneous/dandelion.md
       - Range Proofs Format: technical/miscellaneous/range-proof-format.md
+  - Archives:
+      - Archives: archives/archives.md

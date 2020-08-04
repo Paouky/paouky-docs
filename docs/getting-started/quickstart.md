@@ -2,13 +2,13 @@
 
 In this tutorial you will learn how to:
 
-- Install Grin and Grin-Wallet
+- Install Grin node and wallet
 - Run a full node
 - Create a wallet
-- Send & receive grins
+- Send & receive grin
 
 !!! tip ""
-    If you want to use Grin with a graphical user interface, please refer to [community projects](TODO).
+    If you want to use Grin with a graphical user interface, please refer to [community projects](community-projects.md).
 
 ## Requirements
 
@@ -82,10 +82,11 @@ brew install grin grin-wallet
 
 ### Windows
 
-On Windows 10, the easiest way to install Grin and Grin-Wallet is by downloading the binaries on [Grin website](https://grin.mw/download).
+On Windows, the simplest way to install is by downloading the binaries on the [Grin website](https://grin.mw/download).
 
-We recommed that you create a directory called `grin` in `C:\Users\%USER%`. In this directory, extract both `grin.exe` and `grin-wallet.exe`.
+We recommed that you create a directory called `grin` in `C:\Users\%USER%`. In this directory, extract both binaries `grin.exe` and `grin-wallet.exe`.
 
+---
 ## Running a Grin Node
 
 The rest of the documentation is common for Linux, macOS and Windows.
@@ -99,7 +100,7 @@ grin
 ```
 
 You should see the following window:
-![TUI](assets/images/tui.png)
+![TUI](../assets/images/tui.png)
 Congratulations! 🎉 You are now running a Grin full node.
 The initial sync might take from 30 minutes to a few hours depending on your connection speed and CPU performance.
 
@@ -136,7 +137,6 @@ undo execute festival romance just void custom leopard balcony trick waste castl
 This phrase is a list of 24 words which encode all the information needed to recover your wallet. If your computer breaks or your hard drive becomes corrupted, you can enter `grin-wallet init -r` and type the phrase to recover your grins.
 
 Store it safely, preferably in a non-digital format.
-
 
 ## Receiving Grins
 
@@ -183,7 +183,7 @@ Then enter the message you were sent into the prompt.
 
 Next, your wallet will output a beautiful `Slatepack` of its own:
 
-![receiver-msg](assets/images/receiver-msg.png)
+![receiver-msg](../assets/images/receiver-msg.png){ width=650 }
 
 Copy and send it to the other party, and that's it, you've completed your role!
 
@@ -205,13 +205,11 @@ grin-wallet send -d grin1dhvv9mvarqwl6fderuxp3qgl6qppvhc9p4u24347ec0mvgg6342q4w6
 ```
 
 !!! note "Locked Outputs"
-    From now on and until it's included in a block, the outputs used in this transcation are [locked](TODO.LOCKED-OUTPUTS-TITLE).
+    From now on and until confirmed in the chain, the outputs used in this transcation are [locked](TODO.LOCKED-OUTPUTS-TITLE).
 
 The wallets will interact through Tor and complete the process automatically.
 
-However, If the connection wasn't successful, your wallet will show a `Slatepack` message which you need to provide the receiver with.
-
-The receiver then uses the `receive` command to process it (as demonstrated earlier), and returns back to you a `Slatepack` he produced himself.
+However, If the connection wasn't successful, your wallet will show a `Slatepack` message which you need to provide the receiver with. The receiver then uses the `receive` command to process it (as demonstrated earlier), and returns back to you a `Slatepack` he produced himself.
 
 Simply type the following command:
 
@@ -220,4 +218,4 @@ grin-wallet finalize
 ```
 And enter into the prompt the last `Slatepack` message you were sent.
 
-Your wallet will complete the transaction building and post it to the network, along with a fee, to be included in an upcoming block. Celebrate this milestone with an unapologizing smile ツ
+Your wallet will complete the transaction building process and post it to the network, along with a fee, to be included in an upcoming block. Celebrate this milestone with an unapologizing smile ツ
