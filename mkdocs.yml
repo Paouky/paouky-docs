@@ -39,20 +39,25 @@ markdown_extensions:
   - pymdownx.details
   - footnotes
   - attr_list
-
+  - def_list
+  
 nav:
   - Home: index.md
-  - Hello Grin:
-    - Story: hello-grin/story.md
-    - Basics: hello-grin/basics.md
-    - Transactions: hello-grin/scalability.md
-    - Privacy: hello-grin/privacy.md
-    - Scalability: hello-grin/scalability.md
-    - Proof of Work: hello-grin/proof-of-work.md
-    - Emission: hello-grin/emission.md
-    - Community: hello-grin/community.md
+  - About Grin:
+    - Story: about-grin/story.md
+    - Basics: about-grin/basics.md
+    - Transactions: about-grin/scalability.md
+    - Privacy: about-grin/privacy.md
+    - Scalability: about-grin/scalability.md
+    - Proof of Work: about-grin/proof-of-work.md
+    - Emission: about-grin/emission.md
+    - Community: about-grin/community.md
   - Getting Started:
-    - Quickstart: getting-started/quickstart.md
+    - Quickstart:
+      - Install: getting-started/install.md
+      - Initialize: getting-started/initialize.md
+      - Receive: getting-started/receive.md
+      - Send: getting-started/send.md
     - CLI Wallet: getting-started/cli-wallet.md
     - Full Node: getting-started/full-node.md
     - Community Projects: getting-started/community-projects.md
