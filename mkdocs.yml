@@ -40,25 +40,24 @@ markdown_extensions:
   - footnotes
   - attr_list
   - def_list
-  
+
 nav:
   - Home: index.md
   - About Grin:
     - Story: about-grin/story.md
-    - Basics: about-grin/basics.md
-    - Transactions: about-grin/scalability.md
     - Privacy: about-grin/privacy.md
     - Scalability: about-grin/scalability.md
+    - Transactions: about-grin/scalability.md
     - Proof of Work: about-grin/proof-of-work.md
     - Emission: about-grin/emission.md
     - Community: about-grin/community.md
   - Getting Started:
     - Quickstart:
-      - Install: getting-started/install.md
-      - Initialize: getting-started/initialize.md
-      - Receive: getting-started/receive.md
-      - Send: getting-started/send.md
-    - CLI Wallet: getting-started/cli-wallet.md
+      - Install: getting-started/quickstart/install.md
+      - Initialize: getting-started/quickstart/initialize.md
+      - Receive: getting-started/quickstart/receive.md
+      - Send: getting-started/quickstart/send.md
+    - Wallet: getting-started/wallet.md
     - Full Node: getting-started/full-node.md
     - Community Projects: getting-started/community-projects.md
   - Technical Details:

@@ -26,7 +26,7 @@ It has been tested specifically on:
 
 !!! tip ""
     The following section will guide you to install using precompiled binaries.
-    If you wish to build Grin and Grin-Wallet yourself, refer to the [building section](TODO).
+    If you wish to build them yourself, see the [building section](https://github.com/mimblewimble/grin/blob/master/doc/build.md).
 
 ### Linux
 

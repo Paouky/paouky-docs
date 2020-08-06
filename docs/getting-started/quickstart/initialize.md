@@ -13,12 +13,12 @@ grin
 ```
 
 You should see the following window:
-![TUI](../assets/images/tui.png)
+![TUI](../../assets/images/tui.png)
 Congratulations! 🎉 You are now running a Grin full node.
 The initial sync might take from 30 minutes to a few hours depending on your connection speed and CPU performance.
 
 !!! note ""
-    If you can, consider opening port 3415 to allow inbound peer connections. It will help other nodes with their own initial sync.
+    If you can, consider opening port 3414 to allow inbound peer connections. It will help other nodes with their own initial sync.
 
 
 ## Creating a Grin Wallet
@@ -31,7 +31,7 @@ In the command prompt type the following:
 grin-wallet init
 ```
 
-Your wallet will now ask for a password (optional). Most wallet commands will require you to enter your password, so you'll be typing it quite often.
+Your wallet will now ask you to create a password. Most wallet commands will require it, so you'll be typing it quite often.
 In order to hide it, your keyboard input will not be displayed.
 
 ```text

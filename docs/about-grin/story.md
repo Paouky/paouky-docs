@@ -1,7 +1,7 @@
 # Grin's Story
 
 ## Mimblewimble
-On *Mon Aug 01 2016* a user named 'majorplayer' logged into the `#bitcoin-wizards` IRC channel, dropped a file hosted on a Tor hidden server, and immediately logged out. The document[^2] was titled MIMBLEWIMBLE and authored under the psuedonym Tom Elvis Jedusor. It described a radically different method to construct transactions.
+On *Mon Aug 01 2016* a user named 'majorplayer' logged into the `#bitcoin-wizards` IRC channel, dropped a file hosted on a Tor hidden server, and immediately logged out. The document[^1] was titled MIMBLEWIMBLE and authored under the psuedonym Tom Elvis Jedusor. It described a radically different method to construct transactions.
 
 !!! note ""
     Tom Elvis Jedusor is the French name for Tom Riddle (Lord Voldemort) from the Harry Potter book series.
@@ -27,7 +27,7 @@ The following day, users `nsh` and `andytoshi` (Andrew Poelstra) began discussin
 09:54 <nsh> gotta be some way this is sneaky, otherwise it's too good to be true...
 09:55 <andytoshi> hah, yeah, i know the feeling
 ```
-On *Oct 10 2016*, Andrew Poelstra published a follow-up paper[^1] about Mimblewimble, which introduced several refinements to the original proposal and describes further its technical details.
+On *Oct 10 2016*, Andrew Poelstra published a follow-up paper[^2] about Mimblewimble, which introduced several refinements to the original proposal and describes further its technical details.
 
 ## Grin
 On *Oct 20 2016*, a pseudonymous developer using the name Ignotus Peverell, announced in the bitcoin wizards IRC channel that he began work on a minimal implementation of the protocol, which he named Grin.
