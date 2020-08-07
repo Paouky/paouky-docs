@@ -1,5 +1,10 @@
 # Welcome to the Grin Documentation
 
+**(WORK IN PROGRESS, NOT A REAL DOCUMENT YET)**
+
+Green field implementation that strives to be as clear and simple as possible, making it easier to audit and maintain in the future.
+
+
 Simplicity, Privacy, Scalability
 
 ## Introduction to Mimblewimble and Grin

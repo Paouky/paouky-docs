@@ -1,6 +1,6 @@
 # Wallet User Guide
 
-Now that you've set up your node and learned how to form a simple transaction, let's get to know the wallet more deeply. The following document is a comprehensive user guide to the reference Grin wallet implementation, `grin-wallet v4.0.0`.
+Now that you've set up your node and learned how to form a simple transaction, let's get to know the wallet more deeply. The following document is an extremely comprehensive user guide to the reference Grin wallet implementation, `grin-wallet v4.0.0`.
 
 ## File Structure
 By default, grin will create all wallet files in the hidden directory `.grin` under your home directory (i.e. `~/.grin`). You can also create and use a wallet with data files in a custom directory, as will be explained later.
@@ -174,7 +174,7 @@ This command outputs the same address as using the `listen` command. However, yo
 
 The `send`  command is the method through which you begin an interactive transaction to send grins to somebody else. This can either be an immediate synchronous exchange, as happens when connectins the wallets via Tor, or it can be an asynchronous process, in which each step is done manually by exchanging easily copy-pastable strings called Slatepacks.
 
-The choice between the two methods is handled automatically by using `send` in the form of `send -d [address] [amount]`.
+The choice between the two methods is handled automatically by using `send` in the form of `send -d <address> <amount>`.
 
 ```text
 grin-wallet send -d grin1dhvv9mvarqwl6fderuxp3qgl6qpphvc9p4u24347ec0mvvg6342q4w6x5r 180
@@ -438,6 +438,8 @@ grin-wallet -r "http://192.168.0.2:1341" info
 Other than the default Tor communication channel, GRin exposes an interface that developers can use to integrate any communication channel (i.e Telegram, Signal, Keybase) for automating the transaction building between peers.
 
 ### keybase
+
+**(LOOKS TO BE DEPRACTED, BUT STILL SHOWS ON HELP LISTEN)**
 
 Grin comes bundled with an experimental keybase.io plugin. The keybase client must be installed in the system.
 

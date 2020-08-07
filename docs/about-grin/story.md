@@ -1,7 +1,7 @@
 # Grin's Story
 
 ## Mimblewimble
-On *Mon Aug 01 2016* a user named 'majorplayer' logged into the `#bitcoin-wizards` IRC channel, dropped a file hosted on a Tor hidden server, and immediately logged out. The document[^1] was titled MIMBLEWIMBLE and authored under the psuedonym Tom Elvis Jedusor. It described a radically different method to construct transactions.
+On *Mon Aug 01 2016* a user named 'majorplayer' logged into the `#bitcoin-wizards` IRC channel, dropped a text file hosted on a Tor server and then dissappeared. The document[^1] was titled MIMBLEWIMBLE and authored under the psuedonym Tom Elvis Jedusor. It described a protocol which is both private and extremely lightweight.
 
 !!! note ""
     Tom Elvis Jedusor is the French name for Tom Riddle (Lord Voldemort) from the Harry Potter book series.
@@ -43,9 +43,9 @@ On *Oct 20 2016*, a pseudonymous developer using the name Ignotus Peverell, anno
 16:47 < igno_peverell> Any feedback or review is greatly appreciated. Thanks!
 ```
 
-Igno was joined on github by other developers who took interest in the project, several of them bearing pseudonyms of other Harry Potter wizards.
+Igno was joined on github by other developers who took interest in the project, several of them bearing pseudonyms of other Harry Potter characters.
 
-While Mimblewimble serves as the foundation to transacting, it constitutes a relatively small part of a blockchain cryptocurrency, and many choices were yet to be made. Thus began the journey to for a complete implementation.
+While Mimblewimble serves as the foundation to transacting, it constitutes a relatively small part of a blockchain cryptocurrency, and many choices were yet to be made. Thus began the journey to a complete implementation.
 
 **(WORK IN PROGRESS)**
 
