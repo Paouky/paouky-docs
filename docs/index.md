@@ -40,4 +40,4 @@ Easy to audit and maintain over time
 
 ### Community driven
 
-Community driven, encouraging mining decentralization. No ICO, Founder reward, pre-mine or aidrop.
+Community driven, encouraging mining decentralization. No ICO, Founder reward, pre-mine or dev-tax.

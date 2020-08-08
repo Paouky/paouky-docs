@@ -406,7 +406,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../scalability/" title="Transactions" class="md-nav__link">
+    <a href="../transactions.md" title="Transactions" class="md-nav__link">
       Transactions
     </a>
   </li>
@@ -1003,12 +1003,12 @@
                 <h1 id="privacy">Privacy</h1>
 <h2 id="overview">Overview</h2>
 <p>Privacy is instrumental to a peer-to-peer electronic cash system. In its essence, cash cannot distinguish between users, it does not reveal the amounts transferred or owned by individuals, and it holds no bias to the history of a specific coin or person.</p>
-<p>Grin aims to preserve its user's privacy, while also keeping in mind its core attributes of minimalism and scalability. That said, by cleverly employing Mimblewimble along with several other methods, it is able to achieve a relatively high level of anonymity for its users. This document sets to explore how and to what extent.</p>
+<p>Grin aims to preserve the user's privacy, while keeping in mind its core design principles of minimalism and scalability. That said, by cleverly employing Mimblewimble along with several other methods, it is able to achieve a relatively high level of anonymity for its users. This document sets to explore how and to what extent.</p>
 <p>First, there are no amounts. A Mimblewimble implementation natively uses Confidential Transaction, meaning all amounts are hidden; They are provably impossible to uncover, yet easily verified. Even before anything else, simply hiding amounts makes any analysis significantly more challenging.</p>
 <dl>
 <dt>Notably, there are no on-chain addresses either. Transactions hold minimal information, and each output is simply a commitment: a point on the curve. A transaction might look like this:</dt>
 <dd>
-<p><strong>Transaction</strong></p>
+<p><em>Transaction</em></p>
 <table>
 <thead>
 <tr>
@@ -1036,13 +1036,13 @@
 <p>In a Bitcoin-like system, there are multiple ways in which a user might (accidentally or intentionally) link an address to his identity. Consequently it is often trivial for analysis to link many of his addresses. Not only does his own privacy suffer, but also the entire network's privacy diminishes as a result.</p>
 <p>A Grin commitment is one unique output. An address may be used to create an unlimited amount of outputs. An interesting analogy could then be used to emphasize the difference:</p>
 <ul>
-<li>A commitment, once on-chain, is like a strictly-one-time-use address. Both of them only ever "contain" a single output.</li>
+<li>A commitment, once on-chain, is like a one-time-use address. Both of them only ever "contain" a single output.</li>
 <li>A commitment is <em>not</em> used to form transactions, unlike an address. A commitment is infact a <em>result</em> of a transaction after it was built peer-to-peer. This makes it significantly harder to link an identity to.</li>
 </ul>
 <dl>
 <dt>Furthermore, a key concept of Mimblewimble transactions is that several of them can be safely merged together, resulting in what looks like a single transaction. When done at the block level, every block essentially becomes one large transaction:</dt>
 <dd>
-<p><strong>Block</strong></p>
+<p><em>Block</em></p>
 <table>
 <thead>
 <tr>
@@ -1085,9 +1085,43 @@
 </dl>
 <p>The outcome is a non-interactive CoinJoin with hidden amounts. It's called non-interactive since all transactions are aggregated into one without any coordination required between the different parties, as it's made possible at the protocol level. </br></p>
 <p>An observer knows how many transactions are included in the block, since each one carries a kernel, but nothing more. Any further information is impossible to obtain by looking at the chain.</p>
+<dl>
+<dt>Another trick Mimblewimble sets the stage for, is to perform cut-through. In an example scenario where <code>A</code> sent funds to <code>B</code>, and then <code>B</code> sent them over to <code>C</code>, any trace of <code>B</code>'s involvement can be completely removed, such that the result is seen as <code>A -&gt; C</code>.</dt>
+<dd>
+<p><em>Cut-through</em></p>
+<table>
+<thead>
+<tr>
+<th align="center">Inputs</th>
+<th align="center">Outputs</th>
+<th align="center">&rArr;</th>
+<th align="center">Inputs</th>
+<th align="center">Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">A</td>
+<td align="center">B</td>
+<td align="center">&rArr;</td>
+<td align="center">A</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">C</td>
+<td align="center">&rArr;</td>
+<td align="center"></td>
+<td align="center">C</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>This is could be done at any level of transaction building; Before broadcast, during peer propagation, or in a block. While this trick's use cases are limited, it is a unique manifestation of the "right to be forgotten" in a blockchain.</p>
 <h2 id="transaction-graph">Transaction Graph</h2>
 <p>While chain analysis can extract very little (if any) information about users and outputs, it is possible to monitor peer-to-peer network activity and obtain the transactions before they're included in a block and aggregated with others. By setting up sniffing nodes connected to many peers, you can figure out which outputs are being spent by which transaction, allowing you to build a transaction graph. It's unclear at this points what information could be derived from this, as the trail of data stops there.</p>
-<p>(<strong>paragraph not worded</strong>)
+<p>(<strong>paragraph not worded, WIP</strong>)
 Grin has many methods that may drastically improve privacy such as payjoin, coinswap etc and the beauty about them is that unlike bitcoin, your coins arent tainted for participating in what is pretty obviously a speicif mixing transaction. a payjoin/coinswap/aggregated tx looks exactly the same, nobody knows you extra privacy precautions to obfuscate the transaction graph</p>
 <h2 id="dandelion">Dandelion</h2>
 <p>An important piece of information that commonly leaks is the <em>IP address</em> that originally sent the transaction. Normally, a transaction is just broadcasted to all connected peers and spreads quickly on the network, allowing for statistical analysis to deduce where it originated. In a peer-to-peer network, this might be hard as transactions are relayed, but over multiple transactions it becomes trivial.</p>

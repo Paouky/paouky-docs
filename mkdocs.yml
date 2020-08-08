@@ -40,6 +40,12 @@ markdown_extensions:
   - footnotes
   - attr_list
   - def_list
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed
+  - pymdownx.superfences
 
 nav:
   - Home: index.md
@@ -47,7 +53,7 @@ nav:
     - Story: about-grin/story.md
     - Privacy: about-grin/privacy.md
     - Scalability: about-grin/scalability.md
-    - Transactions: about-grin/scalability.md
+    - Transactions: about-grin/transactions.md
     - Proof of Work: about-grin/proof-of-work.md
     - Emission: about-grin/emission.md
     - Governance: about-grin/governance.md

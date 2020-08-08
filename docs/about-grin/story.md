@@ -1,5 +1,7 @@
 # Grin's Story
 
+**(WORK IN PROGRESS)**
+
 ## Mimblewimble
 On *Mon Aug 01 2016* a user named 'majorplayer' logged into the `#bitcoin-wizards` IRC channel, dropped a text file hosted on a Tor server and then dissappeared. The document[^1] was titled MIMBLEWIMBLE and authored under the psuedonym Tom Elvis Jedusor. It described a protocol which is both private and extremely lightweight.
 
@@ -47,14 +49,13 @@ Igno was joined on github by other developers who took interest in the project, 
 
 While Mimblewimble serves as the foundation to transacting, it constitutes a relatively small part of a complete blockchain cryptocurrency, and many choices were yet to be made. Thus began the journey to develop a working implementation.
 
-**(WORK IN PROGRESS)**
+??? note "Ramblings and Inspiration (ignore)"
 
+    Fast forward to launch?
 
-Fast forward to launch?
+    Igno's dissappearance
 
-Igno's dissappearance
-
-Mention current fund and contributions (and maybe 2010 coinbase btc donor)
+    Mention current fund and contributions (and maybe 2010 coinbase btc donor)
 
 
 
