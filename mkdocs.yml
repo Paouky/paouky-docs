@@ -50,7 +50,7 @@ nav:
     - Transactions: about-grin/scalability.md
     - Proof of Work: about-grin/proof-of-work.md
     - Emission: about-grin/emission.md
-    - Community: about-grin/community.md
+    - Governance: about-grin/governance.md
   - Getting Started:
     - Quickstart:
       - Install: getting-started/quickstart/install.md
