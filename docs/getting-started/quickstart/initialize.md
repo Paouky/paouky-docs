@@ -5,7 +5,7 @@
 The rest of the documentation is common for Linux, macOS and Windows.
 
 !!! note ""
-    On Windows, you will need to replace the `grin` and `grin-wallet` commands with `grin.exe` and `grin-wallet.exe`.
+    On Windows, to be able to use `grin` and `grin-wallet` you'll have to add the directory where you installed `grin.exe` and `grin-wallet.exe` into the PATH.
 
 Running a Grin node is as simple as typing the command:
 ```bash
