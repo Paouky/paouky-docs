@@ -84,4 +84,5 @@ brew install grin grin-wallet
 
 On Windows, the simplest way to install is by downloading the binaries on the [Grin website](https://grin.mw/download).
 
-We recommed that you create a directory called `grin` in `C:\Users\%USER%`. In this directory, extract both binaries `grin.exe` and `grin-wallet.exe`.
+We recommend that you create a directory called `Grin` in `C:\Users\%USER%\AppData\Local\Grin`. The parent directory is where most user windows apps are installed but if you want to put them somewhere else, that'll work too. In this directory, extract both binaries `grin.exe` and `grin-wallet.exe`. You can then add it to the path.
+
