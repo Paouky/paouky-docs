@@ -2,10 +2,10 @@
 
 A Mimblewimble chain is massively-prunable, which allows it to stay lightweight and cheap to verify. This unique balance of privacy and scalability is not trivial.
 
-Once an output is spent, there's no longer any need to keep it and it's removed from the chain. A <100 byte kernel is left for each transaction, forever proving it's validity. The result is, that in order to verify the entire history starting from the gensis block, only the kernels and the set of unspent outputs are needed. Let's illustrate a trail of transcations:
+Once an output is spent, there's no longer any need to keep it and it's removed from the chain. A 100 byte kernel is left for each transaction, forever proving it's validity. The result is, that in order to verify the entire history starting from the genesis block, only the kernels and the set of unspent outputs are needed. Let's illustrate a trail of transcations:
 
 
-:   *(Switch between tabs)*
+:   *(switch between tabs)*
 
     === "Before"
 
@@ -59,7 +59,7 @@ Once an output is spent, there's no longer any need to keep it and it's removed 
         |            | H            |            |
 
 
-An output is considered 'spent' once it's used as an input. As demonstrated above, every single input can dissappear as well as every spent output, leaving only a small kernel behind it. What remains is only the set of unspent outputs.
+An output is considered 'spent' once it's used as an input. As demonstrated above, every single input can dissappear as well as every spent output, leaving only a small kernel behind. What remains is only the set of unspent outputs and the set of kernels proving its validity.
 
 A full verifier needs the following data:
 
@@ -76,9 +76,9 @@ A full verifier needs the following data:
 </br>
 .
 
-At the time of this writing, there were 560m Bitcoin transactions (292GB). Somebody who wants to verify the current state must replay each and every transcation. He will check millions of outputs to eventually produce the current set of 66m unspent outputs (3.75GB).
+At the time of this writing, there were 560M Bitcoin transactions (292GB). Somebody who wants to verify the current state must replay each and every transcation. He will check millions of outputs to eventually produce the current set of 66m unspent outputs (3.75GB).
 
-Mimblewimble shrinks the transaction history such that a chain with Bitcoin's history would need 53GB of data to fully verify the current state, and 44GB to store unspent outputs. This difference is very exciting if one remembers that Mimblewimble employs Confidential Transactions, so that each output requires a large rangeproof. If the current Bitcoin chain had hidden amounts, it's size would have been on the order of several terrabyes.
+Mimblewimble shrinks the transaction history such that a chain with Bitcoin's history would need 53GB of data to fully verify the current state, and 44GB to store unspent outputs. This difference becomes much more exciting if one remembers that Mimblewimble employs Confidential Transactions, so that each output requires a large rangeproof. If the current Bitcoin chain had hidden amounts, it's size would have been on the order of several terabyes.
 
 
 ---
@@ -96,7 +96,3 @@ Mimblewimble shrinks the transaction history such that a chain with Bitcoin's hi
     Building transactions and verifying them in MimbleWimble is trivial computationally and can easily be done on smartphones or raspberry pies
 
     remember to mention that the chain can actually become smaller
-
-    poelstra:
-
-    every single input can dissappear (besides coinbase), as well as any spent output. so a full verifier needs the following data: the chain of headers (showing that this is a valid blockchain), the list of unspent values, and a list of kernels

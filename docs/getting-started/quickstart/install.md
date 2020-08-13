@@ -12,7 +12,7 @@ In this tutorial you will learn how to:
 
 ## Requirements
 
-Grin and Grin-Wallet software are compatible with Linux, macOS and Windows.
+grin and grin-wallet software are compatible with Linux, macOS and Windows.
 
 It has been tested specifically on:
 
@@ -20,9 +20,9 @@ It has been tested specifically on:
 - macOS 10.15 Catalina
 - Windows 10
 
-## Install Grin and Grin-Wallet
+## Install Grin and grin-wallet
 
-'Grin' is the node software and 'Grin-Wallet' is the command-line wallet.
+'grin' is the node software and 'grin-wallet' is the command-line wallet.
 
 !!! tip ""
     The following section will guide you to install using precompiled binaries.
@@ -30,19 +30,9 @@ It has been tested specifically on:
 
 ### Linux
 
-#### Snap Store
+#### Binaries
 
-If you have Snap installed simply type:
-
-```bash
-snap install grin
-```
-
-Note that when installed with Snap, Grin-Wallet is accessible using the `grin.wallet` command instead of `grin-wallet`.
-
-#### Manually
-
-On [Grin website](https://grin.mw/download), download Grin and Grin-Wallet.
+On [Grin website](https://grin.mw/download), download grin and grin-wallet.
 
 Navigate to the directory where the files were downloaded and type (replace `$VERSION`):
 
@@ -52,7 +42,7 @@ sudo tar -C /usr/local/bin -xzf grin-wallet-$VERSION-linux-amd64.tar.gz --strip-
 ```
 
 ??? warning "libncursesw error &#8628;"
-    If you have the following error when you start Grin:
+    If you have the following error when you start grin:
 
     ```bash
     grin: error while loading shared libraries: libncursesw.so.5: cannot open shared object file: No such file or directory
@@ -64,9 +54,21 @@ sudo tar -C /usr/local/bin -xzf grin-wallet-$VERSION-linux-amd64.tar.gz --strip-
     sudo apt install libncursesw5
     ```
 
+#### Snap
+
+While *not* recommended, since it's not a part of the official repo, it is nevertheless possible to install everything as Snap a package. To do so, type:
+
+```bash
+snap install grin
+```
+
+Note that when installed with Snap, grin-wallet is accessible using the `grin.wallet` command instead of `grin-wallet`.
+
+
+
 ### macOS
 
-The easiest way to install Grin and Grin-Wallet on macOS is with [homebrew](https://brew.sh).
+The easiest way to install grin and grin-wallet on macOS is with [homebrew](https://brew.sh).
 
 If you do not have homebrew installed, open the "Terminal.app" and paste the following line:
 
@@ -74,7 +76,7 @@ If you do not have homebrew installed, open the "Terminal.app" and paste the fol
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-This will install homebrew on your computer. Once it's finished you can install Grin and Grin-Wallet:
+This will install homebrew on your computer. Once it's finished you can install grin and grin-wallet:
 
 ```bash
 brew install grin grin-wallet
@@ -84,4 +86,4 @@ brew install grin grin-wallet
 
 On Windows, the simplest way to install is by downloading the binaries on the [Grin website](https://grin.mw/download).
 
-We recommed that you create a directory called `grin` in `C:\Users\%USER%`. In this directory, extract both binaries `grin.exe` and `grin-wallet.exe`.
+We recommend that you create a directory called `grin` in `C:\Users\%USER%`. In this directory, extract both binaries `grin.exe` and `grin-wallet.exe`.

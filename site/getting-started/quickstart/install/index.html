@@ -491,10 +491,10 @@
       
         <li class="md-nav__item">
   <a href="#install-grin-and-grin-wallet" class="md-nav__link">
-    Install Grin and Grin-Wallet
+    Install Grin and grin-wallet
   </a>
   
-    <nav class="md-nav" aria-label="Install Grin and Grin-Wallet">
+    <nav class="md-nav" aria-label="Install Grin and grin-wallet">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -506,15 +506,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#snap-store" class="md-nav__link">
-    Snap Store
+  <a href="#binaries" class="md-nav__link">
+    Binaries
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#manually" class="md-nav__link">
-    Manually
+  <a href="#snap" class="md-nav__link">
+    Snap
   </a>
   
 </li>
@@ -674,9 +674,34 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../../technical/introduction-to-mimblewimble/" title="Introduction to Mimblewimble" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+    
+    <label class="md-nav__link" for="nav-4-2">
       Introduction to Mimblewimble
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Introduction to Mimblewimble" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Introduction to Mimblewimble
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../technical/introduction-to-mimblewimble/elliptic-curve-cryptography/" title="Elliptic Curves" class="md-nav__link">
+      Elliptic Curves
     </a>
   </li>
 
@@ -687,7 +712,36 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../technical/grin-for-bitcoiners/" title="Grin for Bitcoiners" class="md-nav__link">
+    <a href="../../../technical/introduction-to-mimblewimble/commitments/" title="Commitments" class="md-nav__link">
+      Commitments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../technical/introduction-to-mimblewimble/mimblewimble/" title="Mimblewimble" class="md-nav__link">
+      Mimblewimble
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../technical/introduction-to-mimblewimble/grin-for-bitcoiners.md" title="Grin for Bitcoiners" class="md-nav__link">
       Grin for Bitcoiners
     </a>
   </li>
@@ -996,10 +1050,10 @@
       
         <li class="md-nav__item">
   <a href="#install-grin-and-grin-wallet" class="md-nav__link">
-    Install Grin and Grin-Wallet
+    Install Grin and grin-wallet
   </a>
   
-    <nav class="md-nav" aria-label="Install Grin and Grin-Wallet">
+    <nav class="md-nav" aria-label="Install Grin and grin-wallet">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1011,15 +1065,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#snap-store" class="md-nav__link">
-    Snap Store
+  <a href="#binaries" class="md-nav__link">
+    Binaries
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#manually" class="md-nav__link">
-    Manually
+  <a href="#snap" class="md-nav__link">
+    Snap
   </a>
   
 </li>
@@ -1080,34 +1134,28 @@
 <p>If you want to use Grin with a graphical user interface, please refer to <a href="community-projects.md">community projects</a>.</p>
 </div>
 <h2 id="requirements">Requirements</h2>
-<p>Grin and Grin-Wallet software are compatible with Linux, macOS and Windows.</p>
+<p>grin and grin-wallet software are compatible with Linux, macOS and Windows.</p>
 <p>It has been tested specifically on:</p>
 <ul>
 <li>Ubuntu 18.04 (on earlier versions you'll need to compile)</li>
 <li>macOS 10.15 Catalina</li>
 <li>Windows 10</li>
 </ul>
-<h2 id="install-grin-and-grin-wallet">Install Grin and Grin-Wallet</h2>
-<p>'Grin' is the node software and 'Grin-Wallet' is the command-line wallet.</p>
+<h2 id="install-grin-and-grin-wallet">Install Grin and grin-wallet</h2>
+<p>'grin' is the node software and 'grin-wallet' is the command-line wallet.</p>
 <div class="admonition tip">
 <p>The following section will guide you to install using precompiled binaries.
 If you wish to build them yourself, see the <a href="https://github.com/mimblewimble/grin/blob/master/doc/build.md">building section</a>.</p>
 </div>
 <h3 id="linux">Linux</h3>
-<h4 id="snap-store">Snap Store</h4>
-<p>If you have Snap installed simply type:</p>
-<div class="highlight"><pre><span></span><code>snap install grin
-</code></pre></div>
-
-<p>Note that when installed with Snap, Grin-Wallet is accessible using the <code>grin.wallet</code> command instead of <code>grin-wallet</code>.</p>
-<h4 id="manually">Manually</h4>
-<p>On <a href="https://grin.mw/download">Grin website</a>, download Grin and Grin-Wallet.</p>
+<h4 id="binaries">Binaries</h4>
+<p>On <a href="https://grin.mw/download">Grin website</a>, download grin and grin-wallet.</p>
 <p>Navigate to the directory where the files were downloaded and type (replace <code>$VERSION</code>):</p>
 <div class="highlight"><pre><span></span><code>sudo tar -C /usr/local/bin -xzf grin-<span class="nv">$VERSION</span>-linux-amd64.tar.gz --strip-components<span class="o">=</span><span class="m">1</span>
 sudo tar -C /usr/local/bin -xzf grin-wallet-<span class="nv">$VERSION</span>-linux-amd64.tar.gz --strip-components<span class="o">=</span><span class="m">1</span>
 </code></pre></div>
 
-<details class="warning"><summary>libncursesw error &#8628;</summary><p>If you have the following error when you start Grin:</p>
+<details class="warning"><summary>libncursesw error &#8628;</summary><p>If you have the following error when you start grin:</p>
 <div class="highlight"><pre><span></span><code>grin: error <span class="k">while</span> loading shared libraries: libncursesw.so.5: cannot open shared object file: No such file or directory
 </code></pre></div>
 
@@ -1116,19 +1164,25 @@ sudo tar -C /usr/local/bin -xzf grin-wallet-<span class="nv">$VERSION</span>-lin
 </code></pre></div>
 
 </details>
+<h4 id="snap">Snap</h4>
+<p>While <em>not</em> recommended, since it's not a part of the official repo, it is nevertheless possible to install everything as Snap a package. To do so, type:</p>
+<div class="highlight"><pre><span></span><code>snap install grin
+</code></pre></div>
+
+<p>Note that when installed with Snap, grin-wallet is accessible using the <code>grin.wallet</code> command instead of <code>grin-wallet</code>.</p>
 <h3 id="macos">macOS</h3>
-<p>The easiest way to install Grin and Grin-Wallet on macOS is with <a href="https://brew.sh">homebrew</a>.</p>
+<p>The easiest way to install grin and grin-wallet on macOS is with <a href="https://brew.sh">homebrew</a>.</p>
 <p>If you do not have homebrew installed, open the "Terminal.app" and paste the following line:</p>
 <div class="highlight"><pre><span></span><code>/bin/bash -c <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="k">)</span><span class="s2">&quot;</span>
 </code></pre></div>
 
-<p>This will install homebrew on your computer. Once it's finished you can install Grin and Grin-Wallet:</p>
+<p>This will install homebrew on your computer. Once it's finished you can install grin and grin-wallet:</p>
 <div class="highlight"><pre><span></span><code>brew install grin grin-wallet
 </code></pre></div>
 
 <h3 id="windows">Windows</h3>
 <p>On Windows, the simplest way to install is by downloading the binaries on the <a href="https://grin.mw/download">Grin website</a>.</p>
-<p>We recommed that you create a directory called <code>grin</code> in <code>C:\Users\%USER%</code>. In this directory, extract both binaries <code>grin.exe</code> and <code>grin-wallet.exe</code>.</p>
+<p>We recommend that you create a directory called <code>grin</code> in <code>C:\Users\%USER%</code>. In this directory, extract both binaries <code>grin.exe</code> and <code>grin-wallet.exe</code>.</p>
                 
               
               
