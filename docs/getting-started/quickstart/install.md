@@ -8,7 +8,7 @@ In this tutorial you will learn how to:
 - Send & receive grins
 
 !!! tip ""
-    If you want to use Grin with a graphical user interface, please refer to [community projects](community-projects.md).
+    If you prefer to use Grin with a graphical user interface, please refer to [community projects](community-projects.md).
 
 ## Requirements
 

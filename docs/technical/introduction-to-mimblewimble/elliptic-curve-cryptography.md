@@ -51,7 +51,7 @@ We can’t multiply a point by another point, but we can multiply a point by a n
 P + P = -R
 ```
 
-![PIC_COMING_SOON](../../assets/images/ecc2.png){ width=650 }
+![ecc2](../../assets/images/ecc2.png){ width=650 }
 
 !!! note ""
     To calculate `8*P` for e.g. wouldn’t take 8 operations, but only 3; you can find 2P, then add it onto itself, and then add 4P onto itself, for the final result of 8P.
