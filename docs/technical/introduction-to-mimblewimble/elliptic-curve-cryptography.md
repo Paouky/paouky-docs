@@ -37,11 +37,11 @@ We can then write it as:
 P + Q = -R
 ```
 
-So that adding the two points P and Q results in -R, the inverse of R.
+So that adding the two points P and **Q results in -R, the inverse of R.
 
-If we draw a line passing through **P** and **Q**, this line will cross a third point on the curve, **R** (so that **P**, **Q** and **R** are aligned). If we take the inverse of this point, which is simply the one symmetric to it about the x-axis, we have found the result of adding two curve points, **P + Q**. Let’s illustrate:
+If we draw a line passing through P and Q, this line will cross a third point on the curve, R (so that P, Q and R are aligned). If we take the inverse of this point, which is simply the one symmetric to it about the x-axis, we have found the result of adding two curve points, P + Q. Let’s illustrate:
 
-[P + Q = R](../assets/images/ecc-1.png)
+![ecc1](../../assets/images/ecc1.png){ width=650 }
 
 #### Multlipication
 
@@ -51,7 +51,7 @@ We can’t multiply a point by another point, but we can multiply a point by a n
 P + P = -R
 ```
 
-[P + Q = -R](../assets/images/ecc-2.png)
+![PIC_COMING_SOON](../../assets/images/ecc2.png){ width=650 }
 
 !!! note ""
     To calculate `8*P` for e.g. wouldn’t take 8 operations, but only 3; you can find 2P, then add it onto itself, and then add 4P onto itself, for the final result of 8P.
@@ -61,7 +61,7 @@ P + P = -R
 An ECC system defines a public constant curve point called the generator point, **G** (known to everybody). The generator point is used to compute any public key. A key pair consists of:
 
 * Private key **k** – A randomly chosen 256-bit integer (scalar).
-* Public key **P** – An Elliptic-curve point derived by multiplying generator point **G** by the private key.
+* Public key **P** – An Elliptic-curve point derived by multiplying generator point G by the private key.
 
 And more clearly, a public key (of private key `k`) is as follows:
 
@@ -71,7 +71,7 @@ P = k*G
 
 This is easy to compute.
 
-But, if everybody knows points **P** and **G**, can they find out what `k` is? The answer is no; The difficulty of getting from one point to another is precisely the definition of the Elliptic curve discrete logarithm problem.
+But, if everybody knows points P and G, can they find out what `k` is? The answer is no; The difficulty of getting from one point to another is precisely the definition of the Elliptic curve discrete logarithm problem.
 
 !!! note "Secp256k1"
     The specific Elliptic curve that Grin employs is rust-secp256k1 (y^2^ = x^3^ + 7) using Schnorr signature scheme.
