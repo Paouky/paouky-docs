@@ -36,12 +36,12 @@ How the coin gets distributed carries significant importance. Grin was not creat
 
 The constant issuance establishes a fair coin distribution[^3], where equal opportunity is given to everyone, in any point in time. New users should not feel discouraged or disadvantaged when adopting a new form money.
 
-In constrast, a currency distributing early a large portion of the coins largely benefits it's first users but presents an unwelcoming narrative to new ones, since it assigns them with a substabially smaller portion of the network's value. This in turn affects the currency's long-lasting story of distribution[^4].
+In constrast, distributing a very large portion of the coins early, mostly benefits the first users but presents an unwelcoming narrative to new ones, as it assigns them a substabially smaller portion of the network's value. This in turn affects the currency's long-standing story of distribution[^4].
 
 
 ### Wide Distribution
 
-As it stands today, the ownership of bitcoins is very centralized and will likely remain so. The situation is far worse in most other cryptocurrencies.
+As it stands today, the ownership of bitcoin is very centralized and will likely remain so. The situation is far worse in most other cryptocurrencies.
 
 The likely result is that a narrow group emerges, consisting of individuals and organizations who may have an exorbitant amount of control over the market price. More importantly, they have the the power to influence the project and its ecosystem more than any others, since early, unpropotional hoarding carries a good deal of centralization pressure.
 
