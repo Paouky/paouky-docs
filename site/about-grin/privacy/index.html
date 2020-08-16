@@ -440,7 +440,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../transactions.md" title="Transactions" class="md-nav__link">
+    <a href="../transactions/" title="Transactions" class="md-nav__link">
       Transactions
     </a>
   </li>
@@ -452,7 +452,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../proof-of-work.md" title="Proof of Work" class="md-nav__link">
+    <a href="../proof-of-work/" title="Proof of Work" class="md-nav__link">
       Proof of Work
     </a>
   </li>
@@ -464,7 +464,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../emission.md" title="Emission" class="md-nav__link">
+    <a href="../emission/" title="Emission" class="md-nav__link">
       Emission
     </a>
   </li>
@@ -740,7 +740,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../technical/introduction-to-mimblewimble/grin-for-bitcoiners.md" title="Grin for Bitcoiners" class="md-nav__link">
+    <a href="../../technical/grin-for-bitcoiners/" title="Grin for Bitcoiners" class="md-nav__link">
       Grin for Bitcoiners
     </a>
   </li>
@@ -1130,7 +1130,7 @@
 <p>First, there are no amounts. A Mimblewimble implementation natively uses Confidential Transactions, meaning all amounts are hidden; They are provably impossible to uncover, yet easily verified. Even before anything else, simply hiding amounts makes any analysis significantly more challenging.</p>
 <h4 id="addresses">Addresses</h4>
 <dl>
-<dt>Notably, there are no on-chain addresses either. Transactions hold minimal information, and each output is simply a commitment: a point on the curve. A transaction might look like this:</dt>
+<dt>Notably, there are no on-chain addresses either, as transaction building is interactive. Transactions hold minimal information, and each output is simply a commitment: a point on the curve. A transaction might look like this:</dt>
 <dd>
 <p><em>transaction</em></p>
 <table>
@@ -1251,10 +1251,11 @@
 Grin has many methods that may drastically improve privacy such as payjoin, coinswap etc and the beauty about them is that unlike bitcoin, your coins arent tainted for participating in what is pretty obviously a specific mixing transaction. a payjoin/coinswap/aggregated tx looks exactly the same, nobody knows you took extra privacy precautions to obfuscate the transaction graph</p>
 <h2 id="dandelion">Dandelion</h2>
 <p>An important piece of information that commonly leaks is the <em>IP address</em> that originally sent the transaction. Normally, a transaction is just broadcasted to all connected peers and spreads quickly on the network, allowing for statistical analysis to deduce where it originated. In a peer-to-peer network, this might be hard as transactions are relayed, but over multiple transactions it becomes trivial.</p>
-<p>To tackle this issue, Grin employs Dandelion (originally proposed as a BIP), a protocol designed to hide a transcation's origin IP address. Dandelion has two phases; a <code>stem</code> phase and a <code>fluff</code> phase. Once a transaction is initially broadcasted, it enters the <code>stem</code> phase, in which it it hops between individual peers. At a random point, the transcation enters its <code>fluff</code> phase and is spread (fluffed) among the entire network.</p>
+<p>To tackle this issue, Grin employs Dandelion++ (originally proposed as a BIP), a protocol designed to hide a transcation's origin IP address. Dandelion has two phases; a <code>stem</code> phase and a <code>fluff</code> phase. Once a transaction is initially broadcasted, it enters the <code>stem</code> phase, in which it it hops between individual peers. At a random point, the transcation enters its <code>fluff</code> phase and is spread (fluffed) among the entire network.</p>
 <p>This makes it almost impossible to deduce a reliable IP address, and renders statistical analysis impractical.</p>
-<p><img alt="dandelion" src="../../assets/images/dandelion.png" width="675" /></p>
-<p>Moreover, Dandelion provides an additional benefit unique to Mimblewimble, as it allows for transactions to be aggregated at a very early stage. If two or more transactions cross paths in their <code>stem</code> phase, they are aggregated into a single transaction prior to being fluffed, thus obscuring linkability of inputs and outputs that a sniffing node may have learned. However it remains to be seen how much actual privacy is gained from aggregation before fluffing, as it depends on having many other transactions.</p>
+<p><img alt="dandelion" src="../../assets/images/dandelion.png" width="650" /></p>
+<p>(CHANGE TO KARGAKIS'S TYPE OF ILLUSTRATION WITH TRANSPARENT BG)</p>
+<p>Moreover, Dandelion provides an additional benefit unique to Mimblewimble, as it allows for transactions to be aggregated at a very early stage. Right before a transaction beings it's fluff phase, it enters a 30s waiting period in which it will be aggregated with any other transactions it meets, thus obscuring linkability of inputs and outputs that a sniffing node may have learned. However it remains to be seen how much actual privacy is gained from aggregation before fluffing, as it depends on having many other transactions.</p>
 <h2 id="afterword">Afterword</h2>
 <p>Privacy is complex and information leakage is surprisingly easy. Privacy-preserving systems need to be extremely strong to ensure reasonable amounts of protection. Unfortunately, they often fail in practice simply because they are cumbersome to use, causing people to revert to convenience.</p>
 <p>Grin is commited to long term privacy protection and will continue to advance in that direction, while remaining practical and accessible to all, regardless of a person's sophistication or available resources.</p>

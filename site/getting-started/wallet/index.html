@@ -341,7 +341,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../about-grin/transactions.md" title="Transactions" class="md-nav__link">
+    <a href="../../about-grin/transactions/" title="Transactions" class="md-nav__link">
       Transactions
     </a>
   </li>
@@ -353,7 +353,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../about-grin/proof-of-work.md" title="Proof of Work" class="md-nav__link">
+    <a href="../../about-grin/proof-of-work/" title="Proof of Work" class="md-nav__link">
       Proof of Work
     </a>
   </li>
@@ -365,7 +365,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../about-grin/emission.md" title="Emission" class="md-nav__link">
+    <a href="../../about-grin/emission/" title="Emission" class="md-nav__link">
       Emission
     </a>
   </li>
@@ -891,7 +891,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../technical/introduction-to-mimblewimble/grin-for-bitcoiners.md" title="Grin for Bitcoiners" class="md-nav__link">
+    <a href="../../technical/grin-for-bitcoiners/" title="Grin for Bitcoiners" class="md-nav__link">
       Grin for Bitcoiners
     </a>
   </li>
@@ -1597,7 +1597,7 @@ Then your wallet will output a another Slatepack message to provide the other pa
 <p>When sending or receiving via Slatepacks, your wallet will create a text file containing the message it generated. Default path is <code>~/.grin/main/slatepacks</code>.</p>
 </div>
 <h2 id="finalize">finalize</h2>
-<p>The <code>finalize</code> command is the final step to a regular Slatepack transaction.</p>
+<p>The <code>finalize</code> command is the final step to any Slatepack transaction.</p>
 <div class="highlight"><pre><span></span><code>grin-wallet finalize
 </code></pre></div>
 
@@ -1642,7 +1642,7 @@ Command &#39;verify_proof&#39; completed successfully
 <p>This command will create an encypted (as <code>-d</code> is provided) invoice, requesting a payment of <code>60</code> grins. The resulting Slatepack can then be sent to the other party to fill out the transaction using <code>pay</code>.</p>
 <p>Upon receiving the back the Slatepack from the payer, the transaction can then be finalized and posted using the <code>finalize</code> command.</p>
 <h2 id="unpack">unpack</h2>
-<p>Upon receiving an invoice request, the payer can use the <code>unpack</code> command to decode (also decrypt if possible) the Slatepack and confirm the amount of coins being requested as payment.</p>
+<p>After receiving an invoice request, the payer can use the <code>unpack</code> command to decode (also decrypt if possible) the Slatepack and confirm the amount of coins being requested as payment.</p>
 <p><div class="highlight"><pre><span></span><code>grin-wallet pay
 Password:
 Please paste your encoded slatepack message:

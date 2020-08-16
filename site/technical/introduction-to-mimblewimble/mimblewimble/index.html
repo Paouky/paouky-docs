@@ -341,7 +341,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../about-grin/transactions.md" title="Transactions" class="md-nav__link">
+    <a href="../../../about-grin/transactions/" title="Transactions" class="md-nav__link">
       Transactions
     </a>
   </li>
@@ -353,7 +353,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../about-grin/proof-of-work.md" title="Proof of Work" class="md-nav__link">
+    <a href="../../../about-grin/proof-of-work/" title="Proof of Work" class="md-nav__link">
       Proof of Work
     </a>
   </li>
@@ -365,7 +365,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../about-grin/emission.md" title="Emission" class="md-nav__link">
+    <a href="../../../about-grin/emission/" title="Emission" class="md-nav__link">
       Emission
     </a>
   </li>
@@ -789,7 +789,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../grin-for-bitcoiners.md" title="Grin for Bitcoiners" class="md-nav__link">
+    <a href="../../grin-for-bitcoiners/" title="Grin for Bitcoiners" class="md-nav__link">
       Grin for Bitcoiners
     </a>
   </li>
@@ -1391,7 +1391,7 @@ and Alice, while <code>28</code> is only known to Bob.</p>
 <li>The transacting parties can collectively produce the excess value (since it's the private key of their joint signature).</li>
 <li>The sum of the outputs minus the inputs is 0, because only a valid public key for G will check against the signature.</li>
 </ul>
-<p>This signature, along with a commitment to the excess value (86*G), is called a transcation kernel.</p>
+<p>This signature, along with a commitment to the excess value (86*G, which serves as a public key to verify the signature), is called a transcation kernel.</p>
 <h4 id="change">Change</h4>
 <dl>
 <dt>Let's say Bob wants to send only 2 of his coins to Carol. To do this he would send the remaining 1 coin back to back to himself, by creating an output he controls. Bob generates a private key <code>13</code> as a blinding factor for his change output. Carol uses the same private key as before.</dt>
@@ -1660,6 +1660,7 @@ Then how do we solve this?</p>
 <li>The complete set of unspent outputs.</li>
 <li>The transactions kernels for each transaction.</li>
 </ol>
+<p>The extension of this idea is that all the way from the genesis block to the latest block, every input is deleted along with its referenced output.</p>
 <p>Both the set of unspent outputs (UTXO) and transaction kernels are extremely compact. This has important consequences; The blockchain a node needs to maintain is very small, as well as the amount of information that needs to be transferred when a new node joins the network.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>We covered the basic principles that underlie Mimblewimble. By using addition of elliptic curve points, we're able to build transactions that are completely opaque but can still be properly validated. And by generalizing those properties to blocks, we can eliminate a large amount of blockchain data, allowing for great scaling and fast sync of new peers.</p>
@@ -1696,13 +1697,13 @@ Then how do we solve this?</p>
           </a>
         
         
-          <a href="../../building-blocks/merkle-mountain-ranges/" title="Merkle Mountain Ranges (MMRs)" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../grin-for-bitcoiners/" title="Grin for Bitcoiners" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Merkle Mountain Ranges (MMRs)
+                Grin for Bitcoiners
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
