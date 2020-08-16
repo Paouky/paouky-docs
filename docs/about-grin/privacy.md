@@ -12,7 +12,7 @@ First, there are no amounts. A Mimblewimble implementation natively uses Confide
 
 #### Addresses
 
-Notably, there are no on-chain addresses either. Transactions hold minimal information, and each output is simply a commitment: a point on the curve. A transaction might look like this:
+Notably, there are no on-chain addresses either, as transaction building is interactive. Transactions hold minimal information, and each output is simply a commitment: a point on the curve. A transaction might look like this:
 
 :   *transaction*
 
@@ -78,13 +78,15 @@ Grin has many methods that may drastically improve privacy such as payjoin, coin
 
 An important piece of information that commonly leaks is the *IP address* that originally sent the transaction. Normally, a transaction is just broadcasted to all connected peers and spreads quickly on the network, allowing for statistical analysis to deduce where it originated. In a peer-to-peer network, this might be hard as transactions are relayed, but over multiple transactions it becomes trivial.
 
-To tackle this issue, Grin employs Dandelion (originally proposed as a BIP), a protocol designed to hide a transcation's origin IP address. Dandelion has two phases; a `stem` phase and a `fluff` phase. Once a transaction is initially broadcasted, it enters the `stem` phase, in which it it hops between individual peers. At a random point, the transcation enters its `fluff` phase and is spread (fluffed) among the entire network.
+To tackle this issue, Grin employs Dandelion++ (originally proposed as a BIP), a protocol designed to hide a transcation's origin IP address. Dandelion has two phases; a `stem` phase and a `fluff` phase. Once a transaction is initially broadcasted, it enters the `stem` phase, in which it it hops between individual peers. At a random point, the transcation enters its `fluff` phase and is spread (fluffed) among the entire network.
 
 This makes it almost impossible to deduce a reliable IP address, and renders statistical analysis impractical.
 
-![dandelion](../assets/images/dandelion.png){ width=675 }
+![dandelion](../assets/images/dandelion.png){ width=650 }
 
-Moreover, Dandelion provides an additional benefit unique to Mimblewimble, as it allows for transactions to be aggregated at a very early stage. If two or more transactions cross paths in their `stem` phase, they are aggregated into a single transaction prior to being fluffed, thus obscuring linkability of inputs and outputs that a sniffing node may have learned. However it remains to be seen how much actual privacy is gained from aggregation before fluffing, as it depends on having many other transactions.
+(CHANGE TO KARGAKIS'S TYPE OF ILLUSTRATION WITH TRANSPARENT BG)
+
+Moreover, Dandelion provides an additional benefit unique to Mimblewimble, as it allows for transactions to be aggregated at a very early stage. Right before a transaction beings it's fluff phase, it enters a 30s waiting period in which it will be aggregated with any other transactions it meets, thus obscuring linkability of inputs and outputs that a sniffing node may have learned. However it remains to be seen how much actual privacy is gained from aggregation before fluffing, as it depends on having many other transactions.
 
 ## Afterword
 

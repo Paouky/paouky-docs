@@ -74,7 +74,7 @@ nav:
       - Elliptic Curves: technical/introduction-to-mimblewimble/elliptic-curve-cryptography.md
       - Commitments: technical/introduction-to-mimblewimble/commitments.md
       - Mimblewimble: technical/introduction-to-mimblewimble/mimblewimble.md
-    - Grin for Bitcoiners: technical/introduction-to-mimblewimble/grin-for-bitcoiners.md
+    - Grin for Bitcoiners: technical/grin-for-bitcoiners.md
     - Building Blocks:
       - Merkle Mountain Ranges (MMRs): technical/building-blocks/merkle-mountain-ranges.md
       - Merkle Proof: technical/building-blocks/merkle-proof.md

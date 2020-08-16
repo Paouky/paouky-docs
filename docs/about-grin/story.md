@@ -47,7 +47,7 @@ On *Oct 20 2016*, a pseudonymous developer using the name Ignotus Peverell, anno
 
 Igno was joined on github by other developers who took interest in the project, several of them bearing pseudonyms of other Harry Potter characters.
 
-While Mimblewimble serves as the foundation to transacting, it constitutes a relatively small part of a complete blockchain cryptocurrency, and many choices were yet to be made. Thus began the journey to develop a working implementation.
+While Mimblewimble serves as the foundation to transacting, it constitutes a relatively small part of a complete blockchain cryptocurrency, and many choices were yet to be made. Thus began the journey to develop a full working implementation.
 
 ??? note "Ramblings and Inspiration (ignore)"
 

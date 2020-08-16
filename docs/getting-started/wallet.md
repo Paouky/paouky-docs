@@ -220,7 +220,7 @@ Then your wallet will output a another Slatepack message to provide the other pa
 
 ## finalize
 
-The `finalize` command is the final step to a regular Slatepack transaction.
+The `finalize` command is the final step to any Slatepack transaction.
 
 ```text
 grin-wallet finalize
@@ -289,7 +289,7 @@ Upon receiving the back the Slatepack from the payer, the transaction can then b
 
 ## unpack
 
-Upon receiving an invoice request, the payer can use the `unpack` command to decode (also decrypt if possible) the Slatepack and confirm the amount of coins being requested as payment.
+After receiving an invoice request, the payer can use the `unpack` command to decode (also decrypt if possible) the Slatepack and confirm the amount of coins being requested as payment.
 
 ```text
 grin-wallet pay

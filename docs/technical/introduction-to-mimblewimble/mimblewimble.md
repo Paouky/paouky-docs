@@ -129,7 +129,7 @@ This can be verified by requiring the transactors to build a (schnorr) signature
 * The transacting parties can collectively produce the excess value (since it's the private key of their joint signature).
 * The sum of the outputs minus the inputs is 0, because only a valid public key for G will check against the signature.
 
-This signature, along with a commitment to the excess value (86*G), is called a transcation kernel.
+This signature, along with a commitment to the excess value (86*G, which serves as a public key to verify the signature), is called a transcation kernel.
 
 #### Change
 
@@ -331,6 +331,8 @@ All that's needed to remain is the set of currently unspent outputs `out01, out0
 1. The total amount of coins created by mining in the chain.
 2. The complete set of unspent outputs.
 3. The transactions kernels for each transaction.
+
+The extension of this idea is that all the way from the genesis block to the latest block, every input is deleted along with its referenced output.
 
 Both the set of unspent outputs (UTXO) and transaction kernels are extremely compact. This has important consequences; The blockchain a node needs to maintain is very small, as well as the amount of information that needs to be transferred when a new node joins the network.
 

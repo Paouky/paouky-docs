@@ -55,4 +55,4 @@ In every Grin output, we also include a bit of hashed data, which is quantum saf
 
 ### How does all this magic work?
 
-See our [technical introduction](introduction-to-mimblewimble.md) to get started.
+See our [technical introduction](introduction-to-mimblewimble/elliptic-curve-cryptography.md) to get started.
