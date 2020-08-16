@@ -11,7 +11,7 @@
         <meta name="description" content="Grin Documentation">
       
       
-        <link rel="canonical" href="https://docs.grin.mw/technical/introduction-to-mimblewimble/">
+        <link rel="canonical" href="https://docs.grin.mw/technical/%28new%29introduction-to-mimblewimble/">
       
       
         <meta name="author" content="Grin Developers">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Introduction to mimblewimble - Grin Documentation</title>
+        <title>(new)introduction to mimblewimble - Grin Documentation</title>
       
     
     
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Introduction to mimblewimble
+              (new)introduction to mimblewimble
             
           </span>
         </div>
@@ -598,7 +598,7 @@
 
 
   <li class="md-nav__item">
-    <a href="elliptic-curve-cryptography/" title="Elliptic Curves" class="md-nav__link">
+    <a href="../introduction-to-mimblewimble/elliptic-curve-cryptography/" title="Elliptic Curves" class="md-nav__link">
       Elliptic Curves
     </a>
   </li>
@@ -610,7 +610,7 @@
 
 
   <li class="md-nav__item">
-    <a href="commitments/" title="Commitments" class="md-nav__link">
+    <a href="../introduction-to-mimblewimble/commitments/" title="Commitments" class="md-nav__link">
       Commitments
     </a>
   </li>
@@ -622,7 +622,7 @@
 
 
   <li class="md-nav__item">
-    <a href="mimblewimble/" title="Mimblewimble" class="md-nav__link">
+    <a href="../introduction-to-mimblewimble/mimblewimble/" title="Mimblewimble" class="md-nav__link">
       Mimblewimble
     </a>
   </li>
@@ -639,7 +639,7 @@
 
 
   <li class="md-nav__item">
-    <a href="grin-for-bitcoiners.md" title="Grin for Bitcoiners" class="md-nav__link">
+    <a href="../introduction-to-mimblewimble/grin-for-bitcoiners.md" title="Grin for Bitcoiners" class="md-nav__link">
       Grin for Bitcoiners
     </a>
   </li>
@@ -985,7 +985,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mimblewimble/docs/edit/master/docs/technical/introduction-to-mimblewimble.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mimblewimble/docs/edit/master/docs/technical/(new)introduction-to-mimblewimble.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1473,28 +1473,28 @@ Then how do we solve this?</p>
 </thead>
 <tbody>
 <tr>
-<td align="center">in01(prev_out1)</td>
-<td align="center">out01</td>
+<td align="center">in1(prev_out)</td>
+<td align="center">out1</td>
 </tr>
 <tr>
 <td align="center"></td>
-<td align="center">out02</td>
+<td align="center">out2</td>
 </tr>
 <tr>
-<td align="center">in02(prev_out2)</td>
-<td align="center">out03</td>
+<td align="center">in2(prev_out)</td>
+<td align="center">out3</td>
 </tr>
 <tr>
-<td align="center">in03(out2)</td>
+<td align="center">in3(out2)</td>
 <td align="center"></td>
 </tr>
 <tr>
-<td align="center">in04(out3)</td>
-<td align="center">out04</td>
+<td align="center">in4(out3)</td>
+<td align="center">out4</td>
 </tr>
 <tr>
 <td align="center"></td>
-<td align="center">out05</td>
+<td align="center">out5</td>
 </tr>
 </tbody>
 </table>
@@ -1518,16 +1518,16 @@ Then how do we solve this?</p>
 </thead>
 <tbody>
 <tr>
-<td align="center">in01(prev_out1)</td>
-<td align="center">out01</td>
+<td align="center">in1(prev_out)</td>
+<td align="center">out1</td>
 </tr>
 <tr>
-<td align="center">in02(prev_out2)</td>
-<td align="center">out04</td>
+<td align="center">in2(prev_out</td>
+<td align="center">out4</td>
 </tr>
 <tr>
 <td align="center"></td>
-<td align="center">out05</td>
+<td align="center">out5</td>
 </tr>
 </tbody>
 </table>
@@ -1553,9 +1553,7 @@ Then how do we solve this?</p>
 </code></pre></div>
 
 <p>And it all still validates.</p>
-<h3 id="cut-through-everything">Cut-through Everything</h3>
-<p>Going back to the previous example block, outputs <code>prev_out1, prev_out2</code>, which were spent by <code>in01, in02</code> respectively, must have appeared previously in the blockchain. After the addition of this new block, those past outputs as well as <code>in01, in02</code> can also be removed from the blockchain as they now are intermediate transactions.</p>
-<p>All that's needed to remain is the set of currently unspent outputs <code>out01, out02, out05</code>. We conclude that the chain state (excluding headers) at any point in time can be summarized by just these pieces of information:</p>
+<h3 id="cut-through_1">Cut-through</h3>
                 
               
               

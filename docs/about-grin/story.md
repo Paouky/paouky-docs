@@ -35,7 +35,7 @@ On *Oct 10 2016*, Andrew Poelstra published a follow-up paper[^2] about Mimblewi
 On *Oct 20 2016*, a pseudonymous developer using the name Ignotus Peverell, announced in the bitcoin wizards IRC channel that he began work on a minimal implementation of the protocol, which he named Grin.
 
 !!! note ""
-    Ignotus Peverell is the powerful wizard who created the cloak of invisiblity. </br>
+    Ignotus Peverell is the wizard who was gifted the Cloak of Invisibility by Death. </br>
     Grin is short for the Gringotts wizarding bank.
 
 ```text

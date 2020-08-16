@@ -1,193 +1,3 @@
-
----
-description: Mimblewimble
----
-
-**Preface**
-
-The document is intended for those who wish to understand what goes on inside Mimblewimble and Grin. We try to make this objective more accessible by going through the cryptographic primitives required to know first, without diving into proofs and specifics. Once those are in order, we connect everything explain how the protocol works.
-
-For the original introduction written by Igno, read [here](https://github.com/mimblewimble/grin/blob/master/doc/intro.md).
-
----
-
-# Elliptic Curve Cryptography
-
-Mimblewimble relies entirely on Elliptic-curve cryptography (ECC), an approach to public-key cryptography. Put simply, given an algebraic curve of the form `y^2 = x^3 + ax + b`, pairs of private and public keys can be derived. Picking a private key and computing its correspnding public key is trivial, but the reverse operation `public key -> private key` is called the *discrete logarithm problem*, and is considered to be computationally infeasible.
-
-Let's review the basics.
-
-## Operations
-
-These are the relevant mathematical operations we can do on Elliptic-curve points.
-
-* Addition - Given two points, we can add them to one another (or subtract) and the result would be a new point on the curve.
-* Multlipication - Given a point, we can multiply it any number of times.
-
-#### Addition
-
-Given three aligned points **P**, **Q** and **R**, their sum is always 0. We treat this as an inherent property of elliptic curves.
-
-```text
-P + Q + R = 0
-```
-We can then write it as:
-
-```text
-P + Q = -R
-```
-
-So that adding the two points P and Q results in -R, the inverse of R.
-
-If we draw a line passing through **P** and **Q**, this line will cross a third point on the curve, **R** (so that **P**, **Q** and **R** are aligned). If we take the inverse of this point, which is simply the one symmetric to it about the x-axis, we have found the result of adding two curve points, **P + Q**. Let’s illustrate:
-
-[P + Q = R](../assets/images/ecc-1.png)
-
-#### Multlipication
-
-We can’t multiply a point by another point, but we can multiply a point by a number (scalar). Multiplying point **P** by scalar `k` would simply require adding point **P** onto it self ``k` times. This operation is easily demonstrated by assigning `k=2` so that `k*P = P+P`. To illustrate how it would look like on the curve, we draw a tangent line. You can imagine that the line intersects three points, whereas two of them are **P**, such that:
-
-```text
-P + P = -R
-```
-
-[P + Q = -R](../assets/images/ecc-2.png)
-
-!!! note ""
-    To calculate `8*P` for e.g. wouldn’t take 8 operations, but only 3; you can find 2P, then add it onto itself, and then add 4P onto itself, for the final result of 8P.
-
-## Key Pairs
-
-An ECC system defines a public constant curve point called the generator point, **G** (known to everybody). The generator point is used to compute any public key. A key pair consists of:
-
-* Private key **k** – A randomly chosen 256-bit integer (scalar).
-* Public key **P** – An Elliptic-curve point derived by multiplying generator point **G** by the private key.
-
-And more clearly, a public key (of private key `k`) is as follows:
-
-```text
-P = k*G
-```
-
-This is easy to compute.
-
-But, if everybody knows points **P** and **G**, can they find out what `k` is? The answer is no; The difficulty of getting from one point to another is precisely the definition of the Elliptic curve discrete logarithm problem.
-
-!!! note "Secp256k1"
-    The specific Elliptic curve that Grin employs is rust-secp256k1 (y^2^ = x^3^ + 7) using Schnorr signature scheme.
-
-
----
-
-# Commitments
-
-A commitment scheme is a cryptographic primitive that allows you to commit to a chosen value while keeping it hidden from others, with the ability to reveal the committed value later.
-
-Properties:
-
-* Hiding - Nobody but the committer can see or infer the actual value behind the commitment.
-* Binding - The committer can't change the value after the commitment is published.
-
-ECC can be used to create a commitment. Let’s say we want to commit to the value `8`.
-
-```text
-commit (8)  ->  8*G
-```
-
-To everybody else, our commitment `8*G` just looks like a random point, and we publish it. Some time later we reveal our value.
-
-```text
-reveal 8
-```
-
-And now any observer could multiply our stated value 8, by the public point G and verify that their result is equal to the commitment we published ealier.
-
-```text
-verify (8, commitment) == 8*G  ? --> True
-```
-
-However, there’s a major issue. It’s simple for anybody to find out what value we commited to, even if we don’t reveal it; By trying out, or guessing, different values, a commitment that’s equal to ours can be found, thus revealing what value we picked before we chose to do so ourselves.
-
-!!! note "Example"
-    Say we're betting on how many goals a team would score by the end of the year. Our guess is 23, and we commit to it by publishing the commitment `23*G`. Problem is, it would be trivial for anybody to uncover our guess simply by trying to commit to 1, 2, 3, 4 etc and checking each result if it's equal to our commitment. In this case, our value will be revealed after only 23 simple steps.
-
-What’s the solution?
-
-## Blinding Factor
-
-The issue is solved by adding a blinding factor `r`, which is a random 256-bit integer used to blind the value so that it can’t be guessed and uncovered.
-
-
-We could try adding the blinding factor by comitting `(8+r)*G` and then revealing `8` and `r`. But doing so breaks the binding property of the commitment, for reasons we won’t get into here. We require a different method to include `r`.
-
-## Pedersen Commitments
-
-Introducing **G**’s twin, **H**.
-
-**H** is another generator point, distinct from **G** (note how it’s the next letter in the alphabet). Both are nothing-up-my-points, meaning nobody knows `n` such that `G = H`. Using **H** we can blind the value while keeping the commitment binding.
-
-```text
-r*G + v*H
-```
-
-
-:   `r` is the blinding factor, and `r*G` is the public key point for `r` (using H as generator point).
-
-    `v` is the value commited, and `v*H` is the public key point for `v` (using G as generator point).
-
-
-
-
-This specific form of commitement is called a *Pedersen Commitment.*
-
-## Homomorphic Commitments
-
-Commitments with homomorphic properties means you can perform calculations on encrypted values without decrypting them first. The result of the computation is a commitment which is identical to the result if the operations had been performed on the unencrypted values.
-
-They allow us to do as follows:
-
-:   commit (x)  &rArr;  C~1~ </br>
-	commit (y)  &rArr; C~2~ </br>
-	reveal (x + y) </br>
-	verify (x + y, C~1~, C~2~) ? &rArr;  True/False
-
-We don’t want to reveal `x` and `y` independently. Instead, we reveal only their *sum*, proving we know the value of each constituent part.
-
-Elliptic curve commitments indeed have these homomorphic properties. We can do the following:
-
-```text
-x*G + y*G => (x + y)*G
-```
-
-Notice how we add two different commitments and the resut is a commit to the sum of the values we’re hiding. We can then reveal the sum `x + y` to prove that we had knowledge of both `x` and `y` individually, while keeping them a secret.
-
-Similarly, we can add up two Pedersen Commitments. First let's create two of them:
-
-* C~1~ = r~1~G + v~1~H
-* c~2~ = r~2~G + v~2~H
-
-The point **Z** (remember a commitment is simply a point on the curve) is the result of addition between points **C~1~** and **C~2~**.
-
-```text
-Z = C1 + C2
-```
-
-So we can calculate what **Z** is:
-
-```text
-Z = r1*G + r2*G + v1*H + v2*H
-```
-
-Result:
-
-```text
-Z = (r1 + r2)*G + (v1 + v2)*H
-```
-
-Hence point **Z** is a pedersen commitment that is the sum of commitments **C~1~** and **C~2~**. This is the foundation of Mimblewimble outputs, as we'll see now.
-
----
-
 # Mimblewimble
 
 Earlier we demonstrated how a public key obtained from the *addition of two private keys* `r` and `v`, resulting in `(v+r)*G`, is identical to the *addition of the public keys* of each individual private key, `r*G + v*G`. Mimblewimble and Grin heavily rely on this principle.
@@ -361,12 +171,12 @@ A Mimblewimble transaction includes the following:
 
 * Set of inputs, that reference and spend a set of previous outputs.
 * Set of new outputs that each includes:
-    * Value and a blinding factor (a new private key), both multiplied on a curve and summed up to r*G + v*H.
-    * Rangeproof that, among other things, shows that `v` is non-negative.
+    1. Value and a blinding factor (a new private key), both multiplied on a curve and summed up to r*G + v*H.
+    2. Rangeproof that, among other things, shows that `v` is non-negative.
 * Kernel consisting of:
-    * Transaction fee in plain text.
-    * Transaction signature signed by the excess value excess value (and verifies wit hthe kernel excess).
-    * Kernel excess, which is the public key corresponding to the excess value (computed by the `sum of outputs + fee - sum of inputs`)
+    1. Transaction fee in plain text.
+    2. Transaction signature signed by the excess value excess value (and verifies wit hthe kernel excess).
+    3. Kernel excess, which is the public key corresponding to the excess value (computed by the `sum of outputs + fee - sum of inputs`)
 
 
 ## Blocks and Chain
@@ -467,12 +277,12 @@ Blocks let miners assemble multiple transactions into a single set that's added 
 
     | Inputs               | Outputs             |
     | :------------------: | :-----------------: |
-    | in01(prev_out1)      | out01               |
-    |                      | out02               |
-    | in02(prev_out2)      | out03               |
-    | in03(out2)           |                     |
-    | in04(out3)           | out04               |
-    |                      | out05               |
+    | in1(prev_out)        | out1                |
+    |                      | out2                |
+    | in2(prev_out)        | out3                |
+    | in3(out2)            |                     |
+    | in4(out3)            | out4                |
+    |                      | out5                |
 
 We notice the two following properties:
 
@@ -483,11 +293,11 @@ Similarly to a transaction, all that needs to be checked in a block is that owne
 
 :   *cut-through block*
 
-    | Inputs               | Outputs          |
-    | :------------------: | :--------------: |
-    | in01(prev_out1)      | out01            |
-    | in02(prev_out2)      | out04            |
-    |                      | out05            |
+    | Inputs               | Outputs             |
+    | :------------------: | :-----------------: |
+    | in1(prev_out)        | out1                |
+    | in2(prev_out         | out4                |
+    |                      | out5                |
 
 All transaction structure has been eliminated and the order of inputs and outputs does not matter anymore, while the sum of all inputs and outputs values is still guaranteed to be zero.
 
@@ -516,3 +326,14 @@ And it all still validates.
 Going back to the previous example block, outputs `prev_out1, prev_out2`, which were spent by `in01, in02` respectively, must have appeared previously in the blockchain. After the addition of this new block, those past outputs as well as `in01, in02` can also be removed from the blockchain as they now are intermediate transactions.
 
 All that's needed to remain is the set of currently unspent outputs `out01, out02, out05`. We conclude that the chain state (excluding headers) at any point in time can be summarized by just these pieces of information:
+
+
+1. The total amount of coins created by mining in the chain.
+2. The complete set of unspent outputs.
+3. The transactions kernels for each transaction.
+
+Both the set of unspent outputs (UTXO) and transaction kernels are extremely compact. This has important consequences; The blockchain a node needs to maintain is very small, as well as the amount of information that needs to be transferred when a new node joins the network.
+
+## Conclusion
+
+We covered the basic principles that underlie Mimblewimble. By using addition of elliptic curve points, we're able to build transactions that are completely opaque but can still be properly validated. And by generalizing those properties to blocks, we can eliminate a large amount of blockchain data, allowing for great scaling and fast sync of new peers.

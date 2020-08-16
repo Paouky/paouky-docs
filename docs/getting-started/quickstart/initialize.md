@@ -5,7 +5,7 @@
 The rest of the documentation is common for Linux, macOS and Windows.
 
 !!! note ""
-    On Windows, you will need to replace the `grin` and `grin-wallet` commands with `grin.exe` and `grin-wallet.exe`.
+    On Windows, add to PATH the directory where you installed `grin.exe` and `grin-wallet.exe`.
 
 Running a Grin node is as simple as typing the command:
 ```bash
@@ -18,7 +18,7 @@ Congratulations! 🎉 You are now running a Grin full node.
 The initial sync might take from 30 minutes to a few hours depending on your connection speed and CPU performance.
 
 !!! note ""
-    If you can, consider opening port 3414 to allow inbound peer connections. It will help other nodes with their own initial sync.
+    If you can, consider opening port 3414 to allow inbound peer connections, as it [benefits the network](TODO).
 
 
 ## Creating a Grin Wallet

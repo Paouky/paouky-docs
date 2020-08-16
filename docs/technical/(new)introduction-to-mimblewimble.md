@@ -467,12 +467,12 @@ Blocks let miners assemble multiple transactions into a single set that's added 
 
     | Inputs               | Outputs             |
     | :------------------: | :-----------------: |
-    | in01(prev_out1)      | out01               |
-    |                      | out02               |
-    | in02(prev_out2)      | out03               |
-    | in03(out2)           |                     |
-    | in04(out3)           | out04               |
-    |                      | out05               |
+    | in1(prev_out)        | out1                |
+    |                      | out2                |
+    | in2(prev_out)        | out3                |
+    | in3(out2)            |                     |
+    | in4(out3)            | out4                |
+    |                      | out5                |
 
 We notice the two following properties:
 
@@ -483,11 +483,11 @@ Similarly to a transaction, all that needs to be checked in a block is that owne
 
 :   *cut-through block*
 
-    | Inputs               | Outputs          |
-    | :------------------: | :--------------: |
-    | in01(prev_out1)      | out01            |
-    | in02(prev_out2)      | out04            |
-    |                      | out05            |
+    | Inputs               | Outputs             |
+    | :------------------: | :-----------------: |
+    | in1(prev_out)        | out1                |
+    | in2(prev_out         | out4                |
+    |                      | out5                |
 
 All transaction structure has been eliminated and the order of inputs and outputs does not matter anymore, while the sum of all inputs and outputs values is still guaranteed to be zero.
 
@@ -511,8 +511,4 @@ sum(outputs) - sum(inputs) = sum(kernel_excess) + sum(kernel_offset)*G
 
 And it all still validates.
 
-### Cut-through Everything
-
-Going back to the previous example block, outputs `prev_out1, prev_out2`, which were spent by `in01, in02` respectively, must have appeared previously in the blockchain. After the addition of this new block, those past outputs as well as `in01, in02` can also be removed from the blockchain as they now are intermediate transactions.
-
-All that's needed to remain is the set of currently unspent outputs `out01, out02, out05`. We conclude that the chain state (excluding headers) at any point in time can be summarized by just these pieces of information:
+### Cut-through
