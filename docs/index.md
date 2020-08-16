@@ -7,6 +7,8 @@ Green field implementation that strives to be as clear and simple as possible, m
 
 Simplicity, Privacy, Scalability
 
+Minimal implementation of the Mimblewimble protocol. A decentralized, privacy-preserving digital currency with no addresses or amounts. Grin leverages Mimblewimble to collapse transactional data, making it fast and lightweight. Your Embassy will run a full node enabling interchangeable wallet interfaces. 
+
 ## Introduction to Mimblewimble and Grin
 Simplicity
 Mimblewimble is a blockchain format and protocol that provides extremely good scalability, privacy and fungibility by relying on strong cryptographic primitives. It addresses gaps existing in almost all current blockchain implementations.

@@ -444,8 +444,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../governance/" title="Governance" class="md-nav__link">
-      Governance
+    <a href="../community/" title="Community" class="md-nav__link">
+      Community
     </a>
   </li>
 
@@ -1091,7 +1091,7 @@
 <details class="note"><summary>Alternative Method: http</summary><p>Synchronous communication can also happen through normal http, but it requires opening port 3415 and thus might be complicated. We don't cover it here as this method will soon be deprecated.</p>
 </details>
 <h3 id="slatepack">Slatepack</h3>
-<p>Recall that a slate is simply a transaction under construction. Slatepacks are slates encoded inside compact, neatly organized and encrypted text messages.</p>
+<p>Recall that slates are simply partial transactions. Slatepacks are slates encoded inside compact, neatly organized and encrypted text messages.</p>
 <p>Using this method, 2<sub>nd</sub> and 3<sub>rd</sub> steps, where the sender and receiver pass the slate to one another, would be done manually by exchanging these slatepack messages. To do so, almost every available communication channel will work. Creativity is the limit.</p>
 <p>The address initally provided by the receiver will be used to the encrypt the slatepacks, so that only the transacting parties are able to see the data inside.</p>
 <div class="admonition note">

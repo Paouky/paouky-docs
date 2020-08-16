@@ -33,7 +33,7 @@ However, if the Tor connection between the wallets is not successful for whateve
 
 ### Slatepack
 
-Recall that a slate is simply a transaction under construction. Slatepacks are slates encoded inside compact, neatly organized and encrypted text messages.
+Recall that slates are simply partial transactions. Slatepacks are slates encoded inside compact, neatly organized and encrypted text messages.
 
 Using this method, 2~nd~ and 3~rd~ steps, where the sender and receiver pass the slate to one another, would be done manually by exchanging these slatepack messages. To do so, almost every available communication channel will work. Creativity is the limit.
 

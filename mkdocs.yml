@@ -58,7 +58,7 @@ nav:
     - Transactions: about-grin/transactions.md
     - Proof of Work: about-grin/proof-of-work.md
     - Emission: about-grin/emission.md
-    - Governance: about-grin/governance.md
+    - Community: about-grin/community.md
   - Getting Started:
     - Quickstart:
       - Install: getting-started/quickstart/install.md

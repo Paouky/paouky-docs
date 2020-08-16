@@ -1,14 +1,14 @@
 # Emission
 
-Grin's emission schedule is completely linear; New grins are created at a constant rate of 60 grins per block, meaning *1 grin/s*, forever. Such linear increase in supply results in a decreasing inflation rate, or disinflationary emission.
+A new grin is emitted every second, forever, meaning the emission rate stays constant and completely linear. As time passes, the relative dilution becomes smaller; After 10 years, it falls below 10%. After 20, below 5%. This results in a decreasing inflation rate, or disinflation.
 
 ![emission chart](../assets/images/emission_chart.png){ width=650 }
 
 
 This simple design serves to ensure the long term security and stability of the chain, as well as provide a fair process of distribution. We'll set to explore those topics more thoroughly.
 
-!!! note "Compare to Bitcoin"
-    The first four years of Bitcoin emission rate are identical to the first four of Grin. Bitcoin had a full reward for 4 years, followed by half that for the following 4 years. So compared to a constant supply, after 8 years, the total amount of coins emitted is only 33% less.
+!!! note "Compared to Bitcoin"
+    The first four years of Bitcoin emission rate are identical to the first four of Grin. Bitcoin had a full reward for 4 years, followed by half that for the following 4 years. So compared to a constant supply, after 8 years, the total amount of coins emitted is only 25% less. Compare that to daily price fluctuations.
 
 ## Security
 
