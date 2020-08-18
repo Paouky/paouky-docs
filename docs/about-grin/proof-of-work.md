@@ -30,7 +30,7 @@ ASICs are special pieces of hardware especially designed to solve a specific pro
 
 These issues are mostly solved once a mature, competitive market for ASICs appears. However, as apparent with Bitcoin, this natural proccess may take time. Grin’s Cuckatoo32+ simplifies ASIC design in hope to reduce the time until they become widely distributed and accessible.
 
-The choice of upholding some ASIC-resistance in the first 2 years was made to ensure no single party has an unproportional mining advantage at launch, before the market becomes populated and competitive enough.
+The choice of upholding some ASIC-resistance in the first 2 years was made to ensure fair initial distribution, in which no single party has an unproportional mining advantage at launch, before the market becomes populated and competitive enough.
 
 Let’s see why *encouraging* ASIC development might be benficial[^3] in the first place:
 
