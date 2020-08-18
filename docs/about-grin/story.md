@@ -1,11 +1,9 @@
 # Grin's Story
 
-**(WORK IN PROGRESS)**
-
 ## Mimblewimble
 On *Mon Aug 01 2016* a user named 'majorplayer' logged into the `#bitcoin-wizards` IRC channel, dropped a text file hosted on a Tor server and then dissappeared. The document[^1] was titled MIMBLEWIMBLE and authored under the psuedonym Tom Elvis Jedusor. It described a protocol which is both private and extremely lightweight.
 
-!!! note ""
+!!! info ""
     Tom Elvis Jedusor is the French name for Tom Riddle (Lord Voldemort) from the Harry Potter book series.
     Mimblewimble is a tongue-tying spell.
 
@@ -34,7 +32,7 @@ On *Oct 10 2016*, Andrew Poelstra published a follow-up paper[^2] about Mimblewi
 ## Grin
 On *Oct 20 2016*, a pseudonymous developer using the name Ignotus Peverell, announced in the bitcoin wizards IRC channel that he began work on a minimal implementation of the protocol, which he named Grin.
 
-!!! note ""
+!!! info ""
     Ignotus Peverell is the wizard who was gifted the Cloak of Invisibility by Death. </br>
     Grin is short for the Gringotts wizarding bank.
 
@@ -49,14 +47,14 @@ Igno was joined on github by other developers who took interest in the project, 
 
 While Mimblewimble serves as the foundation to transacting, it constitutes a relatively small part of a complete blockchain cryptocurrency, and many choices were yet to be made. Thus began the journey to develop a full working implementation.
 
-??? note "Ramblings and Inspiration (ignore)"
+### Launch
 
-    Fast forward to launch?
+Grin's genesis block was mined on January 15th, 2019. It was, and still is, young and experimental. It currently goes through rapid changes, as its first 2 years include agreed-upon hardforks in 6-months intervals.
 
-    Igno's dissappearance
+!!! note ""
+    Several months after launch, Ignotus Peverell dissappeared and has yet to return.
 
-    Mention current fund and contributions (and maybe 2010 coinbase btc donor)
-
+Developers distributed around the world are contributing to build Grin, some of them funded by donations to work on the project full-time. Governance and development will always remain completely transparent and open for every community member to join.
 
 
 [^1]: [The Mimblewimble Whitepaper](https://scalingbitcoin.org/papers/mimblewimble.txt)

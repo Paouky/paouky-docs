@@ -7,7 +7,7 @@ A new grin is emitted every second, forever, meaning the emission rate stays con
 
 This simple design serves to ensure the long term security and stability of the chain, as well as provide a fair process of distribution. We'll set to explore those topics more thoroughly.
 
-!!! note "Compared to Bitcoin"
+!!! note ""
     The first four years of Bitcoin emission rate are identical to the first four of Grin. Bitcoin had a full reward for 4 years, followed by half that for the following 4 years. So compared to a constant supply, after 8 years, the total amount of coins emitted is only 25% less. Compare that to daily price fluctuations.
 
 ## Security

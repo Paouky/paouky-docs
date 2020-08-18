@@ -28,7 +28,7 @@ If the connection succeeds, all the rest is done automatically by the two wallet
 
 However, if the Tor connection between the wallets is not successful for whatever reason, Grin defaults to exchanging slate text messages, also called slatepacks, manually.
 
-??? note "Alternative Method: http"
+??? info "Alternative Method: http"
     Synchronous communication can also happen through normal http, but it requires opening port 3415 and thus might be complicated. We don't cover it here as this method will soon be deprecated.
 
 ### Slatepack
@@ -39,7 +39,7 @@ Using this method, 2~nd~ and 3~rd~ steps, where the sender and receiver pass the
 
 The address initally provided by the receiver will be used to the encrypt the slatepacks, so that only the transacting parties are able to see the data inside.
 
-!!! note "Non-encrypted Slatepacks"
+!!! info "Non-encrypted Slatepacks"
     It is possible to skip the 1~st~ step (providing an address) and straight up send a non-encrypted slatepack to the receiver. Keep in mind that in this case, if the communication channel is compromised or public, observers may learn some transaction information.
 
 ## Invoice

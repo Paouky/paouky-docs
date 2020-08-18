@@ -69,7 +69,7 @@ This is could be done at any level of transaction building; Before broadcast, du
 ## Transaction Graph
 
 
-Despite the fact that chain analysis can extract very little (if any) information about users and outputs, it is possible to monitor peer-to-peer network activity and obtain the transactions before they're included in a block and aggregated with others. By setting up sniffing nodes connected to many peers, you can figure out which outputs are being spent by which transaction, allowing you to build a transaction graph. It's unclear at this points what information could be derived from this, as the trail of data stops there.
+Despite the fact that chain analysis can extract very little (if any) information about users and outputs, it is possible to monitor peer-to-peer network activity and obtain the transactions before they're included in a block and aggregated with others. By setting up sniffing nodes connected to many peers, you can figure out which outputs are being spent by what transaction, allowing you to build a transaction graph, practically seperating the aggregation done at the block level. It's unclear at this points if meaningful information could be derived from this, as the trail of data stops there.
 
 (**paragraph not worded yet, WIP**)
 Grin has many methods that may drastically improve privacy such as payjoin, coinswap etc and the beauty about them is that unlike bitcoin, your coins arent tainted for participating in what is pretty obviously a specific mixing transaction. a payjoin/coinswap/aggregated tx looks exactly the same, nobody knows you took extra privacy precautions to obfuscate the transaction graph
