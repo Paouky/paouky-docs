@@ -2,9 +2,9 @@
 
 This part of the documentation, explain more in details the technology behind Grin along with the building blocks used.
 
-!!! warning
+!!! tip
     **This documentation contains an high level overview of the Grin and Mimblewimble.**
-    For more details about the implentation please look at the Grin documentation on [doc.rs](https://docs.rs/releases/search?query=grin).
+    For more details about the implentation, please look at the Grin documentation on [doc.rs](https://docs.rs/releases/search?query=grin).
 
 ## Introduction
 

@@ -70,10 +70,10 @@ nav:
     - Community Projects: getting-started/community-projects.md
   - Technical Details:
     - Table of Contents: technical/table-of-contents.md
-    - Introduction to Mimblewimble:
-      - Elliptic Curves: technical/introduction-to-mimblewimble/elliptic-curve-cryptography.md
-      - Commitments: technical/introduction-to-mimblewimble/commitments.md
-      - Mimblewimble: technical/introduction-to-mimblewimble/mimblewimble.md
+    - Introduction:
+      - Elliptic Curves: technical/introduction/elliptic-curve-cryptography.md
+      - Commitments: technical/introduction/commitments.md
+      - Mimblewimble: technical/introduction/mimblewimble.md
     - Grin for Bitcoiners: technical/grin-for-bitcoiners.md
     - Building Blocks:
       - Merkle Mountain Ranges (MMRs): technical/building-blocks/merkle-mountain-ranges.md
