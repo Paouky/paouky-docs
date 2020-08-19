@@ -54,6 +54,7 @@ Given that the sender provides a destination address (always recommended even if
 
 ## Transaction Flow
 
+*(switch between tabs)*
 
 === "Withdrawal"
 
