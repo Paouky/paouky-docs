@@ -25,7 +25,7 @@ This parts details several mechanisms and structures used by Grin.
 
 - [Coinbase Maturity Rule](blockchain-and-consensus/coinbase-maturity-rule.md) -  Explain the Coinbase maturity rule
 - [Fast Sync](blockchain-and-consensus/fast-sync.md) - Explain the fast sync process
-- [Proof-of-Work](blockchain-and-consensus/proof-of-work.md) - An introduction to Cuckoo Cycle: Grin's Proof-of-Work
+- [Cuckoo Cycle](blockchain-and-consensus/cuckoo-cycle.md) - An introduction to Cuckoo Cycle: Grin's Proof-of-Work
 - [Pruning Blockchain Data](blockchain-and-consensus/pruning-blockchain-data.md) - Validation of a pruned MW blockchain
 - [State and Storage](blockchain-and-consensus/state-and-storage.md) - Explain the state used in Grin
 

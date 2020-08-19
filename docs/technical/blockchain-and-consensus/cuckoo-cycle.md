@@ -1,12 +1,7 @@
-# Grin's Proof-of-Work
+!!! Warning "Warning: outdated"
+    Since this document was first published, Grin switched to a variant of Cuckoo cycle: Cuckatoo cycle. Alongside, a dual pow scheme was designed to ensure a fair initial coin distribution. You can read more about it [here](https://paouky.github.io/docs/about-grin/proof-of-work/).
 
-!!! Warning
-    Since this document was first published, Grin switched to a variant of Cuckoo cycle: Cuckatoo cycle.
-
-    Alongside, a dual pow scheme was designed to ensure a fair initial coin distribution.
-
-
-    You can read more about this [here](https://blog.blockcypher.com/an-introduction-to-grin-proof-of-work-103aaa9f66ce).
+    Nevertheless, this document serves as a good introduction to Cuckoo Cycle proof of work.
 
 This document is meant to outline, at a level suitable for someone without prior knowledge,
 the algorithms and processes currently involved in Grin's Proof-of-Work system. We'll start
@@ -14,14 +9,11 @@ with a general overview of cycles in a graph and the Cuckoo Cycle algorithm whic
 basis of Grin's proof-of-work. We'll then move on to Grin-specific details, which will outline
 the other systems that combine with Cuckoo Cycle to form the entirety of mining in Grin.
 
-Please note that Grin is currently under active development, and any and all of this is subject to
-(and will) change before a general release.
-
 ## Graphs and Cuckoo Cycle
 
 Grin's basic Proof-of-Work algorithm is called Cuckoo Cycle, which is specifically designed
 to be resistant to Bitcoin style hardware arms-races. It is primarily a memory bound algorithm,
-which, (at least in theory,) means that solution time is bound by memory bandwidth
+which (at least in theory) means that solution time is bound by memory bandwidth
 rather than raw processor or GPU speed. As such, mining Cuckoo Cycle solutions should be viable on
 most commodity hardware, and require far less energy than most other GPU, CPU or ASIC-bound
 proof of work algorithms.
@@ -166,33 +158,28 @@ to a value aiming for the target block solve time.
 All of these systems are put together in the mining loop, which attempts to create
 valid Proofs-of-Work to create the latest block in the chain. The following is an outline of what the main mining loop does during a single iteration:
 
-* Get the latest chain state and build a block on top of it, which includes
-  * A Block Header with new values particular to this mining attempt, which are:
+1. Get the latest chain state and build a block on top of it, which includes a Block Header with new values particular to this mining attempt:
     * The latest target difficulty as selected by the [evolving network difficulty](#evolving-network-difficulty) algorithm
     * A set of transactions available for validation selected from the transaction pool
     * A coinbase transaction (which we're hoping to give to ourselves)
     * The current timestamp
     * A randomly generated nonce to add further randomness to the header's hash
-    * The merkle root of the UTXO set and fees (not yet implemented)
-      * Then, a sub-loop runs for a set amount of time, currently configured at 2 seconds, where the following happens:
-        * The new block header is hashed to create a hash value
-        * The cuckoo graph generator is initialized, which accepts as parameters:
-          * The hash of the potential block header, which is to be used as the key to a SIPHASH function
-            that will generate pairs of locations for each element in a set of nonces 0..N in the graph.
-          * The size of the graph (a consensus value).
-          * An easiness value, (a consensus value) representing the M/N ratio described above denoting the probability
-            of a solution appearing in the graph
-        * The Cuckoo Cycle detection algorithm tries to find a solution (i.e. a cycle of length 42) within the generated
-          graph.
-        * If a cycle is found, a Blake2b hash of the proof is created and is compared to the current target
-          difficulty, as outlined in [Additional Difficulty Control](#additional-difficulty-control) above.
-        * If the Blake2b Hash difficulty is greater than or equal to the target difficulty, the block is sent to the
-          transaction pool, propagated amongst peers for validation, and work begins on the next block.
-        * If the Blake2b Hash difficulty is less than the target difficulty, the proof is thrown out and the timed loop continues.
-        * If no solution is found, increment the nonce in the header by 1, and update the header's timestamp so the next iteration
-          hashes a different value for seeding the next loop's graph generation step.
-        * If the loop times out with no solution found, start over again from the top, collecting new transactions and creating
-          a new block altogether.
+    * The merkle root of the UTXO set and fees
+2. Then, a sub-loop runs for a set amount of time, currently configured at 2 seconds, where the following happens:
+    1. The new block header is hashed to create a hash value
+    2. The cuckoo graph generator is initialized, which accepts as parameters:
+
+        * The hash of the potential block header, which is to be used as
+        * the key to a SIPHASH function that will generate pairs of locations for each element in a set of nonces 0..N in the graph.
+        * The size of the graph (a consensus value).
+        * An easiness value, (a consensus value) representing the M/N ratio described above denoting the probability of a solution appearing in the graph
+
+3. The Cuckoo Cycle detection algorithm tries to find a solution (i.e. a cycle of length 42) within the generated graph.
+4. If a cycle is found, a Blake2b hash of the proof is created and is compared to the current target difficulty, as outlined in [Additional Difficulty Control](#additional-difficulty-control) above.
+5. If the Blake2b Hash difficulty is greater than or equal to the target difficulty, the block is sent to the transaction pool, propagated amongst peers for validation, and work begins on the next block.
+6. If the Blake2b Hash difficulty is less than the target difficulty, the proof is thrown out and the timed loop continues.
+7. If no solution is found, increment the nonce in the header by 1, and update the header's timestamp so the next iteration hashes a different value for seeding the next loop's graph generation step.
+8. If the loop times out with no solution found, start over again from the top, collecting new transactions and creating a new block altogether.
 
 ### Mining Loop Difficulty Control and Timing
 

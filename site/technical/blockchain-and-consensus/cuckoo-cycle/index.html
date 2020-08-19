@@ -11,7 +11,7 @@
         <meta name="description" content="Grin Documentation">
       
       
-        <link rel="canonical" href="https://docs.grin.mw/technical/miscellaneous/range-proof-format/">
+        <link rel="canonical" href="https://docs.grin.mw/technical/blockchain-and-consensus/cuckoo-cycle/">
       
       
         <meta name="author" content="Grin Developers">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Range Proofs Format - Grin Documentation</title>
+        <title>Cuckoo Cycle - Grin Documentation</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#range-proof-format" class="md-skip">
+        <a href="#graphs-and-cuckoo-cycle" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Range Proofs Format
+              Cuckoo Cycle
             
           </span>
         </div>
@@ -719,10 +719,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5" checked>
     
     <label class="md-nav__link" for="nav-4-5">
       Blockchain and Consensus
@@ -746,7 +748,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../blockchain-and-consensus/coinbase-maturity-rule/" title="Coinbase Maturity Rule" class="md-nav__link">
+    <a href="../coinbase-maturity-rule/" title="Coinbase Maturity Rule" class="md-nav__link">
       Coinbase Maturity Rule
     </a>
   </li>
@@ -758,7 +760,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../blockchain-and-consensus/fast-sync/" title="Fast Sync" class="md-nav__link">
+    <a href="../fast-sync/" title="Fast Sync" class="md-nav__link">
       Fast Sync
     </a>
   </li>
@@ -768,11 +770,130 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../blockchain-and-consensus/cuckoo-cycle/" title="Cuckoo Cycle" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Cuckoo Cycle
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Cuckoo Cycle" class="md-nav__link md-nav__link--active">
       Cuckoo Cycle
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#graphs-and-cuckoo-cycle" class="md-nav__link">
+    Graphs and Cuckoo Cycle
+  </a>
+  
+    <nav class="md-nav" aria-label="Graphs and Cuckoo Cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cycles-in-a-graph" class="md-nav__link">
+    Cycles in a Graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuckoo-cycle" class="md-nav__link">
+    Cuckoo Cycle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mining-in-grin" class="md-nav__link">
+    Mining in Grin
+  </a>
+  
+    <nav class="md-nav" aria-label="Mining in Grin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-difficulty-control" class="md-nav__link">
+    Additional Difficulty Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolving-network-difficulty" class="md-nav__link">
+    Evolving Network Difficulty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mining-loop" class="md-nav__link">
+    The Mining Loop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mining-loop-difficulty-control-and-timing" class="md-nav__link">
+    Mining Loop Difficulty Control and Timing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pooling-capability" class="md-nav__link">
+    Pooling Capability
+  </a>
+  
+    <nav class="md-nav" aria-label="Pooling Capability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progress-freeness" class="md-nav__link">
+    Progress Freeness
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -782,7 +903,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../blockchain-and-consensus/pruning-blockchain-data/" title="Pruning Blockchain Data" class="md-nav__link">
+    <a href="../pruning-blockchain-data/" title="Pruning Blockchain Data" class="md-nav__link">
       Pruning Blockchain Data
     </a>
   </li>
@@ -794,7 +915,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../blockchain-and-consensus/state-and-storage/" title="State and Storage" class="md-nav__link">
+    <a href="../state-and-storage/" title="State and Storage" class="md-nav__link">
       State and Storage
     </a>
   </li>
@@ -809,12 +930,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
     
     <label class="md-nav__link" for="nav-4-6">
       Miscellaneous
@@ -838,7 +957,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../contracts/" title="Contracts" class="md-nav__link">
+    <a href="../../miscellaneous/contracts/" title="Contracts" class="md-nav__link">
       Contracts
     </a>
   </li>
@@ -850,7 +969,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dandelion/" title="Dandelion" class="md-nav__link">
+    <a href="../../miscellaneous/dandelion/" title="Dandelion" class="md-nav__link">
       Dandelion
     </a>
   </li>
@@ -860,53 +979,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Range Proofs Format
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Range Proofs Format" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../miscellaneous/range-proof-format/" title="Range Proofs Format" class="md-nav__link">
       Range Proofs Format
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#secp256k1-zkp-bulletproof-format" class="md-nav__link">
-    secp256k1-zkp Bulletproof format
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -988,8 +1065,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon">
@@ -1000,9 +1075,90 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#secp256k1-zkp-bulletproof-format" class="md-nav__link">
-    secp256k1-zkp Bulletproof format
+  <a href="#graphs-and-cuckoo-cycle" class="md-nav__link">
+    Graphs and Cuckoo Cycle
   </a>
+  
+    <nav class="md-nav" aria-label="Graphs and Cuckoo Cycle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cycles-in-a-graph" class="md-nav__link">
+    Cycles in a Graph
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cuckoo-cycle" class="md-nav__link">
+    Cuckoo Cycle
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mining-in-grin" class="md-nav__link">
+    Mining in Grin
+  </a>
+  
+    <nav class="md-nav" aria-label="Mining in Grin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-difficulty-control" class="md-nav__link">
+    Additional Difficulty Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evolving-network-difficulty" class="md-nav__link">
+    Evolving Network Difficulty
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-mining-loop" class="md-nav__link">
+    The Mining Loop
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mining-loop-difficulty-control-and-timing" class="md-nav__link">
+    Mining Loop Difficulty Control and Timing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pooling-capability" class="md-nav__link">
+    Pooling Capability
+  </a>
+  
+    <nav class="md-nav" aria-label="Pooling Capability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progress-freeness" class="md-nav__link">
+    Progress Freeness
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1018,7 +1174,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mimblewimble/docs/edit/master/docs/technical/miscellaneous/range-proof-format.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mimblewimble/docs/edit/master/docs/technical/blockchain-and-consensus/cuckoo-cycle.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1026,51 +1182,203 @@
                   
                 
                 
-                <h1 id="range-proof-format">Range Proof Format</h1>
-<h2 id="secp256k1-zkp-bulletproof-format">secp256k1-zkp Bulletproof format</h2>
-<p>Grin uses <a href="https://eprint.iacr.org/2017/1066.pdf">Bulletproofs</a> range proofs. The currently most efficient range proofs which do not require a trusted setup.</p>
-<p>Grin uses <a href="https://github.com/mimblewimble/secp256k1-zkp">mimblewimble/secp256k1-zkp</a>, a fork of the Blockstream C library <a href="https://github.com/ElementsProject/secp256k1-zkp">ElementsProject/secp256k1-zkp</a>, which has Bulletproofs implemented but not yet merged into the main branch.</p>
-<p>In this document I will explain how to recover the proof parameters from the output bytes. Note that I will name the parameters as they are named in the C library, which might be slightly different then to the paper in some cases.</p>
-<p>Here is a sample proof output taken from a Grin transaction:</p>
-<div class="highlight"><pre><span></span><code>0b1bdf235e9c438aab5c6d02d3fe8173304bc528a3330825fb2311fa60fcdd6bfb92a248e26f849aebd511d2b326fa34b7f3030517d2f8e08a9b3cac7fa9fd200d07a46ca6ec5af30ce569b1e5faf2acf525cf1ed90cbed74ab7378b9b3957f28635fe7440aac2dc2c4bf43265b6ad1bfa82fddd9a827c4e97a913ce451b9a66bb06d3c08e03e85e98c581bbdf8c852796371a4603b8d52b80a1f2e95bd5e2a91c7a00b4d4564d9586235a7858d9ce8a8888bead7d51be2dd802de5af2921e079586817fce16d36c7764af8b4bf133b56b39970d6a568bf9ff101e6d33409e7c3bb081df7425b276655be611941245ceaad529495a86bc0e3d0f8634a8acf65c34c4e244959a5098bd58285408945a247d2fd894e5b18027d698c7e494e4256110553df54babf90592fbdffa0138b6b5a2a423ea5e2ec4d8f852a33c271a73b10fed9e1ee8cb2db1e71311cacd9e1d0b6dbf6cfab15723ec3cac4cc52154fc9d532202a085238e756ad1fa804cce2a634decc1b348f6ff939f9f80187d85aa5c308224a505c75e7f58fc7f35424276db7956474c1895e23ac55f864f4177b59f3ce92ef8c99e011cf55e0cefc5635d2eaf573df29af057a19bb209392a8c0e29a4b77adad76d385422e7f1d06de2d4f14e61ac3619aa22ae5bc288bb41cb56ddb70bb39ae84d00eb0cb34b4063bb55a83b9fe52604e545adcd41beb6ce14cdff73a21beb7493fa443a34585b7d2927f608cad17aa5f0e8e154b14d35315f63dd3580e80d06d8be4039f58778967f7bf2cdd9020fbcc9fed799b8159814f6a261c568e8b59c59df3180efb9cc13c576bf313248c96fa867aba43a80e799ff19ac685d7208cea7944dc9dcba7a61f2809540ecd0711e76b601969bdc551845e0b11fb821871d00e417ad002a70353867db25fa647e98a0db4c3bbaf828d97fc66079ef0d
-</code></pre></div>
-
-<p>First, we have two 32 byte scalars. These are the already negated versions of taux and mu. We negate them such that the verifier doesn't have to do it. (<em>rangeproof_impl.h 701-702</em>)</p>
-<p><code>0b1bdf235e9c438aab5c6d02d3fe8173304bc528a3330825fb2311fa60fcdd6b (5024686248162052924872973414517693136231035491146611931625298995470137089387)</code> taux (negated)</p>
-<p><code>fb92a248e26f849aebd511d2b326fa34b7f3030517d2f8e08a9b3cac7fa9fd20 (113789604713728301456840843635921464549630649029317112794749678552821986360608)</code> mu (negated)</p>
-<p>After that, we have 4 points, which represent commitments A, S, T1, T2. Points are encoded in a very smart way. We have one offset byte. We use this offset byte indicate the LSB of y, telling us
-if the points y value needs to be negated when recovered. If this is the case, the bit is set to 1 (starting at the LSB); otherwise, it is left at 0. If we have more then
-eight points, we need 2 bytes offset, if we have more then 16, then three, and so forth. (<em>rangeproof_impl.h 703</em>)</p>
-<p><code>0d</code> offset</p>
-<p><code>0000 1101</code> offset in binary</p>
-<p>From this, we can recover the 4 points. (I am using the standard compressed point version here with leading 02 or 03)
-We start reading at the LSB.</p>
-<p><code>0307a46ca6ec5af30ce569b1e5faf2acf525cf1ed90cbed74ab7378b9b3957f286</code> A (03 because of the 1 bit in the offset)</p>
-<p><code>0235fe7440aac2dc2c4bf43265b6ad1bfa82fddd9a827c4e97a913ce451b9a66bb</code> S (02 here because of the 0 bit in the offset)</p>
-<p><code>0306d3c08e03e85e98c581bbdf8c852796371a4603b8d52b80a1f2e95bd5e2a91c</code> T1</p>
-<p><code>037a00b4d4564d9586235a7858d9ce8a8888bead7d51be2dd802de5af2921e0795</code> T2</p>
-<p>Next, we have the final value of the dot product which again is a 32-byte scalar (<em>inner_product_impl.h 811</em>)</p>
-<p><code>86817fce16d36c7764af8b4bf133b56b39970d6a568bf9ff101e6d33409e7c3b (60838727059453008536034129618950719358562694528830851223208761064459354405947)</code> dot</p>
-<p>Then we have the final values (32-byte scalars) of the shrunk vectors a, b used in the inner product protocol. The library does not do the last round of the protocol, meaning it will stop when the vectors are of 
-length two instead of length one. This is because every round creates two commitments Li and Ri. If we don't do the last round, we spare two commitments with the cost that our two vectors are of size two instead of one, which is more space-efficient, and we save computing time. (<em>inner_product_impl.h  835-836</em>)</p>
-<p><code>b081df7425b276655be611941245ceaad529495a86bc0e3d0f8634a8acf65c34 (79836526842770413616887368822368313168206709119259360230886972660827215518772)</code> a1</p>
-<p><code>c4e244959a5098bd58285408945a247d2fd894e5b18027d698c7e494e4256110 (89053099110995010594661038229216983605420219413380810817771304480647904846096)</code> b1</p>
-<p><code>553df54babf90592fbdffa0138b6b5a2a423ea5e2ec4d8f852a33c271a73b10f (38556062768490931671602594328406809964645337276375001909352144464132590252303)</code> a2</p>
-<p><code>ed9e1ee8cb2db1e71311cacd9e1d0b6dbf6cfab15723ec3cac4cc52154fc9d53 (107477520278964342277912932357487306000871347661927764278313323679782451060051)</code> b2</p>
-<p>And last we have the commitments Li and Ri of every round. In Grin we create range proofs with a range of 0 to (2^64 -1). This means we have six rounds (log(64) = 6); however, since we stop early, we only do five rounds, so 10 points instead of 12. The implementation always computes L before R. (<em>inner_product_impl.h 627</em>)
-Again we have an offset in which we specify how to recover y values. Now since we have more than eight points we need two bytes offset. We start reading at the LSB of the first byte and then go to the LSB of the second byte. (<em>inner_product_impl.h 839</em>)</p>
-<p><code>2202</code> offset</p>
-<p><code>0010 0010</code> first offset byte (binary) <code>0000 0010</code> second offset byte (binary)</p>
-<p><code>02a085238e756ad1fa804cce2a634decc1b348f6ff939f9f80187d85aa5c308224</code> L1</p>
-<p><code>03a505c75e7f58fc7f35424276db7956474c1895e23ac55f864f4177b59f3ce92e</code> R1 (03 because of the 1 at bit number 2 of first offset byte)</p>
-<p><code>02f8c99e011cf55e0cefc5635d2eaf573df29af057a19bb209392a8c0e29a4b77a</code> L2</p>
-<p><code>02dad76d385422e7f1d06de2d4f14e61ac3619aa22ae5bc288bb41cb56ddb70bb3</code> R2</p>
-<p><code>029ae84d00eb0cb34b4063bb55a83b9fe52604e545adcd41beb6ce14cdff73a21b</code> L3</p>
-<p><code>03eb7493fa443a34585b7d2927f608cad17aa5f0e8e154b14d35315f63dd3580e8</code> R3 (03 because of the 1 at bit number 6 of first offset byte)</p>
-<p><code>020d06d8be4039f58778967f7bf2cdd9020fbcc9fed799b8159814f6a261c568e8</code> L4</p>
-<p><code>02b59c59df3180efb9cc13c576bf313248c96fa867aba43a80e799ff19ac685d72</code> R4</p>
-<p><code>0208cea7944dc9dcba7a61f2809540ecd0711e76b601969bdc551845e0b11fb821</code> L5</p>
-<p><code>03871d00e417ad002a70353867db25fa647e98a0db4c3bbaf828d97fc66079ef0d</code> R5 (03 because of the 1 at bit number 2 of second offset byte)</p>
+                  <h1>Cuckoo Cycle</h1>
+                
+                <div class="admonition warning">
+<p class="admonition-title">Warning: outdated</p>
+<p>Since this document was first published, Grin switched to a variant of Cuckoo cycle: Cuckatoo cycle. Alongside, a dual pow scheme was designed to ensure a fair initial coin distribution. You can read more about it <a href="https://paouky.github.io/docs/about-grin/proof-of-work/">here</a>.</p>
+<p>Nevertheless, this document serves as a good introduction to Cuckoo Cycle proof of work.</p>
+</div>
+<p>This document is meant to outline, at a level suitable for someone without prior knowledge,
+the algorithms and processes currently involved in Grin's Proof-of-Work system. We'll start
+with a general overview of cycles in a graph and the Cuckoo Cycle algorithm which forms the
+basis of Grin's proof-of-work. We'll then move on to Grin-specific details, which will outline
+the other systems that combine with Cuckoo Cycle to form the entirety of mining in Grin.</p>
+<h2 id="graphs-and-cuckoo-cycle">Graphs and Cuckoo Cycle</h2>
+<p>Grin's basic Proof-of-Work algorithm is called Cuckoo Cycle, which is specifically designed
+to be resistant to Bitcoin style hardware arms-races. It is primarily a memory bound algorithm,
+which (at least in theory) means that solution time is bound by memory bandwidth
+rather than raw processor or GPU speed. As such, mining Cuckoo Cycle solutions should be viable on
+most commodity hardware, and require far less energy than most other GPU, CPU or ASIC-bound
+proof of work algorithms.</p>
+<p>The Cuckoo Cycle POW is the work of John Tromp, and the most up-to-date documentation and implementations
+can be found in <a href="https://github.com/tromp/cuckoo">his github repository</a>. The
+<a href="https://github.com/tromp/cuckoo/blob/master/doc/cuckoo.pdf">white paper</a> is the best source of
+further technical details.</p>
+<p>There is also a <a href="https://moneromonitor.libsyn.com/e14-john-tromp-on-cuckoo-cycle-pow-john-mcafee-on-monero">podcast with Mike from Monero Monitor</a>
+in which John Tromp talks at length about Cuckoo Cycle; recommended listening for anyone wanting
+more background on Cuckoo Cycle, including more technical detail, the history of the algorithm's development
+and some of the motivations behind it.</p>
+<h3 id="cycles-in-a-graph">Cycles in a Graph</h3>
+<p>Cuckoo Cycle is an algorithm meant to detect cycles in a bipartite graph of N nodes
+and M edges. In plain terms, a bipartite graph is one in which edges (i.e. lines connecting nodes)
+travel only between 2 separate groups of nodes. In the case of the Cuckoo hashtable in Cuckoo Cycle,
+one side of the graph is an array numbered with odd indices (up to the size of the graph), and the other is numbered with even
+indices. A node is simply a numbered 'space' on either side of the Cuckoo Table, and an Edge is a
+line connecting two nodes on opposite sides. The simple graph below denotes just such a graph,
+with 4 nodes on the 'even' side (top), 4 nodes on the odd side (bottom) and zero Edges
+(i.e. no lines connecting any nodes.)</p>
+<p><img alt="alt text" src="../images/cuckoo_base_numbered_minimal.png" /></p>
+<p><em>A graph of 8 Nodes with Zero Edges</em></p>
+<p>Let's throw a few Edges into the graph now, randomly:</p>
+<p><img alt="alt text" src="../images/cuckoo_base_numbered_few_edges.png" /></p>
+<p><em>8 Nodes with 4 Edges, no solution</em></p>
+<p>We now have a randomly-generated graph with 8 nodes (N) and 4 edges (M), or an NxM graph where
+N=8 and M=4. Our basic Proof-of-Work is now concerned with finding 'cycles' of a certain length
+within this random graph, or, put simply, a series of connected nodes starting and ending on the
+same node. So, if we were looking for a cycle of length 4 (a path connecting 4 nodes, starting
+and ending on the same node), one cannot be detected in this graph.</p>
+<p>Adjusting the number of Edges M relative to the number of Nodes N changes the difficulty of the
+cycle-finding problem, and the probability that a cycle exists in the current graph. For instance,
+if our POW problem were concerned with finding a cycle of length 4 in the graph, the current difficulty of 4/8 (M/N)
+would mean that all 4 edges would need to be randomly generated in a perfect cycle (from 0-5-4-1-0)
+in order for there to be a solution.</p>
+<p>Let's add a few more edges, again at random:</p>
+<p><img alt="alt text" src="../images/cuckoo_base_numbered_more_edges.png" /></p>
+<p><em>8 Nodes with 7 Edges</em></p>
+<p>Where we can find a cycle:</p>
+<p><img alt="alt text" src="../images/cuckoo_base_numbered_more_edges_cycle.png" /></p>
+<p><em>Cycle Found from 0-5-4-1-0</em></p>
+<p>If you increase the number of edges relative to the number
+of nodes, you increase the probability that a solution exists. With a few more edges added to the graph above,
+a cycle of length 4 has appeared from 0-5-4-1-0, and the graph has a solution.</p>
+<p>Thus, modifying the ratio M/N changes the number of expected occurrences of a cycle for a graph with
+randomly generated edges.</p>
+<p>For a small graph such as the one above, determining whether a cycle of a certain length exists
+is trivial. But as the graphs get larger, detecting such cycles becomes more difficult. For instance,
+does this graph have a cycle of length 8, i.e. 8 connected nodes starting and ending on the same node?</p>
+<p><img alt="alt text" src="../images/cuckoo_base_numbered_many_edges.png" /></p>
+<p><em>Meat-space Cycle Detection exercise</em></p>
+<p>The answer is left as an exercise to the reader, but the overall takeaways are:</p>
+<ul>
+<li>Detecting cycles in a graph becomes more difficult exercise as the size of a graph grows.</li>
+<li>The probability of a cycle of a given length in a graph increases as M/N becomes larger,
+  i.e. you add more edges relative to the number of nodes in a graph.</li>
+</ul>
+<h3 id="cuckoo-cycle">Cuckoo Cycle</h3>
+<p>The Cuckoo Cycle algorithm is a specialized algorithm designed to solve exactly this problem, and it does
+so by inserting values into a structure called a 'Cuckoo Hashtable' according to a hash which maps nodes
+into possible locations in two separate arrays. This document won't go into detail on the base algorithm, as
+it's outlined plainly enough in section 5 of the
+<a href="https://github.com/tromp/cuckoo/blob/master/doc/cuckoo.pdf">white paper</a>. There are also several
+variants on the algorithm that make various speed/memory tradeoffs, again beyond the scope of this document.
+However, there are a few details following from the above that we need to keep in mind before going on to more
+technical aspects of Grin's proof-of-work.</p>
+<ul>
+<li>The 'random' edges in the graph demonstrated above are not actually random but are generated by
+  putting edge indices (0..N) through a seeded hash function, SIPHASH. Each edge index is put through the
+  SIPHASH function twice to create two edge endpoints, with the first input value being 2 * edge_index,
+  and the second 2 * edge_index+1. The seed for this function is based on a hash of a block header,
+  outlined further below.</li>
+<li>The 'Proof' created by this algorithm is a set of nonces that generate a cycle of length 42,
+  which can be trivially validated by other peers.</li>
+<li>Two main parameters, as explained above, are passed into the Cuckoo Cycle algorithm that affect the probability of a solution, and the
+  time it takes to search the graph for a solution:</li>
+<li>The M/N ratio outlined above, which controls the number of edges relative to the size of the graph.
+    Cuckoo Cycle fixes M at N/2, which limits the number of cycles to a few at most.</li>
+<li>The size of the graph itself</li>
+</ul>
+<p>How these parameters interact in practice is looked at in more <a href="#mining-loop-difficulty-control-and-timing">detail below</a>.</p>
+<p>Now, (hopefully) armed with a basic understanding of what the Cuckoo Cycle algorithm is intended to do, as well as the parameters that affect how difficult it is to find a solution, we move on to the other portions of Grin's POW system.</p>
+<h2 id="mining-in-grin">Mining in Grin</h2>
+<p>The Cuckoo Cycle outlined above forms the basis of Grin's mining process, however Grin uses Cuckoo Cycle in tandem with several other systems to create a Proof-of-Work.</p>
+<h3 id="additional-difficulty-control">Additional Difficulty Control</h3>
+<p>In order to provide additional difficulty control in a manner that meets the needs of a network with constantly evolving hashpower
+availability, a further Hashcash-based difficulty check is applied to potential solution sets as follows:</p>
+<p>If the Blake2b hash
+of a potential set of solution nonces (currently an array of 42 u32s representing the cycle nonces,)
+is less than an evolving difficulty target T, then the solution is considered valid. More precisely,
+the proof difficulty is calculated as the maximum target hash (2^256) divided by the current hash,
+rounded to give an integer. If this integer is larger than the evolving network difficulty, the POW
+is considered valid and the block is submit to the chain for validation.</p>
+<p>In other words, a potential proof, as well as containing a valid Cuckoo Cycle, also needs to hash to a value higher than the target difficulty. This difficulty is derived from:</p>
+<h3 id="evolving-network-difficulty">Evolving Network Difficulty</h3>
+<p>The difficulty target is intended to evolve according to the available network hashpower, with the goal of
+keeping the average block solution time within range of a target (currently 60 seconds, though this is subject
+to change).</p>
+<p>The difficulty calculation is based on both Digishield and GravityWave family of difficulty computation,
+coming to something very close to ZCash. The reference difficulty is an average of the difficulty over a window of
+23 blocks (the current consensus value). The corresponding timespan is calculated by using the difference between
+the median timestamps at the beginning and the end of the window. If the timespan is higher or lower than a certain
+range, (adjusted with a dampening factor to allow for normal variation,) then the difficulty is raised or lowered
+to a value aiming for the target block solve time.</p>
+<h3 id="the-mining-loop">The Mining Loop</h3>
+<p>All of these systems are put together in the mining loop, which attempts to create
+valid Proofs-of-Work to create the latest block in the chain. The following is an outline of what the main mining loop does during a single iteration:</p>
+<ol>
+<li>Get the latest chain state and build a block on top of it, which includes a Block Header with new values particular to this mining attempt:<ul>
+<li>The latest target difficulty as selected by the <a href="#evolving-network-difficulty">evolving network difficulty</a> algorithm</li>
+<li>A set of transactions available for validation selected from the transaction pool</li>
+<li>A coinbase transaction (which we're hoping to give to ourselves)</li>
+<li>The current timestamp</li>
+<li>A randomly generated nonce to add further randomness to the header's hash</li>
+<li>The merkle root of the UTXO set and fees</li>
+</ul>
+</li>
+<li>
+<p>Then, a sub-loop runs for a set amount of time, currently configured at 2 seconds, where the following happens:</p>
+<ol>
+<li>The new block header is hashed to create a hash value</li>
+<li>
+<p>The cuckoo graph generator is initialized, which accepts as parameters:</p>
+<ul>
+<li>The hash of the potential block header, which is to be used as</li>
+<li>the key to a SIPHASH function that will generate pairs of locations for each element in a set of nonces 0..N in the graph.</li>
+<li>The size of the graph (a consensus value).</li>
+<li>An easiness value, (a consensus value) representing the M/N ratio described above denoting the probability of a solution appearing in the graph</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>The Cuckoo Cycle detection algorithm tries to find a solution (i.e. a cycle of length 42) within the generated graph.</p>
+</li>
+<li>If a cycle is found, a Blake2b hash of the proof is created and is compared to the current target difficulty, as outlined in <a href="#additional-difficulty-control">Additional Difficulty Control</a> above.</li>
+<li>If the Blake2b Hash difficulty is greater than or equal to the target difficulty, the block is sent to the transaction pool, propagated amongst peers for validation, and work begins on the next block.</li>
+<li>If the Blake2b Hash difficulty is less than the target difficulty, the proof is thrown out and the timed loop continues.</li>
+<li>If no solution is found, increment the nonce in the header by 1, and update the header's timestamp so the next iteration hashes a different value for seeding the next loop's graph generation step.</li>
+<li>If the loop times out with no solution found, start over again from the top, collecting new transactions and creating a new block altogether.</li>
+</ol>
+<h3 id="mining-loop-difficulty-control-and-timing">Mining Loop Difficulty Control and Timing</h3>
+<p>Controlling the overall difficulty of the mining loop requires finding a balance between the three values outlined above:</p>
+<ul>
+<li>Graph size (currently represented as a bit-shift value n representing a size of 2^n nodes, consensus value
+  DEFAULT_SIZESHIFT). Smaller graphs can be exhaustively searched more quickly, but will also have fewer
+  solutions for a given easiness value. A very small graph needs a higher easiness value to have the same
+  chance to have a solution as a larger graph with a lower easiness value.</li>
+<li>The 'Easiness' consensus value, or the M/N ratio of the graph expressed as a percentage. The higher this value, the more likely
+  it is a generated graph will contain a solution. In tandem with the above, the larger the graph, the more solutions
+  it will contain for a given easiness value. The Cuckoo Cycle implementations fix this M to N/2, giving
+  a ratio of 50%</li>
+<li>The evolving network difficulty hash.</li>
+</ul>
+<p>These values need to be carefully tweaked in order for the mining algorithm to find the right balance between the
+cuckoo graph size and the evolving difficulty. The POW needs to remain mostly Cuckoo Cycle based, but still allow for
+reasonably short block times that allow new transactions to be quickly processed.</p>
+<p>If the graph size is too low and the easiness too high, for instance, then many cuckoo cycle solutions can easily be
+found for a given block, and the POW will start to favour those who can hash faster, precisely what Cuckoo Cycle is
+trying to avoid. If the graph is too large and easiness too low, however, then it can potentially take any solver a
+long time to find a solution in a single graph, well outside a window in which you'd like to stop to collect new
+transactions.</p>
+<p>These values are currently set to 2^12 for the graph size and 50% (as fixed by Cuckoo Cycle) for the easiness value,
+however the size is only a temporary values for testing. The current miner implementation is very unoptimized,
+and the graph size will need to be changed as faster and more optimized Cuckoo Cycle algorithms are put in place.</p>
+<h3 id="pooling-capability">Pooling Capability</h3>
+<p>Contrary to some existing concerns about Cuckoo Cycle's poolability, the POW implementation in Grin as described above
+is perfectly suited to a mining pool. While it may be difficult to prove efforts to solve a single graph in isolation,
+the combination of factors within Grin's proof-of-work combine to enforce a notion called 'progress-freeness', which
+enables 'poolability' as well as a level of fairness among all miners.</p>
+<h4 id="progress-freeness">Progress Freeness</h4>
+<p>Progress-freeness is central to the 'poolability' of a proof-of-work, and is simply based on the idea that a solution
+to a POW problem can be found within a reasonable amount of time. For instance, if a blockchain
+has a one minute POW time and miners have to spend one minute on average to find a solution, this still satisfies the POW
+requirement but gives a strong advantage to big miners. In such a setup, small miners will generally lose at least one minute
+every time while larger miners can move on as soon as they find a solution. So in order to keep mining relatively progress-free,
+a POW that requires multiple solution attempts with each attempt taking a relatively small amount of time is desirable.</p>
+<p>Following from this, Grin's progress-freeness is due to the fact that a solution to a Cuckoo with Grin's default parameters
+can typically be found in under a second on most GPUs, and there is the additional requirement of the Blake2b difficulty check
+on top of that. Members of a pool are thus able to prove they're working on a solution to a block by submitting valid Cuckoo solutions
+(or a small bundle of them) that simply fall under the current network target difficulty.</p>
                 
               
               
@@ -1089,7 +1397,7 @@ Again we have an offset in which we specify how to recover y values. Now since w
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../dandelion/" title="Dandelion" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../fast-sync/" title="Fast Sync" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1098,19 +1406,19 @@ Again we have an offset in which we specify how to recover y values. Now since w
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Dandelion
+                Fast Sync
               </div>
             </div>
           </a>
         
         
-          <a href="../../slatepack-integration/" title="Slatepack Integration Guide" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../pruning-blockchain-data/" title="Pruning Blockchain Data" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Slatepack Integration Guide
+                Pruning Blockchain Data
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

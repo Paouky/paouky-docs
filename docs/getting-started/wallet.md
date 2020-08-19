@@ -166,7 +166,7 @@ This command outputs the same address as using the `listen` command. However, yo
 * A key to encrypt the Slatepack messages exchanged between you and your counterparty (more on that below).
 * Payment proof identification.
 
-!!! note "Address"
+!!! info "Address"
      This is not the same concept of address that Bitcoin-based cryptocurrencies might use; A MimbleWimble chain has no addresses.
 
 
@@ -215,7 +215,7 @@ grin-wallet receive
 After entering the command, you'll be prompted to input the Slatepack. </br>
 Then your wallet will output a another Slatepack message to provide the other party in order to `finalize` the transaction.
 
-!!! tip "Files"
+!!! info "Files"
     When sending or receiving via Slatepacks, your wallet will create a text file containing the message it generated. Default path is `~/.grin/main/slatepacks`.
 
 ## finalize

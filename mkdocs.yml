@@ -82,12 +82,13 @@ nav:
     - Blockchain and Consensus:
       - Coinbase Maturity Rule: technical/blockchain-and-consensus/coinbase-maturity-rule.md
       - Fast Sync: technical/blockchain-and-consensus/fast-sync.md
-      - Proof-of-Work: technical/blockchain-and-consensus/proof-of-work.md
+      - Cuckoo Cycle: technical/blockchain-and-consensus/cuckoo-cycle.md
       - Pruning Blockchain Data: technical/blockchain-and-consensus/pruning-blockchain-data.md
       - State and Storage: technical/blockchain-and-consensus/state-and-storage.md
     - Miscellaneous:
       - Contracts: technical/miscellaneous/contracts.md
       - Dandelion: technical/miscellaneous/dandelion.md
       - Range Proofs Format: technical/miscellaneous/range-proof-format.md
+    - Slatepack Integration Guide: technical/slatepack-integration.md
   - Archives:
       - Archives: archives/archives.md
