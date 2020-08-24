@@ -84,6 +84,10 @@
      <lastmod>2020-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://docs.grin.mw/technical/transactions/payment-proofs/</loc>
+     <lastmod>2020-08-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://docs.grin.mw/technical/transactions/range-proof-format/</loc>
      <lastmod>2020-08-24</lastmod>
      <changefreq>daily</changefreq>
@@ -96,7 +100,7 @@
      <lastmod>2020-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.grin.mw/technical/chain-data/fast-sync/</loc>
+     <loc>https://docs.grin.mw/technical/chain-data/chain-sync/</loc>
      <lastmod>2020-08-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>

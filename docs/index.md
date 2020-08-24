@@ -4,6 +4,8 @@
 
     Green field implementation that strives to be as clear and simple as possible, making it easier to audit and maintain in the future.
 
+    > Use Pedersen Commitments to hide the amount and no address info on the chain.
+    Non-interactive coinjoin and global cut-through for the excellent scalability
 
     Simplicity, Privacy, Scalability
 

@@ -5,19 +5,19 @@
 Recall that the Grin chain includes the following data:
 
 1. Outputs, which include for each output:
-    1. A Pedersen commitment (33 bytes)
-    1. A range proof (640KB)
-1. Inputs, which are just output references (32 bytes)
+    1. A Pedersen commitment (33 bytes).
+    1. A range proof (640KB).
+1. Inputs, which are just output references (32 bytes).
 1. Transaction kernels, which include for each transaction:
-    1. The excess commitment sum for the transaction (33 bytes)
-    1. A signature generated with the excess (~70 bytes)
-1. A block header with a valid proof of work and roots of the Merkle trees
+    1. The excess commitment sum for the transaction (33 bytes).
+    1. A signature generated with the excess (~70 bytes).
+1. A block header with a valid proof of work and roots of the Merkle trees.
 
 Each node maintains 3 MMRs:
 
-* An output set MMR
-* Rangeproofs MMR
-* Transaction kernels MMR
+* An output set MMR.
+* Rangeproofs MMR.
+* Transaction kernels MMR.
 
 !!! info ""
     All outputs, rangeproofs and kernels are added in their respective MMRs in the order they occur in each block (recall that block data is required to be sorted).
@@ -33,9 +33,9 @@ pruned of their hash entires.
 
 Following pruning, the full state of the chain consists of the following data:
 
-* The unspent output set (UTXO)
-* A rangeproof for each unspent output
-* All transaction kernels
+* The unspent output set (UTXO).
+* A rangeproof for each unspent output.
+* All transaction kernels.
 
 In addition, all block headers are required to anchor the above state
 with a valid proof of work (the state corresponds to the most worked chain).
@@ -44,10 +44,9 @@ with a valid proof of work (the state corresponds to the most worked chain).
 
 The full validation of the chain state requires that:
 
-* All kernel signatures verify against their public keys (excess commitments)
-* The sum of all UTXO commitments minus the supply is a valid public key (can
-  be used to sign the empty string)
-* The sum of all kernel public keys equals the above public key (sum of UTXO commitments minus supply)
+* All kernel signatures verify against their public keys (excess commitments).
+* The sum of all UTXO commitments minus the supply is a valid public key.
+* The sum of all kernel public keys equals the above public key (sum of UTXO commitments minus supply).
 * The root hashes of the UTXO PMMR, the range proofs PMMR and the kernels MMR
-  match a block header with a valid proof of work chain
-* All range proofs are valid
+  match a block header with a valid proof of work chain.
+* All range proofs are valid.

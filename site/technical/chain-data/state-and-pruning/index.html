@@ -704,7 +704,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../transactions/payment-proofs.md" title="Payment Proofs" class="md-nav__link">
+    <a href="../../transactions/payment-proofs/" title="Payment Proofs" class="md-nav__link">
       Payment Proofs
     </a>
   </li>
@@ -840,8 +840,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../fast-sync/" title="Fast Sync" class="md-nav__link">
-      Fast Sync
+    <a href="../chain-sync/" title="Chain Sync" class="md-nav__link">
+      Chain Sync
     </a>
   </li>
 
@@ -1299,23 +1299,23 @@
 <p>Recall that the Grin chain includes the following data:</p>
 <ol>
 <li>Outputs, which include for each output:<ol>
-<li>A Pedersen commitment (33 bytes)</li>
-<li>A range proof (640KB)</li>
+<li>A Pedersen commitment (33 bytes).</li>
+<li>A range proof (640KB).</li>
 </ol>
 </li>
-<li>Inputs, which are just output references (32 bytes)</li>
+<li>Inputs, which are just output references (32 bytes).</li>
 <li>Transaction kernels, which include for each transaction:<ol>
-<li>The excess commitment sum for the transaction (33 bytes)</li>
-<li>A signature generated with the excess (~70 bytes)</li>
+<li>The excess commitment sum for the transaction (33 bytes).</li>
+<li>A signature generated with the excess (~70 bytes).</li>
 </ol>
 </li>
-<li>A block header with a valid proof of work and roots of the Merkle trees</li>
+<li>A block header with a valid proof of work and roots of the Merkle trees.</li>
 </ol>
 <p>Each node maintains 3 MMRs:</p>
 <ul>
-<li>An output set MMR</li>
-<li>Rangeproofs MMR</li>
-<li>Transaction kernels MMR</li>
+<li>An output set MMR.</li>
+<li>Rangeproofs MMR.</li>
+<li>Transaction kernels MMR.</li>
 </ul>
 <div class="admonition info">
 <p>All outputs, rangeproofs and kernels are added in their respective MMRs in the order they occur in each block (recall that block data is required to be sorted).</p>
@@ -1330,22 +1330,21 @@ pruned of their hash entires.</p>
 </div>
 <p>Following pruning, the full state of the chain consists of the following data:</p>
 <ul>
-<li>The unspent output set (UTXO)</li>
-<li>A rangeproof for each unspent output</li>
-<li>All transaction kernels</li>
+<li>The unspent output set (UTXO).</li>
+<li>A rangeproof for each unspent output.</li>
+<li>All transaction kernels.</li>
 </ul>
 <p>In addition, all block headers are required to anchor the above state
 with a valid proof of work (the state corresponds to the most worked chain).</p>
 <h2 id="validation">Validation</h2>
 <p>The full validation of the chain state requires that:</p>
 <ul>
-<li>All kernel signatures verify against their public keys (excess commitments)</li>
-<li>The sum of all UTXO commitments minus the supply is a valid public key (can
-  be used to sign the empty string)</li>
-<li>The sum of all kernel public keys equals the above public key (sum of UTXO commitments minus supply)</li>
+<li>All kernel signatures verify against their public keys (excess commitments).</li>
+<li>The sum of all UTXO commitments minus the supply is a valid public key.</li>
+<li>The sum of all kernel public keys equals the above public key (sum of UTXO commitments minus supply).</li>
 <li>The root hashes of the UTXO PMMR, the range proofs PMMR and the kernels MMR
-  match a block header with a valid proof of work chain</li>
-<li>All range proofs are valid</li>
+  match a block header with a valid proof of work chain.</li>
+<li>All range proofs are valid.</li>
 </ul>
                 
               
@@ -1380,13 +1379,13 @@ with a valid proof of work (the state corresponds to the most worked chain).</p>
           </a>
         
         
-          <a href="../fast-sync/" title="Fast Sync" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../chain-sync/" title="Chain Sync" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Fast Sync
+                Chain Sync
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

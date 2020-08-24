@@ -3,7 +3,7 @@
 !!! quote ""
     - Title: `slate-v4 (compact slates)`
     - Authors: [Michael Cordner](mailto:yeastplume@protonmail.com)
-    - Start date: April 3, 2020
+    - Start date: April 03 2020
     - RFC PR: [mimblewimble/grin-rfcs#49](https://github.com/mimblewimble/grin-rfcs/pull/49)
     - Tracking issue: [mimblewimble/grin-wallet#317](https://github.com/mimblewimble/grin-wallet/issues/317)
 

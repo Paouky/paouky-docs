@@ -83,7 +83,7 @@ nav:
     - Chain Data:
       - Merkle Mountain Ranges: technical/chain-data/merkle-mountain-range.md
       - State & Pruning: technical/chain-data/state-and-pruning.md
-      - Fast Sync: technical/chain-data/fast-sync.md
+      - Chain Sync: technical/chain-data/chain-sync.md
     - Blocks:
       - Header: technical/blocks/block-header.md
       - Body: technical/blocks/block-body.md
