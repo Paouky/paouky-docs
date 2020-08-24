@@ -1,4 +1,4 @@
-# Slatepack Exchange Integration Guide
+# Slatepack Integration Guide
 
 Slatepack is a new transaction building standard for Grin designed to improve and simplify the transacting experience for all users. The full specification is available [here](https://github.com/mimblewimble/grin-rfcs/pull/55)
 
@@ -6,16 +6,19 @@ Slatepack was introduced in v4.0.0. Wallets and services must fully support it b
 
 ## Motivation
 
-Previously, users and exchanges had to decide between multiple transaction methods to find one that works for them. Transactions were commonly done through HTTPS, requiring users to open ports and configure firewalls, or with slate files which bring their own set of challenges. **With Slatepack, a single standard needs to be supported**.
+Previously, users and exchanges had to decide between multiple transaction methods to find one that works for them. Transactions were commonly done through HTTPS, requiring users to open ports and configure firewalls, or with slate files which bring their own set of challenges. With Slatepack, a single standard needs to be supported.
 
 ## Summary
 
 The Slatepack standard eliminates the need for HTTPS or exchanging files. Instead, it introduces two methods:
 
-1. Synchornous commuication through **Tor** (transaction is completed automatically similar to HTTPS).
-2. Asynchronous communication using **Slatepack Messages**, which are encoded transaction strings exchanged by a simple copy-paste.
+1. **Synchronous** commuication done through Tor (transaction is completed automatically similar to HTTPS).
+1. **Asynchronous** communication using Slatepack Messages, which are encoded transaction strings exchanged by a simple copy-paste.
 
 Additionally, **Slatepack Addresses** are introduced to facilitate the interaction between two wallets.
+
+!!! done "No more endless support tickets"
+    Notice how the transactions can be completed without requiring additional help from exchange support staff; When needed, wallets resort to exchanging simple string messages to complete the interaction. This should drastically reduce time spent on support tickets related to troubles around transacting with Grin.
 
 ## Overview
 
@@ -25,6 +28,11 @@ Additionally, **Slatepack Addresses** are introduced to facilitate the interacti
 
 A Slatepack address is a bech32 encoded address, similar to those used in Bitcoin. However, Slatepack addresses do not touch the network; they are used strictly for transaction building between two wallets, and never appear on-chain or represent ownership.
 
+Addresses are exchanged between parties to serve as instructions for how to complete the payment. Therefore, a Slatepack address serves a double prupose:
+
+* It decodes to a Tor address.
+* Acts as a key to encrypt the transaction data being communicated by Slatepack Messages (strings).
+
 *example address*
 ```text
 grin1dhvv9mvarqwl6fderuxp3qgl6qppvhc9p4u24347ec0mvgg6342q4w6x56
@@ -33,26 +41,24 @@ grin1dhvv9mvarqwl6fderuxp3qgl6qppvhc9p4u24347ec0mvgg6342q4w6x56
 !!! tip ""
     Since Slatepack addresses are bech32, they can easily be QR encoded.
 
-A Slatepack address serves a double purpose:
 
-* Act as a Tor address.
-* A key to encrypt the transaction data being communicated by Slatepack Messages (strings).
-
-### Tor
+### Tor (Synchronous Tx Completion)
 
 Any Slatepack address is decoded by the wallet as a *Tor address*, where the wallet will be listening. Therefore, if both the exchange's and the user's wallets are online and connected to Tor, payments will complete automatically (the receiver's wallet needs to listen).
 
 However, if a Tor connection between the two wallets can't be established (fails for any reason), or when a Slatepack address is not provided, the wallet will resort to exchanging Slatepack Messages for completing a transaction.
 
-### Slatepack Messages
+### Slatepack Messages (Asynchronous Tx Completion)
 
 The Slatepack standard automatically handles a failed Tor connection by outputting a Slatepack Message, which is an encoded transaction string to be exchanged manually by copy-paste.
 
-![receiver-msg](../../assets/images/receiver-msg.png){ width=650 }
+![Send Message](../../assets/images/send-msg.png){ width=650 }
 
 Given that the sender provides a destination address (always recommended even if Tor isn't desired), then the Slatepack Messages will be encrypted.
 
 ## Transaction Flow
+
+As an example, let's demonstrate the workflow of an exchange.
 
 *(switch between tabs)*
 
@@ -79,21 +85,18 @@ Given that the sender provides a destination address (always recommended even if
     |   6     |                       | Paste message[2]                      |
 
 
-!!! done "No more endless support tickets"
-    Notice how the transactions can be completed without requiring additional help from exchange support staff; When needed, wallets resort to exchanging simple string messages to complete the interaction. This should drastically reduce time spent on support tickets related to troubles around depositing or withdrawing Grin.
-
 
 ## Exchange Integration
 
 Exchanges may consider several different paths for intergration:
 
-* An exchange can run a Tor hidden service to automatically complete transactions, and also provide a user-interface for copy-pasting Slatepack Messages as a fallback mechanism.
-* Some exchanges may not wish to have Tor running anywhere in their infrastructure. In this case, they may provide only the user-interface for required for exchanging Slatepack Messages.
-* Although not yet implemented, an exchanges will be able provide each user with a unique Slatepack Address for deposits, to simplify the tracking of transactions for each user. Nevertheless, it is possible to make the exchange's wallet listen on many unique Tor addresses for a comparable effect.
+* Exchanges may run Tor hidden services to automatically complete transactions, and also provide a user-interface for copy-pasting Slatepack Messages as a fallback mechanism.
+* Some exchanges may not wish to have Tor running anywhere in their infrastructure. In this case, they may provide only the user-interface required for exchanging Slatepack Messages via copy and paste text boxes.
+* Exchanges may provide unique Tor end points to serve as unique deposit addresses for each user.
 
 ### Payment proofs
 
-Grin's lack of on-chain addresses slightly complicates proving a transaction occured. In order to solve disputes and prove funds were sent to the correct wallet, seperate payment proofs are used.
+Grin's lack of on-chain addresses slightly complicates proving a transaction occured. In order to solve disputes and prove funds were sent to the correct wallet, seperate [payment proofs](https://github.com/mimblewimble/grin-rfcs/blob/master/text/0006-payment-proofs.md) are used.
 
 By default, whenever a transaction is sent to a destination Slatepack Address, a payment proof is created automatically.
 
@@ -114,7 +117,7 @@ This will ensure that:
 * The kernel for the transaction in the proof is validated and can be found on-chain.
 * Both the sender and recipient's signatures correctly sign for the amount and the kernel.
 
-Additionally, if the recipient of the transaction is the same wallet trying to verify it, then he will be be informed as follows:
+Additionally, if the recipient of the transaction is the same wallet trying to verify it, then they will be be informed as follows:
 
 ```text
 grin-wallet verify_proof proof.txt
@@ -130,6 +133,15 @@ As was always the case with Grin, when a transaction is under construction, the 
 While this inconvience is planned to be (mostly) resolved in the future, for now, it may pose a challenge for an exchange if several user withdrawals are happening simultanously, or when a user takes a long time to provide his side of the Slatepack Message in the midst of a manual withdrawal proccess.
 
 One way to address this, if it becomes a concern, would be for the exchange to implement a timer on manual transactions, after which the transaction would be cancelled and the funds unlocked for spending.
+
+
+
+## Questions & Support
+
+For questions about the Slatepack standard or its implementation, send a message in @grincoin#support on Keybase.
+
+
+
 
 ---
 
@@ -178,11 +190,11 @@ The `SlatepackWorkflow` establishes the steps followed to adhere to the standard
 	- Derive onion address from ED25519 public key decoded from the bech32 `SlatepackAddress`
 	- Attempt to complete the transaction via Tor and json-rpc as per the previous implementations
 	- If connection fails, proceed to step 2
-2. Fall back to copy/paste (optionally encrypted) ascii-armored transaction strings known as `SlatepackMessage`
+1. Fall back to copy/paste (optionally encrypted) ascii-armored transaction strings known as `SlatepackMessage`
 	- If using encryption, derive encryption key: `SlatepackAddress` -> `ed25519 public key` -> `x25519 public key`
 	- Build ascii-armored string according to standard including `SimpleBase58Check`, appropriate binary encoding and framing
 
-3. A `SlatepackMessage` is a transaction string formatted for manual copy/paste transport. It contains the required components to build a transaction manually, similar to the transaction files previously supported but compacted for transport.
+1. A `SlatepackMessage` is a transaction string formatted for manual copy/paste transport. It contains the required components to build a transaction manually, similar to the transaction files previously supported but compacted for transport.
 	- Example:
 		```
 		BEGINSLATEPACK. 4H1qx1wHe668tFW yC2gfL8PPd8kSgv
@@ -190,8 +202,3 @@ The `SlatepackWorkflow` establishes the steps followed to adhere to the standard
 		GWmtgsneoXf7N4D uVWuyZSamPhfF1u AHRaYWvhF7jQvKx
 		wNJAc7qmVm9JVcm NJLEw4k5BU7jY6S eb. ENDSLATEPACK.
 		```
-
-
-## Questions & Support
-
-For questions about the Slatepack standard or its implementation, send a message in @grincoin#support on Keybase.
