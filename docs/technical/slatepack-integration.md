@@ -133,15 +133,6 @@ Payment proof's signatures are valid.
 The proof's recipient address belongs to this wallet.
 ```
 
-### Locked Outputs
-
-As was always the case with Grin, when a transaction is under construction, the outputs used become locked until they're included in a block (min num. of blocks is configurable) or cancelled.
-
-While this inconvience is planned to be (mostly) resolved in the future, for now, it may pose a challenge for an exchange if several user withdrawals are happening simultanously, or when a user takes a long time to provide his side of the Slatepack Message in the midst of a manual withdrawal proccess.
-
-One way to address this, if it becomes a concern, would be for the exchange to implement a timer on manual transactions, after which the transaction would be cancelled and the funds unlocked for spending.
-
-
 
 ## Questions & Support
 
