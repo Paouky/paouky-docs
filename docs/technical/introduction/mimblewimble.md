@@ -1,3 +1,7 @@
+---
+description: Mimblewimble Grin
+---
+
 # Mimblewimble
 
 Earlier we demonstrated how a public key obtained from the *addition of two private keys* `r` and `v`, resulting in `(v+r)*G`, is identical to the *addition of the public keys* of each individual private key, `r*G + v*G`. Mimblewimble and Grin heavily rely on this principle.
@@ -329,8 +333,8 @@ All that's needed to remain is the set of currently unspent outputs `out01, out0
 
 
 1. The total amount of coins created by mining in the chain.
-2. The complete set of unspent outputs.
-3. The transactions kernels for each transaction.
+1. The complete set of unspent outputs.
+1. The transactions kernels for each transaction.
 
 The extension of this idea is that all the way from the genesis block to the latest block, every input is deleted along with its referenced output.
 

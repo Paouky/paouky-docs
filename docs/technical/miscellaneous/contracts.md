@@ -1,21 +1,20 @@
 # Contracts
 
 This document describes smart contracts that can be setup using Grin even
-though the Grin chain does not support scripting. All these contracts rely
-on a few basic features that are built in the chain and compose them in
-increasingly clever ways.
+though its simplicity does not allow scripting. All of these types of contracts rely
+on a few basic Mimblewimble features, and compose them in increasingly clever ways.
 
 None of those constructs are fully original or invented by the authors of this
-document or the Grin development team. Most of the credit should be attributed
+document or the Grin developers. Most of the credit should be attributed
 to a long list of cryptographers and researchers. To name just a few: Torben
 Pryds Pedersen, Gregory Maxwell, Andrew Poelstra, John Tromp, Claus Peter
 Schnorr. We apologize in advance for all those we couldn't name and recognize
 that most computer science discoveries are incremental.
 
-## Built-Ins
+## Built-ins
 
 This section is meant as a reminder of some crucial features of the Grin chain.
-We assume some prior reading as to how these are constructed and used.
+We assume some prior knowledge as to how these are constructed and used.
 
 ### Pedersen Commitments
 
@@ -54,20 +53,22 @@ public key `r*G`, and allows to verify non-inflation for all Grin transactions
 Because these signatures are built simply from a scalar and a public key, they
 can be used to construct a variety of contracts using "simple" arithmetic.
 
-### (Absolute) Timelocked Transactions
+### Timelocked Transactions
 
-Analogous to Bitcoin [nLockTime](https://en.bitcoin.it/wiki/Timelock#nLockTime).
+#### Absolute Timelocked
 
-A transaction can be time-locked with a few simple modifications:
+!!! info ""
+    Analogous to Bitcoin's [nLockTime](https://en.bitcoin.it/wiki/Timelock#nLockTime).
 
-* the message `M` to sign becomes the lock_height `h` at which the transaction
-  becomes spendable appended to the fee
-  * `M = fee | h`
-* the lock height `h` is included in the transaction kernel
-* a block with a kernel that includes a lock height greater than the current
-  block height is rejected
+A transaction can be time-locked with a few simple modifications.
 
-### (Relative) Timelocked Transactions
+The message `M` to sign becomes the lock_height `h` at which the transaction
+becomes spendable, appended to the fee, such that `M = fee | h`.
+
+The lock height `h` is then included in the transaction kernel. If a block contains a kernel that includes a lock height greater than the current
+block height, it is rejected.
+
+#### Relative Timelocked
 
 We can extend the concept of an absolute locktime on a tx by including a (kernel) commitment that we can define the lock_height relative to.
 
@@ -75,13 +76,14 @@ The lock_height would be relative to the block height where the referenced kerne
 
 Tx2 can then be restricted such that it would only be valid to include it in a block once `h` blocks have passed after first seeing Tx1 (via the referenced kernel commitment).
 
-* the message `M` to sign would need to include the following -
-  * the `fee` as before
-  * the lock_height `h` (as before but interpreted as a relative value)
-  * a referenced kernel commitment `C`
-  * M = `fee | h | C`
+The message `M` to sign would need to include the following:
 
-For Tx2 to be accepted it would also need to include a Merkle proof identifying the block including `C` from Tx1. This proves the relative lock_height requirement has been met.
+* The `fee` as before
+* The lock_height `h` (as before but interpreted as a relative value)
+* A referenced kernel commitment `C`
+* M = `fee | h | C`
+
+For Tx2 to be accepted it would also need to include a [Merkle proof](../../building-blocks/merkle-mountain-range/#merkle-proof) identifying the block including `C` from Tx1. This proves the relative lock_height requirement has been met.
 
 ## Derived Contracts
 
@@ -176,7 +178,8 @@ This contract can be trivially used for unidirectional payment channels.
 
 ### Conditional Output Timelocks
 
-Analogous to Bitcoin [CheckLockTimeVerify](https://en.bitcoin.it/wiki/Timelock#CheckLockTimeVerify).
+!!! info ""
+    Analogous to Bitcoin's [CheckLockTimeVerify](https://en.bitcoin.it/wiki/Timelock#CheckLockTimeVerify).
 
 We currently have _unconditional_ lock_heights on txs (tx is not valid and will not be accepted until lock_height has passed).
 
@@ -210,7 +213,8 @@ where it can be spent either with Key<sub>3</sub> (after lock_height), _or_ Key<
 
 ### (Relative) Conditional Output Timelocks
 
-Analogous to Bitcoin [CheckSequenceVerify](https://en.bitcoin.it/wiki/Timelock#CheckSequenceVerify).
+!!! info ""
+    Analogous to Bitcoin's [CheckSequenceVerify](https://en.bitcoin.it/wiki/Timelock#CheckSequenceVerify).
 
 By combining "Conditional Timelock on Output" with "(Relative) Timelocked Transactions" we can encumber a confirmed output with a relative timelock (relative to a related tx kernel).
 
@@ -219,13 +223,7 @@ Tx<sub>2</sub> cannot be broadcast and accepted until the _relative_ lock_height
 
 ### Atomic Swap
 
-This setup can work on Bitcoin, Ethereum and likely other chains. It relies
-on a time locked contract combined with a check for 2 public keys. On Bitcoin
-this would be a 2-of-2 multisig, one public key being Alice's, the second
-being the hash of a preimage that Bob has to reveal. In this setup, we consider
-public key derivation `x*G` to be the hash function and by Bob revealing `x`,
-Alice can then produce an adequate signature proving she knows `x` (in
-addition to her own private key).
+This setup relies on a time locked contract combined with a check for 2 public keys. On Bitcoin this would be a 2-of-2 multisig, one public key being Alice's, the second being the hash of a preimage that Bob has to reveal. In this setup, we consider public key derivation `x*G` to be the hash function and by Bob revealing `x`, Alice can then produce an adequate signature proving she knows `x` (in addition to her own private key).
 
 Alice has grins and Bob has bitcoin. They would like to swap. We assume Bob
 created an output on the Bitcoin blockchain that allows spending either by
@@ -251,7 +249,7 @@ specified in section 2.1.
 1. As soon as Bob broadcasts the final transaction to get his new grins, Alice
    can compute `sr' - sr` to get `x`.
 
-#### Notes on the Bitcoin setup
+**Notes on the Bitcoin setup**
 
 Prior to completing the atomic swap, Bob needs to know Alice's public key. Bob
 would then create an output on the Bitcoin blockchain with a 2-of-2 multisig
@@ -267,4 +265,4 @@ to spend the 2-of-2, having both private keys, and get her bitcoin.
 
 ### "Relative Timelocks" (Lightning Network)
 
-See [No Recent Duplicate (NRD) transaction kernels RFC](https://github.com/mimblewimble/grin-rfcs/blob/master/text/0013-nrd-kernels.md) for more details.
+See [No Recent Duplicate (NRD) transaction kernels](https://github.com/mimblewimble/grin-rfcs/blob/master/text/0013-nrd-kernels.md) for more details.

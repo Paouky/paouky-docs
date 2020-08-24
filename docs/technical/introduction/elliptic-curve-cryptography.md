@@ -1,6 +1,6 @@
 
 ---
-description: Mimblewimble
+description: Elliptic Curve Cryptography ECC
 ---
 
 **Preface**
@@ -22,7 +22,7 @@ Let's review the basics.
 These are the relevant mathematical operations we can do on Elliptic-curve points.
 
 * Addition - Given two points, we can add them to one another (or subtract) and the result would be a new point on the curve.
-* Multlipication - Given a point, we can multiply it any number of times.
+* Multiplication - Given a point, we can multiply it any number of times.
 
 #### Addition
 
@@ -37,15 +37,17 @@ We can then write it as:
 P + Q = -R
 ```
 
-So that adding the two points P and **Q results in -R, the inverse of R.
+So that adding the two points P and Q results in -R, the inverse of R.
 
 If we draw a line passing through P and Q, this line will cross a third point on the curve, R (so that P, Q and R are aligned). If we take the inverse of this point, which is simply the one symmetric to it about the x-axis, we have found the result of adding two curve points, P + Q. Let’s illustrate:
 
 ![ecc1](../../assets/images/ecc1.png){ width=650 }
 
-#### Multlipication
+In other words, addition of points is basically hopping around on the curve to a different, seemingly random point; It looks random unless you know the exact operation performed to reach it.
 
-We can’t multiply a point by another point, but we can multiply a point by a number (scalar). Multiplying point **P** by scalar `k` would simply require adding point **P** onto it self ``k` times. This operation is easily demonstrated by assigning `k=2` so that `k*P = P+P`. To illustrate how it would look like on the curve, we draw a tangent line. You can imagine that the line intersects three points, whereas two of them are **P**, such that:
+#### Multiplication
+
+We can’t multiply a point by another point, but we can multiply a point by a number (scalar). Multiplying point **P** by scalar `k` would simply require adding point **P** onto it self `k` times. This operation is easily demonstrated by assigning `k=2` so that `k*P = P+P`. To illustrate how it would look like on the curve, we draw a tangent line. You can imagine that the line intersects three points, whereas two of them are **P**, such that:
 
 ```text
 P + P = -R
@@ -54,11 +56,11 @@ P + P = -R
 ![ecc2](../../assets/images/ecc2.png){ width=650 }
 
 !!! note ""
-    To calculate `8*P` for e.g. wouldn’t take 8 operations, but only 3; you can find 2P, then add it onto itself, and then add 4P onto itself, for the final result of 8P.
+    To calculate `8*P` for e.g. wouldn’t take 8 operations, but only 3; you can find `2*P`, then add it onto itself, and then add `4*P` onto itself, for the final result of `8*P`.
 
 ## Key Pairs
 
-An ECC system defines a public constant curve point called the generator point, **G** (known to everybody). The generator point is used to compute any public key. A key pair consists of:
+An ECC system defines a publicly known constant curve point called the generator point, **G**. The generator point is used to compute any public key. A key pair consists of:
 
 * Private key **k** – A randomly chosen 256-bit integer (scalar).
 * Public key **P** – An Elliptic-curve point derived by multiplying generator point G by the private key.

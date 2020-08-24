@@ -183,20 +183,20 @@ Grin implements a simplified version of the Dandelion++ protocol. It's been impr
     ```
 
 1. `DandelionEpoch` tracks a node's current epoch. This is configurable via `epoch_secs` with default epoch set to last for 10 minutes. Epochs are set and tracked by nodes individually.
-2. At the beginning of an epoch, the node chooses a single connected peer at random to use as their outbound relay.
-3. At the beginning of an epoch, the node makes a decision whether to be in stem mode or in fluff mode. This decision lasts for the duration of the epoch. By default, this is a random choice, with the probability to be in stem mode set to 90%, which implies a fluff mode probability, `q` of 10%. The probability is configurable via `DANDELION_STEM_PROBABILITY`.  The number of expected stem hops a transaction does before arriving to a fluff node is `1/q = 1/0.1 = 10`.
-4. Any transactions received from inbound peers or transactions originated from the node itself are first added to the node's `stempool`, which is a list of stem transactions, that each node keeps track of individually. Transactions are  removed from the stempool if:
+1. At the beginning of an epoch, the node chooses a single connected peer at random to use as their outbound relay.
+1. At the beginning of an epoch, the node makes a decision whether to be in stem mode or in fluff mode. This decision lasts for the duration of the epoch. By default, this is a random choice, with the probability to be in stem mode set to 90%, which implies a fluff mode probability, `q` of 10%. The probability is configurable via `DANDELION_STEM_PROBABILITY`.  The number of expected stem hops a transaction does before arriving to a fluff node is `1/q = 1/0.1 = 10`.
+1. Any transactions received from inbound peers or transactions originated from the node itself are first added to the node's `stempool`, which is a list of stem transactions, that each node keeps track of individually. Transactions are  removed from the stempool if:
     * The node fluffs the transaction itself.
     * The node sees the transaction in question propagated through regular diffusion, i.e. from a different peer having "fluffed" it.
     * The node receives a block containing this transaction, meaning that the transaction was propagated and included in a block.
 
-5. For each transaction added to the stempool, the node sets an *embargo timer*. This is set by default to 180 seconds, and is configurable via `embargo_secs`.
-6. A `dandelion_monitor` runs every 10 seconds and handles tasks.
-7. If the node is in **stem mode**, then:
+1. For each transaction added to the stempool, the node sets an *embargo timer*. This is set by default to 180 seconds, and is configurable via `embargo_secs`.
+1. A `dandelion_monitor` runs every 10 seconds and handles tasks.
+1. If the node is in **stem mode**, then:
     1. After being added to the stempool, received stem transactions are forwarded onto the their relay node as a stem transaction.
     2. As peers connect at random, it is possible they create a circular loop of connected stem mode nodes (i.e. `A -> B -> C -> A`). Therefore, if a node receives a stem transaction from an inbound node that already exists in its own stempool, it will fluff it, broadcasting it using regular diffusion.
     3. `dandelion_monitor` checks for transactions in the node's stempool with an expired embargo timer, and broadcast those individually.
-8. If the node is in **fluff mode**, then:
+1. If the node is in **fluff mode**, then:
     1. Transactions received from inbound nodes are kept in the stempool.
     2. `dandelion_monitor` checks in the stempool whether any  transactions are older than 30 seconds (configurable as `DANDELION_AGGREGATION_SECS`). If so, these are aggregated and then fluffed. Otherwise no action is taken, allowing for more stem transactions to aggregate in the stempool in time for the next triggering of `dandelion_monitor`.
     3. At the expiry of an epoch, all stem transactions remaining in the stem pool are aggregated and fluffed.
