@@ -73,6 +73,10 @@ As an example, let's demonstrate the workflow of an exchange.
     |   5     |                    | Copy message[2]          |
     |   6     | Paste message[2] [(finalize)](https://paouky.github.io/docs/getting-started/wallet/#finalize) |
 
+=== "Withdrawal UI"
+
+    ![Deposit UI mockup](../../assets/images/grin-withdraw-mockup.png)
+
 === "Deposit"
 
     |  Step   | Exchange                 | User                               |
@@ -85,6 +89,9 @@ As an example, let's demonstrate the workflow of an exchange.
     |   6     |                       | Paste message[2]                      |
 
 
+=== "Deposit UI"
+
+    ![Deposit UI mockup](../../assets/images/grin-deposit-mockup.png)
 
 ## Exchange Integration
 
