@@ -11,7 +11,7 @@
         <meta name="description" content="Grin Documentation">
       
       
-        <link rel="canonical" href="https://docs.grin.mw/technical/miscellaneous/range-proof-format/">
+        <link rel="canonical" href="https://docs.grin.mw/technical/building-blocks/merkle-structures/">
       
       
         <meta name="author" content="Grin Developers">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Range Proofs Format - Grin Documentation</title>
+        <title>Merkle Structures - Grin Documentation</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#range-proof-format" class="md-skip">
+        <a href="#merkle-structures" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Range Proofs Format
+              Merkle Structures
             
           </span>
         </div>
@@ -151,16 +151,14 @@
         
           
 
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link md-tabs__link--active">
         Home
       </a>
     
@@ -204,8 +202,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../table-of-contents/" class="md-tabs__link md-tabs__link--active">
-          Technical Details
+        <a href="../../table-of-contents/" class="md-tabs__link">
+          Technical Wiki
         </a>
       
     </li>
@@ -509,8 +507,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../getting-started/full-node.md" title="Full Node" class="md-nav__link">
-      Full Node
+    <a href="../../../getting-started/node.md" title="Node" class="md-nav__link">
+      Node
     </a>
   </li>
 
@@ -536,25 +534,23 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Technical Details
+      Technical Wiki
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Technical Details" data-md-level="1">
+    <nav class="md-nav" aria-label="Technical Wiki" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Technical Details
+        Technical Wiki
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -576,18 +572,30 @@
           
 
 
+  <li class="md-nav__item">
+    <a href="../../grin-for-bitcoiners/" title="Grin for Bitcoiners" class="md-nav__link">
+      Grin for Bitcoiners
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-3" type="checkbox" id="nav-4-3">
     
-    <label class="md-nav__link" for="nav-4-2">
+    <label class="md-nav__link" for="nav-4-3">
       Introduction
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Introduction" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
+      <label class="md-nav__title" for="nav-4-3">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -642,34 +650,22 @@
           
 
 
-  <li class="md-nav__item">
-    <a href="../../grin-for-bitcoiners/" title="Grin for Bitcoiners" class="md-nav__link">
-      Grin for Bitcoiners
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
   <li class="md-nav__item md-nav__item--nested">
     
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
     
     <label class="md-nav__link" for="nav-4-4">
-      Building Blocks
+      Transactions
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Building Blocks" data-md-level="2">
+    <nav class="md-nav" aria-label="Transactions" data-md-level="2">
       <label class="md-nav__title" for="nav-4-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Building Blocks
+        Transactions
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -680,8 +676,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../building-blocks/merkle-mountain-ranges/" title="Merkle Mountain Ranges (MMRs)" class="md-nav__link">
-      Merkle Mountain Ranges (MMRs)
+    <a href="../../transactions/slates/" title="Slates" class="md-nav__link">
+      Slates
     </a>
   </li>
 
@@ -692,8 +688,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../building-blocks/merkle-proof/" title="Merkle Proof" class="md-nav__link">
-      Merkle Proof
+    <a href="../../transactions/slatepack/" title="Slatepack" class="md-nav__link">
+      Slatepack
     </a>
   </li>
 
@@ -704,8 +700,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../building-blocks/switch-commitments/" title="Switch Commitments" class="md-nav__link">
-      Switch Commitments
+    <a href="../../transactions/payment-proofs.md" title="Payment Proofs" class="md-nav__link">
+      Payment Proofs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../transactions/range-proof-format/" title="Rangeproofs" class="md-nav__link">
+      Rangeproofs
     </a>
   </li>
 
@@ -725,13 +733,187 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-5" type="checkbox" id="nav-4-5">
     
     <label class="md-nav__link" for="nav-4-5">
+      Chain Data
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Chain Data" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Chain Data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chain-data/merkle-mountain-range/" title="Merkle Mountain Ranges" class="md-nav__link">
+      Merkle Mountain Ranges
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chain-data/state-and-pruning/" title="State & Pruning" class="md-nav__link">
+      State & Pruning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../chain-data/fast-sync/" title="Fast Sync" class="md-nav__link">
+      Fast Sync
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6">
+    
+    <label class="md-nav__link" for="nav-4-6">
+      Blocks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Blocks" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Blocks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/block-header.md" title="Header" class="md-nav__link">
+      Header
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/block-body.md" title="Body" class="md-nav__link">
+      Body
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../blocks/fees-and-weight.md" title="Fees & Weight" class="md-nav__link">
+      Fees & Weight
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-7" type="checkbox" id="nav-4-7">
+    
+    <label class="md-nav__link" for="nav-4-7">
+      Building Blocks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Building Blocks" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Building Blocks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../switch-commitments/" title="Switch Commitments" class="md-nav__link">
+      Switch Commitments
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-8" type="checkbox" id="nav-4-8">
+    
+    <label class="md-nav__link" for="nav-4-8">
       Blockchain and Consensus
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Blockchain and Consensus" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-5">
+      <label class="md-nav__title" for="nav-4-8">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -748,18 +930,6 @@
   <li class="md-nav__item">
     <a href="../../blockchain-and-consensus/coinbase-maturity-rule/" title="Coinbase Maturity Rule" class="md-nav__link">
       Coinbase Maturity Rule
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../blockchain-and-consensus/fast-sync/" title="Fast Sync" class="md-nav__link">
-      Fast Sync
     </a>
   </li>
 
@@ -809,21 +979,19 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-6" type="checkbox" id="nav-4-6" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-9" type="checkbox" id="nav-4-9">
     
-    <label class="md-nav__link" for="nav-4-6">
+    <label class="md-nav__link" for="nav-4-9">
       Miscellaneous
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Miscellaneous" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-6">
+      <label class="md-nav__title" for="nav-4-9">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -838,7 +1006,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../contracts/" title="Contracts" class="md-nav__link">
+    <a href="../../miscellaneous/contracts/" title="Contracts" class="md-nav__link">
       Contracts
     </a>
   </li>
@@ -850,7 +1018,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../dandelion/" title="Dandelion" class="md-nav__link">
+    <a href="../../miscellaneous/dandelion/" title="Dandelion" class="md-nav__link">
       Dandelion
     </a>
   </li>
@@ -860,53 +1028,77 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Range Proofs Format
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="Range Proofs Format" class="md-nav__link md-nav__link--active">
-      Range Proofs Format
+  <li class="md-nav__item">
+    <a href="../../miscellaneous/nrd-kernels/" title="NRD Kernels" class="md-nav__link">
+      NRD Kernels
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
     
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-10" type="checkbox" id="nav-4-10">
     
-  
-  
-    <label class="md-nav__title" for="__toc">
+    <label class="md-nav__link" for="nav-4-10">
+      Security Process
       <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
-      Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#secp256k1-zkp-bulletproof-format" class="md-nav__link">
-    secp256k1-zkp Bulletproof format
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
+    <nav class="md-nav" aria-label="Security Process" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Security Process
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../security-process/grin-security-process/" title="Grin's Security Process" class="md-nav__link">
+      Grin's Security Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../security-process/security-team/" title="Security Team" class="md-nav__link">
+      Security Team
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../security-process/code-audits/" title="Code Audits" class="md-nav__link">
+      Code Audits
+    </a>
   </li>
 
         
@@ -1000,8 +1192,111 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#secp256k1-zkp-bulletproof-format" class="md-nav__link">
-    secp256k1-zkp Bulletproof format
+  <a href="#merkle-trees" class="md-nav__link">
+    Merkle Trees
+  </a>
+  
+    <nav class="md-nav" aria-label="Merkle Trees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#total-output-set" class="md-nav__link">
+    Total Output Set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-witnesses" class="md-nav__link">
+    Output witnesses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputs-and-outputs" class="md-nav__link">
+    Inputs and Outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excesses" class="md-nav__link">
+    Excesses
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-merkle-structure" class="md-nav__link">
+    Proposed Merkle Structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Proposed Merkle Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efficient-insertupdates" class="md-nav__link">
+    Efficient insert/updates
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficient-proof-of-spentness" class="md-nav__link">
+    Efficient proof-of-spentness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficient-storage-of-diffs" class="md-nav__link">
+    Efficient storage of diffs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficient-tree-storage-even-with-missing-data" class="md-nav__link">
+    Efficient tree storage even with missing data
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dropping-spent-coins" class="md-nav__link">
+    Dropping spent coins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#efficient-serialization-of-pruned-trees" class="md-nav__link">
+    Efficient serialization of pruned trees
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algorithms" class="md-nav__link">
+    Algorithms
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage" class="md-nav__link">
+    Storage
   </a>
   
 </li>
@@ -1018,7 +1313,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mimblewimble/docs/edit/master/docs/technical/miscellaneous/range-proof-format.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mimblewimble/docs/edit/master/docs/technical/building-blocks/merkle-structures.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1026,51 +1321,135 @@
                   
                 
                 
-                <h1 id="range-proof-format">Range Proof Format</h1>
-<h2 id="secp256k1-zkp-bulletproof-format">secp256k1-zkp Bulletproof format</h2>
-<p>Grin uses <a href="https://eprint.iacr.org/2017/1066.pdf">Bulletproofs</a> range proofs. The currently most efficient range proofs which do not require a trusted setup.</p>
-<p>Grin uses <a href="https://github.com/mimblewimble/secp256k1-zkp">mimblewimble/secp256k1-zkp</a>, a fork of the Blockstream C library <a href="https://github.com/ElementsProject/secp256k1-zkp">ElementsProject/secp256k1-zkp</a>, which has Bulletproofs implemented but not yet merged into the main branch.</p>
-<p>In this document I will explain how to recover the proof parameters from the output bytes. Note that I will name the parameters as they are named in the C library, which might be slightly different then to the paper in some cases.</p>
-<p>Here is a sample proof output taken from a Grin transaction:</p>
-<div class="highlight"><pre><span></span><code>0b1bdf235e9c438aab5c6d02d3fe8173304bc528a3330825fb2311fa60fcdd6bfb92a248e26f849aebd511d2b326fa34b7f3030517d2f8e08a9b3cac7fa9fd200d07a46ca6ec5af30ce569b1e5faf2acf525cf1ed90cbed74ab7378b9b3957f28635fe7440aac2dc2c4bf43265b6ad1bfa82fddd9a827c4e97a913ce451b9a66bb06d3c08e03e85e98c581bbdf8c852796371a4603b8d52b80a1f2e95bd5e2a91c7a00b4d4564d9586235a7858d9ce8a8888bead7d51be2dd802de5af2921e079586817fce16d36c7764af8b4bf133b56b39970d6a568bf9ff101e6d33409e7c3bb081df7425b276655be611941245ceaad529495a86bc0e3d0f8634a8acf65c34c4e244959a5098bd58285408945a247d2fd894e5b18027d698c7e494e4256110553df54babf90592fbdffa0138b6b5a2a423ea5e2ec4d8f852a33c271a73b10fed9e1ee8cb2db1e71311cacd9e1d0b6dbf6cfab15723ec3cac4cc52154fc9d532202a085238e756ad1fa804cce2a634decc1b348f6ff939f9f80187d85aa5c308224a505c75e7f58fc7f35424276db7956474c1895e23ac55f864f4177b59f3ce92ef8c99e011cf55e0cefc5635d2eaf573df29af057a19bb209392a8c0e29a4b77adad76d385422e7f1d06de2d4f14e61ac3619aa22ae5bc288bb41cb56ddb70bb39ae84d00eb0cb34b4063bb55a83b9fe52604e545adcd41beb6ce14cdff73a21beb7493fa443a34585b7d2927f608cad17aa5f0e8e154b14d35315f63dd3580e80d06d8be4039f58778967f7bf2cdd9020fbcc9fed799b8159814f6a261c568e8b59c59df3180efb9cc13c576bf313248c96fa867aba43a80e799ff19ac685d7208cea7944dc9dcba7a61f2809540ecd0711e76b601969bdc551845e0b11fb821871d00e417ad002a70353867db25fa647e98a0db4c3bbaf828d97fc66079ef0d
-</code></pre></div>
-
-<p>First, we have two 32 byte scalars. These are the already negated versions of taux and mu. We negate them such that the verifier doesn't have to do it. (<em>rangeproof_impl.h 701-702</em>)</p>
-<p><code>0b1bdf235e9c438aab5c6d02d3fe8173304bc528a3330825fb2311fa60fcdd6b (5024686248162052924872973414517693136231035491146611931625298995470137089387)</code> taux (negated)</p>
-<p><code>fb92a248e26f849aebd511d2b326fa34b7f3030517d2f8e08a9b3cac7fa9fd20 (113789604713728301456840843635921464549630649029317112794749678552821986360608)</code> mu (negated)</p>
-<p>After that, we have 4 points, which represent commitments A, S, T1, T2. Points are encoded in a very smart way. We have one offset byte. We use this offset byte indicate the LSB of y, telling us
-if the points y value needs to be negated when recovered. If this is the case, the bit is set to 1 (starting at the LSB); otherwise, it is left at 0. If we have more then
-eight points, we need 2 bytes offset, if we have more then 16, then three, and so forth. (<em>rangeproof_impl.h 703</em>)</p>
-<p><code>0d</code> offset</p>
-<p><code>0000 1101</code> offset in binary</p>
-<p>From this, we can recover the 4 points. (I am using the standard compressed point version here with leading 02 or 03)
-We start reading at the LSB.</p>
-<p><code>0307a46ca6ec5af30ce569b1e5faf2acf525cf1ed90cbed74ab7378b9b3957f286</code> A (03 because of the 1 bit in the offset)</p>
-<p><code>0235fe7440aac2dc2c4bf43265b6ad1bfa82fddd9a827c4e97a913ce451b9a66bb</code> S (02 here because of the 0 bit in the offset)</p>
-<p><code>0306d3c08e03e85e98c581bbdf8c852796371a4603b8d52b80a1f2e95bd5e2a91c</code> T1</p>
-<p><code>037a00b4d4564d9586235a7858d9ce8a8888bead7d51be2dd802de5af2921e0795</code> T2</p>
-<p>Next, we have the final value of the dot product which again is a 32-byte scalar (<em>inner_product_impl.h 811</em>)</p>
-<p><code>86817fce16d36c7764af8b4bf133b56b39970d6a568bf9ff101e6d33409e7c3b (60838727059453008536034129618950719358562694528830851223208761064459354405947)</code> dot</p>
-<p>Then we have the final values (32-byte scalars) of the shrunk vectors a, b used in the inner product protocol. The library does not do the last round of the protocol, meaning it will stop when the vectors are of 
-length two instead of length one. This is because every round creates two commitments Li and Ri. If we don't do the last round, we spare two commitments with the cost that our two vectors are of size two instead of one, which is more space-efficient, and we save computing time. (<em>inner_product_impl.h  835-836</em>)</p>
-<p><code>b081df7425b276655be611941245ceaad529495a86bc0e3d0f8634a8acf65c34 (79836526842770413616887368822368313168206709119259360230886972660827215518772)</code> a1</p>
-<p><code>c4e244959a5098bd58285408945a247d2fd894e5b18027d698c7e494e4256110 (89053099110995010594661038229216983605420219413380810817771304480647904846096)</code> b1</p>
-<p><code>553df54babf90592fbdffa0138b6b5a2a423ea5e2ec4d8f852a33c271a73b10f (38556062768490931671602594328406809964645337276375001909352144464132590252303)</code> a2</p>
-<p><code>ed9e1ee8cb2db1e71311cacd9e1d0b6dbf6cfab15723ec3cac4cc52154fc9d53 (107477520278964342277912932357487306000871347661927764278313323679782451060051)</code> b2</p>
-<p>And last we have the commitments Li and Ri of every round. In Grin we create range proofs with a range of 0 to (2^64 -1). This means we have six rounds (log(64) = 6); however, since we stop early, we only do five rounds, so 10 points instead of 12. The implementation always computes L before R. (<em>inner_product_impl.h 627</em>)
-Again we have an offset in which we specify how to recover y values. Now since we have more than eight points we need two bytes offset. We start reading at the LSB of the first byte and then go to the LSB of the second byte. (<em>inner_product_impl.h 839</em>)</p>
-<p><code>2202</code> offset</p>
-<p><code>0010 0010</code> first offset byte (binary) <code>0000 0010</code> second offset byte (binary)</p>
-<p><code>02a085238e756ad1fa804cce2a634decc1b348f6ff939f9f80187d85aa5c308224</code> L1</p>
-<p><code>03a505c75e7f58fc7f35424276db7956474c1895e23ac55f864f4177b59f3ce92e</code> R1 (03 because of the 1 at bit number 2 of first offset byte)</p>
-<p><code>02f8c99e011cf55e0cefc5635d2eaf573df29af057a19bb209392a8c0e29a4b77a</code> L2</p>
-<p><code>02dad76d385422e7f1d06de2d4f14e61ac3619aa22ae5bc288bb41cb56ddb70bb3</code> R2</p>
-<p><code>029ae84d00eb0cb34b4063bb55a83b9fe52604e545adcd41beb6ce14cdff73a21b</code> L3</p>
-<p><code>03eb7493fa443a34585b7d2927f608cad17aa5f0e8e154b14d35315f63dd3580e8</code> R3 (03 because of the 1 at bit number 6 of first offset byte)</p>
-<p><code>020d06d8be4039f58778967f7bf2cdd9020fbcc9fed799b8159814f6a261c568e8</code> L4</p>
-<p><code>02b59c59df3180efb9cc13c576bf313248c96fa867aba43a80e799ff19ac685d72</code> R4</p>
-<p><code>0208cea7944dc9dcba7a61f2809540ecd0711e76b601969bdc551845e0b11fb821</code> L5</p>
-<p><code>03871d00e417ad002a70353867db25fa647e98a0db4c3bbaf828d97fc66079ef0d</code> R5 (03 because of the 1 at bit number 2 of second offset byte)</p>
+                <h1 id="merkle-structures">Merkle Structures</h1>
+<p><em>Read this in other languages: <a href="merkle_KR.md">Korean</a>, <a href="merkle_ZH-CN.md">简体中文</a>.</em></p>
+<p>Mimblewimble is designed for users to verify the state of the system given
+only pruned data. To achieve this goal, all transaction data is committed
+to the blockchain by means of Merkle trees which should support efficient
+updates and serialization even when pruned.</p>
+<p>Also, almost all transaction data (inputs, outputs, excesses and excess
+proofs) have the ability to be summed in some way, so it makes sense to
+treat Merkle sum trees as the default option, and address the sums here.</p>
+<p>A design goal of Grin is that all structures be as easy to implement and
+as simple as possible. Mimblewimble introduces a lot of new cryptography
+so it should be made as easy to understand as possible. Its validation rules
+are simple to specify (no scripts) and Grin is written in a language with
+very explicit semantics, so simplicity is also good to achieve well-understood
+consensus rules.</p>
+<h2 id="merkle-trees">Merkle Trees</h2>
+<p>There are four Merkle trees each block commits to:</p>
+<h3 id="total-output-set">Total Output Set</h3>
+<p>Each object is one of two things: a commitment indicating an unspent output
+or a NULL marker indicating a spent one. It is a sum-tree over all unspent
+outputs (spent ones contribute nothing to the sum). The output set should
+reflect the state of the chain <em>after</em> the current block has taken effect.</p>
+<p>The root sum should be equal to the sum of all excesses since the genesis.</p>
+<p>Design requirements:</p>
+<ol>
+<li>Efficient additions and updating from unspent to spent.</li>
+<li>Efficient proofs that a specific output was spent.</li>
+<li>Efficient storage of diffs between UTXO roots.</li>
+<li>Efficient tree storage even with missing data, even with millions of entries.</li>
+<li>If a node commits to NULL, it has no unspent children and its data should
+   eventually be able to be dropped forever.</li>
+<li>Support for serialization and efficient merging of pruned trees from partial archival nodes.</li>
+</ol>
+<h3 id="output-witnesses">Output witnesses</h3>
+<p>This tree mirrors the total output set but has rangeproofs in place of commitments.
+It is never updated, only appended to, and does not sum over anything. When an
+output is spent it is sufficient to prune its rangeproof from the tree rather
+than deleting it.</p>
+<p>Design requirements:</p>
+<ul>
+<li>Support for serialization and efficient merging of pruned trees from partial archival nodes.</li>
+</ul>
+<h3 id="inputs-and-outputs">Inputs and Outputs</h3>
+<p>Each object is one of two things: an input (unambiguous reference to an old
+transaction output), or an output ([commitment, rangeproof] pair). It is
+a sum-tree over the commitments of outputs, and the negatives of the commitments
+of inputs.</p>
+<p>Input references are hashes of old commitments. It is a consensus rule that
+all unspent outputs must be unique.</p>
+<p>The root sum should be equal to the sum of excesses for this block. See the
+next section.</p>
+<p>In general, validators will see either 100% of this Merkle tree or 0% of it,
+so it is compatible with any design.</p>
+<p>Design requirements:</p>
+<ul>
+<li>Efficient inclusion proofs, for proof-of-publication.</li>
+</ul>
+<h3 id="excesses">Excesses</h3>
+<p>Each object is of the form [excess, signature]. It is a sum tree over the
+excesses.</p>
+<p>In general, validators will always see 100% of this tree, so it is not even
+necessary to have a Merkle structure at all. However, to support partial
+archival nodes in the future we want to support efficient pruning.</p>
+<p>Design requirements:</p>
+<ul>
+<li>Support for serialization and efficient merging of pruned trees from partial archival nodes.</li>
+</ul>
+<h2 id="proposed-merkle-structure">Proposed Merkle Structure</h2>
+<p><strong>The following design is proposed for all trees: a sum-MMR where every node
+sums a count of its children <em>as well as</em> the data it is supposed to sum.
+The result is that every node commits to the count of all its children.</strong></p>
+<p><a href="https://github.com/opentimestamps/opentimestamps-server/blob/master/doc/merkle-mountain-range.md">MMRs, or Merkle Mountain Ranges</a></p>
+<p>The six design criteria for the output set are:</p>
+<h3 id="efficient-insertupdates">Efficient insert/updates</h3>
+<p>Immediate (as is proof-of-inclusion). This is true for any balanced Merkle
+tree design.</p>
+<h3 id="efficient-proof-of-spentness">Efficient proof-of-spentness</h3>
+<p>Grin itself does not need proof-of-spentness but it is a good thing to support
+in the future for SPV clients.</p>
+<p>The children-counts imply an index of each object in the tree, which does not
+change because insertions happen only at the far right of the tree.</p>
+<p>This allows permanent proof-of-spentness, even if an identical output is later
+added to the tree, and prevents false proofs even for identical outputs. These
+properties are hard to achieve for a non-insertion-ordered tree.</p>
+<h3 id="efficient-storage-of-diffs">Efficient storage of diffs</h3>
+<p>Storing complete blocks should be sufficient for this. Updates are obviously
+as easy to undo as they are to do, and since blocks are always processed in
+order, rewinding them during reorgs is as simple as removing a contiguous
+set of outputs from the right of the tree. (This should be even faster than
+repeated deletions in a tree designed to support deletions.)</p>
+<h3 id="efficient-tree-storage-even-with-missing-data">Efficient tree storage even with missing data</h3>
+<p>To update the root hash when random outputs are spent, we do not want to need
+to store or compute the entire tree. Instead we can store only the hashes at
+depth 20, say, of which there will be at most a million. Then each update only
+needs to recompute hashes above this depth (Bitcoin has less than 2^29 outputs
+in its history, so this means computing a tree of size 2^9 = 512 for each update)
+and after all updates are done, the root hash can be recomputed.</p>
+<p>This depth is configurable and may be changed as the output set grows, or
+depending on available disk space.</p>
+<p>This is doable for any Merkle tree but may be complicated by PATRICIA trees or
+other prefix trees, depending how depth is computed.</p>
+<h3 id="dropping-spent-coins">Dropping spent coins</h3>
+<p>Since coins never go from spent to unspent, the data on spent coins is not needed
+for any more updates or lookups.</p>
+<h3 id="efficient-serialization-of-pruned-trees">Efficient serialization of pruned trees</h3>
+<p>Since every node has a count of its children, validators can determine the
+structure of the tree without needing all the hashes, and can determine which
+nodes are siblings, and so on.</p>
+<p>In the output set each node also commits to a sum of its unspent children, so
+a validator knows if it is missing data on unspent coins by checking whether or
+not this sum on a pruned node is zero.</p>
+<h2 id="algorithms">Algorithms</h2>
+<p>(To appear alongside an implementation.)</p>
+<h2 id="storage">Storage</h2>
+<p>The sum tree data structure allows the efficient storage of the output set and
+output witnesses while allowing immediate retrieval of a root hash or root sum
+(when applicable). However, the tree must contain every output commitment and
+witness hash in the system. This data is too big to be permanently stored in
+memory and too costly to be rebuilt from scratch at every restart, even if we
+consider pruning (at this time, Bitcoin has over 50M UTXOs which would require
+at least 3.2GB, assuming a couple hashes per UTXO). So we need an efficient way
+to store this data structure on disk.</p>
+<p>Another limitation of a hash tree is that, given a key (i.e. an output
+commitment), it's impossible to find the leaf in the tree associated with that
+key. We can't walk down the tree from the root in any meaningful way. So an
+additional index over the whole key space is required. As an MMR is an append
+only binary tree, we can find a key in the tree by its insertion position. So a
+full index of keys inserted in the tree (i.e. an output commitment) to their
+insertion positions is also required.</p>
                 
               
               
@@ -1085,41 +1464,6 @@ Again we have an offset in which we specify how to recover y values. Now since w
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../dandelion/" title="Dandelion" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Dandelion
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../slatepack-integration/" title="Slatepack Integration Guide" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Slatepack Integration Guide
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

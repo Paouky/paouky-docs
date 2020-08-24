@@ -16,7 +16,7 @@ This part of the documentation, explain more in details the technology behind Gr
 This part covers *some* of the building blocks used in Grin.
 
 - [Merkle Mountain Ranges](building-blocks/merkle-mountain-ranges.md) - Explain what are Merkle Mountain Ranges (MMRs)
-- [Merkle Proof](building-blocks/merkle-proof.md) - Explain what are Merkle Proof
+- [Merkle Proof](building-blocks/merkle-proof.md) - Explain what are Merkle Proofs
 - [Switch Commitments](building-blocks/switch-commitments.md) - An introduction to Switch Commitments
 
 ## Blockchain and Consensus
