@@ -1,5 +1,7 @@
 # Rangeproof Format
 
+> This  document could use a re-write.
+
 ## secp256k1-zkp Bulletproof format
 
 Grin uses [Bulletproofs](https://eprint.iacr.org/2017/1066.pdf), the currently most efficient range proofs which do not require a trusted setup. Implemented at [mimblewimble/secp256k1-zkp](https://github.com/mimblewimble/secp256k1-zkp), a fork of the Blockstream C library [ElementsProject/secp256k1-zkp](https://github.com/ElementsProject/secp256k1-zkp).

@@ -4,6 +4,9 @@ description: Mimblewimble Grin
 
 # Mimblewimble
 
+!!! note ""
+    For the original introduction (along with many translations), refer to here [here](https://github.com/mimblewimble/grin/blob/master/doc/intro.md).
+
 Earlier we demonstrated how a public key obtained from the *addition of two private keys* `r` and `v`, resulting in `(v+r)*G`, is identical to the *addition of the public keys* of each individual private key, `r*G + v*G`. Mimblewimble and Grin heavily rely on this principle.
 
 ## Transactions
@@ -300,7 +303,7 @@ Similarly to a transaction, all that needs to be checked in a block is that owne
     | Inputs               | Outputs             |
     | :------------------: | :-----------------: |
     | in1(prev_out)        | out1                |
-    | in2(prev_out         | out4                |
+    | in2(prev_out)        | out4                |
     |                      | out5                |
 
 All transaction structure has been eliminated and the order of inputs and outputs does not matter anymore, while the sum of all inputs and outputs values is still guaranteed to be zero.

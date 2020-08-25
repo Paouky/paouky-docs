@@ -1,8 +1,12 @@
 # Commitments
 
-A commitment scheme is a cryptographic primitive that allows you to commit to a chosen value while keeping it hidden from others, with the ability to reveal the committed value later.
+In cryptography a Commitment (or commitment scheme) refers to a concept which can be imagined like a box with a lock. You can put something into the box (for example a piece of a paper with a secret number written on it), lock it and give it to another person (or the public).
 
-Properties:
+The other person doesn't know yet what's the secret number in the box, but if you decide to publish your secret number later in time and want to prove that this really is the secret which you came up with in the first place (and not a different one) you can prove this simply by giving the key of the box to the other person.
+
+They can unlock the box, compare the secret within the box with the secret you just published and can be sure that you didn't change your secret since you locked it. You "committed" to the secret number beforehand, meaning you cannot change it between the time of commitment and the time of revealing.
+
+They have two important properties:
 
 * **Hiding** - Nobody but the committer can see or infer the actual value behind the commitment.
 * **Binding** - The committer can't change the value after the commitment is published.
@@ -37,22 +41,24 @@ What’s the solution?
 The issue is solved by adding a blinding factor `r`, which is a random 256-bit integer used to blind the value so that it can’t be guessed and uncovered.
 
 
-We could try adding the blinding factor by comitting `(8+r)*G` and then revealing `8` and `r`. But doing so breaks the binding property of the commitment, for reasons we won’t get into here. We require a different method to include `r`.
+We could try adding the blinding factor by comitting `(8+r)*G` and then revealing `8` and `r`. But, doing so breaks the binding property of the commitment, because instead of revealing value `8` and blinding factor `r`, we could reveal `7` and `r+1` or any other value.
+
+Therefore, we require a different method to include `r`.
 
 ## Pedersen Commitments
 
 Introducing **G**’s twin, **H**.
 
-**H** is another generator point, distinct from **G** (note how it’s the next letter in the alphabet). Both are nothing-up-my-points, meaning nobody knows `n` such that `G = H`. Using **H** we can blind the value while keeping the commitment binding.
+**H** is another generator point, distinct from **G** (note how it’s the next letter in the alphabet). Both are nothing-up-my-sleeve-points, meaning nobody knows `n` such that `n*G = H`. Using **H** we can blind the value while keeping the commitment binding.
 
 ```text
 r*G + v*H
 ```
 
 
-:   `r` is the blinding factor, and `r*G` is the public key point for `r` (using H as generator point).
+:   `r` is the blinding factor, and `r*G` is the public key point for `r` (using G as generator point).
 
-    `v` is the value commited, and `v*H` is the public key point for `v` (using G as generator point).
+    `v` is the value commited, and `v*H` is the public key point for `v` (using H as generator point).
 
 
 
@@ -67,10 +73,10 @@ They allow us to do as follows:
 
 :   commit (x)  &rArr;  C~1~ </br>
 	commit (y)  &rArr; C~2~ </br>
-	reveal (x + y) </br>
-	verify (x + y, C~1~, C~2~) ? &rArr;  True/False
+	commit (x+y) &rArr; Z </br>
+	Z = C~1~ + C~2~
 
-We don’t want to reveal `x` and `y` independently. Instead, we reveal only their *sum*, proving we know the value of each constituent part.
+f we add two commitments to each other, the result would be an entirely new, valid commitment, which actually commits to the value `x + y`. So we’re able to perform a math operation (addition) unto encrypted data (commitments) while keeping the underlying values “intact”.
 
 Elliptic curve commitments indeed have these homomorphic properties. We can do the following:
 
@@ -78,12 +84,12 @@ Elliptic curve commitments indeed have these homomorphic properties. We can do t
 x*G + y*G => (x + y)*G
 ```
 
-Notice how we add two different commitments and the resut is a commit to the sum of the values we’re hiding. We can then reveal the sum `x + y` to prove that we had knowledge of both `x` and `y` individually, while keeping them a secret.
+Notice how we add two different curve points and the result is a different point, which is a commitment to the sum of the values we’re hiding.
 
 Similarly, we can add up two Pedersen Commitments. First let's create two of them:
 
 * C~1~ = r~1~G + v~1~H
-* c~2~ = r~2~G + v~2~H
+* C~2~ = r~2~G + v~2~H
 
 The point **Z** (remember a commitment is simply a point on the curve) is the result of addition between points **C~1~** and **C~2~**.
 
@@ -104,3 +110,6 @@ Z = (r1 + r2)*G + (v1 + v2)*H
 ```
 
 Hence point **Z** is a pedersen commitment that is the sum of commitments **C~1~** and **C~2~**. This is the foundation of Mimblewimble outputs, as we're about to see.
+
+
+[^1]: [Finessing commitments](https://joinmarket.me/blog/blog/finessing-commitments/)

@@ -7,7 +7,7 @@ description: Elliptic Curve Cryptography ECC
 
 The following three-part series is intended for those who wish to understand what goes on inside Mimblewimble and Grin. We try to make this objective more accessible by going through the cryptographic primitives required to know first, without diving into proofs and specifics. Once those are in order, we connect everything explain how Mimblewimble works.
 
-For the original introduction written by Igno, read [here](https://github.com/mimblewimble/grin/blob/master/doc/intro.md).
+For the original introduction (along with many translations), refer to here [here](https://github.com/mimblewimble/grin/blob/master/doc/intro.md).
 
 ---
 
@@ -77,3 +77,8 @@ But, if everybody knows points P and G, can they find out what `k` is? The answe
 
 !!! note "Secp256k1"
     The specific Elliptic curve that Grin employs is rust-secp256k1 (y^2^ = x^3^ + 7) using Schnorr signature scheme.
+
+
+[^1]: [Elliptic Curve Cryptography: a gentle introduction](https://andrea.corbellini.name/2015/05/17/elliptic-curve-cryptography-a-gentle-introduction/)
+[^2]: [A (Relatively Easy To Understand) Primer on Elliptic Curve Cryptography](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/)
+[^3]: [Cryptography: From Mathematical Magic to Secure Communication](https://www.youtube.com/watch?v=4M8_Oo7lpiA)

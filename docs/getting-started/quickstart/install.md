@@ -8,7 +8,7 @@ In this tutorial you will learn how to:
 - Send & receive grins
 
 !!! tip ""
-    If you prefer to use Grin with a graphical user interface, please refer to [community projects](community-projects.md).
+    If you prefer to use Grin with a graphical user interface, please refer to [community wallets](../community-wallets.md).
 
 ## Requirements
 
@@ -87,4 +87,3 @@ brew install grin grin-wallet
 On Windows, the simplest way to install is by downloading the binaries on the [Grin website](https://grin.mw/download).
 
 We recommend that you create a directory called `Grin` in `C:\Users\%USER%\AppData\Local\Grin`. The parent directory is where most user windows apps are installed but if you want to put them somewhere else, that'll work too. In this directory, extract both binaries `grin.exe` and `grin-wallet.exe`. You can then add it to the path.
-

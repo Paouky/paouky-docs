@@ -1,5 +1,7 @@
 # Dandelion++ in Grin: Privacy-Preserving Transaction Aggregation and Propagation
 
+*Read this document in other languages: [Korean](dandelion_KR.md)[out of date].*
+
 ## Introduction
 
 The Dandelion++ protocol for broadcasting transactions, proposed by Fanti et al. (Sigmetrics 2018)[^1], intends to defend against deanonymization attacks during transaction propagation. In Grin, it also provides an opportunity to aggregate transactions before they are broadcast to the entire network. This document describes the protocol and the simplified version of it that is implemented in Grin.

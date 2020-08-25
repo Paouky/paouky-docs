@@ -18,7 +18,7 @@ The more resources being spent on mining a proof-of-work chain, the less it's su
 
 Grin introduces a constant block subsidy in order to remain sufficiently secure over the coming years and decades. Block reward is then *guaranteed*, regardless of how full the blocks are, or how much users are willing to pay in fees for faster confirmation.
 
-Furthermore, This type of emission provides a lot of certainty, and avoids the shortcomings of the standard decreasing emission which has yet to be proven stable and effective on a longer time horizon. The uncertainty in emission changes is eliminated both for users, who never know how the chain's security might be affected, and for miners who wish to plan their operations far into the future.
+Furthermore, This type of emission removes a lot of uncertainty, and avoids the shortcomings of the standard decreasing emission which has yet to be proven stable and effective on a longer time horizon.
 
 ### Fees
 
@@ -26,7 +26,7 @@ All other proof-of-work chains are designed to generate and distribute most of t
 
 An apparent issue with this approach is that overall security spend is likely to decrease as time passes, making the chain fundamentally less secure in the face of mining attacks, whether by selfish attackers or state actors. This results in a "tragedy of the commons", as individual users strive to pay a minimum amount of fees, while also depending on the security that their fees are paying for[^1].
 
-Although not as obvious, even a chain with extremely high transaction fees is uniquely prone to selfish mining attacks and undercutting[^2], potentially making a 51% attack possible with much less than the majority mining power. This causes inherent instability which would have otherwise been avoided, given a chain with similar mining revenues earned only through block subsidy.
+Even then, the stability of a chain sustaining it self through high transaction fees is questionable[^2], potentially being prone to a new set of mining attacks, all of which could be avoided given similar mining revenues earned only through block subsidy.
 
 ## Distribution
 

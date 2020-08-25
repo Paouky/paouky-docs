@@ -67,42 +67,40 @@ nav:
       - Send: getting-started/quickstart/send.md
     - Wallet: getting-started/wallet.md
     - Node: getting-started/node.md
-    - Community Projects: getting-started/community-projects.md
-  - Technical Wiki:
+    - Community Wallets: getting-started/community-wallets.md
+  - Wiki:
     - Table of Contents: technical/table-of-contents.md
-    - Grin for Bitcoiners: technical/grin-for-bitcoiners.md
     - Introduction:
       - Elliptic Curves: technical/introduction/elliptic-curve-cryptography.md
       - Commitments: technical/introduction/commitments.md
       - Mimblewimble: technical/introduction/mimblewimble.md
+      - Grin for Bitcoiners: technical/introduction/grin-for-bitcoiners.md
     - Transactions:
       - Slates: technical/transactions/slates.md
       - Slatepack: technical/transactions/slatepack.md
       - Payment Proofs: technical/transactions/payment-proofs.md
+      - Contracts: technical/transactions/contracts.md
       - Rangeproofs: technical/transactions/range-proof-format.md
-    - Chain Data:
-      - Merkle Mountain Ranges: technical/chain-data/merkle-mountain-range.md
-      - State & Pruning: technical/chain-data/state-and-pruning.md
-      - Chain Sync: technical/chain-data/chain-sync.md
     - Blocks:
       - Header: technical/blocks/block-header.md
       - Body: technical/blocks/block-body.md
       - Fees & Weight: technical/blocks/fees-and-weight.md
-    - Building Blocks:
-      - Switch Commitments: technical/building-blocks/switch-commitments.md
-    - Blockchain and Consensus:
-      - Coinbase Maturity Rule: technical/blockchain-and-consensus/coinbase-maturity-rule.md
-      - Cuckoo Cycle: technical/blockchain-and-consensus/cuckoo-cycle.md
-      - Pruning Blockchain Data: technical/blockchain-and-consensus/pruning-blockchain-data.md
-      - State and Storage: technical/blockchain-and-consensus/state-and-storage.md
+    - Chain State:
+      - Merkle Mountain Ranges: technical/chain-state/merkle-mountain-range.md
+      - State & Pruning: technical/chain-state/state-and-pruning.md
+      - Chain Sync: technical/chain-state/chain-sync.md
+    - Proof of Work:
+      - Cuckoo Cycle: technical/proof-of-work/cuckoo-cycle.md
+      - Difficulty Adjustment: technical/proof-of-work/daa.md
+      - Stratum RPC: technical/proof-of-work/stratum-rpc.md
     - Miscellaneous:
-      - Contracts: technical/miscellaneous/contracts.md
       - Dandelion: technical/miscellaneous/dandelion.md
+      - Switch Commitments: technical/miscellaneous/switch-commitments.md
+      - Coinbase Maturity Rule: technical/miscellaneous/coinbase-maturity-rule.md
       - NRD Kernels: technical/miscellaneous/nrd-kernels.md
     - Security Process:
       - Grin's Security Process: technical/security-process/grin-security-process.md
       - Security Team: technical/security-process/security-team.md
       - Code Audits: technical/security-process/code-audits.md
     - Slatepack Integration Guide: technical/slatepack-integration.md
-  - Archives:
-      - Archives: archives/archives.md
+    - Archives: technical/archives.md
