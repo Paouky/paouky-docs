@@ -80,7 +80,6 @@ nav:
       - Slatepack: technical/transactions/slatepack.md
       - Payment Proofs: technical/transactions/payment-proofs.md
       - Contracts: technical/transactions/contracts.md
-      - Rangeproofs: technical/transactions/range-proof-format.md
     - Blocks:
       - Header: technical/blocks/block-header.md
       - Body: technical/blocks/block-body.md

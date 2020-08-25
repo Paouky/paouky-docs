@@ -21,7 +21,6 @@ A very brief overview of required cryptographic concepts:
 - [Slatepack](transactions/slatepack.md)
 - [Payment Proofs](transactions/payment-proofs.md)
 - [Contracts](transactions/contracts.md)
-- [Rangeproofs](transactions/range-proof-format.md)
 
 ## Blocks
 
