@@ -1230,28 +1230,32 @@
 <div class="highlight"><pre><span></span><code>verify (8, commitment) == 8*G  ? --&gt; True/False
 </code></pre></div>
 
-<p>However, there’s a major issue. It’s simple for anybody to find out what value we commited to, even if we don’t reveal it; By trying out, or guessing, different values, a commitment that’s equal to ours can be found, thus revealing what value we picked before we chose to do so ourselves.</p>
+<p>However, there’s a major issue. If our value is within a small range, which is typically the case, it’s simple for anybody to find out what value we committed to, even if we don’t reveal it; By trying out (brute-forcing) different values, they can find the one value that, when multiplied by <code>G</code> , matches the original commitment.</p>
 <div class="admonition note">
 <p class="admonition-title">Example</p>
 <p>Say we're betting on how many goals a team would score by the end of the year. Our guess is 23, and we commit to it by publishing the commitment <code>23*G</code>. Problem is, it would be trivial for anybody to uncover our guess simply by trying to commit to 1, 2, 3, 4 etc and checking each result if it's equal to our commitment. In this case, our value will be revealed after only 23 simple steps.</p>
 </div>
 <p>What’s the solution?</p>
 <h2 id="blinding-factor">Blinding Factor</h2>
-<p>The issue is solved by adding a blinding factor <code>r</code>, which is a random 256-bit integer used to blind the value so that it can’t be guessed and uncovered.</p>
+<p>The issue is solved by adding a blinding factor r, which is a random 256-bit integer (range 0 to 2^256, same as a typical private key) used to blind the value so that it can’t be guessed and uncovered.</p>
 <p>We could try adding the blinding factor by comitting <code>(8+r)*G</code> and then revealing <code>8</code> and <code>r</code>. But, doing so breaks the binding property of the commitment, because instead of revealing value <code>8</code> and blinding factor <code>r</code>, we could reveal <code>7</code> and <code>r+1</code> or any other value.</p>
 <p>Therefore, we require a different method to include <code>r</code>.</p>
 <h2 id="pedersen-commitments">Pedersen Commitments</h2>
 <p>Introducing <strong>G</strong>’s twin, <strong>H</strong>.</p>
 <p><strong>H</strong> is another generator point, distinct from <strong>G</strong> (note how it’s the next letter in the alphabet). Both are nothing-up-my-sleeve-points, meaning nobody knows <code>n</code> such that <code>n*G = H</code>. Using <strong>H</strong> we can blind the value while keeping the commitment binding.</p>
-<dl>
-<dt><div class="highlight"><pre><span></span><code>r*G + v*H
-</code></pre></div></dt>
-<dd>
-<p><code>r</code> is the blinding factor, and <code>r*G</code> is the public key point for <code>r</code> (using G as generator point).</p>
-<p><code>v</code> is the value commited, and <code>v*H</code> is the public key point for <code>v</code> (using H as generator point).</p>
-</dd>
-</dl>
+<div class="highlight"><pre><span></span><code>r*G + v*H
+</code></pre></div>
+
 <p>This specific form of commitement is called a <em>Pedersen Commitment.</em></p>
+<p><strong>A Mimblewimble output is just a Pedersen Commitment</strong>, as we’ll soon see. Its values are as follows:</p>
+<ul>
+<li>
+<p><code>r</code> is the blinding factor, and <code>r*G</code> is the public key point for <code>r</code>   (using G as generator point).</p>
+</li>
+<li>
+<p><code>v</code> is the value committed, and <code>v*H</code> is the public key point for <code>v</code> (using H as generator point).</p>
+</li>
+</ul>
 <h2 id="homomorphic-commitments">Homomorphic Commitments</h2>
 <p>Commitments with homomorphic properties means you can perform calculations on encrypted values without decrypting them first. The result of the computation is a commitment which is identical to the result if the operations had been performed on the unencrypted values.</p>
 <dl>
@@ -1259,8 +1263,7 @@
 <dd>
 <p>commit (x)  &rArr;  C<sub>1</sub> </br>
 commit (y)  &rArr; C<sub>2</sub> </br>
-commit (x+y) &rArr; Z </br>
-Z = C<sub>1</sub> + C<sub>2</sub></p>
+commit (x+y) &rArr; Z = C<sub>1</sub> + C<sub>2</sub></p>
 </dd>
 </dl>
 <p>f we add two commitments to each other, the result would be an entirely new, valid commitment, which actually commits to the value <code>x + y</code>. So we’re able to perform a math operation (addition) unto encrypted data (commitments) while keeping the underlying values “intact”.</p>
@@ -1278,15 +1281,15 @@ Z = C<sub>1</sub> + C<sub>2</sub></p>
 <div class="highlight"><pre><span></span><code>Z = C1 + C2
 </code></pre></div>
 
-<p>So we can calculate what <strong>Z</strong> is:</p>
 <div class="highlight"><pre><span></span><code>Z = r1*G + r2*G + v1*H + v2*H
 </code></pre></div>
 
-<p>Result:</p>
+<p>So we can calculate what <strong>Z</strong> is:</p>
 <div class="highlight"><pre><span></span><code>Z = (r1 + r2)*G + (v1 + v2)*H
 </code></pre></div>
 
-<p>Hence point <strong>Z</strong> is a pedersen commitment that is the sum of commitments <strong>C<sub>1</sub></strong> and <strong>C<sub>2</sub></strong>. This is the foundation of Mimblewimble outputs, as we're about to see.</p>
+<p>Hence point <strong>Z</strong> is a pedersen commitment that is the sum of commitments <strong>C<sub>1</sub></strong> and <strong>C<sub>2</sub></strong>.</p>
+<p>This is the foundation for the Elliptic-curve algebra used in Mimblewimble to prove both ownership of outputs (coins) and non-inflation.</p>
 <div class="footnote">
 <hr />
 <ol>

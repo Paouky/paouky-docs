@@ -29,7 +29,7 @@ And now any observer could multiply our stated value 8, by the public point G an
 verify (8, commitment) == 8*G  ? --> True/False
 ```
 
-However, there’s a major issue. It’s simple for anybody to find out what value we commited to, even if we don’t reveal it; By trying out, or guessing, different values, a commitment that’s equal to ours can be found, thus revealing what value we picked before we chose to do so ourselves.
+However, there’s a major issue. If our value is within a small range, which is typically the case, it’s simple for anybody to find out what value we committed to, even if we don’t reveal it; By trying out (brute-forcing) different values, they can find the one value that, when multiplied by `G` , matches the original commitment.
 
 !!! note "Example"
     Say we're betting on how many goals a team would score by the end of the year. Our guess is 23, and we commit to it by publishing the commitment `23*G`. Problem is, it would be trivial for anybody to uncover our guess simply by trying to commit to 1, 2, 3, 4 etc and checking each result if it's equal to our commitment. In this case, our value will be revealed after only 23 simple steps.
@@ -38,8 +38,7 @@ What’s the solution?
 
 ## Blinding Factor
 
-The issue is solved by adding a blinding factor `r`, which is a random 256-bit integer used to blind the value so that it can’t be guessed and uncovered.
-
+The issue is solved by adding a blinding factor r, which is a random 256-bit integer (range 0 to 2^256, same as a typical private key) used to blind the value so that it can’t be guessed and uncovered.
 
 We could try adding the blinding factor by comitting `(8+r)*G` and then revealing `8` and `r`. But, doing so breaks the binding property of the commitment, because instead of revealing value `8` and blinding factor `r`, we could reveal `7` and `r+1` or any other value.
 
@@ -55,15 +54,17 @@ Introducing **G**’s twin, **H**.
 r*G + v*H
 ```
 
-
-:   `r` is the blinding factor, and `r*G` is the public key point for `r` (using G as generator point).
-
-    `v` is the value commited, and `v*H` is the public key point for `v` (using H as generator point).
-
-
-
-
 This specific form of commitement is called a *Pedersen Commitment.*
+
+**A Mimblewimble output is just a Pedersen Commitment**, as we’ll soon see. Its values are as follows:
+
+* `r` is the blinding factor, and `r*G` is the public key point for `r`   (using G as generator point).
+
+* `v` is the value committed, and `v*H` is the public key point for `v` (using H as generator point).
+
+
+
+
 
 ## Homomorphic Commitments
 
@@ -73,8 +74,7 @@ They allow us to do as follows:
 
 :   commit (x)  &rArr;  C~1~ </br>
 	commit (y)  &rArr; C~2~ </br>
-	commit (x+y) &rArr; Z </br>
-	Z = C~1~ + C~2~
+	commit (x+y) &rArr; Z = C~1~ + C~2~
 
 f we add two commitments to each other, the result would be an entirely new, valid commitment, which actually commits to the value `x + y`. So we’re able to perform a math operation (addition) unto encrypted data (commitments) while keeping the underlying values “intact”.
 
@@ -97,19 +97,19 @@ The point **Z** (remember a commitment is simply a point on the curve) is the re
 Z = C1 + C2
 ```
 
-So we can calculate what **Z** is:
-
 ```text
 Z = r1*G + r2*G + v1*H + v2*H
 ```
 
-Result:
+So we can calculate what **Z** is:
 
 ```text
 Z = (r1 + r2)*G + (v1 + v2)*H
 ```
 
-Hence point **Z** is a pedersen commitment that is the sum of commitments **C~1~** and **C~2~**. This is the foundation of Mimblewimble outputs, as we're about to see.
+Hence point **Z** is a pedersen commitment that is the sum of commitments **C~1~** and **C~2~**.
+
+This is the foundation for the Elliptic-curve algebra used in Mimblewimble to prove both ownership of outputs (coins) and non-inflation.
 
 
 [^1]: [Finessing commitments](https://joinmarket.me/blog/blog/finessing-commitments/)
