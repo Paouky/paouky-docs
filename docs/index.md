@@ -1,47 +1,33 @@
 # Welcome to the Grin Documentation
 
-??? note "WORK IN PROGRESS, NOT A REAL DOCUMENT YET"
+Grin aims to serve as digital cash, providing electronic transactions for all, without censorship or restrictions.
 
-    Green field implementation that strives to be as clear and simple as possible, making it easier to audit and maintain in the future.
+As a minimal implementation of the Mimblewimble protocol, it offers extremely good privacy, scalability and fungibility.
 
-    > Use Pedersen Commitments to hide the amount and no address info on the chain.
-    Non-interactive coinjoin and global cut-through for the excellent scalability
+## Principles
 
-    Simplicity, Privacy, Scalability
+### Privacy
 
-    Minimal implementation of the Mimblewimble protocol. A decentralized, privacy-preserving digital currency with no addresses or amounts. Grin leverages Mimblewimble to collapse transactional data, making it fast and lightweight. Your Embassy will run a full node enabling interchangeable wallet interfaces.
+Privacy by default. Transactions have no amount, no addresses and can be trivially aggregated. This enables complete fungibility without precluding the ability to selectively disclose information as needed.
 
-    ## Introduction to Mimblewimble and Grin
-    Simplicity
-    Mimblewimble is a blockchain format and protocol that provides extremely good scalability, privacy and fungibility by relying on strong cryptographic primitives. It addresses gaps existing in almost all current blockchain implementations.
+### Scalability
 
-    Grin is an open source software project that implements a Mimblewimble blockchain and fills the gaps required for a full blockchain and cryptocurrency deployment.
+Scales mostly with the number of users and minimally with the number of transactions. Past transactional data can be pruned, making it drastically lightweight compared to other blockchains.
 
-    Here's an overview:
+### Design Simplicity
 
-    - Clean and minimal implementation, and aiming to stay as such.
-    - Follows the MimbleWimble protocol, which provides great anonymity and scaling characteristics.
-    - Cuckoo Cycle proof of work.
-    - Relatively fast block time: one minute.
-    - Fixed block reward over time with a decreasing dilution.
-    - Transaction fees are based on the number of Outputs created/destroyed and total transaction size.
-    - Smooth curve for difficulty adjustments.
+Minimal implementation that strives to remain as clear and simple as possible, making it easy to audit and maintain over time.
 
-    ## Goal and Characteristics
+### Proven Cryptography
 
-    ### Privacy by Default
+Mimblewimble only relies on strong Elliptic Curve cryptography which has been tried and tested for decades.
 
-    This enables complete fungibility without precluding the ability to selectively disclose information as needed.
-    Scales mostly with the number of users and minimally with the number of transactions (<100 byte kernel), resulting in a large space saving compared to other blockchains.
+### Community Driven
 
-    ### Strong and proven cryptography
+Not controlled by any company, foundation or individual. No ICO, founder reward, pre-mine or dev-tax. Built openly by individual contributors distributed all over the world.
 
-    Mimblewimble only relies on Elliptic Curve Cryptography which has been tried and tested for decades.
-
-    ### Design simplicity
-
-    Easy to audit and maintain over time
-
-    ### Community driven
-
-    Community driven, encouraging mining decentralization. No ICO, Founder reward, pre-mine or dev-tax.
+</br>
+<p align="center">
+  <img width="150" src="https://paouky.github.io/docs/assets/images/grin-logo.svg">
+</p>
+</br>

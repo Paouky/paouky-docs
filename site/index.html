@@ -288,44 +288,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-to-mimblewimble-and-grin" class="md-nav__link">
-    Introduction to Mimblewimble and Grin
+  <a href="#principles" class="md-nav__link">
+    Principles
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#goal-and-characteristics" class="md-nav__link">
-    Goal and Characteristics
-  </a>
-  
-    <nav class="md-nav" aria-label="Goal and Characteristics">
+    <nav class="md-nav" aria-label="Principles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#privacy-by-default" class="md-nav__link">
-    Privacy by Default
+  <a href="#privacy" class="md-nav__link">
+    Privacy
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#strong-and-proven-cryptography" class="md-nav__link">
-    Strong and proven cryptography
+  <a href="#scalability" class="md-nav__link">
+    Scalability
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#design-simplicity" class="md-nav__link">
-    Design simplicity
+    Design Simplicity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proven-cryptography" class="md-nav__link">
+    Proven Cryptography
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#community-driven" class="md-nav__link">
-    Community driven
+    Community Driven
   </a>
   
 </li>
@@ -1190,44 +1190,44 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction-to-mimblewimble-and-grin" class="md-nav__link">
-    Introduction to Mimblewimble and Grin
+  <a href="#principles" class="md-nav__link">
+    Principles
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#goal-and-characteristics" class="md-nav__link">
-    Goal and Characteristics
-  </a>
-  
-    <nav class="md-nav" aria-label="Goal and Characteristics">
+    <nav class="md-nav" aria-label="Principles">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#privacy-by-default" class="md-nav__link">
-    Privacy by Default
+  <a href="#privacy" class="md-nav__link">
+    Privacy
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#strong-and-proven-cryptography" class="md-nav__link">
-    Strong and proven cryptography
+  <a href="#scalability" class="md-nav__link">
+    Scalability
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#design-simplicity" class="md-nav__link">
-    Design simplicity
+    Design Simplicity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proven-cryptography" class="md-nav__link">
+    Proven Cryptography
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#community-driven" class="md-nav__link">
-    Community driven
+    Community Driven
   </a>
   
 </li>
@@ -1258,38 +1258,24 @@
                 
                 
                 <h1 id="welcome-to-the-grin-documentation">Welcome to the Grin Documentation</h1>
-<details class="note"><summary>WORK IN PROGRESS, NOT A REAL DOCUMENT YET</summary><p>Green field implementation that strives to be as clear and simple as possible, making it easier to audit and maintain in the future.</p>
-<blockquote>
-<p>Use Pedersen Commitments to hide the amount and no address info on the chain.
-Non-interactive coinjoin and global cut-through for the excellent scalability</p>
-</blockquote>
-<p>Simplicity, Privacy, Scalability</p>
-<p>Minimal implementation of the Mimblewimble protocol. A decentralized, privacy-preserving digital currency with no addresses or amounts. Grin leverages Mimblewimble to collapse transactional data, making it fast and lightweight. Your Embassy will run a full node enabling interchangeable wallet interfaces.</p>
-<h2 id="introduction-to-mimblewimble-and-grin">Introduction to Mimblewimble and Grin</h2>
-<p>Simplicity
-Mimblewimble is a blockchain format and protocol that provides extremely good scalability, privacy and fungibility by relying on strong cryptographic primitives. It addresses gaps existing in almost all current blockchain implementations.</p>
-<p>Grin is an open source software project that implements a Mimblewimble blockchain and fills the gaps required for a full blockchain and cryptocurrency deployment.</p>
-<p>Here's an overview:</p>
-<ul>
-<li>Clean and minimal implementation, and aiming to stay as such.</li>
-<li>Follows the MimbleWimble protocol, which provides great anonymity and scaling characteristics.</li>
-<li>Cuckoo Cycle proof of work.</li>
-<li>Relatively fast block time: one minute.</li>
-<li>Fixed block reward over time with a decreasing dilution.</li>
-<li>Transaction fees are based on the number of Outputs created/destroyed and total transaction size.</li>
-<li>Smooth curve for difficulty adjustments.</li>
-</ul>
-<h2 id="goal-and-characteristics">Goal and Characteristics</h2>
-<h3 id="privacy-by-default">Privacy by Default</h3>
-<p>This enables complete fungibility without precluding the ability to selectively disclose information as needed.
-Scales mostly with the number of users and minimally with the number of transactions (&lt;100 byte kernel), resulting in a large space saving compared to other blockchains.</p>
-<h3 id="strong-and-proven-cryptography">Strong and proven cryptography</h3>
-<p>Mimblewimble only relies on Elliptic Curve Cryptography which has been tried and tested for decades.</p>
-<h3 id="design-simplicity">Design simplicity</h3>
-<p>Easy to audit and maintain over time</p>
-<h3 id="community-driven">Community driven</h3>
-<p>Community driven, encouraging mining decentralization. No ICO, Founder reward, pre-mine or dev-tax.</p>
-</details>
+<p>Grin aims to serve as digital cash, providing electronic transactions for all, without censorship or restrictions.</p>
+<p>As a minimal implementation of the Mimblewimble protocol, it offers extremely good privacy, scalability and fungibility.</p>
+<h2 id="principles">Principles</h2>
+<h3 id="privacy">Privacy</h3>
+<p>Privacy by default. Transactions have no amount, no addresses and can be trivially aggregated. This enables complete fungibility without precluding the ability to selectively disclose information as needed.</p>
+<h3 id="scalability">Scalability</h3>
+<p>Scales mostly with the number of users and minimally with the number of transactions. Past transactional data can be pruned, making it drastically lightweight compared to other blockchains.</p>
+<h3 id="design-simplicity">Design Simplicity</h3>
+<p>Minimal implementation that strives to remain as clear and simple as possible, making it easy to audit and maintain over time.</p>
+<h3 id="proven-cryptography">Proven Cryptography</h3>
+<p>Mimblewimble only relies on strong Elliptic Curve cryptography which has been tried and tested for decades.</p>
+<h3 id="community-driven">Community Driven</h3>
+<p>Not controlled by any company, foundation or individual. No ICO, founder reward, pre-mine or dev-tax. Built openly by individual contributors distributed all over the world.</p>
+<p></br>
+<p align="center">
+  <img width="150" src="https://paouky.github.io/docs/assets/images/grin-logo.svg">
+</p>
+</br></p>
                 
               
               
