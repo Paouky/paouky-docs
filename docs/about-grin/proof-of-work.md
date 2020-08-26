@@ -45,7 +45,7 @@ Therefore, to achieve optimal security, two conditions must be met:
 
 #### Inevitability
 
-There’s increasingly more evidence that ASICs are inevitable, as dedicated hardware will always have ways in which it can improve upon general purpose hardware. While it’s possible to make ASIC manufacturing more difficult, over a long period it is likely to end up as a centralizing force in it self, as it makes the chain vulnerable to secret ASIC operations[^3].
+There’s increasingly more evidence that ASICs are inevitable, as dedicated hardware will always have ways in which it can improve upon general purpose hardware. While it *is* possible to make ASIC manufacturing more difficult, over a long period it is likely to end up as a centralizing force in it self, as it makes the chain vulnerable to secret ASIC operations[^3].
 
 [^1]: [Cuckoo Cycle](https://github.com/tromp/cuckoo)
 
