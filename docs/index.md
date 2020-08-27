@@ -24,7 +24,7 @@ Mimblewimble only relies on strong Elliptic Curve cryptography which has been tr
 
 ### Community Driven
 
-Not controlled by any company, foundation or individual. No ICO, founder reward, pre-mine or dev-tax. Built openly by individual contributors distributed all over the world.
+No company, foundation or individual behind Grin. No ICO, founder reward, pre-mine or dev-tax. Built openly by individual contributors distributed all over the world.
 
 </br>
 <p align="center">

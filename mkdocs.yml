@@ -59,9 +59,13 @@ nav:
     - Proof of Work: about-grin/proof-of-work.md
     - Emission: about-grin/emission.md
     - Community: about-grin/community.md
-  - Getting Started:
+  - Get Started:
     - Quickstart:
-      - Install: getting-started/quickstart/install.md
+      - Install:
+        - Linux: getting-started/quickstart/install/install-linux.md
+        - macOS: getting-started/quickstart/install/install-macos.md
+        - Windows: getting-started/quickstart/install/install-windows.md
+        - Install: getting-started/quickstart/install/install.md
       - Initialize: getting-started/quickstart/initialize.md
       - Receive: getting-started/quickstart/receive.md
       - Send: getting-started/quickstart/send.md
@@ -91,12 +95,16 @@ nav:
     - Proof of Work:
       - Cuckoo Cycle: technical/proof-of-work/cuckoo-cycle.md
       - Difficulty Adjustment: technical/proof-of-work/daa.md
-      - Stratum RPC: technical/proof-of-work/stratum-rpc.md
     - Miscellaneous:
       - Dandelion: technical/miscellaneous/dandelion.md
       - Switch Commitments: technical/miscellaneous/switch-commitments.md
       - Coinbase Maturity Rule: technical/miscellaneous/coinbase-maturity-rule.md
       - NRD Kernels: technical/miscellaneous/nrd-kernels.md
+    - API:
+      - Node API: technical/api/node-api.md
+      - Wallet REST API: technical/api/wallet-rest-api.md
+      - Stratum RPC: technical/proof-of-work/stratum-rpc.md
+
     - Security Process:
       - Grin's Security Process: technical/security-process/grin-security-process.md
       - Security Team: technical/security-process/security-team.md

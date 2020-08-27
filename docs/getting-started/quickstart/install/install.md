@@ -1,18 +1,9 @@
 # Quickstart
 
-In this tutorial you will learn how to:
-
-- Install Grin node and wallet
-- Run a full node
-- Create a wallet
-- Send & receive grins
-
-!!! tip ""
-    If you prefer to use Grin with a graphical user interface, please refer to [community wallets](../community-wallets.md).
+!!! tip "Graphical user-interface"
+    If you prefer to use Grin with a graphical user-interface, please refer to [community wallets](../community-wallets.md).
 
 ## Requirements
-
-grin and grin-wallet software are compatible with Linux, macOS and Windows.
 
 It has been tested specifically on:
 
@@ -20,12 +11,14 @@ It has been tested specifically on:
 - macOS 10.15 Catalina
 - Windows 10
 
-## Install Grin and grin-wallet
+## Install
 
-'grin' is the node software and 'grin-wallet' is the command-line wallet.
+This document will guide you to install two binaries:
+
+* `grin` - the Grin node.
+* `grin-wallet` - the command-line wallet.
 
 !!! tip ""
-    The following section will guide you to install using precompiled binaries.
     If you wish to build them yourself, see the [building section](https://github.com/mimblewimble/grin/blob/master/doc/build.md).
 
 ### Linux

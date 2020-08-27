@@ -18,7 +18,7 @@ Congratulations! 🎉 You are now running a Grin full node.
 The initial sync might take from 30 minutes to a few hours depending on your connection speed and CPU performance.
 
 !!! note ""
-    If you can, consider opening port 3414 to allow inbound peer connections, as it [benefits the network](TODO).
+    If you can, consider opening port 3414 to allow for inbound peer connections, as it [benefits the network](TODO).
 
 
 ## Creating a Grin Wallet
@@ -31,7 +31,7 @@ In the command prompt type the following:
 grin-wallet init
 ```
 
-Your wallet will now ask you to create a password. Most wallet commands will require it, so you'll be typing it quite often.
+Your wallet will now ask you to create a password. Most wallet commands will require it, so you'll be typing the password quite often.
 In order to hide it, your keyboard input will not be displayed.
 
 ```text
