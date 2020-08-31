@@ -8,12 +8,11 @@ This part of the documentation describes more in details the technology behind G
 
 ## Introduction
 
-
-- [Mimblewimble](introduction/mimblewimble.md) - A technical introduction to Mimblewimble </br>
-A very brief overview of required cryptographic concepts:
-    - [Elliptic Curves](introduction/elliptic-curve-cryptography.md)
-    - [Commitments](introduction/commitments.md)
-- [Grin For Bitcoiners](grin-for-bitcoiners.md) - Explaining Grin from a Bitcoiner's perspective
+- [Grin for Bitcoiners](introduction/grin-for-bitcoiners.md) - Explaining Grin from a Bitcoiner's perspective
+- [Mimblewimble](introduction/mimblewimble/elliptic-curve-cryptography.md/mimblewimble.md) - A technical introduction to Mimblewimble </br>
+    1. Elliptic Curves
+    1. Commitments
+    1. Mimblewimble
 
 ## Transactions
 
