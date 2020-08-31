@@ -49,7 +49,7 @@ No, and this is where Mimblewimble and Grin shine. Confidential transactions are
 
 You can figure out which outputs are being spent by which transaction, but the trail of data stops here. All inputs and outputs look like random pieces of data, so you can't tell if the money was transferred, still belongs to the same person, which output is the actual transfer and which is the change, etc. Grin transactions are built with *no identifiable piece of information*.
 
-In addition, Grin leverages [Dandelion relay](miscellaneous/dandelion.md), which provides additional anonymity as to which IP or client the transaction originated from, and allows for transactions to be aggregated.
+In addition, Grin leverages [Dandelion relay](../miscellaneous/dandelion.md), which provides additional anonymity as to which IP or client the transaction originated from, and allows for transactions to be aggregated.
 
 ### What about the quantum computaggedon?
 
@@ -57,4 +57,4 @@ In every Grin output, we also include a bit of hashed data, which is quantum saf
 
 ### How does all this magic work?
 
-See our [technical introduction](introduction-to-mimblewimble/elliptic-curve-cryptography.md) to get started.
+Click *Next* down below.
