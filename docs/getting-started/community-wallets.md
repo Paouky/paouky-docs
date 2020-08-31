@@ -1,10 +1,9 @@
-
+# Grin Wallets
 
 ![Grin++](../assets/images/grinplusplus.png){ align=left width=60 }
 
 ## &emsp;Grin++
 
-</br>
 </br>
 GUI wallet and node written in C++ &emsp;~Windows,~ ~Linux,~ ~macOS~
 
@@ -30,10 +29,10 @@ Mobile wallet &emsp;~iOS,~ ~macOS~
 
 ---
 
-
-# Other
-
 </br>
+
+# Related Services
+
 
 ![grinnode.live](../assets/images/grinnode-live.png){ align=left width=90 }
 
