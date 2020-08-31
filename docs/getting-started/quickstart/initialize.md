@@ -4,9 +4,6 @@
 
 The rest of the documentation is common for Linux, macOS and Windows.
 
-!!! note ""
-    On Windows, add to PATH the directory where you installed `grin.exe` and `grin-wallet.exe`.
-
 Running a Grin node is as simple as typing the command:
 ```bash
 grin
@@ -17,9 +14,10 @@ You should see the following window:
 Congratulations! 🎉 You are now running a Grin full node.
 The initial sync might take from 30 minutes to a few hours depending on your connection speed and CPU performance.
 
-!!! note ""
-    If you can, consider opening port 3414 to allow for inbound peer connections, as it [benefits the network](TODO).
+!!! tip ""
+    If you have a good Internet connection, you can help strengthen the network by keeping your PC running with a grin node and [port 3414 open](TODO).
 
+All data files will be created at the hidden folder `~/.grin` (under your home directory). Inside this folder, of special interest is the file `grin-server.toml` which can be used to modify configuration options.
 
 ## Creating a Grin Wallet
 
