@@ -406,7 +406,7 @@ grin-wallet txs -i 0
 
 ## cancel
 
-Cancels a previously created transaction, freeing previously locked outputs for use again.
+Cancels an in-progress created transaction, freeing previously [locked outputs](#info) for use again.
 
 ```text
 grin-wallet cancel -i 2

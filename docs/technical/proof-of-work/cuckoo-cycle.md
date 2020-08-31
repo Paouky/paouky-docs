@@ -1,6 +1,6 @@
 # Cuckoo Cycle
 
-> *Read this document in other languages: [Korean](pow_KR.md).*
+> *Read this document in other languages: [Korean](https://github.com/mimblewimble/grin/blob/master/doc/pow/pow_KR.md).*
 
 This document is meant to outline, at a level suitable for someone without prior knowledge,
 the algorithms and processes currently involved in Grin's Proof-of-Work system. We'll start

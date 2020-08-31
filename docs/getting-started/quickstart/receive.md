@@ -19,7 +19,7 @@ grin1dhvv9mvarqwl6fderuxp3qgl6qppvhc9p4u24347ec0mvgg6342q4w6x56
 
 Give it to the sender.
 
-To understand what comes next, you should know there are two primary ways to interact with the other party: [Tor](TODO) and [Slatepack](TODO.LINK-TO-TRANSACTION-PAGE-SLATEPACK-TITLE). A Tor connection is attempted first, but if it isn't accessible (counterparty offline, or either party doesn't have Tor service installed), then Slatepack method is automatically chosen.
+To understand what comes next, you should know there are two primary ways to interact with the other party: [Tor](../../about-grin/transactions/#tor) and [Slatepack](../../about-grin/transactions/#slatepack). A Tor connection is attempted first, but if it isn't accessible (counterparty offline, or either party doesn't have Tor service installed), then Slatepack method is automatically chosen.
 
 ### Tor
 
@@ -27,7 +27,7 @@ All you need to do is type:
 ```bash
 grin-wallet listen
 ```
-Done! This sets up your wallet to listen for incoming connections through Tor. You can type `grin-wallet info` to check your wallet balance.
+Done! This sets up your wallet to listen for incoming connections through Tor. Just let the sender know that your wallet is ready. You can type `grin-wallet info` to check your wallet balance.
 
 ### Slatepack
 Slatepacks are encoded text messages used to transfer the data required to form a transaction, and are an alternative to a hands-off method such as Tor. The messages are easily copy-pasted and can be transferred in any communication channel imaginable: email, forum, social media, chat, letter, carrier pigeon etc.

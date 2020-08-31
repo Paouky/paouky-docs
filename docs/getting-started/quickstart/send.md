@@ -7,14 +7,14 @@ To send grins, use the `send` command, and specify both the destination address 
 grin-wallet send -d [address] [amount]
 ```
 
-Example of sending 360 grins:
+Example of sending 90 grins:
 
 ```bash
-grin-wallet send -d grin1dhvv9mvarqwl6fderuxp3qgl6qppvhc9p4u24347ec0mvgg6342q4w6x56 360
+grin-wallet send -d grin1dhvv9mvarqwl6fderuxp3qgl6qppvhc9p4u24347ec0mvgg6342q4w6x56 90
 ```
 
 !!! note "Locked Outputs"
-    From now on and until confirmed in the chain, the outputs used in this transcation are [locked](TODO.LOCKED-OUTPUTS-TITLE).
+    From now on and until confirmed in the chain, the outputs used in this transcation are [locked](../../wallet-guide/#cancel).
 
 The wallets will interact through Tor and complete the process automatically.
 

@@ -1096,7 +1096,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../technical/api/node-api.md" title="Node API" class="md-nav__link">
+    <a href="../../../technical/api/node-api/" title="Node API" class="md-nav__link">
       Node API
     </a>
   </li>
@@ -1120,7 +1120,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../technical/proof-of-work/stratum-rpc/" title="Stratum RPC" class="md-nav__link">
+    <a href="../../../technical/api/stratum-rpc/" title="Stratum RPC" class="md-nav__link">
       Stratum RPC
     </a>
   </li>
@@ -1299,12 +1299,12 @@
 <div class="highlight"><pre><span></span><code>grin1dhvv9mvarqwl6fderuxp3qgl6qppvhc9p4u24347ec0mvgg6342q4w6x56
 </code></pre></div></p>
 <p>Give it to the sender.</p>
-<p>To understand what comes next, you should know there are two primary ways to interact with the other party: <a href="TODO">Tor</a> and <a href="TODO.LINK-TO-TRANSACTION-PAGE-SLATEPACK-TITLE">Slatepack</a>. A Tor connection is attempted first, but if it isn't accessible (counterparty offline, or either party doesn't have Tor service installed), then Slatepack method is automatically chosen.</p>
+<p>To understand what comes next, you should know there are two primary ways to interact with the other party: <a href="../../about-grin/transactions/#tor">Tor</a> and <a href="../../about-grin/transactions/#slatepack">Slatepack</a>. A Tor connection is attempted first, but if it isn't accessible (counterparty offline, or either party doesn't have Tor service installed), then Slatepack method is automatically chosen.</p>
 <h3 id="tor">Tor</h3>
 <p>All you need to do is type:
 <div class="highlight"><pre><span></span><code>grin-wallet listen
 </code></pre></div>
-Done! This sets up your wallet to listen for incoming connections through Tor. You can type <code>grin-wallet info</code> to check your wallet balance.</p>
+Done! This sets up your wallet to listen for incoming connections through Tor. Just let the sender know that your wallet is ready. You can type <code>grin-wallet info</code> to check your wallet balance.</p>
 <h3 id="slatepack">Slatepack</h3>
 <p>Slatepacks are encoded text messages used to transfer the data required to form a transaction, and are an alternative to a hands-off method such as Tor. The messages are easily copy-pasted and can be transferred in any communication channel imaginable: email, forum, social media, chat, letter, carrier pigeon etc.</p>
 <p>The text you receive from the sender should look like this:

@@ -1056,7 +1056,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../technical/api/node-api.md" title="Node API" class="md-nav__link">
+    <a href="../../../technical/api/node-api/" title="Node API" class="md-nav__link">
       Node API
     </a>
   </li>
@@ -1080,7 +1080,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../technical/proof-of-work/stratum-rpc/" title="Stratum RPC" class="md-nav__link">
+    <a href="../../../technical/api/stratum-rpc/" title="Stratum RPC" class="md-nav__link">
       Stratum RPC
     </a>
   </li>
@@ -1226,13 +1226,13 @@
 <div class="highlight"><pre><span></span><code>grin-wallet send -d <span class="o">[</span>address<span class="o">]</span> <span class="o">[</span>amount<span class="o">]</span>
 </code></pre></div>
 
-<p>Example of sending 360 grins:</p>
-<div class="highlight"><pre><span></span><code>grin-wallet send -d grin1dhvv9mvarqwl6fderuxp3qgl6qppvhc9p4u24347ec0mvgg6342q4w6x56 <span class="m">360</span>
+<p>Example of sending 90 grins:</p>
+<div class="highlight"><pre><span></span><code>grin-wallet send -d grin1dhvv9mvarqwl6fderuxp3qgl6qppvhc9p4u24347ec0mvgg6342q4w6x56 <span class="m">90</span>
 </code></pre></div>
 
 <div class="admonition note">
 <p class="admonition-title">Locked Outputs</p>
-<p>From now on and until confirmed in the chain, the outputs used in this transcation are <a href="TODO.LOCKED-OUTPUTS-TITLE">locked</a>.</p>
+<p>From now on and until confirmed in the chain, the outputs used in this transcation are <a href="../../wallet-guide/#cancel">locked</a>.</p>
 </div>
 <p>The wallets will interact through Tor and complete the process automatically.</p>
 <p>However, If the connection wasn't successful, your wallet will output a Slatepack message which you need to provide the receiver with. The receiver then uses the <code>receive</code> command to process it (as demonstrated earlier), and returns back to you a Slatepack he produced himself.</p>

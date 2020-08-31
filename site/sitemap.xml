@@ -144,7 +144,11 @@
      <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.grin.mw/technical/proof-of-work/stratum-rpc/</loc>
+     <loc>https://docs.grin.mw/technical/api/node-api/</loc>
+     <lastmod>2020-08-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.grin.mw/technical/api/stratum-rpc/</loc>
      <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>

@@ -102,7 +102,7 @@ nav:
     - API:
       - Node API: technical/api/node-api.md
       - Wallet REST API: technical/api/wallet-rest-api.md
-      - Stratum RPC: technical/proof-of-work/stratum-rpc.md
+      - Stratum RPC: technical/api/stratum-rpc.md
     - Security Process:
       - Grin's Security Process: technical/security-process/grin-security-process.md
       - Security Team: technical/security-process/security-team.md

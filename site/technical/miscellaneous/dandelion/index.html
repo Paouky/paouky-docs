@@ -1218,7 +1218,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/node-api.md" title="Node API" class="md-nav__link">
+    <a href="../../api/node-api/" title="Node API" class="md-nav__link">
       Node API
     </a>
   </li>
@@ -1242,7 +1242,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../proof-of-work/stratum-rpc/" title="Stratum RPC" class="md-nav__link">
+    <a href="../../api/stratum-rpc/" title="Stratum RPC" class="md-nav__link">
       Stratum RPC
     </a>
   </li>
@@ -1530,7 +1530,7 @@
                 
                 
                 <h1 id="dandelion-in-grin-privacy-preserving-transaction-aggregation-and-propagation">Dandelion++ in Grin: Privacy-Preserving Transaction Aggregation and Propagation</h1>
-<p><em>Read this document in other languages: <a href="dandelion_KR.md">Korean</a>[out of date].</em></p>
+<p><em>Read this document in other languages: <a href="https://github.com/mimblewimble/grin/blob/master/doc/dandelion/dandelion_KR.md">Korean</a>[out of date].</em></p>
 <h2 id="introduction">Introduction</h2>
 <p>The Dandelion++ protocol for broadcasting transactions, proposed by Fanti et al. (Sigmetrics 2018)<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>, intends to defend against deanonymization attacks during transaction propagation. In Grin, it also provides an opportunity to aggregate transactions before they are broadcast to the entire network. This document describes the protocol and the simplified version of it that is implemented in Grin.</p>
 <p>In the following section, past research on the protocol is summarized. This is then followed by describing details of the Grin implementation; the objectives behind its inclusion, how the current implementation differs from the original paper, what some of the known limitations are, and outlining some areas of improvement for future work.</p>
