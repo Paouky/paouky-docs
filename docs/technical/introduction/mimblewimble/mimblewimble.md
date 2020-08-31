@@ -346,3 +346,9 @@ Both the set of unspent outputs (UTXO) and transaction kernels are extremely com
 ## Conclusion
 
 We covered the basic principles that underlie Mimblewimble. By using addition of elliptic curve points, we're able to build transactions that are completely opaque but can still be properly validated. And by generalizing those properties to blocks, we can eliminate a large amount of blockchain data, allowing for great scaling and fast sync of new peers.
+
+!!! note ""
+    Further reading on how transactions are constructed:
+
+    * [Grin Transactions Explained, Step-by-Step](https://medium.com/@brandonarvanaghi/grin-transactions-explained-step-by-step-fdceb905a853)
+    * [What’s inside a Grin Transaction File?](https://medium.com/@brandonarvanaghi/whats-inside-a-grin-transaction-file-f062a0dcbf99)
