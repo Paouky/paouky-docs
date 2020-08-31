@@ -124,7 +124,7 @@ This will ensure that:
 * The kernel for the transaction in the proof is validated and can be found on-chain.
 * Both the sender and recipient's signatures correctly sign for the amount and the kernel.
 
-Additionally, if the recipient of the transaction is the same wallet trying to verify it, then they will be be informed as follows:
+Additionally, if the recipient of the transaction is the same wallet trying to verify it, then they will be informed as follows:
 
 ```text
 grin-wallet verify_proof proof.txt
