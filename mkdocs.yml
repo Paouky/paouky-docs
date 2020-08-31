@@ -60,25 +60,24 @@ nav:
     - Emission: about-grin/emission.md
     - Community: about-grin/community.md
   - Get Started:
+    - Table of Contents: getting-started/get-started-toc.md
     - Quickstart:
-      - Install:
-        - Linux: getting-started/quickstart/install/install-linux.md
-        - macOS: getting-started/quickstart/install/install-macos.md
-        - Windows: getting-started/quickstart/install/install-windows.md
-        - Install: getting-started/quickstart/install/install.md
+      - Install: getting-started/quickstart/install.md
       - Initialize: getting-started/quickstart/initialize.md
       - Receive: getting-started/quickstart/receive.md
       - Send: getting-started/quickstart/send.md
-    - Wallet: getting-started/wallet.md
-    - Node: getting-started/node.md
+    - Wallet Guide: getting-started/wallet-guide.md
     - Community Wallets: getting-started/community-wallets.md
+    - Build: getting-started/build.md
   - Wiki:
     - Table of Contents: technical/table-of-contents.md
     - Introduction:
-      - Elliptic Curves: technical/introduction/elliptic-curve-cryptography.md
-      - Commitments: technical/introduction/commitments.md
-      - Mimblewimble: technical/introduction/mimblewimble.md
       - Grin for Bitcoiners: technical/introduction/grin-for-bitcoiners.md
+      - Mimblewimble:
+        - Elliptic Curves: technical/introduction/mimblewimble/elliptic-curve-cryptography.md
+        - Commitments: technical/introduction/mimblewimble/commitments.md
+        - Mimblewimble: technical/introduction/mimblewimble/mimblewimble.md
+
     - Transactions:
       - Slates: technical/transactions/slates.md
       - Slatepack: technical/transactions/slatepack.md
@@ -104,7 +103,6 @@ nav:
       - Node API: technical/api/node-api.md
       - Wallet REST API: technical/api/wallet-rest-api.md
       - Stratum RPC: technical/proof-of-work/stratum-rpc.md
-
     - Security Process:
       - Grin's Security Process: technical/security-process/grin-security-process.md
       - Security Team: technical/security-process/security-team.md
