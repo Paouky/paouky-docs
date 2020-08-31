@@ -1,175 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://docs.grin.mw/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/about-grin/story/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/about-grin/privacy/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/about-grin/scalability/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/about-grin/transactions/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/about-grin/proof-of-work/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/about-grin/emission/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/about-grin/community/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.grin.mw/getting-started/quickstart/install/install-linux/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <loc>https://docs.grin.mw/getting-started/get-started-toc/</loc>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.grin.mw/getting-started/quickstart/install/install-macos/</loc>
-     <lastmod>2020-08-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.grin.mw/getting-started/quickstart/install/install-windows/</loc>
-     <lastmod>2020-08-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.grin.mw/getting-started/quickstart/install/install/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <loc>https://docs.grin.mw/getting-started/quickstart/install/</loc>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/getting-started/quickstart/initialize/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/getting-started/quickstart/receive/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/getting-started/quickstart/send/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.grin.mw/getting-started/wallet/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <loc>https://docs.grin.mw/getting-started/wallet-guide/</loc>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/getting-started/community-wallets/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.grin.mw/getting-started/build/</loc>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/table-of-contents/</loc>
-     <lastmod>2020-08-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.grin.mw/technical/introduction/elliptic-curve-cryptography/</loc>
-     <lastmod>2020-08-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.grin.mw/technical/introduction/commitments/</loc>
-     <lastmod>2020-08-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://docs.grin.mw/technical/introduction/mimblewimble/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/introduction/grin-for-bitcoiners/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.grin.mw/technical/introduction/mimblewimble/elliptic-curve-cryptography/</loc>
+     <lastmod>2020-08-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.grin.mw/technical/introduction/mimblewimble/commitments/</loc>
+     <lastmod>2020-08-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://docs.grin.mw/technical/introduction/mimblewimble/mimblewimble/</loc>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/transactions/slates/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/transactions/slatepack/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/transactions/payment-proofs/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/transactions/contracts/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/blocks/block-header/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/blocks/block-body/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/chain-state/merkle-mountain-range/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/chain-state/state-and-pruning/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/chain-state/chain-sync/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/proof-of-work/cuckoo-cycle/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/proof-of-work/daa/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/miscellaneous/dandelion/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/miscellaneous/switch-commitments/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/miscellaneous/coinbase-maturity-rule/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/miscellaneous/nrd-kernels/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/proof-of-work/stratum-rpc/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/security-process/grin-security-process/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/security-process/security-team/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/security-process/code-audits/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/slatepack-integration/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://docs.grin.mw/technical/archives/</loc>
-     <lastmod>2020-08-27</lastmod>
+     <lastmod>2020-08-31</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
