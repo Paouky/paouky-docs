@@ -4,7 +4,7 @@
 Let's see how you can receive your first grins.
 
 !!! note "Interactive Transactions"
-    The nature of [Mimblewimble](../technical/introduction-to-mimblewimble) protocol means that the sender & receiver need to interact with one another, in some way or another, in order to form [transactions](TODO).
+    The nature of [Mimblewimble](../../../technical/introduction/mimblewimble/elliptic-curve-cryptography) protocol means that the sender & receiver need to interact with one another, in some way or another, in order to form [transactions](../../../about-grin/transactions).
 
 The first step is to generate an address:
 
