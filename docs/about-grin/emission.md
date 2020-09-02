@@ -1,6 +1,6 @@
 # Emission
 
-A new grin is emitted every second, forever, meaning the emission rate stays constant and completely linear. As time passes, the relative dilution becomes smaller; After 10 years, it falls below 10%. After 20, below 5%. This results in a decreasing inflation rate, or disinflation.
+A new grin ツ is emitted every second, forever, meaning the emission rate stays constant and completely linear. As time passes, the relative dilution becomes smaller; After 10 years, it falls below 10%. After 20, below 5%. This results in a decreasing inflation rate, or disinflation.
 
 ![emission chart](../assets/images/emission_chart.png){ width=650 }
 
