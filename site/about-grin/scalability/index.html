@@ -41,6 +41,8 @@
     
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     
       
     
@@ -159,7 +161,7 @@
   <li class="md-tabs__item">
     
       <a href="../.." class="md-tabs__link">
-        Home
+        ./ Grin
       </a>
     
   </li>
@@ -249,8 +251,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../.." title="Home" class="md-nav__link">
-      Home
+    <a href="../.." title="./ Grin" class="md-nav__link">
+      ./ Grin
     </a>
   </li>
 
@@ -1278,7 +1280,7 @@
                   <h1>Scalability</h1>
                 
                 <p>A Mimblewimble chain is massively-prunable, which allows it to stay lightweight and cheap to verify. Its core essence is this very unique balance of privacy and scalability.</p>
-<p>Once an output is spent, there's no longer any need to keep it and it's removed from the chain. A 100 byte kernel is left for each transaction, forever proving it's validity. The result is, that in order to verify the entire history starting from the genesis block, only the kernels and the set of unspent outputs are needed. Let's illustrate a trail of transcations:</p>
+<p>Once an output is spent, there's no longer any need to keep it and it's removed from the chain. A 100 byte kernel is left for each transaction, forever proving it's validity. The result is, that in order to verify the entire history starting from the genesis block, only the kernels and the set of unspent outputs are needed. Let's illustrate a trail of transactions:</p>
 <p><em>(switch between tabs)</em></p>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Before</label><div class="tabbed-content">
 <table>
@@ -1513,7 +1515,7 @@
 <p>Following this logic, the chain mostly grows by the number of users, instead of the number of overall transactions. In fact, it often <em>shrinks in size</em> when more inputs are used than new outputs are created.</p>
 <p>Building, verifying and storing transactions requires minimal resources. Anyone can fully verify the chain on a phone or on cheap hardware, and run a node in areas with poor network connectivity.</p>
 <h3 id="comparison-for-bitcoiners">Comparison For Bitcoiners</h3>
-<p>At the time of this writing, there were 560M Bitcoin transactions, taking up 300GB of space. Somebody who wants to verify the current state must replay each and every transcation. He will check millions of outputs to eventually derive the current set of 66M unspent outputs.</p>
+<p>At the time of this writing, there were 560M Bitcoin transactions, taking up 300GB of space. Somebody who wants to verify the current state must replay each and every transacation. He will check millions of outputs to eventually derive the current set of 66M unspent outputs.</p>
 <p>Mimblewimble shrinks the transaction history such that a chain with Bitcoin's history would be kept at around 1/4 of its size. This difference becomes much more exciting if one remembers that Mimblewimble employs Confidential Transactions, so that each output requires a large rangeproof. If the current Bitcoin blockchain had hidden amounts, it's size would have been on the order of several terabyes.</p>
                 
               

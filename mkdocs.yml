@@ -32,6 +32,9 @@ extra:
     - icon: fontawesome/brands/keybase
       link: https://keybase.io/team/grincoin
 
+extra_css:
+  - stylesheets/extra.css
+
 markdown_extensions:
   - admonition
   - codehilite
@@ -51,7 +54,8 @@ markdown_extensions:
 
 
 nav:
-  - Home: index.md
+  - ./ Grin: index.md
+
   - Documents (temp): docs-temp.md
   - About Grin:
     - Story: about-grin/story.md
@@ -61,6 +65,7 @@ nav:
     - Proof of Work: about-grin/proof-of-work.md
     - Emission: about-grin/emission.md
     - Community: about-grin/community.md
+
   - Get Started:
     - Table of Contents: getting-started/get-started-toc.md
     - Quickstart:
@@ -71,6 +76,7 @@ nav:
     - Wallet Guide: getting-started/wallet-guide.md
     - Community Wallets: getting-started/community-wallets.md
     - Build: getting-started/build.md
+    
   - Wiki:
     - Table of Contents: technical/table-of-contents.md
     - Introduction:
@@ -79,7 +85,6 @@ nav:
         - Elliptic Curves: technical/introduction/mimblewimble/elliptic-curve-cryptography.md
         - Commitments: technical/introduction/mimblewimble/commitments.md
         - Mimblewimble: technical/introduction/mimblewimble/mimblewimble.md
-
     - Transactions:
       - Slates: technical/transactions/slates.md
       - Slatepack: technical/transactions/slatepack.md

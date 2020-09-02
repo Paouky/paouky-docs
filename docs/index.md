@@ -3,9 +3,9 @@
 </p>
 </br>
 
-Grin aims to serve as digital cash, providing electronic transactions for all, without censorship or restrictions.
+Simple, privacy-focused, scalable Mimblewimble chain implementation.
 
-As a minimal implementation of the Mimblewimble protocol, it offers extremely good privacy, scalability and fungibility.
+Grin aims to serve as digital cash. To provide electronic transactions for all, without censorship or restrictions.
 
 ## Principles
 

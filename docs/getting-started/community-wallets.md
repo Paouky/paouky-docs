@@ -5,6 +5,7 @@
 ## &emsp;Grin++
 
 </br>
+
 GUI wallet and node written in C++ &emsp;~Windows,~ ~Linux,~ ~macOS~
 
 ??? abstract "How to: send/receive"
