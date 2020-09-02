@@ -6,7 +6,7 @@ Let's see how a standard transaction flow looks like:
 
 1. An address, often referred to as a *Slatepack Address*, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is *completely different* from the familiar on-chain address. It's not a part of the blockchain. It is infact an `ed25199` public key which serves a double role:
     * A Tor hidden service address.
-    * Key to encrypt the data communicated between the sender and receiver, so anybody listening won't be able to determine any info about the transaction.
+    * Key to encrypt the data communicated between the sender and receiver.
 
 1. Sender begins building the transaction *slate* (a sheet of incomplete transaction data), encrypts it with the receiver's address (public key), and passes it over.
 1. Receiver adds to the slate his own data and signature, and delivers it back.
@@ -22,7 +22,7 @@ The interaction between sender and receiver happens in one of two ways.
 
 ### Tor
 
-As mentioned earlier, the slatepack address is also used to derive a Tor address. By default, the sender's wallet will try to communicate with the receiver's wallet through the Tor network.
+As mentioned earlier, the slatepack address is also used to derive a Tor address. By default, the sender's wallet will try to communicate with the receiver's wallet via Tor.
 
 If the connection succeeds, all the rest is done automatically by the two wallets and no manual action is required. The process is exactly as described above, but it all happens under the hood without further intervention.
 
@@ -35,7 +35,7 @@ However, if the Tor connection between the wallets is not successful for whateve
 
 Recall that slates are simply partial transactions. Slatepacks are slates encoded inside compact, neatly organized and encrypted text messages.
 
-Using this method, 2~nd~ and 3~rd~ steps, where the sender and receiver pass the slate to one another, would be done manually by exchanging these slatepack messages. To do so, almost every available communication channel will work. Creativity is the limit.
+Using this method, 2~nd~ and 3~rd~ steps, where the sender and receiver pass the slate to one another, would be done manually by exchanging these slatepack messages. To do so, almost every available communication channel will work; Email, chat, social media, letters, pigeons etc. Creativity is the limit.
 
 The address (public key) initally provided by the receiver will be used to the encrypt the slatepacks, so that only the transacting parties are able to see the data inside.
 
