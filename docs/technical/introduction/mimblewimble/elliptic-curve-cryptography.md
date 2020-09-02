@@ -7,6 +7,10 @@ description: Elliptic Curve Cryptography ECC
 
 The following three-part series is intended for those who wish to understand what goes on inside Mimblewimble and Grin. We try to make this objective more accessible by going through the cryptographic primitives required to know first, without diving into proofs and specifics. Once those are in order, we connect everything explain how Mimblewimble works.
 
+1. Elliptic Curves
+1. Commitments
+1. Mimblewimble
+
 For the original introduction (along with many translations), refer to here [here](https://github.com/mimblewimble/grin/blob/master/doc/intro.md).
 
 ---
@@ -41,7 +45,7 @@ So that adding the two points P and Q results in -R, the inverse of R.
 
 If we draw a line passing through P and Q, this line will cross a third point on the curve, R (so that P, Q and R are aligned). If we take the inverse of this point, which is simply the one symmetric to it about the x-axis, we have found the result of adding two curve points, P + Q. Let’s illustrate:
 
-![ecc1](../../assets/images/ecc1.png){ width=650 }
+![ecc1](../../../assets/images/ecc1.png){ width=650 }
 
 In other words, addition of points is basically hopping around on the curve to a different, seemingly random point; It looks random unless you know the exact operation performed to reach it.
 
@@ -53,7 +57,7 @@ We can’t multiply a point by another point, but we can multiply a point by a n
 P + P = -R
 ```
 
-![ecc2](../../assets/images/ecc2.png){ width=650 }
+![ecc2](../../../assets/images/ecc2.png){ width=650 }
 
 !!! note ""
     To calculate `8*P` for e.g. wouldn’t take 8 operations, but only 3; you can find `2*P`, then add it onto itself, and then add `4*P` onto itself, for the final result of `8*P`.

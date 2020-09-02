@@ -24,7 +24,7 @@ This means that the Grin blockchain scales with the number of users (unspent out
 
 ## Scripting
 
-Maybe you've heard that Mimblewimble doesn't support scripts. And in some way, that's true. But thanks to cryptographic trickery, many contracts that in Bitcoin would require a script can be achieved with Grin using properties of Elliptic Curve Cryptography. So far, we know how to do:
+Maybe you've heard that Mimblewimble doesn't support scripts. And in some way, that's true. But thanks to [cryptographic trickery](https://lists.launchpad.net/mimblewimble/msg00029.html), many contracts that in Bitcoin would require a script can be achieved with Grin using properties of Elliptic Curve Cryptography. So far, we know how to do:
 
 * Multi-signature transactions.
 * Atomic swaps.

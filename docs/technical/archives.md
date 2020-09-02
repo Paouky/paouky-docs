@@ -32,6 +32,7 @@
 
 :   [[Launchpad] Mimblewimble Mailing List Archive](https://lists.launchpad.net/mimblewimble/) </br>
     [[Reddit] Mimblewimble introduced to r/bitcoin](https://www.reddit.com/r/Bitcoin/comments/4vub3y/mimblewimble_noninteractive_coinjoin_and_better/) </br>
+    [[Youtube] Aantonop Bitcoin Q&A: Mimblewimble and Dandelion](https://www.youtube.com/watch?v=LjDJGTpK_lE) </br>
     [[Google] A View on Grin, Hacker's Congress Prague'19](https://docs.google.com/presentation/d/1PbtPV8WwDcWdnqBZHUMU7Cgr0P98NzDnuRRt2y251nU/edit#slide=id.g1a9d89a04cc779b5_0) </br>
     [[Coindesk] Harry Potter Characters Join Mimblewimble 2016](https://www.coindesk.com/coders-harry-potter-bitcoin-mimblewimble) </br>
     [[Medium] Grin Transactions Explained, Step-by-Step](https://medium.com/@brandonarvanaghi/grin-transactions-explained-step-by-step-fdceb905a853) </br>
@@ -59,9 +60,14 @@
     [[GitHub] Grin vs ZCash](https://github.com/mimblewimble/grin/wiki/Grin-and-MimbleWimble-vs-ZCash) </br>
     [[Reddit] On Grin's Privacy @tromp](https://www.reddit.com/r/grincoin/comments/g43fhe/is_there_any_progress_on_reducing_linkability_of/fnv7lfh/)
 
+## Scripts
+
+:   [[Launchpad] Scripting observations and Lightning Network implementation](https://lists.launchpad.net/mimblewimble/msg00029.html)
+
 ## Proof of Work
 
 :   [[GitHub] Fees in Mining](https://github.com/mimblewimble/grin/wiki/fees-mining) </br>
+    [[GitHub] Grin difficulty, C29, C31 fade out and C32](https://github.com/Lolliedieb/lolMiner-releases/wiki/All-you-need-to-know-about-Grin-difficulty,-C29,-C31-fade-out-and-C32)
 
 ## Security
 
@@ -70,3 +76,13 @@
 ## API
 
 :   [[Forum] Postman Collection of Grin Node API](https://forum.grin.mw/t/full-postman-collection-for-grin-node-api/7696) </br>
+
+
+## Papers
+
+:   [Confidential Assets](https://blockstream.com/bitcoin17-final41.pdf)
+    [OWAS](https://download.wpsoftware.net/bitcoin/wizardry/horasyuanmouton-owas.pdf)
+    [Bulletproofs](https://eprint.iacr.org/2017/1066.pdf)
+    [Cuckoo Cycle](https://github.com/tromp/cuckoo/blob/master/doc/cuckoo.pdf)
+
+## Podcast

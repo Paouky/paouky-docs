@@ -185,5 +185,5 @@ A Merkle proof allows us to:
 
     Spending a coinbase output requires the block hash and Merkle proof to be provided in the input. these are used to verify [coinbase maturity](../../blockchain-and-consensus/coinbase-maturity-rule/) (without requiring full block data for verification)
 
-    [^1]: [merkle-mountain-range](https://github.com/opentimestamps/opentimestamps-server/blob/master/doc/merkle-mountain-range.md), Peter Todd
-    [^2]: [Merkle Tree, Wikipedia](https://en.wikipedia.org/wiki/Merkle_tree)
+[^1]: [merkle-mountain-range](https://github.com/opentimestamps/opentimestamps-server/blob/master/doc/merkle-mountain-range.md), Peter Todd
+[^2]: [Merkle Tree](https://en.wikipedia.org/wiki/Merkle_tree), Wikipedia

@@ -51,6 +51,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Documents (temp): docs-temp.md
   - About Grin:
     - Story: about-grin/story.md
     - Privacy: about-grin/privacy.md

@@ -9,7 +9,7 @@ This part of the documentation describes more in details the technology behind G
 ## Introduction
 
 - [Grin for Bitcoiners](introduction/grin-for-bitcoiners.md) - Explaining Grin from a Bitcoiner's perspective
-- [Mimblewimble](introduction/mimblewimble/elliptic-curve-cryptography.md/mimblewimble.md) - A technical introduction to Mimblewimble </br>
+- [Mimblewimble](introduction/mimblewimble/elliptic-curve-cryptography.md) - A technical introduction to Mimblewimble </br>
     1. Elliptic Curves
     1. Commitments
     1. Mimblewimble
@@ -38,7 +38,6 @@ This part of the documentation describes more in details the technology behind G
 
 - [Cuckoo Cycle](proof-of-work/cuckoo-cycle.md)
 - [Difficulty Adjustment](proof-of-work/daa.md)
-- [Stratum RPC](proof-of-work/stratum-rpc.md)
 
 ## Miscellaneous
 
@@ -46,6 +45,12 @@ This part of the documentation describes more in details the technology behind G
 - [Switch Commitments](miscellaneous/switch-commitments.md)
 - [Coinbase Maturity Rule](miscellaneous/coinbase-maturity-rule.md)
 - [NRD Kernels](miscellaneous/nrd-kernels.md)
+
+## API
+
+- [Node API](api/node-api.md)
+- [Stratum RPC](api/stratum-rpc.md)
+
 
 ## Security Process
 

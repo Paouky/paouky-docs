@@ -51,7 +51,7 @@ from _box1_ and _box2_.
 While this "box" metaphor no longer seems to be reasonable in the real-world this
 is perfectly possible using the properties of operations on elliptic curves.
 
-Look into [Introduction to Mimblewimble](../introduction-to-mimblewimble.md) for further details on Pedersen Commitments
+Look into [Introduction to Mimblewimble](../introduction/mimblewimble/mimblewimble.md) for further details on Pedersen Commitments
 and how they are used in Grin.
 
 ## Properties of commitment schemes:
