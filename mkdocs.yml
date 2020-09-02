@@ -14,7 +14,7 @@ copyright: Copyright &copy; 2016 - 2020 Grin Developers
 
 theme:
   palette:
-    scheme: preference
+    scheme: slate
   name: material
   logo: assets/images/grin-logo.svg
   language: en
@@ -47,6 +47,7 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.superfences
   - meta
+
 
 
 nav:

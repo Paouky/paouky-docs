@@ -22,6 +22,10 @@ Very technical documents that have their place in the grin repo. They are not pe
 - [Validation logic](https://github.com/mimblewimble/docs/wiki/Validation-logic)
 - [Block Header](https://github.com/mimblewimble/docs/wiki/Block-Header)
 
+### Move to grin-miner
+
+- [How to mine Grin](https://github.com/mimblewimble/docs/wiki/How-to-mine-Grin)
+
 ### Pages
 
 - [Events](https://github.com/mimblewimble/docs/wiki/Events) - A nice list of past events. Most links are useless, but maybe worth keeping. Some good slides hidden there.

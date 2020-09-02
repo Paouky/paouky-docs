@@ -51,10 +51,8 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
   
-    
-      <script>matchMedia("(prefers-color-scheme: dark)").matches&&document.body.setAttribute("data-md-color-scheme","slate")</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -1338,7 +1336,7 @@ GUI wallet and node written in C++ &emsp;<sub>Windows,</sub> <sub>Linux,</sub> <
 <ul>
 <li>Provide it to the sender.</li>
 </ul>
-<p>Done! The sender will finalize the transaction and post it to the chain.</p>
+<p>Done! The sender will finalize the transaction and post it to the network.</p>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Send</label><div class="tabbed-content">
 <ul>
@@ -1363,7 +1361,7 @@ GUI wallet and node written in C++ &emsp;<sub>Windows,</sub> <sub>Linux,</sub> <
 <li>You should get a Slatepack message back from the receiver. Paste it into the Slatepack box and click Finalize.</li>
 </ul>
 <p><img alt="grin++ receive step4" loading="lazy" src="../../assets/images/grinplusplus-send4.png" width="400" /></p>
-<p>Done! Your wallet will then finalize the transaction and post it to the chain.</p>
+<p>Done! Your wallet will now finalize the transaction and post it to the network.</p>
 </div>
 </div>
 </details>
@@ -1378,16 +1376,20 @@ GUI wallet and node using the main implementation as back-end &emsp;<sub>Windows
 </div>
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Receive</label><div class="tabbed-content">
 <ul>
-<li>Click on Receive, then on Slatepack address.</li>
+<li>Click on Receive, then Slatepack address.</li>
 </ul>
 <p><img alt="niffler receive step1" loading="lazy" src="../../assets/images/niffler-receive.png" width="400" /></p>
 <ul>
 <li>Copy your address (<code>grin1...</code>) and provide it to the other party.</li>
 </ul>
 <p>That's it. If both your wallets can communicate via Tor, the transaction is then completed automatically.</p>
-<p><em>But if there's no Tor communication, next steps are:</em></p>
 <ul>
-<li>The sender will provide you a Slatepack message. Click again on Receive, then on Create response slatepack. Paste it into the Slatepack box and click Create response slatepack.</li>
+<li>
+<p>But if there's no Tor communication, next steps are:*</p>
+</li>
+<li>
+<p>The sender will provide you a Slatepack message. Click again on Receive, then on Create response slatepack. Paste it into the Slatepack box and click Create response slatepack.</p>
+</li>
 </ul>
 <p><img alt="niffler receive step1" loading="lazy" src="../../assets/images/niffler-receive2.png" width="400" /></p>
 <ul>
@@ -1397,16 +1399,29 @@ GUI wallet and node using the main implementation as back-end &emsp;<sub>Windows
 <ul>
 <li>Provide it to the sender.</li>
 </ul>
-<p>Done! The sender will then finalize the transaction and post it to the chain.</p>
+<p>Done! The sender will then finalize the transaction and post it to the network.</p>
 </div>
 <input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Send</label><div class="tabbed-content">
 <ul>
-<li>Click on Send, then on Create slatepack.</li>
+<li>Click on Send, then Create slatepack.</li>
 </ul>
-<p><img alt="niffler receive step1" loading="lazy" src="../../assets/images/niffler-send.png" width="400" /></p>
-<p>*</p>
-<p><img alt="niffler receive step1" loading="lazy" src="../../assets/images/niffler-slatepack.png" width="400" /></p>
-<p><img alt="niffler receive step1" loading="lazy" src="../../assets/images/niffler-send2.png" width="400" /></p>
+<p><img alt="niffler send step1" loading="lazy" src="../../assets/images/niffler-send.png" width="400" /></p>
+<ul>
+<li>Enter the address and amount, then Create slatepack.</li>
+</ul>
+<p><img alt="niffler send step2" loading="lazy" src="../../assets/images/niffler-send2.png" width="400" /></p>
+<ul>
+<li>Copy the Slatepack message your wallet generates and provide it to the receiver (however you want).</li>
+</ul>
+<p><img alt="niffler send step3" loading="lazy" src="../../assets/images/niffler-slatepack.png" width="400" /></p>
+<ul>
+<li>You should get a Slatepack message back from the receiver. </br> Click on Send, then on Finalize.</li>
+</ul>
+<p><img alt="niffler send step4" loading="lazy" src="../../assets/images/niffler-send4.png" width="400" /></p>
+<ul>
+<li>Paste the Slatepack message into the box and confirm.</li>
+</ul>
+<p>Done! Your wallet will now finalize the transaction and post it to the network.</p>
 </div>
 </div>
 </details>

@@ -34,7 +34,7 @@ GUI wallet and node written in C++ &emsp;~Windows,~ ~Linux,~ ~macOS~
 
         * Provide it to the sender.
 
-        Done! The sender will finalize the transaction and post it to the chain.
+        Done! The sender will finalize the transaction and post it to the network.
 
     === "Send"
 
@@ -62,7 +62,7 @@ GUI wallet and node written in C++ &emsp;~Windows,~ ~Linux,~ ~macOS~
 
         ![grin++ receive step4](../assets/images/grinplusplus-send4.png){ width=400 loading="lazy" }
 
-        Done! Your wallet will then finalize the transaction and post it to the chain.
+        Done! Your wallet will now finalize the transaction and post it to the network.
 
 ---
 
@@ -83,7 +83,7 @@ GUI wallet and node using the main implementation as back-end &emsp;~Windows,~ ~
 
     === "Receive"
 
-        * Click on Receive, then on Slatepack address.
+        * Click on Receive, then Slatepack address.
 
         ![niffler receive step1](../assets/images/niffler-receive.png){ width=400 loading="lazy" }
 
@@ -91,7 +91,7 @@ GUI wallet and node using the main implementation as back-end &emsp;~Windows,~ ~
 
         That's it. If both your wallets can communicate via Tor, the transaction is then completed automatically.
 
-        *But if there's no Tor communication, next steps are:*
+        * But if there's no Tor communication, next steps are:*
 
         * The sender will provide you a Slatepack message. Click again on Receive, then on Create response slatepack. Paste it into the Slatepack box and click Create response slatepack.
 
@@ -103,21 +103,30 @@ GUI wallet and node using the main implementation as back-end &emsp;~Windows,~ ~
 
         * Provide it to the sender.
 
-        Done! The sender will then finalize the transaction and post it to the chain.
+        Done! The sender will then finalize the transaction and post it to the network.
 
 
     === "Send"
 
-        * Click on Send, then on Create slatepack.
+        * Click on Send, then Create slatepack.
 
-        ![niffler receive step1](../assets/images/niffler-send.png){ width=400 loading="lazy" }
+        ![niffler send step1](../assets/images/niffler-send.png){ width=400 loading="lazy" }
 
-        *
+        * Enter the address and amount, then Create slatepack.
 
-        ![niffler receive step1](../assets/images/niffler-slatepack.png){ width=400 loading="lazy" }
+        ![niffler send step2](../assets/images/niffler-send2.png){ width=400 loading="lazy" }
 
-        ![niffler receive step1](../assets/images/niffler-send2.png){ width=400 loading="lazy" }
+        * Copy the Slatepack message your wallet generates and provide it to the receiver (however you want).
 
+        ![niffler send step3](../assets/images/niffler-slatepack.png){ width=400 loading="lazy" }
+
+        * You should get a Slatepack message back from the receiver. </br> Click on Send, then on Finalize.
+
+        ![niffler send step4](../assets/images/niffler-send4.png){ width=400 loading="lazy" }
+
+        * Paste the Slatepack message into the box and confirm.
+
+        Done! Your wallet will now finalize the transaction and post it to the network.
 
 
 ---

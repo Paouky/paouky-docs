@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="150" src="https://paouky.github.io/docs/assets/images/grin-logo.svg">
+  <img width="150" src="https://paouky.github.io/docs/assets/images/grin-mw-logo.svg">
 </p>
 </br>
 
@@ -28,5 +28,12 @@ Minimal implementation that strives to remain as clear and simple as possible, m
 ### Proven Cryptography
 
 Mimblewimble only relies on strong Elliptic Curve cryptography which has been tried and tested for decades.
+
+</br>
+</br>
+
+<p align="center">
+  ツ
+</p>
 
 </br>
