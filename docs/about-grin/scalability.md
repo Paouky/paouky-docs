@@ -1,6 +1,6 @@
 A Mimblewimble chain is massively-prunable, which allows it to stay lightweight and cheap to verify. Its core essence is this very unique balance of privacy and scalability.
 
-Once an output is spent, there's no longer any need to keep it and it's removed from the chain. A 100 byte kernel is left for each transaction, forever proving it's validity. The result is, that in order to verify the entire history starting from the genesis block, only the kernels and the set of unspent outputs are needed. Let's illustrate a trail of transcations:
+Once an output is spent, there's no longer any need to keep it and it's removed from the chain. A 100 byte kernel is left for each transaction, forever proving it's validity. The result is, that in order to verify the entire history starting from the genesis block, only the kernels and the set of unspent outputs are needed. Let's illustrate a trail of transactions:
 
 
 *(switch between tabs)*
@@ -74,6 +74,6 @@ Building, verifying and storing transactions requires minimal resources. Anyone 
 
 ### Comparison For Bitcoiners
 
-At the time of this writing, there were 560M Bitcoin transactions, taking up 300GB of space. Somebody who wants to verify the current state must replay each and every transcation. He will check millions of outputs to eventually derive the current set of 66M unspent outputs.
+At the time of this writing, there were 560M Bitcoin transactions, taking up 300GB of space. Somebody who wants to verify the current state must replay each and every transacation. He will check millions of outputs to eventually derive the current set of 66M unspent outputs.
 
 Mimblewimble shrinks the transaction history such that a chain with Bitcoin's history would be kept at around 1/4 of its size. This difference becomes much more exciting if one remembers that Mimblewimble employs Confidential Transactions, so that each output requires a large rangeproof. If the current Bitcoin blockchain had hidden amounts, it's size would have been on the order of several terabyes.
