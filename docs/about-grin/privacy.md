@@ -82,9 +82,8 @@ To tackle this issue, Grin employs Dandelion++ (originally proposed as a BIP), a
 
 This makes it almost impossible to deduce a reliable IP address, and renders statistical analysis impractical.
 
-![dandelion](../assets/images/dandelion.png){ width=650 }
+![dandelion](../assets/images/dandelion.png)
 
-(CHANGE TO KARGAKIS'S TYPE OF ILLUSTRATION WITH TRANSPARENT BG)
 
 Moreover, Dandelion provides an additional benefit unique to Mimblewimble, as it allows for transactions to be aggregated at a very early stage. Right before a transaction beings it's fluff phase, it enters a 30s waiting period in which it will be aggregated with any other transactions it meets, thus obscuring linkability of inputs and outputs that a sniffing node may have learned. However it remains to be seen how much actual privacy is gained from aggregation before fluffing, as it depends on having many other transactions.
 
