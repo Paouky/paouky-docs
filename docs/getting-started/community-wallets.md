@@ -1,5 +1,7 @@
 # Grin Wallets
 
+<hr>
+
 [![Grin++](../assets/images/grinplusplus.png){ align=left width=60 }](https://grinplusplus.github.io/){:target="_blank"}
 
 ## &emsp;Grin++

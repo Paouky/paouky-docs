@@ -27,6 +27,11 @@
     [[Captain Crypto Show] Grin @yeastplume](https://www.youtube.com/watch?v=nwi9pMqUBQI) </br>
     [[Let's Talk Bitcoin] Privacy with Mimblewimble @yeastplume @andreas @adam.b.levine](https://letstalkbitcoin.com/blog/post/lets-talk-bitcoin-356-privacy-on-the-blockchain-with-mimblewimble)
 
+## Forum
+
+:   [How to store Grin in cold storage?](https://forum.grin.mw/t/how-to-store-grin-in-cold-storage/5375/27)
+    [Coinbase outputs as regular outputs](https://forum.grin.mw/t/coinbase-outputs-as-transaction-outputs/7441)
+    [Use of NRD kernels in payment channels](https://forum.grin.mw/t/use-of-nrd-kernels-in-grin-payment-channels/7298)
 
 ## General
 
