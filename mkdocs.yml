@@ -66,7 +66,7 @@ nav:
     - Emission: about-grin/emission.md
     - Community: about-grin/community.md
 
-  - Get Started:
+  - Getting Started:
     - Table of Contents: getting-started/get-started-toc.md
     - Quickstart:
       - Install: getting-started/quickstart/install.md
@@ -76,7 +76,7 @@ nav:
     - Wallet Guide: getting-started/wallet-guide.md
     - Community Wallets: getting-started/community-wallets.md
     - Build: getting-started/build.md
-    
+
   - Wiki:
     - Table of Contents: technical/table-of-contents.md
     - Introduction:

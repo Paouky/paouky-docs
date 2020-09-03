@@ -188,7 +188,7 @@
     <li class="md-tabs__item">
       
         <a href="../../getting-started/get-started-toc/" class="md-tabs__link">
-          Get Started
+          Getting Started
         </a>
       
     </li>
@@ -460,17 +460,17 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
-      Get Started
+      Getting Started
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
-    <nav class="md-nav" aria-label="Get Started" data-md-level="1">
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
-        Get Started
+        Getting Started
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1335,17 +1335,18 @@
                 
                 <p>Mimblewimble transactions are interactive, meaning both parties need some kind of interaction with each other to exchange the necessary data. This communication can happen in countless different ways, such as through a network, email, forum, social media, chat, letter, carrier pigeon etc.</p>
 <p>Let's see how a standard transaction flow looks like:</p>
+<p></br></p>
 <p><img alt="tx-flow" src="../../assets/images/tx-flow.png" width="650" /></p>
 <ol>
 <li>
-<p>An address, often referred to as a <em>Slatepack Address</em>, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is <em>completely different</em> from the familiar on-chain address. It's not a part of the blockchain. It is infact an <code>ed25199</code> public key which serves a double role:</p>
+<p>An address, often referred to as a <em>Slatepack Address</em>, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is <em>completely different</em> from the familiar on-chain address, as it's not a part of the blockchain. </br> It is infact an <code>ed25199</code> public key which serves a double role:</p>
 <ul>
 <li>A Tor hidden service address.</li>
 <li>Key to encrypt the data communicated between the sender and receiver.</li>
 </ul>
 </li>
 <li>
-<p>Sender begins building the transaction <em>slate</em> (a sheet of incomplete transaction data), encrypts it with the receiver's address (public key), and passes it over.</p>
+<p>Sender begins building the transaction <em>slate</em> (a sheet of incomplete transaction data), encrypts it with the receiver's address (a public key), and passes it over.</p>
 </li>
 <li>Receiver adds to the slate his own data and signature, and delivers it back.</li>
 <li>Sender finalizes the transaction by adding the final data and his own signature to the slate, thus completing the transaction building process. He can then post it to the chain.</li>
