@@ -2,13 +2,15 @@ Mimblewimble transactions are interactive, meaning both parties need some kind o
 
 Let's see how a standard transaction flow looks like:
 
+</br>
+
 ![tx-flow](../assets/images/tx-flow.png){ width=650 }
 
-1. An address, often referred to as a *Slatepack Address*, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is *completely different* from the familiar on-chain address. It's not a part of the blockchain. It is infact an `ed25199` public key which serves a double role:
+1. An address, often referred to as a *Slatepack Address*, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is *completely different* from the familiar on-chain address, as it's not a part of the blockchain. </br> It is infact an `ed25199` public key which serves a double role:
     * A Tor hidden service address.
     * Key to encrypt the data communicated between the sender and receiver.
 
-1. Sender begins building the transaction *slate* (a sheet of incomplete transaction data), encrypts it with the receiver's address (public key), and passes it over.
+1. Sender begins building the transaction *slate* (a sheet of incomplete transaction data), encrypts it with the receiver's address (a public key), and passes it over.
 1. Receiver adds to the slate his own data and signature, and delivers it back.
 1. Sender finalizes the transaction by adding the final data and his own signature to the slate, thus completing the transaction building process. He can then post it to the chain.
 
