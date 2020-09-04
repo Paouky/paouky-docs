@@ -1,8 +1,7 @@
 # Install
 
-!!! tip ""
-    * **GUI**: To use Grin with a graphical user-interface, see [community wallets](../community-wallets.md).
-    * **BUILD**: If you wish to build the binaries yourself, visit the [building section](https://github.com/mimblewimble/grin/blob/master/doc/build.md).
+!!! tip "GUI Wallet"
+    To use Grin with a graphical user-interface, see [community wallets](../community-wallets.md).
 
 The *Quickstart* series will guide you in your first steps of installing a Grin node, creating a wallet, and making a transaction.
 
