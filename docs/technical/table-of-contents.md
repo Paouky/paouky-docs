@@ -60,5 +60,4 @@ This part of the documentation describes more in details the technology behind G
 
 ## More
 
-- [Slatepack Integration Guide](slatepack-integration.md)
 - [Archives](archives.md)
