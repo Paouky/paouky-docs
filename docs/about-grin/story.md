@@ -9,13 +9,13 @@ On *Mon Aug 01 2016* a user named 'majorplayer' logged into the `#bitcoin-wizard
 
 
 ```text
-21:35 -!- majorplayer [8ae5c065@gateway/web/freenode/ip.138.229.192.101] has joined #bitcoin-wizards
-21:35 <majorplayer> hi, i have an idea for improving privacy in bitcoin. my
-friend who knows technology says this channel would have interest
+-!- majorplayer [...] has joined #bitcoin-wizards
+<majorplayer> hi, i have an idea for improving privacy in bitcoin. my friend who
+knows technology says this channel would have interest
 http://5pdcbgndmprm4wud.onion/mimblewimble.txt
-21:35 -!- majorplayer [8ae5c065@gateway/web/freenode/ip.138.229.192.101] has quit [Client Quit]
+-!- majorplayer [...] has quit [Client Quit]
 ```
-
+Its title:
 ```text
 MIMBLEWIMBLE
 Tom Elvis Jedusor
@@ -24,8 +24,8 @@ Tom Elvis Jedusor
 
 The following day, users `nsh` and `andytoshi` (Andrew Poelstra) began discussing the idea proposed in the paper. The anonymous writer left several un-answered questions in the document, along with a general lack of details, so there was much to discuss. The conversation included a memorable moment:
 ```text
-09:54 <nsh> gotta be some way this is sneaky, otherwise it's too good to be true...
-09:55 <andytoshi> hah, yeah, i know the feeling
+<nsh> gotta be some way this is sneaky, otherwise it's too good to be true...
+<andytoshi> hah, yeah, i know the feeling
 ```
 On *Oct 10 2016*, Andrew Poelstra published a follow-up paper[^2] about Mimblewimble, which introduced several refinements to the original proposal and describes further its technical details.
 
