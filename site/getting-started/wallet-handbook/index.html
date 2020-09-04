@@ -11,7 +11,7 @@
         <meta name="description" content="Grin Documentation">
       
       
-        <link rel="canonical" href="https://docs.grin.mw/getting-started/wallet-guide/">
+        <link rel="canonical" href="https://docs.grin.mw/getting-started/wallet-handbook/">
       
       
         <meta name="author" content="Grin Developers">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Wallet Guide - Grin Documentation</title>
+        <title>Wallet Handbook - Grin Documentation</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wallet-user-guide" class="md-skip">
+        <a href="#wallet-user-handbook" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Wallet Guide
+              Wallet Handbook
             
           </span>
         </div>
@@ -515,14 +515,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Wallet Guide
+        Wallet Handbook
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Wallet Guide" class="md-nav__link md-nav__link--active">
-      Wallet Guide
+    <a href="./" title="Wallet Handbook" class="md-nav__link md-nav__link--active">
+      Wallet Handbook
     </a>
     
       
@@ -767,6 +767,18 @@
   <li class="md-nav__item">
     <a href="../build/" title="Build" class="md-nav__link">
       Build
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../technical/slatepack-integration.md" title="Slatepack Integration Guide" class="md-nav__link">
+      Slatepack Integration Guide
     </a>
   </li>
 
@@ -1401,18 +1413,6 @@
 
 
   <li class="md-nav__item">
-    <a href="../../technical/slatepack-integration/" title="Slatepack Integration Guide" class="md-nav__link">
-      Slatepack Integration Guide
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
     <a href="../../technical/archives/" title="Archives" class="md-nav__link">
       Archives
     </a>
@@ -1661,7 +1661,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mimblewimble/docs/edit/master/docs/getting-started/wallet-guide.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mimblewimble/docs/edit/master/docs/getting-started/wallet-handbook.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1669,8 +1669,12 @@
                   
                 
                 
-                <h1 id="wallet-user-guide">Wallet User Guide</h1>
+                <h1 id="wallet-user-handbook">Wallet User Handbook</h1>
 <p>Now that you've set up your node and learned how to form a simple transaction, let's get to know the wallet more deeply. The following document is an extremely comprehensive user guide to the reference Grin wallet implementation, <code>grin-wallet v4.0.0</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">GUI Wallet</p>
+<p>For instructions on how to use Grin with a graphical user-interface, see <a href="../community-wallets.md">community wallets</a>.</p>
+</div>
 <h2 id="file-structure">File Structure</h2>
 <p>By default, grin will create all wallet files in the hidden directory <code>.grin</code> under your home directory (i.e. <code>~/.grin</code>). You can also create and use a wallet with data files in a custom directory, as will be explained later.</p>
 <p>A Grin wallet maintains its state in an LMDB database, with the master seed stored in a separate file. When creating a new wallet, the file structure should be as follows:</p>
