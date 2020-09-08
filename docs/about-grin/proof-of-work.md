@@ -4,7 +4,7 @@ Proof of work is a concensus mechanism which allows anyone to extand the chain w
 Grin has an average block time of 60 seconds and employs Cuckoo Cycle[^1], a memory bound proof of work algorithm, or more specifically, a variation of it named *Cuckatoo* that is meant to simplify ASICs.
 
 ??? info "Cuckoo Cycle"
-    The algorithm finds length-42 cycles in a bipartite graph. The current (and final) Grin PoW is Cuckatoo32+, in which a graph must have atleast 2^32^ + 2^32^ nodes. For a friendly introduction and further description, read [here](https://paouky.github.io/docs/technical/blockchain-and-consensus/proof-of-work/).
+    The algorithm finds length-42 cycles in a bipartite graph. The current (and final) Grin PoW is Cuckatoo32+, in which a graph must have atleast 2^32^ + 2^32^ nodes. For a comprehensive introduction, read [here](../../wiki/miscellaneous/cuckoo-cycle).
 
     !!! quote ""
         Q: Why use a memory-hard proof of work? </br> A: The point is that chips dominated by memory have rather different characteristics from computational chips; they run much cooler, dissipating less heat per unit of area. This shifts the mining cost from mostly opex (electricity) to mostly capex (hardware cost), which delays obsolescense and allows mining in places with higher electricity costs.
@@ -21,7 +21,7 @@ During the first 2 years of Grin, the algorithms gradually balance themselves to
 
 
 !!! note ""
-	The above simplifies a bit, since in practice Cuckatoo31+ was initially the primary PoW but was phased out completely after 18 months, for reasons we won’t discuss here. You can read about it on this [post](TODO).
+	The above simplifies a bit, since in practice Cuckatoo31+ was initially the primary PoW but was phased out completely after 18 months, for reasons we won’t discuss here. You can read about it on this [post](https://forum.grin.mw/t/grin-improvement-proposal-1-put-later-phase-outs-on-hold-and-rephrase-primary-pow-commitment/4653).
 
 
 ### ASICs
@@ -32,7 +32,7 @@ These issues are mostly solved once a mature, competitive market for ASICs appea
 
 The choice of upholding some ASIC-resistance in the first 2 years was made to ensure fair initial distribution, in which no single party has an unproportional mining advantage at launch, before the market becomes populated and competitive enough.
 
-Let’s see why *encouraging* ASIC development might be benficial[^3] in the first place:
+Let’s see why *encouraging* ASIC development might be benficial[^2] in the first place:
 
 #### Security
 

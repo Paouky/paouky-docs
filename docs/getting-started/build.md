@@ -1,5 +1,7 @@
 > *Read this in other languages: [Español](https://github.com/mimblewimble/grin/blob/master/doc/build_ES.md), [Korean](https://github.com/mimblewimble/grin/blob/master/doc/build_KR.md), [日本語](https://github.com/mimblewimble/grin/blob/master/doc/build_JP.md), [简体中文](https://github.com/mimblewimble/grin/blob/master/doc/build_ZH-CN.md).*
 
+
+
 ## Requirements
 
 ### Rust
@@ -117,8 +119,8 @@ For help on grin commands and their switches, try:
 
 ```text
 grin help
-grin server --help
-grin client --help
+grin server help
+grin client help
 ```
 
 ??? info "Mining"
@@ -128,7 +130,7 @@ grin client --help
 
 ## Docker
 
-*(Alternative way to build)*
+*(Running Grin in a container)*
 
 ```text
 docker build -t grin -f etc/Dockerfile .

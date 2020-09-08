@@ -3,7 +3,7 @@
 Now that you've set up your node and learned how to form a simple transaction, let's get to know the wallet more deeply. The following document is an extremely comprehensive user guide to the reference Grin wallet implementation, `grin-wallet v4.0.0`.
 
 !!! tip "GUI Wallet"
-    For instructions on how to use Grin with a graphical user-interface, see [community wallets](../community-wallets.md).
+    For instructions on how to do grin transactions with a graphical user interface, see [community wallets](../community-wallets).
 
 ## File Structure
 By default, grin will create all wallet files in the hidden directory `.grin` under your home directory (i.e. `~/.grin`). You can also create and use a wallet with data files in a custom directory, as will be explained later.

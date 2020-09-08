@@ -37,8 +37,8 @@ Mimblewimble only relies on strong Elliptic Curve cryptography which has been tr
 </br>
 <p align="center">
   <a href="about-grin/story">About Grin</a> </br>
-  <a href="getting-started/get-started-toc">Get Started</a> </br>
-  <a href="technical/table-of-contents">Wiki</a> </br>
+  <a href="getting-started/table-of-contents">Get Started</a> </br>
+  <a href="wiki/table-of-contents">Wiki</a> </br>
   <hr style="height:1px;border-width:0;width:20%;color:#b5e847;background-color:#b5e847;display:block;margin-left:auto;margin-right:auto;">
   </br>
 </p>

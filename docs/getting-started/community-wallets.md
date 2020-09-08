@@ -1,6 +1,6 @@
 # Grin Wallets
 
-[![Grin++](../assets/images/grinplusplus.png){ align=left width=60 }](https://grinplusplus.github.io/){:target="_blank"}
+[![Grin++](images/grinplusplus.png){ align=left width=60 }](https://grinplusplus.github.io/){:target="_blank"}
 
 ## &emsp;Grin++
 
@@ -19,7 +19,7 @@ GUI wallet and node written in C++ &emsp;~Windows,~ ~Linux,~ ~macOS~
 
         * Copy your address (`grin1...`) and provide it to the other party.
 
-        ![grin++ receive step1](../assets/images/grinplusplus-receive.png){ width=400 loading="lazy" }
+        ![grin++ receive step1](images/grinplusplus-receive.png){ width=400 loading="lazy" }
 
         That's it. If both your wallets can communicate via Tor, the transaction is then completed automatically.
 
@@ -27,11 +27,11 @@ GUI wallet and node written in C++ &emsp;~Windows,~ ~Linux,~ ~macOS~
 
         * The sender will provide you a Slatepack message. Paste it into the Slatepack box and click Receive.
 
-        ![grin++ receive step2](../assets/images/grinplusplus-receive2.png){ width=400 loading="lazy" }
+        ![grin++ receive step2](images/grinplusplus-receive2.png){ width=400 loading="lazy" }
 
         * Copy the Slatepack message your wallet generates.
 
-        ![grin++ slatepack](../assets/images/grinplusplus-slatepack.png){ width=400 loading="lazy" }
+        ![grin++ slatepack](images/grinplusplus-slatepack.png){ width=400 loading="lazy" }
 
         * Provide it to the sender.
 
@@ -41,15 +41,15 @@ GUI wallet and node written in C++ &emsp;~Windows,~ ~Linux,~ ~macOS~
 
         * Click send.
 
-        ![grin++ receive step3](../assets/images/grinplusplus-send.png){ width=400 loading="lazy" }
+        ![grin++ receive step3](images/grinplusplus-send.png){ width=400 loading="lazy" }
 
         * Choose the amount of grins.
 
-        ![grin++ receive step4](../assets/images/grinplusplus-send2.png){ width=400 loading="lazy" }
+        ![grin++ receive step4](images/grinplusplus-send2.png){ width=400 loading="lazy" }
 
         * Enter the receiver's address and send.
 
-        ![grin++ receive step4](../assets/images/grinplusplus-send3.png){ width=400 loading="lazy" }
+        ![grin++ receive step4](images/grinplusplus-send3.png){ width=400 loading="lazy" }
 
         That's it. If both your wallets can communicate via Tor, the transaction is then completed automatically.
 
@@ -57,18 +57,18 @@ GUI wallet and node written in C++ &emsp;~Windows,~ ~Linux,~ ~macOS~
 
         * Copy the Slatepack message your wallet generates and provide it to the receiver (however you want).
 
-        ![grin++ receive step4](../assets/images/grinplusplus-slatepack.png){ width=400 loading="lazy" }
+        ![grin++ receive step4](images/grinplusplus-slatepack.png){ width=400 loading="lazy" }
 
         * You should get a Slatepack message back from the receiver. Paste it into the Slatepack box and click Finalize.
 
-        ![grin++ receive step4](../assets/images/grinplusplus-send4.png){ width=400 loading="lazy" }
+        ![grin++ receive step4](images/grinplusplus-send4.png){ width=400 loading="lazy" }
 
         Done! Your wallet will now finalize the transaction and post it to the network.
 
 ---
 
 
-[![Niffler](../assets/images/niffler.png){ align=left width=60 }](https://github.com/grinfans/Niffler){:target="_blank"}
+[![Niffler](images/niffler.png){ align=left width=60 }](https://github.com/grinfans/Niffler){:target="_blank"}
 
 ## &emsp;Niffler
 
@@ -86,7 +86,7 @@ GUI wallet and node using the main implementation as back-end &emsp;~Windows,~ ~
 
         * Click on Receive, then Slatepack address.
 
-        ![niffler receive step1](../assets/images/niffler-receive.png){ width=400 loading="lazy" }
+        ![niffler receive step1](images/niffler-receive.png){ width=400 loading="lazy" }
 
         * Copy your address (`grin1...`) and provide it to the other party.
 
@@ -96,11 +96,11 @@ GUI wallet and node using the main implementation as back-end &emsp;~Windows,~ ~
 
         * The sender will provide you a Slatepack message. Click again on Receive, then on Create response slatepack. Paste it into the Slatepack box and click Create response slatepack.
 
-        ![niffler receive step1](../assets/images/niffler-receive2.png){ width=400 loading="lazy" }
+        ![niffler receive step1](images/niffler-receive2.png){ width=400 loading="lazy" }
 
         * Copy the new Slatepack message your wallet generates.
 
-        ![niffler receive step1](../assets/images/niffler-slatepack.png){ width=400 loading="lazy" }
+        ![niffler receive step1](images/niffler-slatepack.png){ width=400 loading="lazy" }
 
         * Provide it to the sender.
 
@@ -111,19 +111,19 @@ GUI wallet and node using the main implementation as back-end &emsp;~Windows,~ ~
 
         * Click on Send, then Create slatepack.
 
-        ![niffler send step1](../assets/images/niffler-send.png){ width=400 loading="lazy" }
+        ![niffler send step1](images/niffler-send.png){ width=400 loading="lazy" }
 
         * Enter the address and amount, then Create slatepack.
 
-        ![niffler send step2](../assets/images/niffler-send2.png){ width=400 loading="lazy" }
+        ![niffler send step2](images/niffler-send2.png){ width=400 loading="lazy" }
 
         * Copy the Slatepack message your wallet generates and provide it to the receiver (however you want).
 
-        ![niffler send step3](../assets/images/niffler-slatepack.png){ width=400 loading="lazy" }
+        ![niffler send step3](images/niffler-slatepack.png){ width=400 loading="lazy" }
 
         * You should get a Slatepack message back from the receiver. </br> Click on Send, then on Finalize.
 
-        ![niffler send step4](../assets/images/niffler-send4.png){ width=400 loading="lazy" }
+        ![niffler send step4](images/niffler-send4.png){ width=400 loading="lazy" }
 
         * Paste the Slatepack message into the box and confirm.
 
@@ -133,7 +133,7 @@ GUI wallet and node using the main implementation as back-end &emsp;~Windows,~ ~
 ---
 
 
-[![Ironbelly](../assets/images/ironbelly.png){ align=left width=55 }](https://ironbelly.app){:target="_blank"}
+[![Ironbelly](images/ironbelly.png){ align=left width=55 }](https://ironbelly.app){:target="_blank"}
 
 ## &emsp;Ironbelly
 
@@ -162,7 +162,7 @@ Mobile wallet &emsp;~iOS,~ ~Android~
 # Related Services
 
 
-[![grinnode.live](../assets/images/grinnode-live.png){ align=left width=90 }](https://grinnode.live/){:target="_blank"}
+[![grinnode.live](images/grinnode-live.png){ align=left width=90 }](https://grinnode.live/){:target="_blank"}
 
 ## &emsp;Grinnode.live
 

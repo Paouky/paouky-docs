@@ -64,10 +64,9 @@ nav:
     - Transactions: about-grin/transactions.md
     - Proof of Work: about-grin/proof-of-work.md
     - Emission: about-grin/emission.md
-    - Community: about-grin/community.md
 
   - Getting Started:
-    - Table of Contents: getting-started/get-started-toc.md
+    - Table of Contents: getting-started/table-of-contents.md
     - Quickstart:
       - Install: getting-started/quickstart/install.md
       - Initialize: getting-started/quickstart/initialize.md
@@ -76,44 +75,43 @@ nav:
     - Wallet Handbook: getting-started/wallet-handbook.md
     - Community Wallets: getting-started/community-wallets.md
     - Build: getting-started/build.md
-    - Slatepack Integration Guide: getting-started/slatepack-integration.md
-
 
   - Wiki:
-    - Table of Contents: technical/table-of-contents.md
+    - Table of Contents: wiki/table-of-contents.md
     - Introduction:
-      - Grin for Bitcoiners: technical/introduction/grin-for-bitcoiners.md
+      - Grin for Bitcoiners: wiki/introduction/grin-for-bitcoiners.md
       - Mimblewimble:
-        - Elliptic Curves: technical/introduction/mimblewimble/elliptic-curve-cryptography.md
-        - Commitments: technical/introduction/mimblewimble/commitments.md
-        - Mimblewimble: technical/introduction/mimblewimble/mimblewimble.md
+        - Elliptic Curves: wiki/introduction/mimblewimble/ecc.md
+        - Commitments: wiki/introduction/mimblewimble/commitments.md
+        - Mimblewimble: wiki/introduction/mimblewimble/mimblewimble.md
     - Transactions:
-      - Slates: technical/transactions/slates.md
-      - Slatepack: technical/transactions/slatepack.md
-      - Payment Proofs: technical/transactions/payment-proofs.md
-      - Contracts: technical/transactions/contracts.md
+      - Slates: wiki/transactions/slates.md
+      - Slatepack: wiki/transactions/slatepack.md
+      - Payment Proofs: wiki/transactions/payment-proofs.md
+      - Contracts: wiki/transactions/contracts.md
     - Blocks:
-      - Header: technical/blocks/block-header.md
-      - Body: technical/blocks/block-body.md
-      - Fees & Weight: technical/blocks/fees-and-weight.md
+      - Header: wiki/blocks/block-header.md
+      - Body: wiki/blocks/block-body.md
+      - Fees & Weight: wiki/blocks/fees-and-weight.md
     - Chain State:
-      - Merkle Mountain Ranges: technical/chain-state/merkle-mountain-range.md
-      - State & Pruning: technical/chain-state/state-and-pruning.md
-      - Chain Sync: technical/chain-state/chain-sync.md
-    - Proof of Work:
-      - Cuckoo Cycle: technical/proof-of-work/cuckoo-cycle.md
-      - Difficulty Adjustment: technical/proof-of-work/daa.md
+      - Merkle Mountain Ranges: wiki/chain-state/merkle-mountain-range.md
+      - State & Pruning: wiki/chain-state/state-and-pruning.md
+      - Chain Sync: wiki/chain-state/chain-sync.md
     - Miscellaneous:
-      - Dandelion: technical/miscellaneous/dandelion.md
-      - Switch Commitments: technical/miscellaneous/switch-commitments.md
-      - Coinbase Maturity Rule: technical/miscellaneous/coinbase-maturity-rule.md
-      - NRD Kernels: technical/miscellaneous/nrd-kernels.md
+      - Cuckoo Cycle: wiki/miscellaneous/cuckoo-cycle.md
+      - Dandelion: wiki/miscellaneous/dandelion.md
+      - Switch Commitments: wiki/miscellaneous/switch-commitments.md
+      - Coinbase Maturity Rule: wiki/miscellaneous/coinbase-maturity-rule.md
+      - NRD Kernels: wiki/miscellaneous/nrd-kernels.md
     - API:
-      - Node API: technical/api/node-api.md
-      - Wallet REST API: technical/api/wallet-rest-api.md
-      - Stratum RPC: technical/api/stratum-rpc.md
+      - Node API: wiki/api/node-api.md
+      - Wallet REST API: wiki/api/wallet-rest-api.md
+      - Stratum RPC: wiki/api/stratum-rpc.md
     - Security Process:
-      - Grin's Security Process: technical/security-process/grin-security-process.md
-      - Security Team: technical/security-process/security-team.md
-      - Code Audits: technical/security-process/code-audits.md
-    - Archives: technical/archives.md
+      - Grin's Security Process: wiki/security-process/grin-security-process.md
+      - Security Team: wiki/security-process/security-team.md
+      - Code Audits: wiki/security-process/code-audits.md
+    - Services:
+      - Slatepack Integration Guide: wiki/services/slatepack-integration.md
+      - List of Services: wiki/services/list-of-services.md
+    - Archives: wiki/archives.md

@@ -1,4 +1,4 @@
-A Mimblewimble chain is massively-prunable, which allows it to stay lightweight and cheap to verify. Its core essence is this very unique balance of privacy and scalability.
+A Mimblewimble chain is massively-prunable, which allows it to stay lightweight and cheap to verify. Its core essence is this unique balance of privacy and scalability.
 
 Once an output is spent, there's no longer any need to keep it and it's removed from the chain. A 100 byte kernel is left for each transaction, forever proving it's validity. The result is, that in order to verify the entire history starting from the genesis block, only the kernels and the set of unspent outputs are needed. Let's illustrate a trail of transactions:
 

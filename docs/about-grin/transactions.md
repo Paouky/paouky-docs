@@ -6,7 +6,7 @@ Let's see how a standard transaction flow looks like:
 
 ![tx-flow](../assets/images/tx-flow.png){ width=650 }
 
-1. An address, often referred to as a *Slatepack Address*, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is *completely different* from the familiar on-chain address, as it's not a part of the blockchain. </br> It is infact an `ed25199` public key which serves a double role:
+1. An address, often referred to as a *Slatepack Address*, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is *completely different* from the familiar on-chain address, as it's not part of the ledger. </br> It is infact an `ed25199` public key which serves a double role:
     * A Tor hidden service address.
     * Key to encrypt the data communicated between the sender and receiver.
 

@@ -1,7 +1,7 @@
 # Install
 
 !!! tip "GUI Wallet"
-    To use Grin with a graphical user-interface, see [community wallets](../community-wallets.md).
+    To use Grin with a graphical user interface, see [community wallets](../community-wallets.md).
 
 The *Quickstart* series will guide you in your first steps of installing a Grin node, creating a wallet, and making a transaction.
 
@@ -104,7 +104,7 @@ Go to [grin.mw/download](https://grin.mw/download) and download the zip files of
 
 We recommend that you create a directory called `Grin` in `C:\Users\%USER%\AppData\Local`. The parent directory is where most user windows apps are installed, but if you want to put them somewhere else, that'll work too.
 
-In this directory, extract both binaries `grin.exe` and `grin-wallet.exe`. Then, add them to your path:
+In this directory, extract both binaries `grin.exe` and `grin-wallet.exe`. Then, add them to your path by typing in the terminal:
 
 ```text
 set PATH=%PATH%;C:\Users\%USER%\AppData\Local
