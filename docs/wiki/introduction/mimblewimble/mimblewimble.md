@@ -24,7 +24,7 @@ Going next, we'll examine how those two fundemental properties are achieved.
 
 Building upon the ECC princple desrcibed above, we can obscure the values in a transaction.
 
-If `v` is the amount value of an input or output and **H** is a generator point on the elliptic curve, we can simply embed `v*H` instead of `v` in a transaction. This works because using the ECC operations, we can validate that the sum of values in outputs, equals to the sum of values in inputs. If we subtract those sumb, the result would be 0.
+If `v` is the amount value of an input or output and **H** is a generator point on the elliptic curve, we can simply embed `v*H` instead of `v` in a transaction. This works because using the ECC operations, we can validate that the sum of values in outputs, equals to the sum of values in inputs. If we subtract those sums (outputs minus inputs), the result would be 0.
 
 :   *transaction*
 
@@ -47,7 +47,7 @@ v3*H + v2*H - v3*H = (v3 + v2 - v1)*H = 0*H
 ```
 
 !!! note ""
-    Recall that an input is just a reference to a past output being spent, so each input is practically considered an output.
+    Recall that an input is just a reference to a past output being spent, so each input is practically an output.
 
 Verifying this property on every transaction allows the protocol to confirm that a transaction doesn't create money out of thin air, without knowing what the actual values are.
 
@@ -178,12 +178,12 @@ A Mimblewimble transaction includes the following:
 
 * Set of inputs, that reference and spend a set of previous outputs.
 * Set of new outputs that each includes:
-    1. Value and a blinding factor (a new private key), both multiplied on a curve and summed up to r*G + v*H.
+    1. Value and a blinding factor (a new private key), both multiplied on a curve and summed up to `r*G + v*H`.
     2. Rangeproof that, among other things, shows that `v` is non-negative.
 * Kernel consisting of:
     1. Transaction fee in plain text.
-    2. Transaction signature signed by the excess value excess value (and verifies wit hthe kernel excess).
-    3. Kernel excess, which is the public key corresponding to the excess value (computed by the `sum of outputs + fee - sum of inputs`)
+    2. Transaction signature signed by the excess value (and verifies with the kernel excess).
+    3. Kernel excess, which is the public key corresponding to the excess value (computed by `sum of outputs + fee - sum of inputs`)
 
 
 ## Blocks and Chain
@@ -197,7 +197,7 @@ The Mimblewimble block format builds on this by introducing one additional conce
 
 ### Transaction Aggregation
 
-While the kernel excess of a transaction can be computed by anyone, there is a major benefit in including it in every transactions's kernel, as it allows for aggregation within blocks.
+While the kernel excess of a transaction can be computed by anyone, there is a major benefit in including it in every transaction's kernel, as it allows for aggregation within blocks.
 
 The following is true for any valid transcation (ignoring fees).
 
@@ -213,13 +213,13 @@ block:
 sum(outputs) - sum(inputs) = sum(kernel_excess)
 ```
 
-Simplifying slightly (ignoring transaction fees), we can see how entire Mimblewimble blocks can be treated exactly as single transactions.
+Simplifying slightly (ignoring transaction fees), we can see how a Mimblewimble block can be treated exactly as single transaction.
 
 Similarly, transactions could be aggregated before block construction and thus enter the mempool at an already aggregated state. The Dandelion stem phase does so automatically when possible, and it could also be done manually and potentially through different aggregation services.
 
 ### Kernel Offsets
 
-There is a subtle problem with Mimblewimble blocks and transactions as described above, that needs to be addressed. Given a set of inputs, outputs and transaction kernels, a subset of these will combine to reconstruct a valid transaction.
+There is a subtle problem with Mimblewimble blocks and transactions as described above, which needs to be addressed. Given a set of inputs, outputs and transaction kernels, a subset of these will combine to reconstruct a valid transaction.
 
 Consider the two following transcations:
 
@@ -252,7 +252,7 @@ Then how do we solve this?
 !!! note ""
     Remember that the kernel excess `r*G` is simply the public key of the excess value `r`.
 
-To address this issue we introduce a *kernel offset* and redefine a transaction's kernel excess from r*G to `(r-kernel_offset)*G`. The kernel offset is thus a blinding factor that needs to be added to the excess value to ensure the sum of the commitments is valid:
+To address this issue we introduce a *kernel offset* and redefine a transaction's kernel excess from `r*G` to `(r-kernel_offset)*G`. The kernel offset is thus a blinding factor that needs to be added to the excess value to ensure the sum of the commitments is valid:
 
 ```text
 sum(outputs) - sum(inputs) + (kernel_offset)*G = (r + kernel_offset)*G

@@ -1498,7 +1498,7 @@
 <h3 id="amounts">Amounts</h3>
 <p>Building upon the ECC princple desrcibed above, we can obscure the values in a transaction.</p>
 <dl>
-<dt>If <code>v</code> is the amount value of an input or output and <strong>H</strong> is a generator point on the elliptic curve, we can simply embed <code>v*H</code> instead of <code>v</code> in a transaction. This works because using the ECC operations, we can validate that the sum of values in outputs, equals to the sum of values in inputs. If we subtract those sumb, the result would be 0.</dt>
+<dt>If <code>v</code> is the amount value of an input or output and <strong>H</strong> is a generator point on the elliptic curve, we can simply embed <code>v*H</code> instead of <code>v</code> in a transaction. This works because using the ECC operations, we can validate that the sum of values in outputs, equals to the sum of values in inputs. If we subtract those sums (outputs minus inputs), the result would be 0.</dt>
 <dd>
 <p><em>transaction</em></p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Hidden</label><div class="tabbed-content">
@@ -1548,7 +1548,7 @@
 </code></pre></div>
 
 <div class="admonition note">
-<p>Recall that an input is just a reference to a past output being spent, so each input is practically considered an output.</p>
+<p>Recall that an input is just a reference to a past output being spent, so each input is practically an output.</p>
 </div>
 <p>Verifying this property on every transaction allows the protocol to confirm that a transaction doesn't create money out of thin air, without knowing what the actual values are.</p>
 <p>However, we encounter a familiar issue; There are a finite number of usable values (amounts) and one could try every single one of them to guess the value of the transaction.</p>
@@ -1724,14 +1724,14 @@ and Alice, while <code>28</code> is only known to Bob.</p>
 <ul>
 <li>Set of inputs, that reference and spend a set of previous outputs.</li>
 <li>Set of new outputs that each includes:<ol>
-<li>Value and a blinding factor (a new private key), both multiplied on a curve and summed up to r<em>G + v</em>H.</li>
+<li>Value and a blinding factor (a new private key), both multiplied on a curve and summed up to <code>r*G + v*H</code>.</li>
 <li>Rangeproof that, among other things, shows that <code>v</code> is non-negative.</li>
 </ol>
 </li>
 <li>Kernel consisting of:<ol>
 <li>Transaction fee in plain text.</li>
-<li>Transaction signature signed by the excess value excess value (and verifies wit hthe kernel excess).</li>
-<li>Kernel excess, which is the public key corresponding to the excess value (computed by the <code>sum of outputs + fee - sum of inputs</code>)</li>
+<li>Transaction signature signed by the excess value (and verifies with the kernel excess).</li>
+<li>Kernel excess, which is the public key corresponding to the excess value (computed by <code>sum of outputs + fee - sum of inputs</code>)</li>
 </ol>
 </li>
 </ul>
@@ -1743,7 +1743,7 @@ and Alice, while <code>28</code> is only known to Bob.</p>
 <li>Further anonymity by mixing and removing transaction data.</li>
 </ul>
 <h3 id="transaction-aggregation">Transaction Aggregation</h3>
-<p>While the kernel excess of a transaction can be computed by anyone, there is a major benefit in including it in every transactions's kernel, as it allows for aggregation within blocks.</p>
+<p>While the kernel excess of a transaction can be computed by anyone, there is a major benefit in including it in every transaction's kernel, as it allows for aggregation within blocks.</p>
 <p>The following is true for any valid transcation (ignoring fees).</p>
 <div class="highlight"><pre><span></span><code>transaction:
 sum(outputs) - sum(inputs) = kernel_excess
@@ -1754,10 +1754,10 @@ sum(outputs) - sum(inputs) = kernel_excess
 sum(outputs) - sum(inputs) = sum(kernel_excess)
 </code></pre></div>
 
-<p>Simplifying slightly (ignoring transaction fees), we can see how entire Mimblewimble blocks can be treated exactly as single transactions.</p>
+<p>Simplifying slightly (ignoring transaction fees), we can see how a Mimblewimble block can be treated exactly as single transaction.</p>
 <p>Similarly, transactions could be aggregated before block construction and thus enter the mempool at an already aggregated state. The Dandelion stem phase does so automatically when possible, and it could also be done manually and potentially through different aggregation services.</p>
 <h3 id="kernel-offsets">Kernel Offsets</h3>
-<p>There is a subtle problem with Mimblewimble blocks and transactions as described above, that needs to be addressed. Given a set of inputs, outputs and transaction kernels, a subset of these will combine to reconstruct a valid transaction.</p>
+<p>There is a subtle problem with Mimblewimble blocks and transactions as described above, which needs to be addressed. Given a set of inputs, outputs and transaction kernels, a subset of these will combine to reconstruct a valid transaction.</p>
 <p>Consider the two following transcations:</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>(in1, in2) -&gt; (out1)        |  (kern1)
@@ -1807,7 +1807,7 @@ Then how do we solve this?</p>
 <div class="admonition note">
 <p>Remember that the kernel excess <code>r*G</code> is simply the public key of the excess value <code>r</code>.</p>
 </div>
-<p>To address this issue we introduce a <em>kernel offset</em> and redefine a transaction's kernel excess from r*G to <code>(r-kernel_offset)*G</code>. The kernel offset is thus a blinding factor that needs to be added to the excess value to ensure the sum of the commitments is valid:</p>
+<p>To address this issue we introduce a <em>kernel offset</em> and redefine a transaction's kernel excess from <code>r*G</code> to <code>(r-kernel_offset)*G</code>. The kernel offset is thus a blinding factor that needs to be added to the excess value to ensure the sum of the commitments is valid:</p>
 <div class="highlight"><pre><span></span><code>sum(outputs) - sum(inputs) + (kernel_offset)*G = (r + kernel_offset)*G
 </code></pre></div>
 
