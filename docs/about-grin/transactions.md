@@ -1,12 +1,12 @@
+# Transactions
+
 Mimblewimble transactions are interactive, meaning both parties need some kind of interaction with each other to exchange the necessary data. This communication can happen in countless different ways, such as through a network, email, forum, social media, chat, letter, carrier pigeon etc.
 
 Let's see how a standard transaction flow looks like:
 
-</br>
-
 ![tx-flow](../assets/images/tx-flow.png){ width=650 }
 
-1. An address, often referred to as a *Slatepack Address*, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is *completely different* from the familiar on-chain address, as it's not part of the ledger. </br> It is infact an `ed25199` public key which serves a double role:
+1. An address, often referred to as a *Slatepack Address*, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is *completely different* from the familiar on-chain address, as it's not part of the ledger. </br> It is in fact an `ed25199` public key which serves a double role:
     * A Tor hidden service address.
     * Key to encrypt the data communicated between the sender and receiver.
 
@@ -16,7 +16,6 @@ Let's see how a standard transaction flow looks like:
 
 !!! note ""
     One nice side-effect of interactive transactions is that coins can't accidentally be sent into the "void" (a public key/address which nobody controls).
-
 
 ## How does it happen?
 
@@ -39,7 +38,7 @@ Recall that slates are simply partial transactions. Slatepacks are slates encode
 
 Using this method, 2~nd~ and 3~rd~ steps, where the sender and receiver pass the slate to one another, would be done manually by exchanging these slatepack messages. To do so, almost every available communication channel will work; Email, chat, social media, letters, pigeons etc. Creativity is the limit.
 
-The address (public key) initally provided by the receiver will be used to the encrypt the slatepacks, so that only the transacting parties are able to see the data inside.
+The address (public key) initially provided by the receiver will be used to the encrypt the slatepacks, so that only the transacting parties are able to see the data inside.
 
 !!! info "Non-encrypted Slatepacks"
     It is possible to skip the 1~st~ step (providing an address) and straight up send a non-encrypted slatepack to the receiver. Keep in mind that in this case, if the communication channel is compromised or public, observers may learn some transaction information.
@@ -50,5 +49,5 @@ Invoice transactions are built much the same way, but with a different order whe
 
 1. A slatepack address is provided by the sender (optional).
 1. Receiver creates an invoice, requesting to be paid the specified amount. In practice he starts building the transaction slate and writes a pre-determined amount into it.
-1. Sender decrypts the slate to confirm the amount he is about to pay, and adds his own data and siganture.
+1. Sender decrypts the slate to confirm the amount he is about to pay, and adds his own data and signature.
 1. Receiver finalizes the transaction building process and posts it to the chain.
