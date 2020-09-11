@@ -11,7 +11,7 @@
         <meta name="description" content="Grin Documentation">
       
       
-        <link rel="canonical" href="https://docs.grin.mw/wiki/blocks/fees-mining/">
+        <link rel="canonical" href="https://docs.grin.mw/wiki/api/wallet-api/">
       
       
         <meta name="author" content="Grin Developers">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Economic Policy: Fees and Mining Reward - Grin Documentation</title>
+        <title>Wallet API - Grin Documentation</title>
       
     
     
@@ -61,11 +61,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#economic-policy-fees-and-mining-reward" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -89,7 +84,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Economic Policy: Fees and Mining Reward
+              Wallet API
             
           </span>
         </div>
@@ -151,14 +146,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         ./ Grin
       </a>
     
@@ -198,7 +195,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../table-of-contents/" class="md-tabs__link">
+        <a href="../../table-of-contents/" class="md-tabs__link md-tabs__link--active">
           Wiki
         </a>
       
@@ -529,10 +526,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Wiki
@@ -779,7 +778,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../block-header/" title="Header" class="md-nav__link">
+    <a href="../../blocks/block-header/" title="Header" class="md-nav__link">
       Header
     </a>
   </li>
@@ -791,7 +790,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../block-body/" title="Body" class="md-nav__link">
+    <a href="../../blocks/block-body/" title="Body" class="md-nav__link">
       Body
     </a>
   </li>
@@ -803,7 +802,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../fees-and-weight.md" title="Fees & Weight" class="md-nav__link">
+    <a href="../../blocks/fees-and-weight/" title="Fees & Weight" class="md-nav__link">
       Fees & Weight
     </a>
   </li>
@@ -974,10 +973,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7" checked>
     
     <label class="md-nav__link" for="nav-5-7">
       API
@@ -1001,7 +1002,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/node-api/" title="Node API" class="md-nav__link">
+    <a href="../node-api/" title="Node API" class="md-nav__link">
       Node API
     </a>
   </li>
@@ -1011,11 +1012,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../api/wallet-rest-api.md" title="Wallet API" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Wallet API" class="md-nav__link md-nav__link--active">
       Wallet API
     </a>
+    
   </li>
 
         
@@ -1025,7 +1033,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../api/stratum-rpc/" title="Stratum RPC" class="md-nav__link">
+    <a href="../stratum-rpc/" title="Stratum RPC" class="md-nav__link">
       Stratum RPC
     </a>
   </li>
@@ -1162,8 +1170,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../archives/" title="Archives" class="md-nav__link">
-      Archives
+    <a href="../../resources/" title="Resources" class="md-nav__link">
+      Resources
     </a>
   </li>
 
@@ -1180,44 +1188,12 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#considerations" class="md-nav__link">
-    Considerations
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/mimblewimble/docs/wiki/blocks/fees-mining.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/mimblewimble/docs/wiki/api/wallet-api.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -1225,30 +1201,9 @@
                   
                 
                 
-                <h1 id="economic-policy-fees-and-mining-reward">Economic Policy: Fees and Mining Reward</h1>
-<p><strong>(there are are several mentions oh weight and fees, one of them the document below written by igno in 2016, by you should probably wait until they're revisited (tromp rfc) before the last hard fork).
-</strong>WORK IN PROGRESS**</p>
-<h2 id="considerations">Considerations</h2>
-<p>Most cryptocurrencies rely on 2 important parameters: fees dictating the cost of transacting and block rewards compensating miners for securing the chain. Rewards also play the important role of being the only source of new money creation: the total amount of tokens in existence is the sum of every reward since the genesis block.</p>
-<p>No cryptocurrency so far has established a fee market that would allow to fully compensate for block rewards. Even bitcoin, with its fees significantly raising (as of Oct. 2016), is still far from reaching that goal. Given the current block space supply, bitcoin fees would have to raise by at least an order of magnitude, reaching $4 USD. Even then, the stability of the currency when mining is only payed out in fee is questionable<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. We also note that the security provided by a large hashrate is desirable to all participants in a cryptocurrency's economy, and not only to active transactors.</p>
-<p>For all these reasons we favor a constant reward over time, remarking that it asymptotically leads to zero dilution<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
-<p>However, any cryptocurrency needs to protect itself against malicious spamming attacks that would flood the network and bloat storage. Proof of work is an efficient and elegant way to do so but difficult to adopt due to the complex computing ecosystem a cryptocurrency evolves in (from mobile wallets to cheap super-computing). So transaction fees remain the simplest way to protect a blockchain against malicious spam.</p>
-<p>By acknowledging that transaction fees only act as spam prevention we gain a framework to gauge how they should be priced: proportionately to the cost incurred by the network when accepting and safekeeping the transaction.
-Fee Levels and Incentives</p>
-<p>Given that block reward is the only way new currency is introduced, and supply greatly influences value, it makes sense to price fees based on how much supply is injected in the system. It also makes sense to study this for Grin, to establish a fee baseline. We introduce the notion of fees per reward per minute.</p>
-<p>For example in Bitcoin, at this time the reward per minute is 1.25BTC. Transaction fees average 70 satoshis per byte for a fast confirmation, putting the average transaction price around 16,000 with a median transaction size of 230 bytes. So the fees for a transaction are priced at 0.00128% of the reward per minute. In Ethereum, factoring in the current gas price, the transaction fees are priced around 0.0028% of the reward per minute.</p>
-<p>It may come as a surprise that this number would be higher for Ethereum than Bitcoin, but keep in mind that it only factors supply and not demand. It also only reflects how fast supply is injected, not how much total supply is currently in existence. Nonetheless, these 2 numbers are surprisingly close, giving us a good baseline.</p>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>http://randomwalker.info/publications/mining_CCS.pdf&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>By introducing new currency, each block reward dilutes all existing participants,&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+                  <h1>Wallet API</h1>
+                
+                
                 
               
               
@@ -1263,6 +1218,41 @@ Fee Levels and Incentives</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../node-api/" title="Node API" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Node API
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../stratum-rpc/" title="Stratum RPC" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Stratum RPC
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

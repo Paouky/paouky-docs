@@ -26,8 +26,8 @@
 ## Blocks
 
 - [Header](blocks/block-header.md)
-- [Body](blocks/blocks-body.md)
-- [Fees & Weight](fees-mining.md)
+- [Body](blocks/block-body.md)
+- [Fees & Weight](blocks/fees-and-weight.md)
 
 ## Chain State
 
@@ -46,6 +46,7 @@
 ## API
 
 - [Node API](api/node-api.md)
+- [Wallet API](api/wallet-api.md)
 - [Stratum RPC](api/stratum-rpc.md)
 
 
@@ -62,4 +63,4 @@
 
 ## More
 
-- [Archives](archives.md)
+- [Resources](resources.md)

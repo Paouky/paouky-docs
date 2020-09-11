@@ -108,6 +108,10 @@
      <lastmod>2020-09-11</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://docs.grin.mw/wiki/blocks/fees-and-weight/</loc>
+     <lastmod>2020-09-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://docs.grin.mw/wiki/chain-state/merkle-mountain-range/</loc>
      <lastmod>2020-09-11</lastmod>
      <changefreq>daily</changefreq>
@@ -144,6 +148,10 @@
      <lastmod>2020-09-11</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
+     <loc>https://docs.grin.mw/wiki/api/wallet-api/</loc>
+     <lastmod>2020-09-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
      <loc>https://docs.grin.mw/wiki/api/stratum-rpc/</loc>
      <lastmod>2020-09-11</lastmod>
      <changefreq>daily</changefreq>
@@ -168,7 +176,7 @@
      <lastmod>2020-09-11</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://docs.grin.mw/wiki/archives/</loc>
+     <loc>https://docs.grin.mw/wiki/resources/</loc>
      <lastmod>2020-09-11</lastmod>
      <changefreq>daily</changefreq>
     </url>

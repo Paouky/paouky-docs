@@ -1,35 +1,25 @@
 # Archives
 
-## Docs
+## Documents
 
 
 
 ## Talks
 
-:   [Mimblewimble, Scaling Bitcoin'16](https://www.youtube.com/watch?v=8BLWUUPfh2Q&t=1h29m20s) </br>
-    [Mimblewimble, SF Bitcoin Developers`16](https://www.youtube.com/watch?v=aHTRlbCaUyM&t=133s) </br>
-    [Mimblewimble, BPASE'17](https://www.youtube.com/watch?v=XiUGu48JTd0&feature=youtu.be) </br>
-    [Mimblewimble & Scriptless Scripts, RWC'18](https://www.youtube.com/watch?v=EN-JMlzr8Qw) </br>
-    [A View on Grin, HCPP'19](https://www.youtube.com/watch?v=NShVKX6Ra7Y), [Slides](https://docs.google.com/presentation/d/1PbtPV8WwDcWdnqBZHUMU7Cgr0P98NzDnuRRt2y251nU/edit#slide=id.g1a9d89a04cc779b5_0) </br>
-
-
-#### Conference Playlists
+#### Playlists
 
 :   [grincon0](https://www.youtube.com/playlist?list=PLvgCPbagiHgqYdVUj-ylqhsXOifWrExiq) </br>
     [grinconUS(0)](https://www.youtube.com/playlist?list=PLvgCPbagiHgqOe0z_xgrIsGq-ayVZcNjy) </br>
     [grinAmsterdam](https://www.youtube.com/playlist?list=PLvgCPbagiHgpJXhrKAJu0Q-mbCVhpqgu7) </br>
     [grincon1](https://www.youtube.com/playlist?list=PLvgCPbagiHgrQa5KVt4XixK9t_NbfpkuP) </br>
 
+#### Other
 
-## Podcasts
-
-:   [[Bitcoin Wednesday] Introducing Mimblewimble and Grin @jaspervdm](https://www.youtube.com/watch?v=mzHswLujMYc) </br>
-    [[Unchained] Grin: A More Private, Lighter Bitcoin @lehnberg @yeastplume](https://unchainedpodcast.com/grin-a-more-private-lighter-bitcoin/) </br>
-    [[The Crypto Show] Mimblewimble with Andrew Poelstra and Peter Wuillie](https://soundcloud.com/heryptohow/mimblewimble-andrew-poelstra-peter-wuille-brian-deery-and-chris-odom) </br>
-    [[What Bitcoin Did] Grin's Mimblewimble Implementation @yeastplume](https://www.whatbitcoindid.com/podcast/grins-michael-cordner-aka-yeastplume-on-implementing-mimblewimble) </br>
-    [[Zero Knowledge] Grin @lehnberg](https://fireside.fm/s/3yp1oIzN+6BedPBky) </br>
-    [[Captain Crypto Show] Grin @yeastplume](https://www.youtube.com/watch?v=nwi9pMqUBQI) </br>
-    [[Let's Talk Bitcoin] Privacy with Mimblewimble @yeastplume @andreas @adam.b.levine](https://letstalkbitcoin.com/blog/post/lets-talk-bitcoin-356-privacy-on-the-blockchain-with-mimblewimble)
+:   [Mimblewimble, Scaling Bitcoin'16](https://www.youtube.com/watch?v=8BLWUUPfh2Q&t=1h29m20s) </br>
+    [Mimblewimble, SF Bitcoin Developers`16](https://www.youtube.com/watch?v=aHTRlbCaUyM&t=133s) </br>
+    [Mimblewimble, BPASE'17](https://www.youtube.com/watch?v=XiUGu48JTd0&feature=youtu.be) </br>
+    [Mimblewimble & Scriptless Scripts, RWC'18](https://www.youtube.com/watch?v=EN-JMlzr8Qw) </br>
+    [A View on Grin, HCPP'19](https://www.youtube.com/watch?v=NShVKX6Ra7Y), [Slides](https://docs.google.com/presentation/d/1PbtPV8WwDcWdnqBZHUMU7Cgr0P98NzDnuRRt2y251nU/edit#slide=id.g1a9d89a04cc779b5_0) </br>
 
 ## Forum
 
@@ -62,7 +52,6 @@
     [Pep talk for one sided transactions](https://forum.grin.mw/t/pep-talk-for-one-sided-transactions/7361) </br>
     [Dismantling the core team and governance structure](https://forum.grin.mw/t/dismantling-the-core-team-and-governance-structure/7801) </br>
 
-
 ## Medium
 
 :   [Grin's Mythical Fair Launch](https://www.coindesk.com/coders-harry-potter-bitcoin-mimblewimble) </br>
@@ -72,44 +61,33 @@
     [Breaking Mimblewimble’s Privacy Model](https://medium.com/dragonfly-research/breaking-mimblewimble-privacy-model-84bcd67bfe52) </br>
     [Factual inaccuracies of “Breaking Mimblewimble’s Privacy Model”](https://medium.com/grin-mimblewimble/factual-inaccuracies-of-breaking-mimblewimbles-privacy-model-8063371839b9) </br>
 
+## Podcasts
 
-## General
+:   [[Bitcoin Wednesday] Introducing Mimblewimble and Grin @jaspervdm](https://www.youtube.com/watch?v=mzHswLujMYc) </br>
+    [[Unchained] Grin: A More Private, Lighter Bitcoin @lehnberg @yeastplume](https://unchainedpodcast.com/grin-a-more-private-lighter-bitcoin/) </br>
+    [[The Crypto Show] Mimblewimble with Andrew Poelstra and Peter Wuillie](https://soundcloud.com/heryptohow/mimblewimble-andrew-poelstra-peter-wuille-brian-deery-and-chris-odom) </br>
+    [[What Bitcoin Did] Grin's Mimblewimble Implementation @yeastplume](https://www.whatbitcoindid.com/podcast/grins-michael-cordner-aka-yeastplume-on-implementing-mimblewimble) </br>
+    [[Zero Knowledge] Grin @lehnberg](https://fireside.fm/s/3yp1oIzN+6BedPBky) </br>
+    [[Captain Crypto Show] Grin @yeastplume](https://www.youtube.com/watch?v=nwi9pMqUBQI) </br>
+    [[Let's Talk Bitcoin] Privacy with Mimblewimble @yeastplume @andreas @adam.b.levine](https://letstalkbitcoin.com/blog/post/lets-talk-bitcoin-356-privacy-on-the-blockchain-with-mimblewimble)
+
+## Miscellaneous
 
 :   [[Launchpad] Mimblewimble Mailing List Archive](https://lists.launchpad.net/mimblewimble/) </br>
     [[Reddit] Mimblewimble introduced to r/bitcoin](https://www.reddit.com/r/Bitcoin/comments/4vub3y/mimblewimble_noninteractive_coinjoin_and_better/) </br>
     [[Youtube] Aantonop Bitcoin Q&A: Mimblewimble and Dandelion](https://www.youtube.com/watch?v=LjDJGTpK_lE) </br>
     [[Coindesk] Harry Potter Characters Join Mimblewimble 2016](https://www.coindesk.com/coders-harry-potter-bitcoin-mimblewimble) </br>
     [[Github] Meeting Notes](https://github.com/mimblewimble/grin-pm#2020) </br>
-    [[Github] Run a Grin node on Google cloud for free](https://github.com/mimblewimble/docs/wiki/How-to%3A-Run-a-Grin-node-on-Google-Cloud-for-free) </br>
-    [[Github] Automating and running Grin as a service](https://github.com/mimblewimble/docs/wiki/Build-and-run-automation) </br>
+    [[Reddit] On Grin's Privacy](https://www.reddit.com/r/grincoin/comments/g43fhe/is_there_any_progress_on_reducing_linkability_of/fnv7lfh/) </br>
+    [[Launchpad] Scripting observations and Lightning Network implementation](https://lists.launchpad.net/mimblewimble/msg00029.html)
+    [[GitHub] Grin difficulty, C29, C31 fade out and C32](https://github.com/Lolliedieb/lolMiner-releases/wiki/All-you-need-to-know-about-Grin-difficulty,-C29,-C31-fade-out-and-C32) </br>
+    [[GitHub] Fees in Mining](https://github.com/mimblewimble/grin/wiki/fees-mining) </br>
+    [[Google] Replay Attacks Summary](https://docs.google.com/document/d/1BbXhgFd3byP_gfvnteRq4BmfXjtv5PJtJwI13CJsZT8/edit#)
 
 #### RFCs
 
 :   [[Github] All Accepted RFCs](https://github.com/mimblewimble/grin-rfcs#list-of-accepted-rfcs) </br>
     [[Github] All Pending RFCs](https://github.com/mimblewimble/grin-rfcs/pulls) </br>
-
-## Privacy
-
-:   [[Reddit] On Grin's Privacy](https://www.reddit.com/r/grincoin/comments/g43fhe/is_there_any_progress_on_reducing_linkability_of/fnv7lfh/)
-
-## Scripts
-
-:   [[Launchpad] Scripting observations and Lightning Network implementation](https://lists.launchpad.net/mimblewimble/msg00029.html)
-
-## Proof of Work
-
-:   [[GitHub] Fees in Mining](https://github.com/mimblewimble/grin/wiki/fees-mining) </br>
-    [[GitHub] Grin difficulty, C29, C31 fade out and C32](https://github.com/Lolliedieb/lolMiner-releases/wiki/All-you-need-to-know-about-Grin-difficulty,-C29,-C31-fade-out-and-C32) </br>
-
-
-## Security
-
-:   [[Google] Replay Attacks Summary](https://docs.google.com/document/d/1BbXhgFd3byP_gfvnteRq4BmfXjtv5PJtJwI13CJsZT8/edit#)
-
-## API
-
-:   [[Forum] Postman Collection of Grin Node API](https://forum.grin.mw/t/full-postman-collection-for-grin-node-api/7696) </br>
-
 
 ## Papers
 

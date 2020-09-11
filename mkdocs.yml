@@ -106,7 +106,7 @@ nav:
       - NRD Kernels: wiki/miscellaneous/nrd-kernels.md
     - API:
       - Node API: wiki/api/node-api.md
-      - Wallet API: wiki/api/wallet-rest-api.md
+      - Wallet API: wiki/api/wallet-api.md
       - Stratum RPC: wiki/api/stratum-rpc.md
     - Security Process:
       - Grin's Security Process: wiki/security-process/grin-security-process.md
@@ -115,4 +115,4 @@ nav:
     - Services:
       - Slatepack Integration Guide: wiki/services/slatepack-integration.md
       - List of Services: wiki/services/list-of-services.md
-    - Archives: wiki/archives.md
+    - Resources: wiki/resources.md
