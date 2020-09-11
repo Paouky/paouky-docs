@@ -28,22 +28,3 @@ Minimal implementation that strives to remain as clear and simple as possible, m
 ### Proven Cryptography
 
 Mimblewimble only relies on strong Elliptic Curve cryptography which has been tried and tested for decades.
-
-</br>
-</br>
-
-
-
-</br>
-<p align="center">
-  <a href="about-grin/story">About Grin</a> </br>
-  <a href="getting-started/table-of-contents">Get Started</a> </br>
-  <a href="wiki/table-of-contents">Wiki</a> </br>
-  <hr style="height:1px;border-width:0;width:20%;color:#b5e847;background-color:#b5e847;display:block;margin-left:auto;margin-right:auto;">
-  </br>
-</p>
-<p align="center">
- ツ
-</p>
-
-</br>
