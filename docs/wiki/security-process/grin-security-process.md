@@ -24,7 +24,7 @@ explained in the following sections.
 
 ## Receiving Disclosures
 
-Grin is committed to working with researchers who submit security vulnerability
+We are committed to working with researchers who submit security vulnerability
 notifications to us, to resolve those issues on an appropriate timeline and perform
 a coordinated release, giving credit to the reporter if they would like.
 
@@ -35,10 +35,9 @@ and [details](https://github.com/RD-Crypto-Spec/Responsible-Disclosure/tree/82e0
 guidelines. More information is available about the
 [expected timelines for the full disclosure cycle](https://github.com/RD-Crypto-Spec/Responsible-Disclosure/tree/82e08d2736ea9dbe43484a3317e4bce214163bd0#standard-disclosure-timelines).
 
-**For all security related issues, Grin has 3 main points of contact**:
+**For all security related issues, there are 3 main points of contact**:
 
 * Daniel Lehnberg, daniel.lehnberg at protonmail.com [PGP key](https://github.com/mimblewimble/grin-security/blob/master/keys/lehnberg.asc)
-* hashmap, hashmap.dev at protonmail.com [PGP key](https://github.com/mimblewimble/grin-security/blob/master/keys/hashmap.asc)
 * John Woeltz, joltz at protonmail.com [PGP key](https://github.com/mimblewimble/grin-security/blob/master/keys/j01tz.asc)
 
 Send all communications PGP encrypted to all parties.

@@ -17,8 +17,8 @@ Documents to keep, but that might not have proper place in the new structure.
 
 Very technical documents that have their place in the grin repo. They are not perfect but so are most grin repo docs. Still useful.
 
-- ~~[P2P Protocol](https://github.com/mimblewimble/docs/wiki/P2P-Protocol)~~
-- ~~[Validation logic](https://github.com/mimblewimble/docs/wiki/Validation-logic)~~
+- ~~[P2P Protocol](https://github.com/mimblewimble/docs/wiki/P2P-Protocol) (MOVED)~~
+- ~~[Validation logic](https://github.com/mimblewimble/docs/wiki/Validation-logic) (MOVED)~~
 - ~~[Block Header](https://github.com/mimblewimble/docs/wiki/Block-Header)~~
 
 ### Move to grin-pm

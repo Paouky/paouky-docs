@@ -37,7 +37,7 @@
 
 ## Miscellaneous
 
-- [Cuckoo Cycle](proof-of-work/cuckoo-cycle.md)
+- [Cuckoo Cycle](miscellaneous/cuckoo-cycle.md)
 - [Dandelion](miscellaneous/dandelion.md)
 - [Switch Commitments](miscellaneous/switch-commitments.md)
 - [Coinbase Maturity Rule](miscellaneous/coinbase-maturity-rule.md)

@@ -7,16 +7,17 @@ site_description: 'Grin Documentation'
 # Repository
 repo_name: mimblewimble/grin
 repo_url: https://github.com/mimblewimble/grin
-edit_uri: ../docs/edit/master/docs/
+edit_uri: https://github.com/mimblewimble/docs
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2020 Grin Developers
+# copyright: Copyright &copy; 2016 - 2021 Grin Developers
 
 theme:
   palette:
     scheme: slate
   name: material
   logo: assets/images/grin-logo.svg
+  favicon: assets/images/grin-logo.svg
   language: en
   features:
     - tabs
@@ -28,7 +29,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/mimblewimble/grin
+      link: https://github.com/mimblewimble
     - icon: fontawesome/brands/keybase
       link: https://keybase.io/team/grincoin
 
@@ -105,7 +106,7 @@ nav:
       - NRD Kernels: wiki/miscellaneous/nrd-kernels.md
     - API:
       - Node API: wiki/api/node-api.md
-      - Wallet REST API: wiki/api/wallet-rest-api.md
+      - Wallet API: wiki/api/wallet-rest-api.md
       - Stratum RPC: wiki/api/stratum-rpc.md
     - Security Process:
       - Grin's Security Process: wiki/security-process/grin-security-process.md

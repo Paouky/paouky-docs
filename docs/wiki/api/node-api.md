@@ -12,7 +12,7 @@ This API version uses jsonrpc for its requests. It is split up in a foreign API 
 
 Basic auth passwords can be found in `.api_secret`/`.foreign_api_secret` files respectively.
 
-!!! note ""
+!!! note "Postman"
     A complete Postman collection for the Grin Node API can be found [here](https://forum.grin.mw/t/full-postman-collection-for-grin-node-api/7696).
 
 ## Node API v1

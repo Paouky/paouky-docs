@@ -1,6 +1,6 @@
-<p align="center">
-  <img width="150" src="https://paouky.github.io/docs/assets/images/grin-mw-logo.svg">
-</p>
+<center>
+  <img width="150" src="assets/images/grin-mw-logo.svg">
+</center>
 </br>
 
 Simple, privacy-focused, scalable Mimblewimble chain implementation.

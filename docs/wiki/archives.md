@@ -60,6 +60,7 @@
     [Is there a potential hidden inflation problem](https://forum.grin.mw/t/is-there-a-potential-hidden-inflation-problem-with-all-mw-coins/6400) </br>
     [Eliminating finalize step](https://forum.grin.mw/t/eliminating-finalize-step/7621) </br>
     [Pep talk for one sided transactions](https://forum.grin.mw/t/pep-talk-for-one-sided-transactions/7361) </br>
+    [Dismantling the core team and governance structure](https://forum.grin.mw/t/dismantling-the-core-team-and-governance-structure/7801) </br>
 
 
 ## Medium
