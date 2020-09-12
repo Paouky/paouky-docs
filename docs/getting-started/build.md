@@ -130,7 +130,7 @@ grin client help
 
 ## Docker
 
-*(Running Grin in a container)*
+*(Running grin in a container)*
 
 ```text
 docker build -t grin -f etc/Dockerfile .

@@ -63,8 +63,8 @@ nav:
     - Initialize: getting-started/quickstart/initialize.md
     - Receive: getting-started/quickstart/receive.md
     - Send: getting-started/quickstart/send.md
-  - Community Wallets: getting-started/community-wallets.md
-  - Wallet Handbook: getting-started/wallet-handbook.md
+  - CLI Handbook: getting-started/wallet-handbook.md
+  - Wallets: getting-started/wallets.md
   - Build: getting-started/build.md
 
 - About Grin:

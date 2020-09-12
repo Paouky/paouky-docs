@@ -11,51 +11,51 @@ Once an output is spent, there's no longer any need to keep it and it's removed 
     | Inputs     | Outputs      |            |
     | :--------: | :----------: | :--------: |
     |            | t r a n s a c t i o n |   |
-    | Coinbase   | A            | Kernel     |
+    | ![Coinbase](../assets/images/coinbase-output.png){ width=40 }   | ![A](../assets/images/a-output.png){ width=40 }            | Kernel     |
     |            | t r a n s a c t i o n |   |
-    | A          | B            | Kernel     |
-    |            | C            |            |
+    | ![A](../assets/images/a-output.png){ width=40 }          | ![B](../assets/images/b-output.png){ width=40 }            | Kernel     |
+    |            | ![C](../assets/images/c-output.png){ width=40 }            |            |
     |            | t r a n s a c t i o n |   |
-    | B          | D            | Kernel     |
-    | Coinbase   | E            |            |
-    |            | F            |            |
+    | ![B](../assets/images/b-output.png){ width=40 }          | ![D](../assets/images/d-output.png){ width=40 }            | Kernel     |
+    | ![Coinbase](../assets/images/coinbase-output.png){ width=40 }   | ![E](../assets/images/e-output.png){ width=40 }            |            |
+    |            | ![F](../assets/images/f-output.png){ width=40 }            |            |
     |            | t r a n s a c t i o n |   |
-    | D          | G            | Kernel     |
-    | E          | H            |            |
+    | ![D](../assets/images/d-output.png){ width=40 }          | ![G](../assets/images/g-output.png){ width=40 }            | Kernel     |
+    | ![E](../assets/images/e-output.png){ width=40 }          | ![H](../assets/images/h-output.png){ width=40 }            |            |
 
 === "Cut-through"
 
     | Inputs     | Outputs      |            |
     | :--------: | :----------: | :--------: |
     |            | t r a n s a c t i o n |   |
-    | Coinbase   | ==A==        | Kernel     |
+    | ![Coinbase](../assets/images/coinbase-output.png){ width=40 }   | &#x2731; ![A](../assets/images/a-output.png){ width=40 }  &#x2731;          | Kernel     |
     |            | t r a n s a c t i o n |   |
-    | ==A==      | ==B==        | Kernel     |
-    |            | C            |            |
+    | &#x2731; ![A](../assets/images/a-output.png){ width=40 } &#x2731;         | &#x2731; ![B](../assets/images/b-output.png){ width=40 } &#x2731;           | Kernel     |
+    |            | ![C](../assets/images/c-output.png){ width=40 }            |            |
     |            | t r a n s a c t i o n |   |
-    | ==B==      | ==D==        | Kernel     |
-    | Coinbase   | ==E==        |            |
-    |            | F            |            |
+    | &#x2731; ![B](../assets/images/b-output.png){ width=40 } &#x2731;         | &#x2731; ![D](../assets/images/d-output.png){ width=40 } &#x2731;           | Kernel     |
+    | ![Coinbase](../assets/images/coinbase-output.png){ width=40 }   | &#x2731; ![E](../assets/images/e-output.png){ width=40 } &#x2731;           |            |
+    |            | ![F](../assets/images/f-output.png){ width=40 }            |            |
     |            | t r a n s a c t i o n |   |
-    | ==D==      | G            | Kernel     |
-    | ==E==      | H            |            |
+    | &#x2731; ![D](../assets/images/d-output.png){ width=40 } &#x2731;         | ![G](../assets/images/g-output.png){ width=40 }            | Kernel     |
+    | &#x2731; ![E](../assets/images/e-output.png){ width=40 } &#x2731;         | ![H](../assets/images/h-output.png){ width=40 }            |            |
 
 === "After"
 
     | Inputs     | Outputs      |            |
     | :--------: | :----------: | :--------: |
     |            | t r a n s a c t i o n |   |
-    | Coinbase   |             | Kernel     |
+    | ![Coinbase](../assets/images/coinbase-output.png){ width=40 }   |             | Kernel     |
     |            | t r a n s a c t i o n |   |
     |            |              | Kernel     |
-    |            | C            |            |
+    |            | ![C](../assets/images/c-output.png){ width=40 }            |            |
     |            | t r a n s a c t i o n |   |
     |            |             | Kernel     |
-    | Coinbase   |              |            |
-    |            | F            |            |
+    | ![Coinbase](../assets/images/coinbase-output.png){ width=40 }   |              |            |
+    |            | ![F](../assets/images/f-output.png){ width=40 }            |            |
     |            | t r a n s a c t i o n |   |
-    |            | G            | Kernel     |
-    |            | H            |            |
+    |            | ![G](../assets/images/g-output.png){ width=40 }            | Kernel     |
+    |            | ![H](../assets/images/h-output.png){ width=40 }            |            |
 
 An output is considered 'spent' once it is used as an input. As demonstrated above, every single input can disappear as well as every spent output, leaving only a small kernel behind. What remains is only the set of unspent outputs and the set of kernels proving its validity.
 

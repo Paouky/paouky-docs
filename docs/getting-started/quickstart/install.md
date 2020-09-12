@@ -1,7 +1,7 @@
 # Install
 
 !!! tip "GUI Wallet"
-    To use Grin with a graphical user interface, see [community wallets](../community-wallets.md).
+    To use Grin with a graphical user interface, see [wallets](../../wallets).
 
 The *Quickstart* series will guide you in your first steps of installing a Grin node, creating a wallet, and making a transaction.
 

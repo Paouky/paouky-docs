@@ -73,7 +73,7 @@ GUI wallet and node written in C++ &emsp;~Windows,~ ~Linux,~ ~macOS~
 ## &emsp;Niffler
 
 </br>
-GUI wallet and node using the main implementation as back-end &emsp;~Windows,~ ~Linux,~ ~macOS~
+GUI wallet and node using the Rust implementation as back-end &emsp;~Windows,~ ~Linux,~ ~macOS~
 
 ??? abstract "How to: send/receive"
     === "Download"
