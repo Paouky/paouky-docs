@@ -55,64 +55,62 @@ markdown_extensions:
 
 
 nav:
+
+- Getting Started:
   - ./ Grin: index.md
+  - Quickstart:
+    - Install: getting-started/quickstart/install.md
+    - Initialize: getting-started/quickstart/initialize.md
+    - Receive: getting-started/quickstart/receive.md
+    - Send: getting-started/quickstart/send.md
+  - Community Wallets: getting-started/community-wallets.md
+  - Wallet Handbook: getting-started/wallet-handbook.md
+  - Build: getting-started/build.md
 
-  - Documents (temp): docs-temp.md
-  - About Grin:
-    - Story: about-grin/story.md
-    - Privacy: about-grin/privacy.md
-    - Scalability: about-grin/scalability.md
-    - Transactions: about-grin/transactions.md
-    - Proof of Work: about-grin/proof-of-work.md
-    - Emission: about-grin/emission.md
+- About Grin:
+  - Story: about-grin/story.md
+  - Privacy: about-grin/privacy.md
+  - Scalability: about-grin/scalability.md
+  - Transactions: about-grin/transactions.md
+  - Proof of Work: about-grin/proof-of-work.md
+  - Emission: about-grin/emission.md
 
-  - Getting Started:
-    - Table of Contents: getting-started/table-of-contents.md
-    - Quickstart:
-      - Install: getting-started/quickstart/install.md
-      - Initialize: getting-started/quickstart/initialize.md
-      - Receive: getting-started/quickstart/receive.md
-      - Send: getting-started/quickstart/send.md
-    - Wallet Handbook: getting-started/wallet-handbook.md
-    - Community Wallets: getting-started/community-wallets.md
-    - Build: getting-started/build.md
-
-  - Wiki:
-    - Table of Contents: wiki/table-of-contents.md
-    - Introduction:
-      - Grin for Bitcoiners: wiki/introduction/grin-for-bitcoiners.md
-      - Mimblewimble:
-        - Elliptic Curves: wiki/introduction/mimblewimble/ecc.md
-        - Commitments: wiki/introduction/mimblewimble/commitments.md
-        - Mimblewimble: wiki/introduction/mimblewimble/mimblewimble.md
-    - Transactions:
+- Wiki:
+  - Table of Contents: wiki/table-of-contents.md
+  - Introduction:
+    - Grin for Bitcoiners: wiki/introduction/grin-for-bitcoiners.md
+    - Mimblewimble:
+      - Elliptic Curves: wiki/introduction/mimblewimble/ecc.md
+      - Commitments: wiki/introduction/mimblewimble/commitments.md
+      - Mimblewimble: wiki/introduction/mimblewimble/mimblewimble.md
+  - Transactions:
       - Slates: wiki/transactions/slates.md
       - Slatepack: wiki/transactions/slatepack.md
       - Payment Proofs: wiki/transactions/payment-proofs.md
       - Contracts: wiki/transactions/contracts.md
-    - Blocks:
+  - Blocks:
       - Header: wiki/blocks/block-header.md
       - Body: wiki/blocks/block-body.md
       - Fees & Weight: wiki/blocks/fees-and-weight.md
-    - Chain State:
+  - Chain State:
       - Merkle Mountain Ranges: wiki/chain-state/merkle-mountain-range.md
       - State & Pruning: wiki/chain-state/state-and-pruning.md
       - Chain Sync: wiki/chain-state/chain-sync.md
-    - Miscellaneous:
+  - Miscellaneous:
       - Cuckoo Cycle: wiki/miscellaneous/cuckoo-cycle.md
       - Dandelion: wiki/miscellaneous/dandelion.md
       - Switch Commitments: wiki/miscellaneous/switch-commitments.md
       - Coinbase Maturity Rule: wiki/miscellaneous/coinbase-maturity-rule.md
       - NRD Kernels: wiki/miscellaneous/nrd-kernels.md
-    - API:
+  - API:
       - Node API: wiki/api/node-api.md
       - Wallet API: wiki/api/wallet-api.md
       - Stratum RPC: wiki/api/stratum-rpc.md
-    - Security Process:
+  - Security Process:
       - Grin's Security Process: wiki/security-process/grin-security-process.md
       - Security Team: wiki/security-process/security-team.md
       - Code Audits: wiki/security-process/code-audits.md
-    - Services:
+  - Services:
       - Slatepack Integration Guide: wiki/services/slatepack-integration.md
       - List of Services: wiki/services/list-of-services.md
-    - Resources: wiki/resources.md
+  - Resources: wiki/resources.md

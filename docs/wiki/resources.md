@@ -1,7 +1,11 @@
-# Archives
+# Resources
 
-## Documents
+## More Documents
 
+:   [Build and run automation](../extra-documents/build-run-automation) </br>
+    [Run a node on google cloud for free](../extra-documents/google-cloud-node) </br>
+    [How to mine with grin-miner](../extra-documents/how-to-mine) </br>
+    [Monetary policy](../extra-documents/monetary-policy) </br>
 
 
 ## Talks
@@ -24,6 +28,7 @@
 ## Forum
 
 :   [How to store Grin in cold storage?](https://forum.grin.mw/t/how-to-store-grin-in-cold-storage/5375) </br>
+    [Raspberry Pi 4 - Standalone Grin-Node PoC by Grinnode.live](https://forum.grin.mw/t/raspberry-pi-4-standalone-grin-node-poc-by-grinnode-live/7796) </br>
     [Coinbase outputs as regular outputs](https://forum.grin.mw/t/coinbase-outputs-as-transaction-outputs/7441) </br>
     [Use of NRD kernels in payment channels](https://forum.grin.mw/t/use-of-nrd-kernels-in-grin-payment-channels/7298) </br>
     [Emission Rate Thread](https://forum.grin.mw/t/emission-rate-of-grin/171), [#2](https://forum.grin.mw/t/questioning-core-assumptions-on-our-emissions-model/1414), [#3](https://forum.grin.mw/t/question-for-statement-linear-emission-is-fair-for-late-adopters/6285) </br>
