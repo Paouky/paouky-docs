@@ -153,7 +153,6 @@ Height
 0       1        7     10  11 15     18
 ```
 
-
 ## Merkle Proof
 
 ![merkle proof](images/merkle_proof.png)

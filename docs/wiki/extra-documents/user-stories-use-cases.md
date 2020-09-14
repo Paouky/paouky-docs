@@ -36,5 +36,5 @@ Use cases:
 
 ### Misty the museum owner
 
-- As a somewhat idealistic person, Misty accepts entrance fee payments in just about any MimbleWimble coin and most testnet coins.
+- As a somewhat idealistic person, Misty accepts entrance fee payments in just about any Mimblewimble coin and most testnet coins.
 - On a glass shell in the corner stands a great though aged open computer case with a name tag "The Yeastmonster" subtexted "The First Great Grin Miner". Most visitors feel its importance and snap a photo before moving along to the graphical user interfaces exhibition hall, but only those with testnet grins can pay to the monster directly to get it to start up its text UI and mine for one minute.

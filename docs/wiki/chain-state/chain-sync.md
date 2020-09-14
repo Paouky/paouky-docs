@@ -30,7 +30,6 @@ However, such full history sync, also called Initial Block Download (IBD), is un
 
 We call `fast sync` the process of synchronizing a new node, or a node that hasn't been keeping up with the chain for a while, and bringing it up to the latest known most-worked block. In this model we try to optimize for very fast syncing while sacrificing as little security assumptions as possible. As a matter of fact, the security model is almost identical as a full history sync, despite requiring orders of magnitude less data to download.
 
-
 At a high level, a fast-sync goes through the following process:
 
 1. Sync all block headers on the most worked chain as advertized by other nodes. Also, pick a header sufficiently back from the chain head. This is called the node horizon as it's the furthest a node can reorganize its chain on a new fork if it were to occur without triggering another new full sync.

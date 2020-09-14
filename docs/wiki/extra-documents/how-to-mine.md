@@ -30,11 +30,12 @@ Distribution-specific releases will likely appear over time, and will be listed 
 ## Installation
 
 ### Linux (all distributions)
+
 Download the zipped binary to your machine, and unzip it using the terminal. This will unzip into a directory called `grin-miner` which contains the `grin-miner` binary, GPU and CPU mining plugins, and the main configuration file, `grin-miner.toml`.
 
 For now, we'd recommend placing this somewhere relative to your home directory, and editing your path environment variable to ensure the `grin-miner` executable is available from wherever you run it. All of this can be done by running the following commands in the directory to which you downloaded grin-miner (substituting the grin-miner version number where necessary).
 
-```
+```bash
 tar -C ~/ xzf grin-miner-v1.0.2-480780316-linux-amd64.tgz
 echo 'export PATH=~/grin-miner-v1.0.2:$PATH' >> ~/.bashrc
 source ~/.bashrc
@@ -60,13 +61,13 @@ enable_stratum_server = true
 
 In one terminal window, run the wallet listener (entering your wallet password when prompted)
 
-```
+```bash
 grin-wallet listen
 ```
 
 In another, run your Grin node:
 
-```
+```bash
 grin
 ```
 
@@ -75,6 +76,7 @@ grin
 All configuration options for the mining plugins can be found, fully documented, in `grin-miner.toml`. The following steps should work to get most people up and running:
 
 ### Setting up grin-miner for CPU mining
+
 CPU Mining is Enabled by default in the configuration file. You may wish to use the `cuckaroo_cpu_avx2_29` plugin rather than the default if you have a relatively recent CPU.
 
 ### Setting up grin-miner for GPU Mining (Nvidia)
@@ -135,7 +137,7 @@ If you have multiple GPUs you’ll need to copy these 5 lines for each device an
 
 Ensure that your Grin node and wallet are running (see [Running Grin in Mining Mode](running-grin-in-mining-mode)), then, from your `grin-miner-vx.x.x` installation directory:
 
-```
+```bash
 ./grin-miner
 ```
 

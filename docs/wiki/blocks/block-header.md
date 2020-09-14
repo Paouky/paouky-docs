@@ -1,6 +1,6 @@
-### Block Header
+# Block Header
 
-General format of a **Block Header** in a MimbleWimble/Grin:
+General format of a **Block Header** in a Mimblewimble/Grin:
 
 | Field        | Description           | Size  |
 |:-------------|:-------------|:-----|
@@ -20,8 +20,9 @@ General format of a **Block Header** in a MimbleWimble/Grin:
 | pow  | Proof of work data | For cuck(AR)oo 29: 174 bytes.<br>For cuck(AT)oo 32: 189 bytes. |
 |   |   | Total:<br> **400** bytes for C29<br>or **415** bytes for C32  |
 
-### PoW
-General format of a **Proof Of Work** in a MimbleWimble/Grin:
+## PoW
+
+General format of a **Proof Of Work** in a Mimblewimble/Grin:
 
 | Field        | Description           | Size  |
 |:-------------|:-------------|:-----|
@@ -31,9 +32,9 @@ General format of a **Proof Of Work** in a MimbleWimble/Grin:
 | proof   | Proof of work data | cuckoo_size: 1byte<br>cuckoo_solution of C29: 42&lowast;29 bits=153 bytes<br>cuckoo_solution of C32: 42&lowast;32 bits=168 bytes  |
 |   |   | Sub-Total: **174** bytes for C29 and **189** bytes for C32  |
 
-
 ## Example
-Here is a **principle example** of a MimbleWimle/Grin block header. The related block is included in Mainnet chain block: [1869](https://grinscan.net/block/1869).
+
+Here is a **principle example** of a Mimblewimble/Grin block header. The related block is included in Mainnet chain block: [1869](https://grinscan.net/block/1869).
 
 | Offset        | Field           | Hex Value  |
 |:-------------|:-------------|:-----|

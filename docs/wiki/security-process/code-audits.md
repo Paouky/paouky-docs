@@ -16,7 +16,7 @@ perspectives can help ensure long term security for the Grin codebase.
 !!! note ""
     A complete list of PGP keys, canaries, CVEs and audits can be found in the [grin-security](https://github.com/mimblewimble/grin-security) repository.
 
-### Past Audits
+## Past Audits
 
 |  Audit     | Results      |
 | :--------: | :----------: |

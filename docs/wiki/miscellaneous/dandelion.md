@@ -72,6 +72,7 @@ The paper describes five types of attacks, and proposes specific updates to the 
 As with the original Dandelion protocol, epochs are asynchronous, each node keeping track of its own epoch, which the suggested duration being in the order of 10 minutes.
 
 ##### Anonymity Graph
+
  Rather than a line graph as per the original paper (which is 2-regular), a *quasi-4-regular graph* is constructed by a node at the beginning of each epoch: the node chooses (up to) two of its outbound peers uniformly at random as its _dandelion++ relays_. As a node enters into a new epoch, new dandelion++ relays are chosen.
 
 **Figure 2.** representation of a 4-regular graph.
@@ -128,7 +129,6 @@ The paper also proceeds to specify the size of the initiating time out parameter
     where `k`, `ε` are parameters and δ~hop~ is
     the time between each hop (e.g., network and/or internal node latency), transactions travel for `k` hops without any peer initiating diffusion with a probability of at least `1 − ε`.
 
-
 ## Dandelion in Grin
 
 ### Objectives
@@ -159,8 +159,6 @@ The choice to include Dandelion in Grin has two main motives behind it:
         |    A        |    X            | Kernel 1   |
         |    B        |    Y            | Kernel 2   |
         |    C        |    Z            |            |
-
-
 
 ### Current implementation
 
@@ -222,7 +220,7 @@ Additionally, unlike the Dandelion++ paper, the embargo timer is by default iden
 
 [^1]: [Dandelion++: Lightweight Cryptocurrency Networking with Formal Anonymity Guarantees (Sigmetrics'18)](https://arxiv.org/abs/1805.11060)
 
-[^2]: [Dandelion: Redesigning the Bitcoin Network for Anonymity (Sigmetrics'17) ](https://arxiv.org/abs/1701.04439)
+[^2]: [Dandelion: Redesigning the Bitcoin Network for Anonymity (Sigmetrics'17)](https://arxiv.org/abs/1701.04439)
 
 [^3]: [Dandelion BIP](https://github.com/dandelion-org/bips/blob/master/bip-dandelion.mediawiki)
 

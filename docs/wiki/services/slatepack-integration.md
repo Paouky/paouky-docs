@@ -22,8 +22,6 @@ Additionally, **Slatepack Addresses** are introduced to facilitate the interacti
 
 ## Overview
 
-
-
 ### Slatepack Address
 
 A Slatepack address is a bech32 encoded address, similar to those used in Bitcoin. However, Slatepack addresses do not touch the network; they are used strictly for transaction building between two wallets, and never appear on-chain or represent ownership.
@@ -40,7 +38,6 @@ grin1dhvv9mvarqwl6fderuxp3qgl6qppvhc9p4u24347ec0mvgg6342q4w6x56
 
 !!! tip ""
     Since Slatepack addresses are bech32, they can easily be QR encoded.
-
 
 ### Tor (Synchronous Tx Completion)
 
@@ -138,17 +135,13 @@ The proof's recipient address belongs to this wallet.
 
 For questions about the Slatepack standard or its implementation, send a message in @grincoin#support on Keybase.
 
-
-
-
 ---
-
 
 ## Technical Details
 
 See the [full specification](https://github.com/mimblewimble/grin-rfcs/pull/55) for complete technical details.
 
-#### Address
+### Address
 
 A `SlatepackAddress` is a bech32 encoded ed25519 public key which maps to:
 
@@ -160,7 +153,7 @@ Keys used in `SlatepackAddresses` are derived from a path from the master seed i
 !!! note "Unique addresses (not yet supported)"
     `SlatepackAddress` keys may be derived in parallel to the blinding factor derivation path, such that a unique address is derived for each new transaction.
 
-#### Message Formatting
+### Message Formatting
 
 `WORD_LENGTH`: `15` characters
 
@@ -176,7 +169,6 @@ Keys used in `SlatepackAddresses` are derived from a path from the master seed i
 * If a `SlatepackMessage` exceeds this value it must be handled as a `.slatepack` file instead of a string
 * This parameter chosen to cover as many cases as possible and still be supported by most clipboards
 
-
 Note that `WORD_LENGTH` and `LINE_BREAK` parameters are adjustable as a formatting convenience.
 
 !!! note ""
@@ -185,18 +177,20 @@ Note that `WORD_LENGTH` and `LINE_BREAK` parameters are adjustable as a formatti
 The `SlatepackWorkflow` establishes the steps followed to adhere to the standard:
 
 1. Try to establish connection via Tor
-	- Derive onion address from ED25519 public key decoded from the bech32 `SlatepackAddress`
-	- Attempt to complete the transaction via Tor and json-rpc as per the previous implementations
-	- If connection fails, proceed to step 2
+
+    * Derive onion address from ED25519 public key decoded from the bech32 `SlatepackAddress`
+    * Attempt to complete the transaction via Tor and json-rpc as per the previous implementations
+    * If connection fails, proceed to step 2
 1. Fall back to copy/paste (optionally encrypted) ascii-armored transaction strings known as `SlatepackMessage`
-	- If using encryption, derive encryption key: `SlatepackAddress` -> `ed25519 public key` -> `x25519 public key`
-	- Build ascii-armored string according to standard including `SimpleBase58Check`, appropriate binary encoding and framing
+    * If using encryption, derive encryption key: `SlatepackAddress` -> `ed25519 public key` -> `x25519 public key`
+    * Build ascii-armored string according to standard including `SimpleBase58Check`, appropriate binary encoding and framing
 
 1. A `SlatepackMessage` is a transaction string formatted for manual copy/paste transport. It contains the required components to build a transaction manually, similar to the transaction files previously supported but compacted for transport.
-	- Example:
-		```
-		BEGINSLATEPACK. 4H1qx1wHe668tFW yC2gfL8PPd8kSgv
-		pcXQhyRkHbyKHZg GN75o7uWoT3dkib R2tj1fFGN2FoRLY
-		GWmtgsneoXf7N4D uVWuyZSamPhfF1u AHRaYWvhF7jQvKx
-		wNJAc7qmVm9JVcm NJLEw4k5BU7jY6S eb. ENDSLATEPACK.
-		```
+    * Example:
+
+        ```slatepack
+        BEGINSLATEPACK. 4H1qx1wHe668tFW yC2gfL8PPd8kSgv
+        pcXQhyRkHbyKHZg GN75o7uWoT3dkib R2tj1fFGN2FoRLY
+        GWmtgsneoXf7N4D uVWuyZSamPhfF1u AHRaYWvhF7jQvKx
+        wNJAc7qmVm9JVcm NJLEw4k5BU7jY6S eb. ENDSLATEPACK.
+        ```
