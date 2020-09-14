@@ -1609,7 +1609,7 @@ The proof&#39;s recipient address belongs to this wallet.
 <hr />
 <h2 id="technical-details">Technical Details</h2>
 <p>See the <a href="https://github.com/mimblewimble/grin-rfcs/pull/55">full specification</a> for complete technical details.</p>
-<h4 id="address">Address</h4>
+<h3 id="address">Address</h3>
 <p>A <code>SlatepackAddress</code> is a bech32 encoded ed25519 public key which maps to:</p>
 <ul>
 <li>A Tor onion address <code>bech32 -&gt; ed25519 -&gt; onionv3</code></li>
@@ -1620,7 +1620,7 @@ The proof&#39;s recipient address belongs to this wallet.
 <p class="admonition-title">Unique addresses (not yet supported)</p>
 <p><code>SlatepackAddress</code> keys may be derived in parallel to the blinding factor derivation path, such that a unique address is derived for each new transaction.</p>
 </div>
-<h4 id="message-formatting">Message Formatting</h4>
+<h3 id="message-formatting">Message Formatting</h3>
 <p><code>WORD_LENGTH</code>: <code>15</code> characters</p>
 <ul>
 <li>Number of <code>SimpleBase58Check</code> encoded characters per word; chosen for human readability across device screen sizes</li>
@@ -1641,15 +1641,13 @@ The proof&#39;s recipient address belongs to this wallet.
 </div>
 <p>The <code>SlatepackWorkflow</code> establishes the steps followed to adhere to the standard:</p>
 <ol>
-<li>Try to establish connection via Tor<ul>
+<li>
+<p>Try to establish connection via Tor</p>
+<ul>
 <li>Derive onion address from ED25519 public key decoded from the bech32 <code>SlatepackAddress</code></li>
 <li>Attempt to complete the transaction via Tor and json-rpc as per the previous implementations</li>
 <li>If connection fails, proceed to step 2</li>
-</ul>
-</li>
-<li>
-<p>Fall back to copy/paste (optionally encrypted) ascii-armored transaction strings known as <code>SlatepackMessage</code></p>
-<ul>
+<li>Fall back to copy/paste (optionally encrypted) ascii-armored transaction strings known as <code>SlatepackMessage</code></li>
 <li>If using encryption, derive encryption key: <code>SlatepackAddress</code> -&gt; <code>ed25519 public key</code> -&gt; <code>x25519 public key</code></li>
 <li>Build ascii-armored string according to standard including <code>SimpleBase58Check</code>, appropriate binary encoding and framing</li>
 </ul>
@@ -1657,12 +1655,15 @@ The proof&#39;s recipient address belongs to this wallet.
 <li>
 <p>A <code>SlatepackMessage</code> is a transaction string formatted for manual copy/paste transport. It contains the required components to build a transaction manually, similar to the transaction files previously supported but compacted for transport.</p>
 <ul>
-<li>Example:
-    <div class="highlight"><pre><span></span><code>BEGINSLATEPACK. 4H1qx1wHe668tFW yC2gfL8PPd8kSgv
+<li>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code>BEGINSLATEPACK. 4H1qx1wHe668tFW yC2gfL8PPd8kSgv
 pcXQhyRkHbyKHZg GN75o7uWoT3dkib R2tj1fFGN2FoRLY
 GWmtgsneoXf7N4D uVWuyZSamPhfF1u AHRaYWvhF7jQvKx
 wNJAc7qmVm9JVcm NJLEw4k5BU7jY6S eb. ENDSLATEPACK.
-</code></pre></div></li>
+</code></pre></div>
+
+</li>
 </ul>
 </li>
 </ol>

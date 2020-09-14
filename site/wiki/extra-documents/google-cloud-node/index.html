@@ -1225,11 +1225,13 @@
                 
                 
                 <h1 id="grin-node-on-google-cloud-for-free">Grin node on Google Cloud (for free)</h1>
-<p>Thanks to Google Cloud's <a href="https://cloud.google.com/free/docs/frequently-asked-questions#always-free">Always Free</a>  program, it's possible to create an instance on Cloud Compute that runs a full Grin node, 24/7, without it costing you anything. This is a cheap (free!) and fool-proof way to get a node up and running since it:
-* Is not dependent on the compatibility of your computer or OS;
-* Does not require you to open up ports on your network;
-* Starts you off from a clean instance; and
-* Allows you to follow instructions that are replicable.</p>
+<p>Thanks to Google Cloud's <a href="https://cloud.google.com/free/docs/frequently-asked-questions#always-free">Always Free</a>  program, it's possible to create an instance on Cloud Compute that runs a full Grin node, 24/7, without it costing you anything. This is a cheap (free!) and fool-proof way to get a node up and running since it:</p>
+<ul>
+<li>Is not dependent on the compatibility of your computer or OS;</li>
+<li>Does not require you to open up ports on your network;</li>
+<li>Starts you off from a clean instance; and</li>
+<li>Allows you to follow instructions that are replicable.</li>
+</ul>
 <p>The only requirement is that you are willing to sign up for a Google Cloud account and that you have a valid credit or debit card (which will not be charged).</p>
 <p><strong>NOTE: This is for testing purposes only. The node is free to run, but if you make mistakes in the configuration you may incur charges. Make sure you monitor your account and billing status regularly whilst running your instance to avoid any unpleasant surprises.</strong></p>
 <h2 id="google-cloud-set-up">Google Cloud Set up</h2>
@@ -1240,7 +1242,7 @@
 </ol>
 <h2 id="provisioning-an-instance">Provisioning an instance</h2>
 <p>From the cloud shell, run the following command to create <code>grin-node1</code>, an always free-compatible instance running Linux Debian 10:</p>
-<div class="highlight"><pre><span></span><code>gcloud beta compute instances create grin-node1 --zone=us-east1-b --machine-type=f1-micro --tags=grin-node --image=debian-10-buster-v20191210 --image-project=debian-cloud --boot-disk-size=30GB --boot-disk-type=pd-standard --boot-disk-device-name=grin-disk1
+<div class="highlight"><pre><span></span><code>gcloud beta compute instances create grin-node1 --zone<span class="o">=</span>us-east1-b --machine-type<span class="o">=</span>f1-micro --tags<span class="o">=</span>grin-node --image<span class="o">=</span>debian-10-buster-v20191210 --image-project<span class="o">=</span>debian-cloud --boot-disk-size<span class="o">=</span>30GB --boot-disk-type<span class="o">=</span>pd-standard --boot-disk-device-name<span class="o">=</span>grin-disk1
 </code></pre></div>
 
 <h2 id="building">Building</h2>
@@ -1249,11 +1251,13 @@
 <div class="highlight"><pre><span></span><code>sudo apt-get update
 </code></pre></div>
 
-<p>Install some tools:
-* git
-* pkg-config
-* nano, a simple text editor
-* tmux, which will allow you to run multiple terminal sessions and keep your node running on your instance once you disconnect remotely. See <a href="https://medium.com/actualize-network/a-minimalist-guide-to-tmux-13675fb160fa">gentle intro</a>  and <a href="https://gist.github.com/MohamedAlaa/2961058">cheatsheet</a>.</p>
+<p>Install some tools:</p>
+<ul>
+<li>git</li>
+<li>pkg-config</li>
+<li>nano, a simple text editor</li>
+<li>tmux, which will allow you to run multiple terminal sessions and keep your node running on your instance once you disconnect remotely. See <a href="https://medium.com/actualize-network/a-minimalist-guide-to-tmux-13675fb160fa">gentle intro</a>  and <a href="https://gist.github.com/MohamedAlaa/2961058">cheatsheet</a>.</li>
+</ul>
 <div class="highlight"><pre><span></span><code> sudo apt-get install git nano tmux pkg-config
 </code></pre></div>
 
@@ -1262,21 +1266,22 @@
 <div class="highlight"><pre><span></span><code>sudo apt-get install clang cmake libncurses5-dev libncursesw5-dev zlib1g-dev libssl-dev tor
 </code></pre></div>
 
-<p>Install rust:
-<div class="highlight"><pre><span></span><code>curl https://sh.rustup.rs -sSf | sh; source $HOME/.cargo/env
-</code></pre></div></p>
+<p>Install rust:</p>
+<div class="highlight"><pre><span></span><code>curl https://sh.rustup.rs -sSf <span class="p">|</span> sh<span class="p">;</span> <span class="nb">source</span> <span class="nv">$HOME</span>/.cargo/env
+</code></pre></div>
+
 <p>Clone grin and build a release version</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/mimblewimble/grin.git
-cd grin
+<span class="nb">cd</span> grin
 git checkout v4.0.2
 cargo build --release
 </code></pre></div>
 
 <p>Building takes ~90 minutes on the <code>grin-node1</code> instance. Slow, but it's free. Good time for a coffee break. Alternatively, you can skip the build process by downloading the latest Grin binary from <a href="https://github.com/mimblewimble/grin/releases">here</a>.</p>
 <p>Clone grin-wallet and build a release version</p>
-<div class="highlight"><pre><span></span><code>cd ~
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~
 git clone https://github.com/mimblewimble/grin-wallet.git
-cd grin-wallet
+<span class="nb">cd</span> grin-wallet
 cargo build --release
 </code></pre></div>
 
@@ -1284,14 +1289,14 @@ cargo build --release
 <h2 id="syncing-a-grin-node">Syncing a Grin node</h2>
 <p>When the build has completed, create a new <code>tmux</code> session and launch your Grin node in it:</p>
 <div class="highlight"><pre><span></span><code>tmux new -s main
-cd target/release
+<span class="nb">cd</span> target/release
 ./grin
 </code></pre></div>
 
 <p>The node should automatically connect to peers and begin syncing. This might also take a while, so you might want to go for another break.</p>
-<p>Once completed, the node should be at the same block height as https://grinscan.net/. We can now detach from the tmux session running the node by pressing <code>ctrl+b</code>, then <code>d</code>. This will allow us to continue interfacing with the gcloud instance command line, with the node running in the background. If you want to check in on the node at a later time, you can attach back into it's tmux session with <code>tmux a -t main</code></p>
+<p>Once completed, the node should be at the same block height as <a href="https://grinscan.net/">https://grinscan.net/</a>. We can now detach from the tmux session running the node by pressing <code>ctrl+b</code>, then <code>d</code>. This will allow us to continue interfacing with the gcloud instance command line, with the node running in the background. If you want to check in on the node at a later time, you can attach back into it's tmux session with <code>tmux a -t main</code></p>
 <p>Optionally, from the cloud shell, open up your node's p2p port so it can receive inbound connections:</p>
-<div class="highlight"><pre><span></span><code>gcloud compute firewall-rules create main-p2p-port --direction=INGRESS --action=ALLOW --rules=tcp:3414 --target-tags=grin-node1
+<div class="highlight"><pre><span></span><code>gcloud compute firewall-rules create main-p2p-port --direction<span class="o">=</span>INGRESS --action<span class="o">=</span>ALLOW --rules<span class="o">=</span>tcp:3414 --target-tags<span class="o">=</span>grin-node1
 </code></pre></div>
 
 <h2 id="connecting-to-google-grin-node-from-local-wallet">Connecting to Google Grin node from local wallet</h2>
@@ -1304,16 +1309,16 @@ Follow instructions for setting up a Grin node as above. Once built and synched 
 <ul>
 <li>set api_http_addr to <code>0.0.0.0:3413</code> and host to <code>0.0.0.0</code>:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>api_http_addr = &quot;0.0.0.0:3413&quot;
+<div class="highlight"><pre><span></span><code><span class="nv">api_http_addr</span> <span class="o">=</span> <span class="s2">&quot;0.0.0.0:3413&quot;</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>host = &quot;0.0.0.0&quot;
+<div class="highlight"><pre><span></span><code><span class="nv">host</span> <span class="o">=</span> <span class="s2">&quot;0.0.0.0&quot;</span>
 </code></pre></div>
 
 <ul>
 <li>open up your node's api port so it can receive inbound connections</li>
 </ul>
-<div class="highlight"><pre><span></span><code>gcloud compute firewall-rules create main-api-port --direction=INGRESS --action=ALLOW --rules=tcp:3413 --target-tags=grin-node1
+<div class="highlight"><pre><span></span><code>gcloud compute firewall-rules create main-api-port --direction<span class="o">=</span>INGRESS --action<span class="o">=</span>ALLOW --rules<span class="o">=</span>tcp:3413 --target-tags<span class="o">=</span>grin-node1
 </code></pre></div>
 
 <ul>
@@ -1321,10 +1326,10 @@ Follow instructions for setting up a Grin node as above. Once built and synched 
 <li>on your local machine, create a new file for storing the api secret from the previous step (ex: <code>~/.grin/main/.remote_api_secret</code>, but can be any location). Save file with key value copied in previous step.</li>
 <li>now update your local wallet configuration file: set node_api_secret_path to the path of the file created in the previous step (ex: <code>~/.grin/main/.remote_api_secret</code>) and update check_node_api_http_addr with IP address of your Google instance:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>api_secret_path = &quot;~/.grin/main/.remote_api_secret&quot;
+<div class="highlight"><pre><span></span><code><span class="n">api_secret_path</span> <span class="o">=</span> <span class="s">&quot;~/.grin/main/.remote_api_secret&quot;</span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code>check_node_api_http_addr = &quot;http://{YourGoogleCloudIP}:3413&quot;
+<div class="highlight"><pre><span></span><code><span class="n">check_node_api_http_addr</span> <span class="o">=</span> <span class="s">&quot;http://{YourGoogleCloudIP}:3413&quot;</span>
 </code></pre></div>
 
 <ul>
@@ -1333,16 +1338,16 @@ Follow instructions for setting up a Grin node as above. Once built and synched 
 <div class="highlight"><pre><span></span><code>./grin-wallet info
 Password:
 
-____ Wallet Summary Info - Account &#39;default&#39; as of height 235438 ____
+____ Wallet Summary Info - Account <span class="s1">&#39;default&#39;</span> as of height <span class="m">235438</span> ____
 
- Confirmed Total                  | 0.000000000
- Awaiting Confirmation (&lt; 10)     | 0.000000000
- Awaiting Finalization            | 0.000000000
- Locked by previous transaction   | 0.000000000
- -------------------------------- | -------------
- Currently Spendable              | 0.000000000
+ Confirmed Total                  <span class="p">|</span> <span class="m">0</span>.000000000
+ Awaiting Confirmation <span class="o">(</span>&lt; <span class="m">10</span><span class="o">)</span>     <span class="p">|</span> <span class="m">0</span>.000000000
+ Awaiting Finalization            <span class="p">|</span> <span class="m">0</span>.000000000
+ Locked by previous transaction   <span class="p">|</span> <span class="m">0</span>.000000000
+ -------------------------------- <span class="p">|</span> -------------
+ Currently Spendable              <span class="p">|</span> <span class="m">0</span>.000000000
 
-Command &#39;info&#39; completed successfully
+Command <span class="s1">&#39;info&#39;</span> completed successfully
 </code></pre></div>
 
 <h2 id="future-work">Future work</h2>
