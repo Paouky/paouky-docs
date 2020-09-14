@@ -266,8 +266,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../.." title="./ Grin" class="md-nav__link">
-      ./ Grin
+    <a href="../../.." title="./Grin" class="md-nav__link">
+      ./Grin
     </a>
   </li>
 
@@ -1188,7 +1188,7 @@
                 
                 
                 <h1 id="sending-grins">Sending Grins</h1>
-<p>To send grins, use the <code>send</code> command, and specify both the destination address (<code>-d</code>) and the amount.</p>
+<p>To send grins, use the <code>send</code> command and specify both the destination address (<code>-d</code>) and the amount.</p>
 <div class="highlight"><pre><span></span><code>grin-wallet send -d <span class="o">[</span>address<span class="o">]</span> <span class="o">[</span>amount<span class="o">]</span>
 </code></pre></div>
 
@@ -1198,14 +1198,14 @@
 
 <div class="admonition note">
 <p class="admonition-title">Locked Outputs</p>
-<p>From now on and until confirmed in the chain, the outputs used in this transcation are <a href="../../wallet-guide/#cancel">locked</a>.</p>
+<p>From now on and until confirmed in the chain, the outputs used in this transcation are <a href="../../wallet-handbook/#cancel">locked</a>.</p>
 </div>
 <p>The wallets will interact through Tor and complete the process automatically.</p>
-<p>However, If the connection wasn't successful, your wallet will output a Slatepack message which you need to provide the receiver with. The receiver then uses the <code>receive</code> command to process it (as demonstrated earlier), and returns back to you a Slatepack he produced himself.</p>
+<p>However, If the connection wasn't successful, your wallet will output a Slatepack message which you need to provide the receiver with. The receiver then uses the <code>receive</code> command to process it (as demonstrated earlier), and returns back a Slatepack he produced himself.</p>
 <p>Simply type the following command:</p>
 <p><div class="highlight"><pre><span></span><code>grin-wallet finalize
 </code></pre></div>
-And enter into the prompt the last Slatepack message you were sent.</p>
+And enter into the prompt the Slatepack message you got from the receiver.</p>
 <p>Your wallet will complete the transaction building process and post it to the network, along with a fee, to be included in an upcoming block. Celebrate this milestone with an unapologizing smile ツ</p>
                 
               

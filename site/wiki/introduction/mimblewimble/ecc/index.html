@@ -264,8 +264,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../.." title="./ Grin" class="md-nav__link">
-      ./ Grin
+    <a href="../../../.." title="./Grin" class="md-nav__link">
+      ./Grin
     </a>
   </li>
 
@@ -1321,14 +1321,18 @@ We can then write it as:</p>
 
 <p>So that adding the two points P and Q results in -R, the inverse of R.</p>
 <p>If we draw a line passing through P and Q, this line will cross a third point on the curve, R (so that P, Q and R are aligned). If we take the inverse of this point, which is simply the one symmetric to it about the x-axis, we have found the result of adding two curve points, P + Q. Let’s illustrate:</p>
-<p><img alt="ecc1" src="../../../../assets/images/ecc1.png" width="650" /></p>
+<p><center>
+<img alt="ecc1" src="../../../../assets/images/ecc1.png" width="200" />
+</center></p>
 <p>In other words, addition of points is basically hopping around on the curve to a different, seemingly random point; It looks random unless you know the exact operation performed to reach it.</p>
 <h4 id="multiplication">Multiplication</h4>
 <p>We can’t multiply a point by another point, but we can multiply a point by a number (scalar). Multiplying point <strong>P</strong> by scalar <code>k</code> would simply require adding point <strong>P</strong> onto it self <code>k</code> times. This operation is easily demonstrated by assigning <code>k=2</code> so that <code>k*P = P+P</code>. To illustrate how it would look like on the curve, we draw a tangent line. You can imagine that the line intersects three points, whereas two of them are <strong>P</strong>, such that:</p>
 <div class="highlight"><pre><span></span><code>P + P = -R
 </code></pre></div>
 
-<p><img alt="ecc2" src="../../../../assets/images/ecc2.png" width="650" /></p>
+<p><center>
+<img alt="ecc2" src="../../../../assets/images/ecc2.png" width="200" />
+</center></p>
 <div class="admonition note">
 <p>To calculate <code>8*P</code> for e.g. wouldn’t take 8 operations, but only 3; you can find <code>2*P</code>, then add it onto itself, and then add <code>4*P</code> onto itself, for the final result of <code>8*P</code>.</p>
 </div>

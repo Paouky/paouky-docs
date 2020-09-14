@@ -45,7 +45,9 @@ So that adding the two points P and Q results in -R, the inverse of R.
 
 If we draw a line passing through P and Q, this line will cross a third point on the curve, R (so that P, Q and R are aligned). If we take the inverse of this point, which is simply the one symmetric to it about the x-axis, we have found the result of adding two curve points, P + Q. Let’s illustrate:
 
-![ecc1](../../../assets/images/ecc1.png){ width=650 }
+<center>
+![ecc1](../../../assets/images/ecc1.png){ width=200 }
+</center>
 
 In other words, addition of points is basically hopping around on the curve to a different, seemingly random point; It looks random unless you know the exact operation performed to reach it.
 
@@ -57,7 +59,10 @@ We can’t multiply a point by another point, but we can multiply a point by a n
 P + P = -R
 ```
 
-![ecc2](../../../assets/images/ecc2.png){ width=650 }
+<center>
+![ecc2](../../../assets/images/ecc2.png){ width=200 }
+</center>
+
 
 !!! note ""
     To calculate `8*P` for e.g. wouldn’t take 8 operations, but only 3; you can find `2*P`, then add it onto itself, and then add `4*P` onto itself, for the final result of `8*P`.

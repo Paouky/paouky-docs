@@ -7,8 +7,8 @@ The *Quickstart* series will guide you in your first steps of installing a Grin 
 
 We begin by downloading the precompiled binaries.
 
-* `grin` - the Grin node.
-* `grin-wallet` - the command-line wallet.
+* `grin` - grin node.
+* `grin-wallet` - command-line wallet.
 
 First, choose your operating system:
 
@@ -20,16 +20,9 @@ First, choose your operating system:
 
 ## Linux
 
-Go to [grin.mw/download](https://grin.mw/download) and download the tgz files of `grin` and `grin-wallet` by clicking on their name titles.
+Go to [grin.mw/download](https://grin.mw/download) and download the tgz files of grin and grin-wallet by clicking on their name titles.
 
-<p align="center">
-  <img src="https://paouky.github.io/docs/assets/images/download-page.png" loading="lazy">
-</p>
-
-
-**Verify Release**
-
-Type the following commands and compare the results against the respective SHA256 HASH displayed on the website.
+To verify the release, calculate the `sha256sum` of the binaries and compare the result against their respective SHA256 HASH on the website (or in [releases](https://github.com/mimblewimble/grin/releases)).
 
 ```bash
 sha256sum grin-wallet-$VERSION-linux-amd64.tar.gz
@@ -98,9 +91,9 @@ brew install grin grin-wallet
 
 Go to [grin.mw/download](https://grin.mw/download) and download the zip files of grin and grin-wallet by clicking on their name titles.
 
-<p align="center">
-  <img src="https://paouky.github.io/docs/assets/images/download-page.png" loading="lazy">
-</p>
+<center>
+![download page image](../../assets/images/download-page.png)
+</center>
 
 We recommend that you create a directory called `Grin` in `C:\Users\%USER%\AppData\Local`. The parent directory is where most user windows apps are installed, but if you want to put them somewhere else, that'll work too.
 
@@ -109,6 +102,7 @@ In this directory, extract both binaries `grin.exe` and `grin-wallet.exe`. Then,
 ```text
 set PATH=%PATH%;C:\Users\%USER%\AppData\Local
 ```
+
 *Remember to replace %USER%*
 
 

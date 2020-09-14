@@ -1,6 +1,6 @@
 # Transactions
 
-Mimblewimble transactions are interactive, meaning both parties need some kind of interaction with each other to exchange the necessary data. This communication can happen in countless different ways, such as through a network, email, forum, social media, chat, letter, carrier pigeon etc.
+Mimblewimble transactions are interactive, meaning both parties need some kind of communication to interact with each other and exchange the necessary data to create a transaction.
 
 Let's see how a standard transaction flow looks like:
 
@@ -36,7 +36,7 @@ However, if the Tor connection between the wallets is not successful for whateve
 
 Recall that slates are simply partial transactions. Slatepacks are slates encoded inside compact, neatly organized and encrypted text messages.
 
-Using this method, 2~nd~ and 3~rd~ steps, where the sender and receiver pass the slate to one another, would be done manually by exchanging these slatepack messages. To do so, almost every available communication channel will work; Email, chat, social media, letters, pigeons etc. Creativity is the limit.
+Using this method, 2~nd~ and 3~rd~ steps, where the sender and receiver pass the slate to one another, would be done manually by exchanging these slatepack messages. To do so, almost every available communication channel will work; e-mail, forum, chat, social media, letters, pigeons etc. Creativity is the only limit.
 
 The address (public key) initially provided by the receiver will be used to the encrypt the slatepacks, so that only the transacting parties are able to see the data inside.
 

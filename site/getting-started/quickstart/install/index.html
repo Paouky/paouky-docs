@@ -266,8 +266,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../.." title="./ Grin" class="md-nav__link">
-      ./ Grin
+    <a href="../../.." title="./Grin" class="md-nav__link">
+      ./Grin
     </a>
   </li>
 
@@ -1299,8 +1299,8 @@
 <p>The <em>Quickstart</em> series will guide you in your first steps of installing a Grin node, creating a wallet, and making a transaction.</p>
 <p>We begin by downloading the precompiled binaries.</p>
 <ul>
-<li><code>grin</code> - the Grin node.</li>
-<li><code>grin-wallet</code> - the command-line wallet.</li>
+<li><code>grin</code> - grin node.</li>
+<li><code>grin-wallet</code> - command-line wallet.</li>
 </ul>
 <p>First, choose your operating system:</p>
 <ul>
@@ -1310,13 +1310,8 @@
 </ul>
 <hr />
 <h2 id="linux">Linux</h2>
-<p>Go to <a href="https://grin.mw/download">grin.mw/download</a> and download the tgz files of <code>grin</code> and <code>grin-wallet</code> by clicking on their name titles.</p>
-<p align="center">
-  <img src="https://paouky.github.io/docs/assets/images/download-page.png" loading="lazy">
-</p>
-
-<p><strong>Verify Release</strong></p>
-<p>Type the following commands and compare the results against the respective SHA256 HASH displayed on the website.</p>
+<p>Go to <a href="https://grin.mw/download">grin.mw/download</a> and download the tgz files of grin and grin-wallet by clicking on their name titles.</p>
+<p>To verify the release, calculate the <code>sha256sum</code> of the binaries and compare the result against their respective SHA256 HASH on the website (or in <a href="https://github.com/mimblewimble/grin/releases">releases</a>).</p>
 <div class="highlight"><pre><span></span><code>sha256sum grin-wallet-<span class="nv">$VERSION</span>-linux-amd64.tar.gz
 sha256sum grin-<span class="nv">$VERSION</span>-linux-amd64.tar.gz
 </code></pre></div>
@@ -1358,15 +1353,15 @@ sudo tar -C /usr/local/bin -xzf grin-wallet-<span class="nv">$VERSION</span>-lin
 <hr />
 <h2 id="windows">Windows</h2>
 <p>Go to <a href="https://grin.mw/download">grin.mw/download</a> and download the zip files of grin and grin-wallet by clicking on their name titles.</p>
-<p align="center">
-  <img src="https://paouky.github.io/docs/assets/images/download-page.png" loading="lazy">
-</p>
-
+<p><center>
+<img alt="download page image" src="../../../assets/images/download-page.png" />
+</center></p>
 <p>We recommend that you create a directory called <code>Grin</code> in <code>C:\Users\%USER%\AppData\Local</code>. The parent directory is where most user windows apps are installed, but if you want to put them somewhere else, that'll work too.</p>
 <p>In this directory, extract both binaries <code>grin.exe</code> and <code>grin-wallet.exe</code>. Then, add them to your path by typing in the terminal:</p>
-<p><div class="highlight"><pre><span></span><code>set PATH=%PATH%;C:\Users\%USER%\AppData\Local
+<div class="highlight"><pre><span></span><code>set PATH=%PATH%;C:\Users\%USER%\AppData\Local
 </code></pre></div>
-<em>Remember to replace %USER%</em></p>
+
+<p><em>Remember to replace %USER%</em></p>
 <p>That's it, you're done!</p>
                 
               
@@ -1386,7 +1381,7 @@ sudo tar -C /usr/local/bin -xzf grin-wallet-<span class="nv">$VERSION</span>-lin
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../.." title="./ Grin" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../.." title="./Grin" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1395,7 +1390,7 @@ sudo tar -C /usr/local/bin -xzf grin-wallet-<span class="nv">$VERSION</span>-lin
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                ./ Grin
+                ./Grin
               </div>
             </div>
           </a>

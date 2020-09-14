@@ -36,6 +36,7 @@
     [TX Graph Confidentality](https://forum.grin.mw/t/tx-graph-confidentiality/1260) </br>
     [Response to Reavealing TX Graph](https://forum.grin.mw/t/my-full-response-to-the-blocks-questions/6566) </br>
     [Some Thoughts on Privacy](https://forum.grin.mw/t/some-thoughts-on-privacy/6581) </br>
+    [How to open port 3414 (and why)](https://forum.grin.mw/t/how-to-open-port-3414-and-why/7825) </br>
     [Scheduled PoW upgrades proposal](https://forum.grin.mw/t/scheduled-pow-upgrades-proposal/820) </br>
     [Choice of ASIC Resistant PoW for GPU miners](https://forum.grin.mw/t/choice-of-asic-resistant-pow-for-gpu-miners/1017) </br>
     [Put later phase-outs on hold proposal](https://forum.grin.mw/t/grin-improvement-proposal-1-put-later-phase-outs-on-hold-and-rephrase-primary-pow-commitment/4653) </br>
@@ -43,6 +44,7 @@
     [Genesis block message](https://forum.grin.mw/t/genesis-block-message/250) </br>
     [Queries about transaction aggregation](https://forum.grin.mw/t/some-queries-about-transaction-aggregation/1753 </br>)
     [Aggregate merkle proofs](https://forum.grin.mw/t/aggregate-merkle-proofs/4948) </br>
+    [Unique kernels thread #73](https://forum.grin.mw/t/unique-kernel-thread-73/7688/14) </br>
     [Sending a transaction to more parties than originally intended](https://forum.grin.mw/t/sending-a-transaction-to-more-different-parties-than-originally-intended/4985) </br>
     [Reasoning behind block weight limit](https://forum.grin.mw/t/reasoning-behind-block-weight-limit/6310) </br>
     [Hardforks on Grin v5.0.0 and beyond](https://forum.grin.mw/t/network-upgrades-hard-forks-on-grin-v5-0-0-and-beyond/7231) </br>

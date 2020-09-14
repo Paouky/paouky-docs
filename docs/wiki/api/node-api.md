@@ -5,7 +5,7 @@ This endpoint requires, by default, [basic authentication](https://en.wikipedia.
 
 ## Node API v2
 
-This API version uses jsonrpc for its requests. It is split up into a foreign API and an owner API. The documentation for these endpoints is automatically generated:
+This API version uses JSON-RPC for its requests. It is split up into a foreign API and an owner API. The documentation for these endpoints is automatically generated:
 
 * [Owner API](https://docs.rs/grin_api/latest/grin_api/trait.OwnerRpc.html)
 * [Foreign API](https://docs.rs/grin_api/latest/grin_api/trait.ForeignRpc.html)

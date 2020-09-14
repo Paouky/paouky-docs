@@ -12,10 +12,10 @@ grin
 You should see the following window:
 ![TUI](../../assets/images/tui.png)
 Congratulations! 🎉 You are now running a Grin full node.
-The initial sync might take from 30 minutes to a few hours depending on your connection speed and CPU performance.
+The initial sync might take anywhere from 30 minutes to a few hours depending on your connection speed and CPU performance.
 
 !!! tip ""
-    If you have a good Internet connection, you can help strengthen the network by keeping your PC running with a grin node and [port 3414 open](TODO).
+    If you have a good Internet connection, you can help strengthen the network by keeping your PC running with a grin node and [port 3414 open](https://forum.grin.mw/t/how-to-open-port-3414-and-why/7825).
 
 All data files will be created at the hidden folder `~/.grin` (under your home directory). Inside this folder, of special interest is the file `grin-server.toml` which can be used to modify configuration options.
 
@@ -43,7 +43,7 @@ Next, the wallet will show your recovery-phrase:
 ```text
 Your recovery phrase is:
 
-undo execute festival romance just void custom leopard balcony trick waste castle fire master lecture ordinary million slam wise oil whisper mechanic episode room
+fire execute festival romance just void lecture leopard balcony trick waste castle undo master custom ordinary million slam wise oil whisper mechanic episode room
 ```
 This phrase is a list of 24 words which encode all the information needed to recover your wallet. If your computer breaks or your hard drive becomes corrupted, you can enter `grin-wallet init -r` and type the phrase to recover your grins.
 

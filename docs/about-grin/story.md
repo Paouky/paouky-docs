@@ -42,15 +42,15 @@ On *Oct 20 2016*, a pseudonymous developer using the name Ignotus Peverell, anno
     Grin is short for the Gringotts wizarding bank.
 
 ```text
-16:45 -!- igno_peverell [~user@104.238.169.137] has joined #bitcoin-wizards
-16:47 < igno_peverell> I have a minimal implementation of MimbleWimble available. It's very far from complete but has the basics, included the summing of pedersen commitments:
-16:47 < igno_peverell> https://github.com/ignopeverell/grin
-16:47 < igno_peverell> Any feedback or review is greatly appreciated. Thanks!
+-!- igno_peverell [~user@104.238.169.137] has joined #bitcoin-wizards
+<igno_peverell> I have a minimal implementation of MimbleWimble available. It's very far from complete but has the basics, included the summing of pedersen commitments:
+<igno_peverell> https://github.com/ignopeverell/grin
+<igno_peverell> Any feedback or review is greatly appreciated. Thanks!
 ```
 
 Igno was joined on GitHub by other developers who took interest in the project, several of them bearing pseudonyms of other Harry Potter characters.
 
-While Mimblewimble serves as the foundation to transacting, it constitutes a relatively small part of a complete blockchain cryptocurrency, and many choices were yet to be made. Thus, began the journey to develop a full working implementation.
+While Mimblewimble serves as the foundation to a blockchain, it constitutes a relatively small part of a complete cryptocurrency, and many choices were yet to be made. Thus, began the journey to create a full implementation. A community of contributors and users slowly started to form around grin.
 
 ### Launch
 
@@ -59,7 +59,7 @@ Grin's genesis block was mined on January 15th, 2019. It was, and still is, youn
 !!! note ""
     Several months after launch, Ignotus Peverell disappeared and has yet to return.
 
-Developers distributed around the world are contributing to build Grin, some of them funded by donations to work on the project full-time. Governance and development will always remain completely transparent and open for every community member to join.
+Developers distributed around the world are contributing to build grin, some of them funded by donations to work on the project full-time. Development will always remain completely transparent and open for anybody to join.
 
 [^1]: [The Mimblewimble Whitepaper](https://scalingbitcoin.org/papers/mimblewimble.txt)
 [^2]: [Andrew Poelstra's Paper](https://download.wpsoftware.net/bitcoin/wizardry/mimblewimble.pdf)
