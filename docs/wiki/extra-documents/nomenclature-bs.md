@@ -12,13 +12,16 @@ If it weren't explicitly useful (in my opinion) to name things unconventionally,
 _We obviously don't want to cross the line into copyright infringement. There are plenty of historical and wizardly themes to choos from that are not strictly inspired by modern novels._
 
 Some discussion:
+
 * https://www.grin-forum.org/t/meeting-notes-governance-aug-15-2018/644/2?u=0-x
 * https://www.grin-forum.org/t/technomity-new-members/635/2?u=0-x
 
 GRIN (GOBLINS' Righteous Intergalactic Network)
 
-# Council Name
+## Council Name
+
 What do we call the "technomity" aka the Council of Grin, given it certainly doesn't matter, and there are so many fun witchy things to choose from? This group will be cited by name when future upgrades, discussions, and decisions arise. Some ideas:
+
 * The GAMUT (GOBLINs Adhocratic Magical Undertakings Thing) (Who runs the GAMUT? https://en.wiktionary.org/wiki/run_the_gamut) https://en.wikipedia.org/wiki/Thing_(assembly) also referencet to supreme wizard court in harry potter, the Wizengamot. https://en.wikipedia.org/wiki/Adhocracy
 * Prefects or præfectus/praefectus/praefectii- leadership, appear in harry potter books as upperclassmen.
 * Spontaneous Order of GOBLINS
@@ -41,28 +44,33 @@ What do we call the "technomity" aka the Council of Grin, given it certainly doe
 * Chamber of Intermagical Affairs, aka the CIA?
 * Assembly of Seers? Seer Association? Seers, Robust &amp; Company?
 
-# Wallet/Miner Names
+## Wallet/Miner Names
+
 These are all totally free to use for any efforts.
+
 * Wink
 * Nod
 * Smirk
 
-# Mascot Names
+## Mascot Names
+
 * Cuthru
 * Langlock
 * Alice (https://tmgox.com/product/alice-embroidered-womens-polo-shirt/)
 * Chesire Cat (immensely cool and in public domain: https://upload.wikimedia.org/wikipedia/commons/8/8a/Arthur_Rackham_Cheshire_Cat.jpeg)
 
-# Currency name [Solved]
+## Currency name [Solved]
+
 In what units do we measure the grin currency?
+
 * grins (milli, micro, etc).
 * Winks and Nods?
 
-# Currency Symbol
+## Currency Symbol
+
 Discussion: https://www.grin-forum.org/t/currency-symbol-other-bs/484
 
 * we could do something absolutely evil and comandeer the symbol for generic currency... ¤ ... ¤333 .... https://en.wikipedia.org/wiki/Currency_sign_(typography) it is the universal ISO symbol for money............................... i feel like i've peekend inside pandora's box. **GOODNESS I like this one.** It's like a glitch in the matrix.... and very philosophicala symbolic.
-
 
 >Roman Czyborra writes in his [Good ole' ASCII](http://www.unicodecharacter.com/charsets/iso646.html) that "the socialist countries managed to substitute the international currency sign ¤ for ASCII's capitalist dollar sign $ in the the first international reference version ISO-646-IRV". However, the international currency symbol ¤ was proposed for inclusion in the international standard character code in place of the dollar or pound sign by the Italian delegation to the CCITT, not by the socialist countries. In a later vote, Italy, Portugal, Switzerland, and the USSR favored the use of the ¤ character; Canada, France, Germany, the Netherlands, Sweden, and the United Kingdom preferred to standardize the $ and £ signs.
 Sources: CCITT Working Group on Alphabets, October 6-9, 1964, CBI 67, box 3, folder 3; ISO TC 97/SC 2 and CCITT/GM ALP joint meeting, April 26-28, 1966, NMAH 310, box 5.
@@ -76,11 +84,11 @@ doesnt show
 
 These are very good old English... very in the style of.
 http://www.wikiwand.com/en/Insular_G
+
 * ᵹ &gins; 1D79 PhonExt LATIN SMALL LETTER INSULAR G
 * Ᵹ &Gins; A77D LatExtD LATIN CAPITAL LETTER INSULAR G
 * ꝿ &ginsturn; A77F LatExtD LATIN SMALL LETTER TURNED INSULAR G
 * Ꝿ &Ginsturn; A77E LatExtD LATIN CAPITAL LETTER TURNED INSULAR G
-
 
 * ꟿ &M5leg; A7FF LatExtD LATIN EPIGRAPHIC LETTER ARCHAIC M
 199ꟿ  aka ꟿ  aka mimblewimble. that one is confusing and cool
@@ -103,8 +111,6 @@ looks kind of like a G when rendered differently
 * ◌͜◌ &combdblbrevebl; 035C CombDiaMk COMBINING DOUBLE BREVE BELOW
 this one not sure if it shows but its like a fallen over right parenthesis... looks like a grin... pretty awesome!
 literally you write the number of grin syou have and underline it with a little grin, ha!
-
-
 
 * ∞ &infin; 221E MathOp INFINITY
 42∞  worth of wine please!

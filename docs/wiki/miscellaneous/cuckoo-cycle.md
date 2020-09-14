@@ -132,7 +132,6 @@ The Cuckoo Cycle outlined above forms the basis of Grin's mining process, howeve
     * Mean mineable in high memory GPUs.
     * Smoothly transitions to 2^32 or more by July 2020, called Cuckatoo32+ (explained why [here](https://forum.grin.mw/t/grin-improvement-proposal-1-put-later-phase-outs-on-hold-and-rephrase-primary-pow-commitment/4653))
 
-
 ### Additional Difficulty Control
 
 In order to provide additional difficulty control in a manner that meets the needs of a network with constantly evolving hashpower

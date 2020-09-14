@@ -67,6 +67,7 @@ There are only ~28 million Bitcoin wallets today (many of them not in active use
 Onward.
 
 ## Further discussion
+
 There is a long discussion regarding Grin's monetary policy in the community [forum](https://forum.grin.mw/t/emmission-rate-of-grin/171).
 
 [Igno's thoughts](https://forum.grin.mw/t/emmission-rate-of-grin/171/88) on soliciting productive feedback:

@@ -16,7 +16,7 @@ run_tui = false
 
 Then create a service file for grin:
 
-```
+```bash
 sudo nano /etc/systemd/system/grin.service
 ```
 
@@ -50,25 +50,25 @@ Alias=grin.service
 
 Tell systemd to reload (you need to do that every time you edit this file):
 
-```
+```bash
 systemctl daemon-reload
 ```
 
 Now try to start the node:
 
-```
+```bash
 sudo systemctl start grin
 ```
 
 And check to see if it's running:
 
-```
+```bash
 ps aux | grep grin
 ```
 
 That should give you two lines of output like this:
 
-```
+```bash
 alice   19175  0.4  0.6 188040 54208 ?        Ssl  17:45   0:07 /home/alice/mimblewimble/grin/target/release/grin
 alice   27481  0.0  0.0  12944  1028 pts/0    S+   18:11   0:00 grep --color=auto grin
 ```

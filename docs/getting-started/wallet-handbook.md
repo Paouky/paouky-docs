@@ -164,7 +164,7 @@ This command outputs the same address as using the `listen` command. The address
 * Payment proof identification.
 
 !!! info "Address"
-     This is not the same concept of address that other cryptocurrencies might use; A MimbleWimble chain has no addresses. It is used purely for wallet to wallet communication.
+     This is not the same concept of address that other cryptocurrencies might use; A Mimblewimble chain has no addresses. It is used purely for wallet to wallet communication.
 
 
 ## listen

@@ -1,13 +1,13 @@
 # Economic Policy: Fees and Mining Reward
 
-**(there are are several mentions oh weight and fees, one of them the document below written by igno in 2016, by you should probably wait until they're revisited (tromp rfc) before the last hard fork).
+**(there are several mentions oh weight and fees, one of them the document below written by igno in 2016, by you should probably wait until they're revisited (tromp rfc) before the last hard fork).
 **WORK IN PROGRESS**
 
 ## Considerations
 
 Most cryptocurrencies rely on 2 important parameters: fees dictating the cost of transacting and block rewards compensating miners for securing the chain. Rewards also play the important role of being the only source of new money creation: the total amount of tokens in existence is the sum of every reward since the genesis block.
 
-No cryptocurrency so far has established a fee market that would allow to fully compensate for block rewards. Even bitcoin, with its fees significantly raising (as of Oct. 2016), is still far from reaching that goal. Given the current block space supply, bitcoin fees would have to raise by at least an order of magnitude, reaching $4 USD. Even then, the stability of the currency when mining is only payed out in fee is questionable[^1]. We also note that the security provided by a large hashrate is desirable to all participants in a cryptocurrency's economy, and not only to active transactors.
+No cryptocurrency so far has established a fee market that would allow to fully compensate for block rewards. Even bitcoin, with its fees significantly raising (as of Oct. 2016), is still far from reaching that goal. Given the current block space supply, bitcoin fees would have to raise by at least an order of magnitude, reaching $4 USD. Even then, the stability of the currency when mining is only paid out in fee is questionable[^1]. We also note that the security provided by a large hashrate is desirable to all participants in a cryptocurrency's economy, and not only to active transactors.
 
 For all these reasons we favor a constant reward over time, remarking that it asymptotically leads to zero dilution[^2].
 

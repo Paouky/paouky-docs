@@ -43,7 +43,7 @@ On *Oct 20 2016*, a pseudonymous developer using the name Ignotus Peverell, anno
 
 ```text
 -!- igno_peverell [~user@104.238.169.137] has joined #bitcoin-wizards
-<igno_peverell> I have a minimal implementation of MimbleWimble available. It's very far from complete but has the basics, included the summing of pedersen commitments:
+<igno_peverell> I have a minimal implementation of Mimblewimble available. It's very far from complete but has the basics, included the summing of pedersen commitments:
 <igno_peverell> https://github.com/ignopeverell/grin
 <igno_peverell> Any feedback or review is greatly appreciated. Thanks!
 ```

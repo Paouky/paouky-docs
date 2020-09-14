@@ -7,7 +7,6 @@
     - grin: [api](https://docs.rs/grin_api/latest), [core](https://docs.rs/grin_core/latest), [chain](https://docs.rs/grin_chain/latest), [util](https://docs.rs/grin_util/latest), [store](https://docs.rs/grin_store/latest), [keychain](https://docs.rs/grin_keychain/latest), [p2p](https://docs.rs/grin_p2p/latest), [pool](https://docs.rs/grin_pool/latest), [config](https://docs.rs/grin_config/latest), [servers](https://docs.rs/grin_servers/latest).
     - grin_wallet: [wallet_api](https://docs.rs/grin_wallet_api/latest), [wallet](https://docs.rs/grin_wallet/latest).
 
-
 ## Introduction
 
 - [Grin for Bitcoiners](introduction/grin-for-bitcoiners.md) - Explaining Grin from a Bitcoiner's perspective
@@ -48,7 +47,6 @@
 - [Node API](api/node-api.md)
 - [Wallet API](api/wallet-api.md)
 - [Stratum RPC](api/stratum-rpc.md)
-
 
 ## Security Process
 
