@@ -6,13 +6,17 @@ Let's see how a standard transaction flow looks like:
 
 ![tx-flow](../assets/images/tx-flow.png){ width=650 }
 
+The **slate** is a sheet of incomplete transaction data. Wallets transfer it back and forth until the full signature is complete.
+
+In more detail, the process goes as follows:
+
 1. An address, often referred to as a *Slatepack Address*, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is *completely different* from the familiar on-chain address, as it's not part of the ledger. </br> It is in fact an `ed25199` public key which serves a double role:
     * A Tor hidden service address.
     * Key to encrypt the data communicated between the sender and receiver.
 
-1. Sender begins building the transaction *slate* (a sheet of incomplete transaction data), encrypts it with the receiver's address (a public key), and passes it over.
-1. Receiver adds to the slate his own data and signature, and delivers it back.
-1. Sender finalizes the transaction by adding the final data and his own signature to the slate, thus completing the transaction building process. He can then post it to the chain.
+1. Sender begins building the transaction slate, encrypts it with the receiver's address (a public key), and passes it over.
+1. Receiver adds to the slate his own data and partial signature, and delivers it back.
+1. Sender finalizes the transaction by adding the final data and his own part partial signature to the slate, thus completing the transaction building process. He can then post it to the chain.
 
 !!! note ""
     One nice side-effect of interactive transactions is that coins can't accidentally be sent into the "void" (a public key/address which nobody controls).
@@ -27,10 +31,10 @@ As mentioned earlier, the slatepack address is also used to derive a Tor address
 
 If the connection succeeds, all the rest is done automatically by the two wallets and no manual action is required. The process is exactly as described above, but it all happens under the hood without further intervention.
 
-However, if the Tor connection between the wallets is not successful for whatever reason, Grin defaults to exchanging slate text messages, also called slatepacks, manually.
+However, if the Tor connection between the wallets is not successful for whatever reason, grin defaults to manually exchanging slate text messages, also called slatepacks. manually.
 
 ??? info "Alternative Method: http"
-    Synchronous communication can also happen through normal http, but it requires opening port 3415 and thus might be complicated. We don't cover it here as this method will soon be deprecated.
+    Synchronous communication can also happen through regular http, but it requires opening port 3415 and thus might be complicated. We don't cover it here as this method will soon be deprecated.
 
 ### Slatepack
 

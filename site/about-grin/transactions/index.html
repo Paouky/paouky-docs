@@ -1293,6 +1293,8 @@
 <p>Mimblewimble transactions are interactive, meaning both parties need some kind of communication to interact with each other and exchange the necessary data to create a transaction.</p>
 <p>Let's see how a standard transaction flow looks like:</p>
 <p><img alt="tx-flow" src="../../assets/images/tx-flow.png" width="650" /></p>
+<p>The <strong>slate</strong> is a sheet of incomplete transaction data. Wallets transfer it back and forth until the full signature is complete.</p>
+<p>In more detail, the process goes as follows:</p>
 <ol>
 <li>
 <p>An address, often referred to as a <em>Slatepack Address</em>, is provided by the receiver. </br> It is important to note; This slatepack address is only used to support peer-to-peer interaction, and is <em>completely different</em> from the familiar on-chain address, as it's not part of the ledger. </br> It is in fact an <code>ed25199</code> public key which serves a double role:</p>
@@ -1302,10 +1304,10 @@
 </ul>
 </li>
 <li>
-<p>Sender begins building the transaction <em>slate</em> (a sheet of incomplete transaction data), encrypts it with the receiver's address (a public key), and passes it over.</p>
+<p>Sender begins building the transaction slate, encrypts it with the receiver's address (a public key), and passes it over.</p>
 </li>
-<li>Receiver adds to the slate his own data and signature, and delivers it back.</li>
-<li>Sender finalizes the transaction by adding the final data and his own signature to the slate, thus completing the transaction building process. He can then post it to the chain.</li>
+<li>Receiver adds to the slate his own data and partial signature, and delivers it back.</li>
+<li>Sender finalizes the transaction by adding the final data and his own part partial signature to the slate, thus completing the transaction building process. He can then post it to the chain.</li>
 </ol>
 <div class="admonition note">
 <p>One nice side-effect of interactive transactions is that coins can't accidentally be sent into the "void" (a public key/address which nobody controls).</p>
@@ -1315,8 +1317,8 @@
 <h3 id="tor">Tor</h3>
 <p>As mentioned earlier, the slatepack address is also used to derive a Tor address. By default, the sender's wallet will try to communicate with the receiver's wallet via Tor.</p>
 <p>If the connection succeeds, all the rest is done automatically by the two wallets and no manual action is required. The process is exactly as described above, but it all happens under the hood without further intervention.</p>
-<p>However, if the Tor connection between the wallets is not successful for whatever reason, Grin defaults to exchanging slate text messages, also called slatepacks, manually.</p>
-<details class="info"><summary>Alternative Method: http</summary><p>Synchronous communication can also happen through normal http, but it requires opening port 3415 and thus might be complicated. We don't cover it here as this method will soon be deprecated.</p>
+<p>However, if the Tor connection between the wallets is not successful for whatever reason, grin defaults to manually exchanging slate text messages, also called slatepacks. manually.</p>
+<details class="info"><summary>Alternative Method: http</summary><p>Synchronous communication can also happen through regular http, but it requires opening port 3415 and thus might be complicated. We don't cover it here as this method will soon be deprecated.</p>
 </details>
 <h3 id="slatepack">Slatepack</h3>
 <p>Recall that slates are simply partial transactions. Slatepacks are slates encoded inside compact, neatly organized and encrypted text messages.</p>

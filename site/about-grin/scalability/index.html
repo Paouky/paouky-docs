@@ -454,42 +454,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Scalability
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
     <a href="./" title="Scalability" class="md-nav__link md-nav__link--active">
       Scalability
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#comparison-for-bitcoiners" class="md-nav__link">
-    Comparison For Bitcoiners
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -1200,23 +1167,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#comparison-for-bitcoiners" class="md-nav__link">
-    Comparison For Bitcoiners
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1237,7 +1187,10 @@
                 
                 <h1 id="scalability">Scalability</h1>
 <p>A Mimblewimble chain is massively-prunable, which allows it to stay lightweight and cheap to verify. Its core essence is this unique balance of privacy and scalability.</p>
-<p>Once an output is spent, there's no longer any need to keep it and it's removed from the chain. A 100 bytes kernel is left for each transaction, forever proving it's validity. The result is, that in order to verify the entire history starting from the genesis block, only the kernels and the set of unspent outputs are needed. Let's illustrate a trail of transactions:</p>
+<p>For a mimblewimble chain to be valid everything has to balance out, such that all outputs minus all inputs equals 0 (plus fees). Given that spending an output is practically just copying it to the input side of the equation, then that spent output can be completely removed from the chain and the balance still holds.</p>
+<dl>
+<dt>Only a small kernel has to be kept for each past transaction, forever proving it's validity. Let's illustrate with a trail of transactions:</dt>
+<dd>
 <p><em>(switch between tabs)</em></p>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Before</label><div class="tabbed-content">
 <table>
@@ -1459,21 +1412,23 @@
 </table>
 </div>
 </div>
-<p>An output is considered 'spent' once it is used as an input. As demonstrated above, every single input can disappear as well as every spent output, leaving only a small kernel behind. What remains is only the set of unspent outputs and the set of kernels proving its validity.</p>
-<p>A full verifier needs the following data:</p>
+</dd>
+</dl>
+<p>An output is considered 'spent' once it is used as an input. As demonstrated above, every single input can disappear as well as every spent output. What remains is only the set of unspent outputs and all transaction kernels (~100 bytes).</p>
+<p>In order to verify the entire history starting from the genesis block, a verifier needs:</p>
 <ul>
-<li>The chain of headers</li>
-<li>List of unspent outputs</li>
+<li>Block headers</li>
+<li>Set of unspent outputs</li>
 <li>Kernels</li>
 </ul>
 <div class="admonition info">
 <p>An output is a 33 bytes commitment accompanied by a 640 byte rangeproof.</p>
 </div>
 <p>Following this logic, the chain mostly grows by the number of users, instead of the number of overall transactions. In fact, it often <em>shrinks in size</em> when more inputs are used than new outputs are created.</p>
-<p>Building, verifying and storing transactions requires minimal resources. Anyone can fully verify the chain on a phone or on cheap hardware, and run a node in areas with poor network connectivity.</p>
-<h2 id="comparison-for-bitcoiners">Comparison For Bitcoiners</h2>
-<p>At the time of this writing, there were 560M Bitcoin transactions, taking up 300GB of space. Somebody who wants to verify the current state must replay each and every transaction. He will check millions of outputs to eventually derive the current set of 66M unspent outputs.</p>
-<p>Mimblewimble shrinks the transaction history such that a chain with Bitcoin's history would be kept at around 1/4 of its size. This difference becomes much more exciting if one remembers that Mimblewimble employs Confidential Transactions, so that each output requires a large rangeproof. If the current Bitcoin blockchain had hidden amounts, it's size would have been on the order of several terabyes.</p>
+<p>Building, verifying and storing transactions requires minimal resources. Anyone can verify the entire chain on a phone or cheap hardware, and fully participate in areas with poor network connectivity.</p>
+<p><strong>Comparison for bitcoiners</strong></p>
+<p>At the time of this writing, there were 560M bitcoin transactions since its genesis. Anybody who wishes to verify the current state must replay each and every transaction in its history. They will go over billions of outputs to eventually derive the current set of 66M unspent outputs.</p>
+<p>Mimblewimble shrinks the transaction history such that a chain with bitcoin's history would be kept at around 1/4 the size. This difference becomes much more exciting if one remembers that confidential transactions are extremely resource consuming, since each output requires a large rangeproof. If the current bitcoin blockchain had hidden amounts, it's size would have been on the order of several terabyes.</p>
                 
               
               
