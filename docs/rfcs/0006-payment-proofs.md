@@ -1,17 +1,17 @@
-# Payment Proofs
 
-!!! quote ""
-    - Title: payment-proofs
-    - Authors: [David Burkett](mailto:davidburkett38@gmail.com)
-    - Start date: Nov 05 2019
-    - RFC PR: [mimblewimble/grin-rfcs#31](https://github.com/mimblewimble/grin-rfcs/pull/31)
-    - Tracking issue: [mimblewimble/grin-wallet#230](https://github.com/mimblewimble/grin-wallet/issues/230)
+- Title: payment-proofs
+- Authors: [David Burkett](mailto:davidburkett38@gmail.com)
+- Start date: Nov 05, 2019
+- RFC PR: [mimblewimble/grin-rfcs#31](https://github.com/mimblewimble/grin-rfcs/pull/31)
+- Tracking issue: [mimblewimble/grin-wallet#230](https://github.com/mimblewimble/grin-wallet/issues/230)
 
 ## Summary
+[summary]: #summary
 
 Support generating and validating payment proofs for sender-initiated (i.e. non-invoice) transactions.
 
 ## Motivation
+[motivation]: #motivation
 
 Bitcoin and other cryptocurrencies with transparent protocol-level addressing and immutable, unprunable blockchains can prove sender, receiver, and amounts of payments simply by pointing to the transaction in the blockchain.
 Grin's privacy and scalability means users no longer have this ability. This prevents some merchants from accepting Grin due to the high possibility of payment disputes that are unresolvable in the same way they are for transparent coins.
@@ -102,5 +102,5 @@ Once the `payment_info` details have been validated, the sender can generate and
 
 ## References
 
-[^1]: [Tx slate structure](https://github.com/mimblewimble/grin-wallet/blob/master/libwallet/src/slate.rs)
-[^2]: [Beam's payment proof model](https://github.com/BeamMW/beam/blob/c9beb0eae55fa6b7fb3084ebe9b5db2850cf83b9/wallet/wallet_db.cpp#L3231-L3236)
+- [Tx slate structure](https://github.com/mimblewimble/grin-wallet/blob/master/libwallet/src/slate.rs)
+- [Beam's payment proof model](https://github.com/BeamMW/beam/blob/c9beb0eae55fa6b7fb3084ebe9b5db2850cf83b9/wallet/wallet_db.cpp#L3231-L3236)
