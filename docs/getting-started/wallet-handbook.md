@@ -437,7 +437,7 @@ To specify which transaction to cancel, use the `-i` flag along with the tx id (
 
 ## scan
 
-The `scan` command scans the entire UTXO (unspent tx outputs) set from the node, identifyies which outputs are yours and updates your wallet state.
+The `scan` command scans the entire UTXO (unspent tx outputs) set from the node, identifies which outputs are yours and updates your wallet state.
 
 ```text
 grin-wallet scan
