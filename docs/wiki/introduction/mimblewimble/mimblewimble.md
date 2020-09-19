@@ -7,7 +7,7 @@ description: Mimblewimble Grin
 !!! note ""
     For the original introduction (along with many translations), refer to [here](https://github.com/mimblewimble/grin/blob/master/doc/intro.md).
 
-Earlier we demonstrated how a public key obtained from the *addition of two private keys* `r` and `v`, resulting in `(v+r)*G`, is identical to the *addition of the public keys* of each individual private key, `r*G + v*G`. Mimblewimble and Grin heavily rely on this principle.
+Earlier we demonstrated how a public key obtained from the *addition of two private keys* `r` and `v`, resulting in public key `(v+r)*G`, is identical to the *addition of the public keys* of each individual private key, `r*G + v*G`. Mimblewimble and Grin heavily rely on this principle.
 
 ## Transactions
 
@@ -22,7 +22,7 @@ Going next, we'll examine how those two fundemental properties are achieved.
 
 ### Amounts
 
-Building upon the ECC princple desrcibed above, we can obscure the values in a transaction.
+Building upon the ECC princple described above, we can obscure the values in a transaction.
 
 If `v` is the amount value of an input or output and **H** is a generator point on the elliptic curve, we can simply embed `v*H` instead of `v` in a transaction. This works because using the ECC operations, we can validate that the sum of values in outputs, equals to the sum of values in inputs. If we subtract those sums (outputs minus inputs), the result would be 0.
 
@@ -43,7 +43,7 @@ If `v` is the amount value of an input or output and **H** is a generator point 
         |            | v~3~         |
 
 ```text
-v3*H + v2*H - v3*H = (v3 + v2 - v1)*H = 0*H
+v3*H + v2*H - v1*H = (v3 + v2 - v1)*H = 0*H = 0
 ```
 
 !!! note ""
@@ -97,7 +97,7 @@ X = 28*G + 3*H
 **X** is a commitment visible by everyone. The value `3` is only known to Bob
 and Alice, while `28` is only known to Bob.
 
-To transfer those 3 coins again, the protocol requires `28` to be known. Let's say Bob wants to send the 3 coins to *Carol*. He needs to build a simple transaction where `Xi` is his input, and `Y` is Carol's new output. For the transcation to be valid, proving no new coins were created, subtracting the input from the output should result in 0.
+To transfer those 3 coins again, the protocol requires `28` to be known. Let's say Bob wants to send the 3 coins to *Carol*. He needs to build a simple transaction where `Xi` is his input, and `Y` is Carol's new output. For the transaction to be valid, proving no new coins were created, subtracting the input from the output should result in 0.
 
 ```text
 Y - Xi = 0*G + 0*H = 0
@@ -129,12 +129,12 @@ Y - Xi = (114*G + 3*H) - (28*G + 3*H) = 86*G + 0*H
 
 Now the transaction no longer sums to zero and we have an **excess value** `86`. The excess value of a transaction is the sum of all outputs blinding factors, minus the sum of all inputs blinding factors, r~o~ - r~i~. In this case, simply `114-28 = 86`.
 
-Then how does the protocol verify that values equal to 0? The transaction is only legitimate if `Y - Xi` is a valid public key for generator point G; which is the case **only if** `Y - Xi = ... 0*H`. In other words, if the values don't sum to 0, the result is recognized as an invalid public key for G.
+Then how does the protocol verify that values equal to 0? The transaction is only legitimate if `Y - Xi` is a valid public key for generator point G; which is the case **only if** `Y - Xi = r*G + 0*H`. In other words, if the values don't sum to 0, the result is recognized as an invalid public key for G.
 
-This can be verified by requiring the transactors to build a (schnorr) signature together with the excess value `86`, which ensures that:
+This can be verified by requiring the transactors to build a (schnorr) signature together, signing excess value `86`. This ensures that:
 
-* The transacting parties can collectively produce the excess value (since it's the private key of their joint signature).
-* The sum of the outputs minus the inputs is 0, because only a valid public key for G will check against the signature.
+* The transacting parties can collectively produce the excess value (it is the private key of their joint signature).
+* The sum of the outputs minus the inputs is 0, because only a valid public key for G will check out against the signature.
 
 This signature, along with a commitment to the excess value (86*G, which serves as a public key to verify the signature), is called a transcation kernel.
 
@@ -154,7 +154,7 @@ Let's say Bob wants to send only 2 of his coins to Carol. To do this he would se
 (114*G + 2*H) + (13*G + 1*H) - (28*G + 3*H) = 99*G + 0*H
 ```
 
-The signature is again built with the excess value, `99` in this example.
+The joint signature is again built with the excess value, `99` in this example.
 
 
 ### Rangeproofs
@@ -174,39 +174,42 @@ A Mimblewimble transaction includes the following:
     | 28&#42;G + 3&#42;H </br> Rangeproof | 114&#42;G + 2&#42;H </br> Rangeproof                                                          |
     |                | 13&#42;G + 1&#42;H </br> Rangeproof              |
     |                |                                                  |
-    |   **Kernel**:  |    TX fee </br> Signature </br>  Kernel excess   |
+    |   **Kernel**:  |    TX fee </br> Kernel excess </br> Signature  |
 
 * Set of inputs, that reference and spend a set of previous outputs.
-* Set of new outputs that each includes:
+* Set of new outputs where each includes:
     1. Value and a blinding factor (a new private key), both multiplied on a curve and summed up to `r*G + v*H`.
-    2. Rangeproof that, among other things, shows that `v` is non-negative.
+    1. Rangeproof that, among other things, shows that `v` is non-negative.
 * Kernel consisting of:
     1. Transaction fee in plain text.
-    2. Transaction signature signed by the excess value (and verifies with the kernel excess).
-    3. Kernel excess, which is the public key corresponding to the excess value (computed by `sum of outputs + fee - sum of inputs`)
+    1. Kernel excess, which is the public key corresponding to the excess value (computed by `sum of outputs + fee - sum of inputs`)
+    1. Transaction signature signed by the excess value as private key (and verifies with the kernel excess).
 
 
-## Blocks and Chain
+## Blocks and chain
 
-We explained above how Mimblewimble transactions can provide strong anonymity guarantees while maintaining the properties required for a valid blockchain, i.e., a transaction does not create money and proof of ownership is established through private keys.
+We explained above how Mimblewimble transactions can provide strong anonymity guarantees while maintaining the properties required for a valid blockchain, i.e., a transaction does not create new money and proof of ownership is established through private keys.
 
-The Mimblewimble block format builds on this by introducing one additional concept: cut-through. With this addition, a Mimblewimble chain gains:
+The Mimblewimble block format builds on this by introducing two additional concepts: Aggregation and cut-through. With these additions, a Mimblewimble chain gains:
 
-* Extremely good scalability, as the great majority of transaction data can be eliminated over time, without compromising security.
 * Further anonymity by mixing and removing transaction data.
+* Extremely good scalability, as the great majority of transaction data can be eliminated over time, without compromising security.
 
-### Transaction Aggregation
+### Transaction aggregation
 
-While the kernel excess of a transaction can be computed by anyone, there is a major benefit in including it in every transaction's kernel, as it allows for aggregation within blocks.
+While the kernel excess of a transaction can be computed by anyone, there's major benefit in including it in every transaction's kernel, as it allows for aggregation within blocks.
 
-The following is true for any valid transcation (ignoring fees).
+The following is true for any valid transcation (ignoring fees):
 
 ```text
 transaction:
 sum(outputs) - sum(inputs) = kernel_excess
 ```
 
-The same holds true for blocks themselves once we realize a block is simply an extanded set of inputs, outputs and transaction kernels. We can sum the outputs, subtract the inputs from it, and the result would be a commitment equal to the sum of the kernel excesses.
+!!! note ""
+    Note that we refer here to the complete pedersen commitments, not just their blinding factors (which would result in `excess_value` instead of `kernel_excess`).
+
+The same holds true for entire blocks of transactions, if we realize a block is simply an extended set of inputs, outputs and transaction kernels. We can sum the outputs, subtract the inputs, and the result would be a commitment equal to the sum of the kernel excesses.
 
 ```text
 block:
@@ -217,9 +220,9 @@ Simplifying slightly (ignoring transaction fees), we can see how a Mimblewimble 
 
 Similarly, transactions could be aggregated before block construction and thus enter the mempool at an already aggregated state. The Dandelion stem phase does so automatically when possible, and it could also be done manually and potentially through different aggregation services.
 
-### Kernel Offsets
+### Kernel offsets
 
-There is a subtle problem with Mimblewimble blocks and transactions as described above, which needs to be addressed. Given a set of inputs, outputs and transaction kernels, a subset of these will combine to reconstruct a valid transaction.
+There is a subtle problem with Mimblewimble blocks and transactions as described above, that needs to be addressed. Given a set of inputs, outputs and transaction kernels, a subset of these will combine to reconstruct a valid transaction.
 
 Consider the two following transcations:
 
@@ -228,7 +231,7 @@ Consider the two following transcations:
      (in3) -> (out2, out3)  |  (kern2)
 ```
 
-We can aggregate them into a block (or simply another transcation):
+We can aggregate them into a block (simply another transcation):
 
 :   *aggregated block/transaction*
 
@@ -315,7 +318,7 @@ A block is simply built from:
 * Set of outputs remaining after cut-through.
 * A single kernel offset (sum of all kernel offsets) to cover the full block.
 * The transaction kernels containing, for each transaction:
-    1. The public key ``(r-a)*G`, which is the (modified) kernel excess.
+    1. The public key `(r-a)*G`, which is the (modified) kernel excess.
     2. The signatures generated using the (modified) excess value `(r-a)` as the signing private key.
     3. Mining fee.
 
@@ -328,11 +331,11 @@ sum(outputs) - sum(inputs) = sum(kernel_excess) + sum(kernel_offset)*G
 
 And it all still validates.
 
-### Cut-through Everything
+### Cut-through everything
 
-Going back to the previous example block, outputs `prev_out1, prev_out2`, which were spent by `in01, in02` respectively, must have appeared previously in the blockchain. After the addition of this new block, those past outputs as well as `in01, in02` can also be removed from the blockchain as they now are intermediate transactions.
+Going back to the previous example block, outputs `prev_out1, prev_out2`, which were spent by `in01, in02` respectively, must have appeared previously in the blockchain. After the addition of this new block, those past outputs as well as `in01, in02` can also be removed from the blockchain as they now are intermediate transactions. The blocks they were originally included in would still remain valid after their removal.
 
-All that's needed to remain is the set of currently unspent outputs `out01, out02, out05`. We conclude that the chain state (excluding headers) at any point in time can be summarized by just these pieces of information:
+All that needs to remain is the set of currently unspent outputs `out01, out02, out05`. We conclude that the chain state (excluding headers) at any point in time can be summarized by just these pieces of information:
 
 
 1. The total amount of coins created by mining in the chain.
@@ -341,7 +344,7 @@ All that's needed to remain is the set of currently unspent outputs `out01, out0
 
 The extension of this idea is that all the way from the genesis block to the latest block, every input is deleted along with its referenced output.
 
-Both the set of unspent outputs (UTXO) and transaction kernels are extremely compact. This has important consequences; The blockchain a node needs to maintain is very small, as well as the amount of information that needs to be transferred when a new node joins the network.
+Both the set of unspent outputs (UTXO) and transaction kernels are extremely compact. This has important consequences; The blockchain a node needs to maintain is very small, as well as the amount of information transferred when a new node joins the network.
 
 ## Conclusion
 
