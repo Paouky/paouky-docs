@@ -116,18 +116,18 @@ nav:
   - Resources: wiki/resources.md
 
 - RFCs:
-  - 0015 slatepack: rfcs/0015-slatepack.md
-  - 0014 general-fund-guidelines: rfcs/0014-general-fund-guidelines.md
-  - 0013 nrd-kernels: rfcs/0013-nrd-kernels.md
-  - 0012 compact-slates: rfcs/0012-compact-slates.md
-  - 0011 security-team: rfcs/0011-security-team.md
-  - 0010 online-transacting-via-tor: rfcs/0010-online-transacting-via-tor.md
-  - 0009 enable-faster-sync: rfcs/0009-enable-faster-sync.md
-  - 0008 wallet-state-management: rfcs/0008-wallet-state-management.md
-  - 0007 node-api-v2: rfcs/0007-node-api-v2.md
-  - 0006 payment-proofs: rfcs/0006-payment-proofs.md
-  - 0005 variable-size-kernels: rfcs/0005-variable-size-kernels.md
-  - 0004 full-wallet-lifecycle: rfcs/0004-full-wallet-lifecycle.md
-  - 0003 security-process: rfcs/0003-security-process.md
-  - 0002 grin-governance: rfcs/0002-grin-governance.md
-  - 0001 rfc-process: rfcs/0001-rfc-process.md
+  - 0015 slatepack: grin-rfcs/text/0015-slatepack.md
+  - 0014 general-fund-guidelines: grin-rfcs/text/0014-general-fund-guidelines.md
+  - 0013 nrd-kernels: grin-rfcs/text/0013-nrd-kernels.md
+  - 0012 compact-slates: grin-rfcs/text/0012-compact-slates.md
+  - 0011 security-team: grin-rfcs/text/0011-security-team.md
+  - 0010 online-transacting-via-tor: grin-rfcs/text/0010-online-transacting-via-tor.md
+  - 0009 enable-faster-sync: grin-rfcs/text/0009-enable-faster-sync.md
+  - 0008 wallet-state-management: grin-rfcs/text/0008-wallet-state-management.md
+  - 0007 node-api-v2: grin-rfcs/text/0007-node-api-v2.md
+  - 0006 payment-proofs: grin-rfcs/text/0006-payment-proofs.md
+  - 0005 variable-size-kernels: grin-rfcs/text/0005-variable-size-kernels.md
+  - 0004 full-wallet-lifecycle: grin-rfcs/text/0004-full-wallet-lifecycle.md
+  - 0003 security-process: grin-rfcs/text/0003-security-process.md
+  - 0002 grin-governance: grin-rfcs/text/0002-grin-governance.md
+  - 0001 rfc-process: grin-rfcs/text/0001-rfc-process.md
