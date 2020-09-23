@@ -29,6 +29,7 @@
 
 :   [How to store Grin in cold storage?](https://forum.grin.mw/t/how-to-store-grin-in-cold-storage/5375) </br>
     [Raspberry Pi 4 - Standalone Grin-Node PoC by Grinnode.live](https://forum.grin.mw/t/raspberry-pi-4-standalone-grin-node-poc-by-grinnode-live/7796) </br>
+    [How to open port 3414 (and why)](https://forum.grin.mw/t/how-to-open-port-3414-and-why/7825) </br>
     [Coinbase outputs as regular outputs](https://forum.grin.mw/t/coinbase-outputs-as-transaction-outputs/7441) </br>
     [Use of NRD kernels in payment channels](https://forum.grin.mw/t/use-of-nrd-kernels-in-grin-payment-channels/7298) </br>
     [Emission Rate Thread](https://forum.grin.mw/t/emission-rate-of-grin/171), [#2](https://forum.grin.mw/t/questioning-core-assumptions-on-our-emissions-model/1414), [#3](https://forum.grin.mw/t/question-for-statement-linear-emission-is-fair-for-late-adopters/6285) </br>
@@ -68,6 +69,10 @@
     [What’s inside a Grin Transaction File?](https://medium.com/@brandonarvanaghi/whats-inside-a-grin-transaction-file-f062a0dcbf99) </br>
     [Breaking Mimblewimble’s Privacy Model](https://medium.com/dragonfly-research/breaking-mimblewimble-privacy-model-84bcd67bfe52) </br>
     [Factual inaccuracies of “Breaking Mimblewimble’s Privacy Model”](https://medium.com/grin-mimblewimble/factual-inaccuracies-of-breaking-mimblewimbles-privacy-model-8063371839b9) </br>
+    [Mimblewimble Without the Scary Math](https://blog.qtum.org/mimblewimble-without-scary-math-e894cb841b98) </br>
+    [Behind Mimblewimble](https://medium.com/scalar-capital/behind-mimblewimble-cd9da78a00e9) </br>
+    [An Introduction to Grin Proof-of-Work](https://blog.blockcypher.com/an-introduction-to-grin-proof-of-work-103aaa9f66ce) </br>
+
 
 ## Podcasts
 
@@ -87,10 +92,11 @@
     [[Coindesk] Harry Potter Characters Join Mimblewimble 2016](https://www.coindesk.com/coders-harry-potter-bitcoin-mimblewimble) </br>
     [[Github] Meeting Notes](https://github.com/mimblewimble/grin-pm#2020) </br>
     [[Reddit] On Grin's Privacy](https://www.reddit.com/r/grincoin/comments/g43fhe/is_there_any_progress_on_reducing_linkability_of/fnv7lfh/) </br>
-    [[Launchpad] Scripting observations and Lightning Network implementation](https://lists.launchpad.net/mimblewimble/msg00029.html)
+    [[Launchpad] Scripting observations and Lightning Network implementation](https://lists.launchpad.net/mimblewimble/msg00029.html) </br>
     [[GitHub] Grin difficulty, C29, C31 fade out and C32](https://github.com/Lolliedieb/lolMiner-releases/wiki/All-you-need-to-know-about-Grin-difficulty,-C29,-C31-fade-out-and-C32) </br>
     [[GitHub] Fees in Mining](https://github.com/mimblewimble/grin/wiki/fees-mining) </br>
-    [[Google] Replay Attacks Summary](https://docs.google.com/document/d/1BbXhgFd3byP_gfvnteRq4BmfXjtv5PJtJwI13CJsZT8/edit#)
+    [[Google] Replay Attacks Summary](https://docs.google.com/document/d/1BbXhgFd3byP_gfvnteRq4BmfXjtv5PJtJwI13CJsZT8/edit#) </br>
+    [[Blog] A Relatively Easy to Understand Primer on ECC](https://blog.cloudflare.com/a-relatively-easy-to-understand-primer-on-elliptic-curve-cryptography/) </br>
 
 #### RFCs
 

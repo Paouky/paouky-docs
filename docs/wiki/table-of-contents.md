@@ -56,8 +56,8 @@
 
 ## Services
 
-- [Slatepack Integration Guide](services/slatepack-integration.md)
 - [List of Services](services/list-of-services.md)
+- [Slatepack Integration Guide](services/slatepack-integration.md)
 
 ## More
 

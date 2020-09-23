@@ -89,14 +89,6 @@ Please enter your recovery phrase:
 
 On the first run, the wallet will scan the entire chain and restore any outputs that belong to you.
 
-## recover
-
-The `recover` command displays the existing wallet's 24 (or 12) word seed phrase.
-
-```text
-grin-wallet recover
-```
-
 ## account
 
 The `account` command is used to manage wallet accounts. Let's print a list of your existing accounts:
@@ -329,6 +321,7 @@ Please review the above information carefully before proceeding
 
 To proceed, type the exact amount of the invoice as displayed above (or Q/q to quit) >
 ```
+
 To confirm the payment, type the exact amount in decimal, `10.000000000` in this example, into the prompt. Your wallet will then fill out the transaction slate and return a slatepack for you to provide back to the initiator, which they can then `finalize`.
 
 
@@ -339,6 +332,7 @@ Upon receiving a slatepack message or file from a party, whether in an encrypted
 ```text
 grin-wallet unpack
 ```
+
 This prompts you for a slatepack message. to decode a file, use the `-i` flag and provide the path.
 
 Result:
@@ -364,10 +358,7 @@ DECRYPTED SLATE
   ...
 }
 Command 'unpack' completed successfully
-
 ```
-
-
 
 ## outputs
 
@@ -449,10 +440,19 @@ It should not be necessary to run the scan command manually, as the wallet conti
 
 * `-d` `--delete-unconfirmed` if present, scan and cancel all pending transactions, freeing up any locked outputs.
 
-* `h` `--start-height` lets you specify a block height from which to start the manual scan.
+* `-h` `--start-height` lets you specify a block height from which to start the manual scan.
 
 !!! text ""
     When initializing a wallet from an existing seed via the grin-wallet `init -r command`, this scan is performed automatically on the first run.
+
+## recover
+
+The `recover` command displays the existing wallet's 24 (or 12) word seed phrase.
+
+```text
+grin-wallet recover
+```
+
 
 ---
 

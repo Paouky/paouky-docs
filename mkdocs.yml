@@ -111,8 +111,8 @@ nav:
       - Security Team: wiki/security-process/security-team.md
       - Code Audits: wiki/security-process/code-audits.md
   - Services:
-      - Slatepack Integration Guide: wiki/services/slatepack-integration.md
       - List of Services: wiki/services/list-of-services.md
+      - Slatepack Integration Guide: wiki/services/slatepack-integration.md
   - Resources: wiki/resources.md
 
 - RFCs:
