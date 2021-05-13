@@ -1,5 +1,8 @@
 # Grin Documentation
 
+Update: This repo is no longer being used, it is now in https://github.com/mimblewimble/docs
+Find the docs at https://docs.grin.mw/
+
 ## Requirements
 
 - MkDocs
